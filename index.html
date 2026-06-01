@@ -69,6 +69,52 @@
         }
 
         /* AQUI VAI ENTRAR A GALERIA DA FAMÍLIA */
+        <style>
+    .piramide {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 40px;
+    }
+
+    .piramide .linha {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .piramide img {
+        width: 180px;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        transition: transform 0.3s;
+    }
+
+    .piramide img:hover {
+        transform: scale(1.05);
+    }
+</style>
+
+<div class="piramide">
+    <div class="linha">
+        <img src="imagens/foto1.jpg">
+    </div>
+
+    <div class="linha">
+        <img src="imagens/foto2.jpg">
+        <img src="imagens/foto3.jpg">
+    </div>
+
+    <div class="linha">
+        <img src="imagens/foto4.jpg">
+        <img src="imagens/foto5.jpg">
+        <img src="imagens/foto6.jpg">
+    </div>
+</div>
+
         .galeria-familia {
             margin-top: 40px;
         }

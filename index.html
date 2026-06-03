@@ -2,12 +2,6 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>Família Pizzirani</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Família Pizzirani</title>
 
@@ -44,30 +38,51 @@
             font-size: 32px;
             margin: 40px 0 20px;
         }
-/* PIRÂMIDE */
-.person {
-    display: inline-block;
-    margin: 20px 10px; /* horizontal reduzido */
-}
 
-.person img {
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 3px solid #333;
-}
+        /* PESSOAS */
+        .person {
+            display: inline-block;
+            margin: 20px 10px;
+        }
 
-/* GRUPOS (Pais, Filhos, Netos, Bisnetos) */
-.level {
-    margin: 20px 0;      /* vertical (em pé) — você disse que está ótimo */
-    max-width: 800px;    /* compactação horizontal entre os grupos */
-    margin-left: auto;
-    margin-right: auto;  /* centraliza */
-}
+        .person img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid #333;
+        }
 
+        /* GRUPOS (Pais, Filhos, Netos, Bisnetos) */
+        .level {
+            margin: 20px 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-      
+        /* NETOS — 8 EM UMA ÚNICA LINHA */
+        .netos {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 8px;
+            justify-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .netos .person img {
+            width: 75px;
+            height: 75px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 2px solid #333;
+        }
+
+        .netos .person div {
+            font-size: 0.8rem;
+            margin-top: 4px;
+        }
     </style>
 </head>
 
@@ -81,105 +96,69 @@
             <p>Histórias que atravessam gerações.<br>
             Memórias, raízes e laços que permanecem.</p>
 
-          <h2 class="section-title">BEM-VINDOS</h2>
+            <h2 class="section-title">BEM-VINDOS</h2>
 
-<p style="font-size:1.2rem; color:#444; max-width:700px; margin:0 auto 20px; text-align:center;">
-    Este espaço celebra nossa história, nossas raízes e a jornada da Família Pizzirani.
-</p>
+            <p style="font-size:1.2rem; color:#444; max-width:700px; margin:0 auto 20px;">
+                Este espaço celebra nossa história, nossas raízes e a jornada da Família Pizzirani.
+            </p>
 
-<p style="font-size:1rem; color:#555; max-width:700px; margin:0 auto; text-align:center; line-height:1.6;">
-    🇧🇷 Bem-vindos — Um lar de memórias e afetos.<br>
-    🇺🇸 Welcome — A place to honor our family’s journey.<br>
-    🇪🇸 Bienvenidos — Un espacio para celebrar nuestras raíces.<br>
-    🇮🇹 Benvenuti — Un luogo per ricordare la nostra storia.<br>
-    🇩🇪 Willkommen — Ein Ort, um unsere Erinnerungen zu bewahren.<br>
-    🇫🇷 Bienvenue — Un espace pour préserver nos souvenirs.<br>
-    🇯🇵 ようこそ — 家族の歴史を大切にする場所です。<br>
-    🇵🇹 Bem-vindos — Um espaço de união e tradição.
-</p>
+            <p style="font-size:1rem; color:#555; max-width:700px; margin:0 auto; line-height:1.6;">
+                🇧🇷 Bem-vindos — Um lar de memórias e afetos.<br>
+                🇺🇸 Welcome — A place to honor our family’s journey.<br>
+                🇪🇸 Bienvenidos — Un espacio para celebrar nuestras raíces.<br>
+                🇮🇹 Benvenuti — Un luogo per ricordare la nostra storia.<br>
+                🇩🇪 Willkommen — Ein Ort, um unsere Erinnerungen zu bewahren.<br>
+                🇫🇷 Bienvenue — Un espace pour préserver nos souvenirs.<br>
+                🇯🇵 ようこそ — 家族の歴史を大切にする場所です。<br>
+                🇵🇹 Bem-vindos — Um espaço de união e tradição.
+            </p>
 
+            <h1 class="section-title">PIRÂMIDE FAMILIAR</h1>
 
-      
+            <div class="tree">
 
+                <!-- TOPO -->
+                <div class="level">
+                    <div class="person">
+                        <img src="imagens/familia/Arnaldo_InPixio.png">
+                        <div>Arnaldo</div>
+                    </div>
+                    <div class="person">
+                        <img src="imagens/familia/amaria_InPixio.png">
+                        <div>Amaria</div>
+                    </div>
+                </div>
 
+                <!-- FILHOS -->
+                <div class="level">
+                    <div class="person"><img src="imagens/familia/patricia_InPixio.png"><div>Patrícia</div></div>
+                    <div class="person"><img src="imagens/familia/andrea_InPixio.png"><div>Andréa</div></div>
+                    <div class="person"><img src="imagens/familia/marcelo_InPixio.png"><div>Marcelo</div></div>
+                </div>
 
-<h1 class="section-title">PIRÂMIDE FAMILIAR</h1>
+                <!-- NETOS (AGORA EM UMA ÚNICA LINHA) -->
+                <div class="level netos">
+                    <div class="person"><img src="imagens/familia/Lucas.jpg"><div>Lucas</div></div>
+                    <div class="person"><img src="imagens/familia/sthefanie.jpg"><div>Sthefanie</div></div>
+                    <div class="person"><img src="imagens/familia/paula.jpg"><div>Paula</div></div>
+                    <div class="person"><img src="imagens/familia/pamela.jpg"><div>Pamela</div></div>
+                    <div class="person"><img src="imagens/familia/michele.jpg"><div>Michele</div></div>
+                    <div class="person"><img src="imagens/familia/barbara.jpg"><div>Barbara</div></div>
+                    <div class="person"><img src="imagens/familia/marcella.jpg"><div>Marcella</div></div>
+                    <div class="person"><img src="imagens/familia/marcelo_neto.jpg"><div>Marcelo (neto)</div></div>
+                </div>
 
-<div class="tree">
+                <!-- BISNETOS -->
+                <div class="level">
+                    <div class="person"><img src="imagens/familia/lorena e as flores.jpg"><div>Lorena</div></div>
+                    <div class="person"><img src="imagens/familia/ALICE 1_InPixio_InPixioFINAL.png"><div>Alice</div></div>
+                    <div class="person"><img src="imagens/familia/PEDRO_HOME PAGE.jpg"><div>Pedro</div></div>
+                </div>
 
-    <!-- TOPO -->
-   <div class="level netos">
-<div class="level netos">
-    <div class="person"><img src="imagens/familia/Lucas.jpg"><div>Lucas</div></div>
-    <div class="person"><img src="imagens/familia/sthefanie.jpg"><div>Sthefanie</div></div>
-    <div class="person"><img src="imagens/familia/paula.jpg"><div>Paula</div></div>
-    <div class="person"><img src="imagens/familia/pamela.jpg"><div>Pamela</div></div>
-    <div class="person"><img src="imagens/familia/michele.jpg"><div>Michele</div></div>
-    <div class="person"><img src="imagens/familia/barbara.jpg"><div>Barbara</div></div>
-    <div class="person"><img src="imagens/familia/marcella.jpg"><div>Marcella</div></div>
-    <div class="person"><img src="imagens/familia/marcelo_neto.jpg"><div>Marcelo (neto)</div></div>
-</div>
-/* NETOS — 8 EM UMA ÚNICA LINHA */
-.netos {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 8px;
-    justify-items: center;
-    max-width: 800px;
-    margin: 0 auto;
-}
+            </div>
 
-/* Redução apenas para os netos */
-.netos .person img {
-    width: 75px;
-    height: 75px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 2px solid #333;
-}
-
-/* Ajuste do nome abaixo da foto */
-.netos .person div {
-    font-size: 0.8rem;
-    margin-top: 4px;
-}
-
-        <div class="person">
-            <img src="imagens/familia/Arnaldo_InPixio.png">
-            <div>Arnaldo</div>
-        </div>
-        <div class="person">
-            <img src="imagens/familia/amaria_InPixio.png">
-            <div>Amaria</div>
         </div>
     </div>
 
-    <!-- FILHOS -->
-    <div class="level">
-        <div class="person"><img src="imagens/familia/patricia_InPixio.png"><div>Patrícia</div></div>
-        <div class="person"><img src="imagens/familia/andrea_InPixio.png"><div>Andréa</div></div>
-        <div class="person"><img src="imagens/familia/marcelo_InPixio.png"><div>Marcelo</div></div>
-    </div>
-
-    <!-- NETOS -->
-    <div class="level">
-        <div class="person"><img src="imagens/familia/Lucas.jpg"><div>Lucas</div></div>
-        <div class="person"><img src="imagens/familia/sthefanie.jpg"><div>Sthefanie</div></div>
-        <div class="person"><img src="imagens/familia/paula.jpg"><div>Paula</div></div>
-        <div class="person"><img src="imagens/familia/pamela.jpg"><div>Pamela</div></div>
-        <div class="person"><img src="imagens/familia/michele.jpg"><div>Michele</div></div>
-        <div class="person"><img src="imagens/familia/barbara.jpg"><div>Barbara</div></div>
-        <div class="person"><img src="imagens/familia/marcella.jpg"><div>Marcella</div></div>
-        <div class="person"><img src="imagens/familia/marcelo_neto.jpg"><div>Marcelo (neto)</div></div>
-    </div>
-
-    <!-- BISNETOS -->
-    <div class="level">
-        <div class="person"><img src="imagens/familia/lorena e as flores.jpg"><div>Lorena</div></div>
-        <div class="person"><img src="imagens/familia/ALICE 1_InPixio_InPixioFINAL.png"><div>Alice</div></div>
-        <div class="person"><img src="imagens/familia/PEDRO_HOME PAGE.jpg"><div>Pedro</div></div>
-    </div>
-
-</div>
-    
-
+</body>
+</html>

@@ -4,42 +4,62 @@
     <meta charset="UTF-8">
     <title>Família Pizzirani</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Família Pizzirani</title>
 
-<!-- Abertura do site -->
-<div style="width: 100%; display: flex; justify-content: center; margin-top: 40px;">
-    <div style="max-width: 900px; text-align: center; font-family: Arial, sans-serif;">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #ffffff;
+            color: #333;
+        }
 
-        <h1 style="font-size: 42px; margin-bottom: 10px; color: #333;">
-            Bem-vindos à Família Pizzirani
-        </h1>
+        /* CONTAINER CENTRALIZADO */
+        .container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
 
-        <h2 style="font-size: 22px; font-weight: normal; margin-top: 0; color: #666;">
-            Histórias, viagens e memórias que atravessam gerações
-        </h2>
+        .content {
+            max-width: 900px;
+            width: 100%;
+            text-align: center;
+        }
 
-        <p style="font-size: 18px; color: #555; margin-top: 20px;">
-            “Família é onde nossa história começa.”
-        </p>
+        /* TÍTULOS */
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
 
-    </div>
-</div>
-<!-- Fim da abertura -->
+        h2.section-title {
+            font-size: 32px;
+            margin: 40px 0 20px;
+        }
 
+        /* PIRÂMIDE */
+        .person {
+            display: inline-block;
+            margin: 20px;
+        }
 
+        .person img {
+            width: 140px;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid #333;
+        }
 
-
-
-
-        /* ============================
-           SEÇÃO 1 — PIRÂMIDE FAMILIAR
-           ============================ */
-        .section-title { font-size:32px; margin:40px 0 20px; text-align:center; }
-        .tree { text-align:center; }
-        .person { display:inline-block; margin:20px; }
-        .person img { width:140px; height:140px; object-fit:cover; border-radius:10px; border:3px solid #333; }
-        .level { margin:40px 0; }
-
-        footer {
+        .tree {
             text-align: center;
             padding: 20px;
             font-size: 0.85rem;
@@ -47,82 +67,64 @@
             border-top: 1px solid #ddd;
             background: #fafafa;
         }
+
+        .level {
+            margin: 40px 0;
+        }
+
+        footer {
+            margin: 40px;
+            font-size: 0.8rem;
+            color: #777;
+        }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Família Pizzirani</h1>
-        <p>Histórias que atravessam gerações.</p>
-        <p>Memórias, raízes e laços que permanecem.</p>
-    </header>
+    <div class="container">
+        <div class="content">
 
-    <!-- BOAS-VINDAS EM 4 IDIOMAS -->
-    <section class="boas-vindas">
-        <h1>BEM‑VINDOS</h1>
-        <h2>WELCOME</h2>
-        <h2>BIENVENIDOS</h2>
-        <h2>ようこそ</h2>
-    </section>
+            <!-- ABERTURA -->
+            <h1>Família Pizzirani</h1>
+            <p>Histórias que atravessam gerações.<br>
+            Memórias, raízes e laços que permanecem.</p>
 
-    <main>
+            <h2>BEM-VINDOS</h2>
+            <p>WELCOME • BIENVENIDOS • ようこそ</p>
 
-        <section class="intro">
-            <p>Bem-vindo a este espaço de lembranças, afetos e histórias.</p>
-            <p>Cada rosto, uma memória. Cada geração, um capítulo.</p>
-        </section>
+            <p>
+                Bem-vindo a este espaço de lembranças, afetos e histórias.<br>
+                Cada rosto, uma memória. Cada geração, um capítulo.
+            </p>
 
-        <!-- SUA PIRÂMIDE ORIGINAL -->
-        <h1 class="section-title">PIRÂMIDE FAMILIAR</h1>
+            <!-- TÍTULO DA PIRÂMIDE -->
+            <h2 class="section-title">PIRÂMIDE FAMILIAR</h2>
 
-        <div class="tree">
-
-            <!-- TOPO -->
+            <!-- PIRÂMIDE -->
             <div class="level">
                 <div class="person">
-                    <img src="imagens/familia/Arnaldo_InPixio.png">
-                    <div>Arnaldo</div>
+                    <img src="img/exemplo1.jpg" alt="Pessoa 1">
+                    <p>Nome 1</p>
                 </div>
+
                 <div class="person">
-                    <img src="imagens/familia/amaria_InPixio.png">
-                    <div>Amaria</div>
+                    <img src="img/exemplo2.jpg" alt="Pessoa 2">
+                    <p>Nome 2</p>
                 </div>
             </div>
 
-            <!-- FILHOS -->
-            <div class="level">
-                <div class="person"><img src="imagens/familia/patricia_InPixio.png"><div>Patrícia</div></div>
-                <div class="person"><img src="imagens/familia/andrea_InPixio.png"><div>Andréa</div></div>
-                <div class="person"><img src="imagens/familia/marcelo_InPixio.png"><div>Marcelo</div></div>
+            <div class="tree">
+                <p>Árvore genealógica em construção.</p>
             </div>
 
-            <!-- NETOS -->
-            <div class="level">
-                <div class="person"><img src="imagens/familia/Lucas.jpg"><div>Lucas</div></div>
-                <div class="person"><img src="imagens/familia/sthefanie.jpg"><div>Sthefanie</div></div>
-                <div class="person"><img src="imagens/familia/paula.jpg"><div>Paula</div></div>
-                <div class="person"><img src="imagens/familia/pamela.jpg"><div>Pamela</div></div>
-                <div class="person"><img src="imagens/familia/michele.jpg"><div>Michele</div></div>
-                <div class="person"><img src="imagens/familia/barbara.jpg"><div>Barbara</div></div>
-                <div class="person"><img src="imagens/familia/marcella.jpg"><div>Marcella</div></div>
-                <div class="person"><img src="imagens/familia/marcelo_neto.jpg"><div>Marcelo (neto)</div></div>
-            </div>
-
-            <!-- BISNETOS -->
-            <div class="level">
-                <div class="person"><img src="imagens/familia/lorena e as flores.jpg"><div>Lorena</div></div>
-                <div class="person"><img src="imagens/familia/ALICE 1_InPixio_InPixioFINAL.png"><div>Alice</div></div>
-                <div class="person"><img src="imagens/familia/PEDRO_HOME PAGE.jpg"><div>Pedro</div></div>
-            </div>
+            <footer>
+                © 2026 Família Pizzirani — Todos os direitos reservados.
+            </footer>
 
         </div>
-
-    </main>
-
-    <footer>
-        <p>&copy; Família Pizzirani — criado com carinho.</p>
-    </footer>
+    </div>
 
 </body>
 </html>
+

@@ -108,7 +108,42 @@
 <div class="tree">
 
     <!-- TOPO -->
-    <div class="level">
+   <div class="level netos">
+<div class="level netos">
+    <div class="person"><img src="imagens/familia/Lucas.jpg"><div>Lucas</div></div>
+    <div class="person"><img src="imagens/familia/sthefanie.jpg"><div>Sthefanie</div></div>
+    <div class="person"><img src="imagens/familia/paula.jpg"><div>Paula</div></div>
+    <div class="person"><img src="imagens/familia/pamela.jpg"><div>Pamela</div></div>
+    <div class="person"><img src="imagens/familia/michele.jpg"><div>Michele</div></div>
+    <div class="person"><img src="imagens/familia/barbara.jpg"><div>Barbara</div></div>
+    <div class="person"><img src="imagens/familia/marcella.jpg"><div>Marcella</div></div>
+    <div class="person"><img src="imagens/familia/marcelo_neto.jpg"><div>Marcelo (neto)</div></div>
+</div>
+/* NETOS — 8 EM UMA ÚNICA LINHA */
+.netos {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 8px;
+    justify-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Redução apenas para os netos */
+.netos .person img {
+    width: 75px;
+    height: 75px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #333;
+}
+
+/* Ajuste do nome abaixo da foto */
+.netos .person div {
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
         <div class="person">
             <img src="imagens/familia/Arnaldo_InPixio.png">
             <div>Arnaldo</div>

@@ -44,42 +44,28 @@
             font-size: 32px;
             margin: 40px 0 20px;
         }
-
-        /* PIRÂMIDE */
-        .person {
-            display: inline-block;
-            margin: 20px;
-        }
-
-        .person img {
-            width: 140px;
-            height: 140px;
-            object-fit: cover;
-            border-radius: 10px;
-            border: 3px solid #333;
-        }
-
-        .tree {
-            text-align: center;
-            padding: 20px;
-            font-size: 0.85rem;
-            color: #777;
-            border-top: 1px solid #ddd;
-            background: #fafafa;
-        }
-
-        .level {
-          .level {
-    margin:40px auto;   /* mantém o vertical, centraliza horizontal */
-    max-width:800px;    /* compactação horizontal de 50% */
+/* PIRÂMIDE */
+.person {
+    display: inline-block;
+    margin: 20px 10px; /* horizontal reduzido */
 }
 
-        }
+.person img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #333;
+}
 
-        footer {
-            margin: 40px;
-            font-size: 0.8rem;
-            color: #777;
+/* GRUPOS (Pais, Filhos, Netos, Bisnetos) */
+.level {
+    margin: 40px 0;      /* vertical (em pé) — você disse que está ótimo */
+    max-width: 800px;    /* compactação horizontal entre os grupos */
+    margin-left: auto;
+    margin-right: auto;  /* centraliza */
+}
+
         }
     </style>
 </head>

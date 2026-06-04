@@ -49,6 +49,26 @@
     .menu a:hover {
       background: #0f5ca4;
     }
+
+    /* ===== PIRÂMIDE ===== */
+    .section-title { font-size:32px; margin:40px 0 20px; text-align:center; }
+    .tree { text-align:center; }
+    .person { display:inline-block; margin:20px; }
+    .person img {
+      width:140px;
+      height:140px;
+      object-fit:cover;
+      border-radius:10px;
+      border:3px solid #333;
+    }
+    .level { margin:40px 0; }
+
+    /* NETOS – reduzidos para caber 8 em uma linha */
+    .level.netos .person img {
+      width:110px;
+      height:110px;
+    }
+
     footer {
       margin-top: 40px;
       padding: 15px;
@@ -67,13 +87,60 @@
 <main>
 
   <p style="text-align:center;">
-    Esta é a página inicial da Família Pizzirani.  
+    Esta é a página inicial da Família Pizzirani.<br>
     Escolha uma das opções abaixo para navegar:
   </p>
 
   <div class="menu">
     <a href="viagens.html">Viagens da Família</a>
     <a href="videos_familia.htm">Vídeos da Família</a>
+  </div>
+
+  <!-- ============================
+       SEÇÃO 1 — PIRÂMIDE FAMILIAR
+       ============================ -->
+  <h1 class="section-title">PIRÂMIDE FAMILIAR</h1>
+
+  <div class="tree">
+
+      <!-- TOPO -->
+      <div class="level">
+          <div class="person">
+              <img src="imagens/familia/Arnaldo_InPixio.png">
+              <div>Arnaldo</div>
+          </div>
+          <div class="person">
+              <img src="imagens/familia/amaria_InPixio.png">
+              <div>Amaria</div>
+          </div>
+      </div>
+
+      <!-- FILHOS -->
+      <div class="level">
+          <div class="person"><img src="imagens/familia/patricia_InPixio.png"><div>Patrícia</div></div>
+          <div class="person"><img src="imagens/familia/andrea_InPixio.png"><div>Andréa</div></div>
+          <div class="person"><img src="imagens/familia/marcelo_InPixio.png"><div>Marcelo</div></div>
+      </div>
+
+      <!-- NETOS -->
+      <div class="level netos">
+          <div class="person"><img src="imagens/familia/Lucas.jpg"><div>Lucas</div></div>
+          <div class="person"><img src="imagens/familia/sthefanie.jpg"><div>Sthefanie</div></div>
+          <div class="person"><img src="imagens/familia/paula.jpg"><div>Paula</div></div>
+          <div class="person"><img src="imagens/familia/pamela.jpg"><div>Pamela</div></div>
+          <div class="person"><img src="imagens/familia/michele.jpg"><div>Michele</div></div>
+          <div class="person"><img src="imagens/familia/barbara.jpg"><div>Barbara</div></div>
+          <div class="person"><img src="imagens/familia/marcella.jpg"><div>Marcella</div></div>
+          <div class="person"><img src="imagens/familia/marcelo_neto.jpg"><div>Marcelo (neto)</div></div>
+      </div>
+
+      <!-- BISNETOS -->
+      <div class="level">
+          <div class="person"><img src="imagens/familia/lorena e as flores.jpg"><div>Lorena</div></div>
+          <div class="person"><img src="imagens/familia/ALICE 1_InPixio_InPixioFINAL.png"><div>Alice</div></div>
+          <div class="person"><img src="imagens/familia/PEDRO_HOME PAGE.jpg"><div>Pedro</div></div>
+      </div>
+
   </div>
 
 </main>

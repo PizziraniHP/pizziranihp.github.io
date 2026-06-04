@@ -55,19 +55,17 @@
     .tree { text-align:center; }
     .person { display:inline-block; margin:20px; }
     .person img {
-      width:140px;
-      height:140px;
       object-fit:cover;
       border-radius:10px;
       border:3px solid #333;
     }
     .level { margin:40px 0; }
 
-    /* NETOS – reduzidos para caber 8 em uma linha */
-    .level.netos .person img {
-      width:110px;
-      height:110px;
-    }
+    /* TAMANHOS POR NÍVEL */
+    .level.pais .person img { width:150px; height:150px; }
+    .level.filhos .person img { width:120px; height:120px; }
+    .level.netos .person img { width:90px; height:90px; }
+    .level.bisnetos .person img { width:120px; height:120px; }
 
     footer {
       margin-top: 40px;
@@ -75,6 +73,13 @@
       background-color: #e9e9e9;
       text-align: center;
       font-size: 0.85rem;
+    }
+
+    .welcome-block {
+      text-align:center;
+      margin: 30px 0;
+      font-size: 1.1rem;
+      line-height: 1.8;
     }
   </style>
 </head>
@@ -86,10 +91,14 @@
 
 <main>
 
-  <p style="text-align:center;">
-    Esta é a página inicial da Família Pizzirani.<br>
-    Escolha uma das opções abaixo para navegar:
-  </p>
+  <!-- MENSAGENS MULTILÍNGUES -->
+  <div class="welcome-block">
+    <strong>Bem-vindo à página da Família Pizzirani</strong><br>
+    Welcome to the Pizzirani Family Home Page<br>
+    Benvenuto nella Home Page della Famiglia Pizzirani<br>
+    Bienvenido a la Página de la Familia Pizzirani<br>
+    Bienvenue sur la Page de la Famille Pizzirani
+  </div>
 
   <div class="menu">
     <a href="viagens.html">Viagens da Família</a>
@@ -103,8 +112,8 @@
 
   <div class="tree">
 
-      <!-- TOPO -->
-      <div class="level">
+      <!-- PAIS -->
+      <div class="level pais">
           <div class="person">
               <img src="imagens/familia/Arnaldo_InPixio.png">
               <div>Arnaldo</div>
@@ -116,7 +125,7 @@
       </div>
 
       <!-- FILHOS -->
-      <div class="level">
+      <div class="level filhos">
           <div class="person"><img src="imagens/familia/patricia_InPixio.png"><div>Patrícia</div></div>
           <div class="person"><img src="imagens/familia/andrea_InPixio.png"><div>Andréa</div></div>
           <div class="person"><img src="imagens/familia/marcelo_InPixio.png"><div>Marcelo</div></div>
@@ -135,7 +144,7 @@
       </div>
 
       <!-- BISNETOS -->
-      <div class="level">
+      <div class="level bisnetos">
           <div class="person"><img src="imagens/familia/lorena e as flores.jpg"><div>Lorena</div></div>
           <div class="person"><img src="imagens/familia/ALICE 1_InPixio_InPixioFINAL.png"><div>Alice</div></div>
           <div class="person"><img src="imagens/familia/PEDRO_HOME PAGE.jpg"><div>Pedro</div></div>

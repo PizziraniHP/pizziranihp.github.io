@@ -10,7 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: #ffffff;
+            background: #d0d0d0; /* cinza levemente mais escuro */
             color: #333;
         }
 
@@ -55,7 +55,7 @@
 
         .person {
             display: inline-block;
-            margin: 15px 10px;
+            margin: 10px 6px; /* REDUZIDO — menos espaço horizontal */
         }
 
         .person img {
@@ -77,7 +77,7 @@
         .netos {
             display: grid;
             grid-template-columns: repeat(8, 1fr);
-            gap: 10px;
+            gap: 6px; /* REDUZIDO — menos espaço entre as fotos */
             justify-items: center;
             max-width: 800px;
             margin: 0 auto;
@@ -108,7 +108,15 @@
             height: 95px;
         }
 
-        /* BISNETOS — mantém tamanho atual */
+        /* RODAPÉ */
+        .footer {
+            text-align: center;
+            padding: 18px 0;
+            font-size: 14px;
+            color: #555;
+            background-color: #e0e0e0;
+            margin-top: 40px;
+        }
     </style>
 </head>
 
@@ -117,7 +125,14 @@
     <div class="container">
         <div class="content">
 
+            <!-- ========================================================= -->
+            <!-- =====================  TÍTULO PRINCIPAL  ================= -->
+            <!-- ========================================================= -->
             <h1>Família Pizzirani</h1>
+
+            <!-- ========================================================= -->
+            <!-- ==================  MENSAGEM DE BOAS-VINDAS  ============ -->
+            <!-- ========================================================= -->
             <p class="intro-text">
                 Histórias que atravessam gerações.<br>
                 Memórias, raízes e laços que permanecem.
@@ -129,6 +144,9 @@
                 Este espaço celebra nossa história, nossas raízes e a jornada da Família Pizzirani.
             </p>
 
+            <!-- ========================================================= -->
+            <!-- =====================  MENSAGENS EM VÁRIAS LÍNGUAS ====== -->
+            <!-- ========================================================= -->
             <p class="flags-text">
                 🇧🇷 Bem-vindos — Um lar de memórias e afetos.<br>
                 🇺🇸 Welcome — A place to honor our family’s journey.<br>
@@ -142,7 +160,9 @@
 
             <div class="tree">
 
-                <!-- PAIS -->
+                <!-- ========================================================= -->
+                <!-- ===========================  PAIS  ======================= -->
+                <!-- ========================================================= -->
                 <div class="level">
                     <div class="person">
                         <img src="imagens/familia/Arnaldo_InPixio.png">
@@ -154,14 +174,18 @@
                     </div>
                 </div>
 
-                <!-- FILHOS -->
+                <!-- ========================================================= -->
+                <!-- ==========================  FILHOS  ====================== -->
+                <!-- ========================================================= -->
                 <div class="level">
                     <div class="person"><img src="imagens/familia/patricia_InPixio.png"><div>Patrícia</div></div>
                     <div class="person"><img src="imagens/familia/andrea_InPixio.png"><div>Andréa</div></div>
                     <div class="person"><img src="imagens/familia/marcelo_InPixio.png"><div>Marcelo</div></div>
                 </div>
 
-                <!-- NETOS -->
+                <!-- ========================================================= -->
+                <!-- ===========================  NETOS  ====================== -->
+                <!-- ========================================================= -->
                 <div class="level netos">
                     <div class="person"><img src="imagens/familia/Lucas.jpg"><div>Lucas</div></div>
                     <div class="person"><img src="imagens/familia/sthefanie.jpg"><div>Sthefanie</div></div>
@@ -173,7 +197,9 @@
                     <div class="person"><img src="imagens/familia/marcelo_neto.jpg"><div>Marcelo (neto)</div></div>
                 </div>
 
-                <!-- BISNETOS -->
+                <!-- ========================================================= -->
+                <!-- =========================  BISNETOS  ===================== -->
+                <!-- ========================================================= -->
                 <div class="level">
                     <div class="person"><img src="imagens/familia/lorena e as flores.jpg"><div>Lorena</div></div>
                     <div class="person"><img src="imagens/familia/ALICE 1_InPixio_InPixioFINAL.png"><div>Alice</div></div>
@@ -184,6 +210,13 @@
 
         </div>
     </div>
+
+    <!-- ========================================================= -->
+    <!-- ==========================  RODAPÉ  ====================== -->
+    <!-- ========================================================= -->
+    <footer class="footer">
+        © 2024 Família Pizzirani — Rio Claro, SP
+    </footer>
 
 </body>
 </html>

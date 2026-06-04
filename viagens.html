@@ -5,195 +5,203 @@
   <title>Viagens da Família Pizzirani</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: Arial, Helvetica, sans-serif;
       background-color: #f5f5f5;
       color: #333;
       line-height: 1.6;
     }
-
     main {
       max-width: 1100px;
       margin: 0 auto;
       padding: 20px;
     }
-
-    h1, h2, h3 {
-      margin-bottom: 15px;
-      font-weight: normal;
-    }
-
-    h1 {
-      font-size: 1.8rem;
-      text-align: center;
-      margin-top: 15px;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      margin-top: 10px;
-    }
-
-    p {
-      margin-bottom: 10px;
-      font-size: 0.95rem;
-    }
-
+    h1 { text-align: center; margin: 20px 0; font-size: 1.8rem; }
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
       margin-top: 20px;
     }
-
     .card {
-      background-color: #ffffff;
+      background-color: #fff;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       padding: 15px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
     }
-
-    .card h3 {
-      margin-bottom: 8px;
-      font-weight: bold;
-    }
-
-    .card p {
-      font-size: 0.9rem;
-      margin-bottom: 10px;
-    }
-
-    .card-footer {
-      margin-top: auto;
-      text-align: right;
-    }
-
+    .card h3 { margin-bottom: 10px; }
+    .card-footer { margin-top: auto; text-align: right; }
     .btn-link {
-      display: inline-block;
-      padding: 6px 10px;
-      font-size: 0.85rem;
-      border-radius: 4px;
       background-color: #1976d2;
       color: #fff;
+      padding: 6px 10px;
+      border-radius: 4px;
       text-decoration: none;
-      transition: background-color 0.2s;
+      font-size: 0.85rem;
     }
-
-    .btn-link:hover {
-      background-color: #0f5ca4;
-    }
-
+    .btn-link:hover { background-color: #0f5ca4; }
     footer {
-      margin-top: 30px;
-      padding: 15px 10px;
+      margin-top: 40px;
+      padding: 15px;
       background-color: #e9e9e9;
       text-align: center;
       font-size: 0.85rem;
-      color: #555;
     }
   </style>
 </head>
 <body>
 
-  <main>
+<main>
 
-    <!-- ========================================================= -->
-    <!-- ===================  VIAGENS DA FAMÍLIA  ================= -->
-    <!-- ========================================================= -->
-    <h1>Viagens da Família Pizzirani</h1>
+<h1>Viagens da Família Pizzirani</h1>
 
-    <p>
-      Nesta página você encontra as principais viagens da família, com links para páginas
-      completas e vídeos hospedados no YouTube.
-    </p>
+<div class="grid">
 
-    <div class="grid">
-
-      <!-- ========================================================= -->
-      <!-- ====================  VIAGEM 01  ======================== -->
-      <!-- ========================================================= -->
-      <div class="card">
-        <h3>Travessia Europa–Ásia</h3>
-        <p>Relato e registros da travessia entre Europa e Ásia.</p>
-        <div class="card-footer">
-          <a class="btn-link" href="europa_asia.htm">Ver página da viagem</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Viagem ao Caribe</h3>
-        <p>Imagens, histórias e vídeos da viagem ao Caribe.</p>
-        <div class="card-footer">
-          <a class="btn-link" href="caribe.htm">Ver página da viagem</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Viagem ao Sul da América do Sul</h3>
-        <p>Registros da viagem pelo sul do continente.</p>
-        <div class="card-footer">
-          <a class="btn-link" href="sul_america_do_sul.htm">Ver página da viagem</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Norte do Brasil</h3>
-        <p>Belezas naturais e experiências pelo Norte do Brasil.</p>
-        <div class="card-footer">
-          <a class="btn-link" href="norte_brasil.htm">Ver página da viagem</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Extremo Oriente – Ásia</h3>
-        <p>Viagem ao Extremo Oriente, com fotos e vídeos.</p>
-        <div class="card-footer">
-          <a class="btn-link" href="extremo_oriente_asia.htm">Ver página da viagem</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Marrocos</h3>
-        <p>Cidades, desertos e cultura do Marrocos.</p>
-        <div class="card-footer">
-          <a class="btn-link" href="marrocos.htm">Ver página da viagem</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Egito</h3>
-        <p>Pirâmides, história e registros da viagem ao Egito.</p>
-        <div class="card-footer">
-          <a class="btn-link" href="egito.htm">Ver página da viagem</a>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3>Israel</h3>
-        <p>Locais históricos e memórias da viagem a Israel.</p>
-        <div class="card-footer">
-          <a class="btn-link" href="israel.htm">Ver página da viagem</a>
-        </div>
-      </div>
-
-      <!-- Aqui depois a gente completa até as 15 viagens -->
-
+  <!-- 1 -->
+  <div class="card">
+    <h3>Navegando na Baía da Ilha Grande</h3>
+    <p>Primeira viagem registrada no site antigo.</p>
+    <div class="card-footer">
+      <a class="btn-link" href="baia_ilha_grande.htm">Ver página</a>
     </div>
+  </div>
 
-  </main>
+  <!-- 2 -->
+  <div class="card">
+    <h3>Conhecendo o Nordeste Brasileiro</h3>
+    <p>Viagem de 2012 pelo Nordeste.</p>
+    <div class="card-footer">
+      <a class="btn-link" href="nordeste_brasileiro.htm">Ver página</a>
+    </div>
+  </div>
 
-  <footer>
-    © Família Pizzirani – Viagens e Memórias
-  </footer>
+  <!-- 3 -->
+  <div class="card">
+    <h3>Travessia Atlântico – Santos → Veneza (2013)</h3>
+    <p>Travessia com o navio MSC Fantasia.</p>
+    <div class="card-footer">
+      <a class="btn-link" href="santos_veneza_2013.htm">Ver página</a>
+    </div>
+  </div>
+
+  <!-- 4 -->
+  <div class="card">
+    <h3>Travessia Atlântico – Veneza → Santos (2013)</h3>
+    <p>Travessia de retorno com o MSC Preziosa.</p>
+    <div class="card-footer">
+      <a class="btn-link" href="veneza_santos_2013.htm">Ver página</a>
+    </div>
+  </div>
+
+  <!-- 5 -->
+  <div class="card">
+    <h3>Minas Gerais – Circuito das Águas e Cidades Históricas (2013)</h3>
+    <p>Viagem cultural por Minas Gerais.</p>
+    <div class="card-footer">
+      <a class="btn-link" href="minas_gerais.htm">Ver página</a>
+    </div>
+  </div>
+
+  <!-- 6 -->
+  <div class="card">
+    <h3>Travessia Europa – Ásia / Oriente Médio (2014)</h3>
+    <p>Travessia pelo Mediterrâneo Oriental.</p>
+    <div class="card-footer">
+      <a class="btn-link" href="europa_asia.htm">Ver página</a>
+    </div>
+  </div>
+
+  <!-- 7 -->
+  <div class="card">
+    <h3>Viagem ao Caribe (2014)</h3>
+    <p>Navios Costa Mágica e Monarch.</p>
+    <div class="card-footer">
+      <a class="btn-link" href="caribe.htm">Ver página</a>
+    </div>
+  </div>
+
+  <!-- 8 -->
+  <div class="card">
+    <h3>Viagem ao Sul da América do Sul (2016)</h3>
+    <p>Chile, Uruguai, Buenos Aires e Montevideo.</p>
+    <div class="card-footer">
+      <a class="btn-link" href="sul_america_do_sul.htm">Ver página</a>
+    </div>
+  </div>
+
+  <!-- 9 -->
+  <div class="card">
+    <h3>Peru – Lima / Cusco / Machu Picchu (2016)</h3>
+    <p>Viagem histórica pelo Peru.</p>
+    <div class="card-footer">
+      <a class="btn-link" href="peru.htm">Ver página</a>
+    </div>
+  </div>
+
+  <!-- 10 -->
+  <div class="card">
+    <h3>Norte do Brasil – Amazonas / Belém / Marajó (2017)</h3>
+    <p>Viagem pela região amazônica.</p>
+    <div class="card-footer">
+      <a class="btn-link" href="norte_brasil.htm">Ver página</a>
+    </div>
+  </div>
+
+  <!-- 11 -->
+  <div class="card">
+    <h3>Extremo Oriente – Ásia / Emirados ao Japão (2019)</h3>
+    <p>Grande viagem pela Ásia.</p>
+    <div class="card-footer">
+      <a class="btn-link" href="extremo_oriente_asia.htm">Ver página</a>
+    </div>
+  </div>
+
+  <!-- 12 -->
+  <div class="card">
+    <h3>Marrocos – Outubro 2019</h3>
+    <p>Viagem pelo norte da África.</p>
+    <div class="card-footer">
+      <a class="btn-link" href="marrocos.htm">Ver página</a>
+    </div>
+  </div>
+
+  <!-- 13 -->
+  <div class="card">
+    <h3>Egito – Outubro 2019</h3>
+    <p>Pirâmides, templos e história.</p>
+    <div class="card-footer">
+      <a class="btn-link" href="egito.htm">Ver página</a>
+    </div>
+  </div>
+
+  <!-- 14 -->
+  <div class="card">
+    <h3>Israel – Novembro 2019</h3>
+    <p>Locais históricos e religiosos.</p>
+    <div class="card-footer">
+      <a class="btn-link" href="israel.htm">Ver página</a>
+    </div>
+  </div>
+
+  <!-- 15 -->
+  <div class="card">
+    <h3>Vídeos da Família</h3>
+    <p>Vídeos pessoais da família Pizzirani.</p>
+    <div class="card-footer">
+      <a class="btn-link" href="videos_familia.htm">Acessar</a>
+    </div>
+  </div>
+
+</div>
+
+</main>
+
+<footer>
+  © Família Pizzirani – Viagens e Memórias
+</footer>
 
 </body>
 </html>

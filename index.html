@@ -50,14 +50,12 @@
       background: #0f5ca4;
     }
 
-    /* ===== PIRÂMIDE ===== */
     .section-title { font-size:32px; margin:40px 0 20px; text-align:center; }
     .tree { text-align:center; }
 
-    /* REDUÇÃO DO ESPAÇO HORIZONTAL */
     .person {
       display: inline-block;
-      margin: 6px 4px; /* vertical 6px, horizontal 4px */
+      margin: 6px 4px;
     }
 
     .person img {
@@ -68,7 +66,6 @@
 
     .level { margin:30px 0; }
 
-    /* TAMANHOS POR NÍVEL */
     .level.pais .person img { width:100px; height:100px; }
     .level.filhos .person img { width:80px; height:80px; }
     .level.netos .person img { width:70px; height:70px; }
@@ -98,7 +95,6 @@
 
 <main>
 
-  <!-- MENSAGENS MULTILÍNGUES -->
   <div class="welcome-block">
     <strong>Bem-vindo à página da Família Pizzirani</strong><br>
     Welcome to the Pizzirani Family Home Page<br>
@@ -112,33 +108,20 @@
     <a href="videos_familia.htm">Vídeos da Família</a>
   </div>
 
-  <!-- ============================
-       SEÇÃO 1 — PIRÂMIDE FAMILIAR
-       ============================ -->
   <h1 class="section-title">PIRÂMIDE FAMILIAR</h1>
 
   <div class="tree">
-
-      <!-- PAIS -->
       <div class="level pais">
-          <div class="person">
-              <img src="imagens/familia/Arnaldo_InPixio.png">
-              <div>Arnaldo</div>
-          </div>
-          <div class="person">
-              <img src="imagens/familia/amaria_InPixio.png">
-              <div>Amaria</div>
-          </div>
+          <div class="person"><img src="imagens/familia/Arnaldo_InPixio.png"><div>Arnaldo</div></div>
+          <div class="person"><img src="imagens/familia/amaria_InPixio.png"><div>Amaria</div></div>
       </div>
 
-      <!-- FILHOS -->
       <div class="level filhos">
           <div class="person"><img src="imagens/familia/patricia_InPixio.png"><div>Patrícia</div></div>
           <div class="person"><img src="imagens/familia/andrea_InPixio.png"><div>Andréa</div></div>
           <div class="person"><img src="imagens/familia/marcelo_InPixio.png"><div>Marcelo</div></div>
       </div>
 
-      <!-- NETOS -->
       <div class="level netos">
           <div class="person"><img src="imagens/familia/Lucas.jpg"><div>Lucas</div></div>
           <div class="person"><img src="imagens/familia/sthefanie.jpg"><div>Sthefanie</div></div>
@@ -150,6 +133,35 @@
           <div class="person"><img src="imagens/familia/marcelo_neto.jpg"><div>Marcelo (neto)</div></div>
       </div>
 
-      <!-- BISNETOS -->
       <div class="level bisnetos">
-          <div class="person"><img src="imagens/familia/lorena e as flores.jpg"><div>Lorena</div>
+          <div class="person"><img src="imagens/familia/lorena e as flores.jpg"><div>Lorena</div></div>
+          <div class="person"><img src="imagens/familia/alice.jpg"><div>Alice</div></div>
+          <div class="person"><img src="imagens/familia/pedro.jpg"><div>Pedro</div></div>
+      </div>
+  </div>
+
+  <!-- ============================
+       BOTÕES ESPECIAIS DA FAMÍLIA
+       ============================ -->
+  <h1 class="section-title">ACESSO RÁPIDO</h1>
+
+  <div style="text-align:center; margin: 30px 0;">
+    <a href="viagens.html"
+       style="display:inline-block;background:#1976d2;color:white;padding:15px 30px;margin:10px;border-radius:10px;font-size:20px;text-decoration:none;box-shadow:0 4px 10px rgba(0,0,0,0.25);transition:0.3s;"
+       onmouseover="this.style.background='#0f5ca4'"
+       onmouseout="this.style.background='#1976d2'">🌍 Viagens da Família</a>
+
+    <a href="https://1drv.ms/f/c/523964bf28f6d6be/IgDU0wMmmUbUSJOJD2bp3272AX4hERN014vqFgaynIw718Q?e=pg3lvd"
+       style="display:inline-block;background:#8e24aa;color:white;padding:15px 30px;margin:10px;border-radius:10px;font-size:20px;text-decoration:none;box-shadow:0 4px 10px rgba(0,0,0,0.25);transition:0.3s;"
+       onmouseover="this.style.background='#6a1b9a'"
+       onmouseout="this.style.background='#8e24aa'">🎥 Vídeos da Família (restrito)</a>
+  </div>
+
+</main>
+
+<footer>
+  © Família Pizzirani – Memórias e Histórias
+</footer>
+
+</body>
+</html>

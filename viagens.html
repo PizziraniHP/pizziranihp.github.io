@@ -36,10 +36,11 @@
       text-align: center;
     }
 
-    /* ALTURA ORIGINAL — SEM DISTORCER, SEM FORÇAR */
+    /* AQUI ESTÁ A CORREÇÃO DEFINITIVA */
     .card img {
       width: 100%;
-      height: auto;
+      height: 180px;        /* altura original que você gostava */
+      object-fit: cover;    /* mantém bonito sem distorcer */
       border-radius: 8px;
       margin-bottom: 10px;
     }

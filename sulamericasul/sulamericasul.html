@@ -33,15 +33,22 @@
         margin-top: 40px;
         color: #003366;
     }
-    .foto {
-        text-align: center;
+
+    /* ===== GALERIA 4 FOTOS LADO A LADO ===== */
+    .galeria4 {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
         margin: 20px 0;
     }
-    .foto img {
-        width: 280px;
+    .galeria4 img {
+        width: 22%;
+        min-width: 180px;
         border-radius: 8px;
         box-shadow: 0 2px 6px rgba(0,0,0,0.2);
     }
+
     .videos {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -98,7 +105,6 @@ Madryn, Montevidéu e Buenos Aires, finalizando em Santos – Brasil.
     <img src="grupochile.jpg" alt="Grupo no Chile">
     <img src="grupochile1.jpg" alt="Grupo no Chile - Foto 2">
 </div>
-
 
 <h2>Vídeos da Viagem</h2>
 

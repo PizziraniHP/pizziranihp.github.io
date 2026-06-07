@@ -4,21 +4,30 @@
   <meta charset="UTF-8" />
   <title>Viagens da Família Pizzirani</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
+
     body {
       font-family: Arial, Helvetica, sans-serif;
       background-color: #f5f5f5;
       color: #333;
       line-height: 1.6;
     }
+
     main {
       max-width: 1100px;
       margin: 0 auto;
       padding: 20px;
     }
-    h1 { text-align: center; margin: 20px 0; font-size: 1.8rem; }
 
+    h1 {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 1.8rem;
+    }
+
+    /* GRID DOS CARTÕES */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -26,6 +35,7 @@
       margin-top: 20px;
     }
 
+    /* CARTÃO */
     .card {
       background-color: #fff;
       border-radius: 10px;
@@ -34,20 +44,24 @@
       display: flex;
       flex-direction: column;
       text-align: center;
+      overflow: hidden; /* ajuda no corte elegante */
     }
 
-    /* AQUI ESTÁ A CORREÇÃO DEFINITIVA */
+    /* IMAGENS — CORREÇÃO DEFINITIVA */
     .card img {
       width: 100%;
-      height: 180px;        /* altura original que você gostava */
-      object-fit: cover;    /* mantém bonito sem distorcer */
+      height: 230px;          /* altura ideal para todas as proporções */
+      object-fit: cover;      /* mantém proporção sem distorcer */
+      object-position: center;
       border-radius: 8px;
       margin-bottom: 10px;
+      display: block;
     }
 
     .card h3 { margin-bottom: 10px; }
     .card-footer { margin-top: auto; }
 
+    /* BOTÃO */
     .btn-link {
       background-color: #1976d2;
       color: #fff;
@@ -56,7 +70,10 @@
       text-decoration: none;
       font-size: 0.85rem;
     }
-    .btn-link:hover { background-color: #0f5ca4; }
+
+    .btn-link:hover {
+      background-color: #0f5ca4;
+    }
 
     footer {
       margin-top: 40px;
@@ -67,6 +84,7 @@
     }
   </style>
 </head>
+
 <body>
 
 <main>
@@ -75,20 +93,20 @@
 
 <div class="grid">
 
- <!-- 1 -->
-<div class="card">
-  <h3>Navegando na Baía da Ilha Grande</h3>
+  <!-- 1 -->
+  <div class="card">
+    <h3>Navegando na Baía da Ilha Grande</h3>
     <img src="ilhagrande/ilhagrande1.jpg" alt="Baía da Ilha Grande">
-  <p>Navegando na Baia numa lancha Focker 255.</p>
-  <div class="card-footer">
-    <a class="btn-link" href="ilhagrande/baiailhagrande.html">Ver página</a>
+    <p>Navegando na Baia numa lancha Focker 255.</p>
+    <div class="card-footer">
+      <a class="btn-link" href="ilhagrande/baiailhagrande.html">Ver página</a>
+    </div>
   </div>
-</div>
 
   <!-- 2 -->
   <div class="card">
     <h3>Conhecendo o Nordeste Brasileiro</h3>
-     <img src="nordestebrasil/mapregnordeste.png" alt="REGIÃO NORDESTE DO BRASIL">
+    <img src="nordestebrasil/mapregnordeste.png" alt="REGIÃO NORDESTE DO BRASIL">
     <p>Viagem de 2012 pelo Nordeste.</p>
     <div class="card-footer">
       <a class="btn-link" href="nordestebrasil/nordesteBR.html">Ver página</a>
@@ -98,7 +116,7 @@
   <!-- 3 -->
   <div class="card">
     <h3>Travessia Atlântico – Santos → Veneza (2013)</h3>
-     <img src="viagemsantosveneza2013/naviofantasia.jpg" alt="Navio Fantasia - Europa">
+    <img src="viagemsantosveneza2013/naviofantasia.jpg" alt="Navio Fantasia - Europa">
     <p>Travessia com o navio MSC Fantasia.</p>
     <div class="card-footer">
       <a class="btn-link" href="viagemsantosveneza2013/europa2013navfantasia.html">Ver página</a>
@@ -108,7 +126,7 @@
   <!-- 4 -->
   <div class="card">
     <h3>Travessia Atlântico – Genova → Santos (2013)</h3>
-     <img src="viagemgenovasantos/genovasantos.png" alt="Navio Navio Preciosa - Europa">
+    <img src="viagemgenovasantos/genovasantos.png" alt="Navio Preziosa - Europa">
     <p>Travessia de retorno com o MSC Preziosa.</p>
     <div class="card-footer">
       <a class="btn-link" href="viagemgenovasantos/viagemGenovaSantos.html">Ver página</a>
@@ -124,15 +142,15 @@
     </div>
   </div>
 
-<!-- 6 – ORIENTE MÉDIO -->
-<div class="card">
-  <h3>Travessia Europa – Ásia / Oriente Médio (2014)</h3>
-  <img src="orientemedio/orientemedio2.png" alt="Travessia Europa – Ásia / Oriente Médio (2014)">
-  <p>Travessia pelo Mediterrâneo Oriental.</p>
-  <div class="card-footer">
-    <a class="btn-link" href="orientemedio/orientemedio_1.html">Ver página</a>
+  <!-- 6 -->
+  <div class="card">
+    <h3>Travessia Europa – Ásia / Oriente Médio (2014)</h3>
+    <img src="orientemedio/orientemedio2.png" alt="Travessia Europa – Ásia / Oriente Médio (2014)">
+    <p>Travessia pelo Mediterrâneo Oriental.</p>
+    <div class="card-footer">
+      <a class="btn-link" href="orientemedio/orientemedio_1.html">Ver página</a>
+    </div>
   </div>
-</div>
 
   <!-- 7 -->
   <div class="card">
@@ -143,7 +161,7 @@
     </div>
   </div>
 
-  <!-- 8 – SUL AMÉRICA -->
+  <!-- 8 -->
   <div class="card">
     <h3>Viagem ao Sul da América do Sul (2016)</h3>
     <img src="sulamericasul/sulamericasul.png" alt="Sul da América do Sul">
@@ -180,7 +198,7 @@
     </div>
   </div>
 
-  <!-- 12 – MARROCOS -->
+  <!-- 12 -->
   <div class="card">
     <h3>Marrocos – Outubro 2019</h3>
     <img src="marrocos/marrocos_imag.jpg" alt="Marrocos – Outubro 2019">
@@ -190,7 +208,7 @@
     </div>
   </div>
 
-  <!-- 13 – EGITO -->
+  <!-- 13 -->
   <div class="card">
     <h3>Egito – Outubro 2019</h3>
     <img src="egito/egito_imag.jpg" alt="Egito – Outubro 2019">
@@ -200,7 +218,7 @@
     </div>
   </div>
 
-  <!-- 14 – ISRAEL -->
+  <!-- 14 -->
   <div class="card">
     <h3>Israel – Novembro 2019</h3>
     <img src="israel/israel_imag.jpg" alt="Israel – Novembro 2019">
@@ -240,3 +258,4 @@
 
 </body>
 </html>
+

@@ -4,10 +4,11 @@
   <meta charset="UTF-8">
   <title>Vídeos da Família Pizzirani</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
-      background: #f5f5f5;
+      background: #f2f2f2;
       margin: 0;
       padding: 0;
       color: #333;
@@ -22,12 +23,12 @@
     }
 
     main {
-      max-width: 1000px;
-      margin: 20px auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 1100px;
+      margin: 25px auto;
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
     }
 
     h1 {
@@ -45,61 +46,70 @@
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 20px;
+      gap: 22px;
     }
 
     .video-card {
-      background: #fafafa;
+      background: #ffffff;
       border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.10);
       overflow: hidden;
       display: flex;
       flex-direction: column;
+      transition: transform .15s ease-in-out;
+    }
+
+    .video-card:hover {
+      transform: scale(1.02);
     }
 
     .video-thumb {
       width: 100%;
-      height: 135px;
+      height: 150px;
       object-fit: cover;
       display: block;
     }
 
     .video-content {
-      padding: 10px 12px 14px;
+      padding: 12px;
       text-align: center;
     }
 
     .video-title {
       font-size: 0.95rem;
       font-weight: bold;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+      color: #1976d2;
     }
 
     .video-link {
       display: inline-block;
       margin-top: 4px;
       font-size: 0.85rem;
-      color: #1976d2;
+      padding: 6px 12px;
+      background: #1976d2;
+      color: white;
+      border-radius: 6px;
       text-decoration: none;
     }
 
     .video-link:hover {
-      text-decoration: underline;
+      background: #005fa3;
     }
 
     .back-button {
       text-align: center;
-      margin: 30px 0 10px;
+      margin: 35px 0 10px;
     }
 
     .back-button a {
       display:inline-block;
-      padding:8px 16px;
-      background:#0077cc;
+      padding:10px 20px;
+      background:#1976d2;
       color:white;
       text-decoration:none;
       border-radius:6px;
-      font-size:0.95rem;
+      font-size:1rem;
     }
 
     .back-button a:hover {
@@ -123,6 +133,7 @@
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -137,380 +148,3 @@
   </div>
 
   <div class="grid">
-
-    <!-- 1 -->
-    <div class="video-card">
-      <a href="https://youtu.be/TSZdcO9Wr-g" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/TSZdcO9Wr-g/hqdefault.jpg" alt="Vídeo I - Aniversário Antonia Maria">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO I – Aniversário Antonia Maria</div>
-        <a class="video-link" href="https://youtu.be/TSZdcO9Wr-g" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 2 -->
-    <div class="video-card">
-      <a href="https://youtu.be/lbp1pEss6tw" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/lbp1pEss6tw/hqdefault.jpg" alt="Vídeo II – Aniversário D. Helena 91 anos">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO II – Aniversário D. Helena 91 anos</div>
-        <a class="video-link" href="https://youtu.be/lbp1pEss6tw" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 3 -->
-    <div class="video-card">
-      <a href="https://youtu.be/rL6mVBqoqeA" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/rL6mVBqoqeA/hqdefault.jpg" alt="Vídeo III – Aniversário Arnaldo">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO III – Aniversário Arnaldo</div>
-        <a class="video-link" href="https://youtu.be/rL6mVBqoqeA" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 4 -->
-    <div class="video-card">
-      <a href="https://youtu.be/NKNEgdCnfGc" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/NKNEgdCnfGc/hqdefault.jpg" alt="Vídeo IV – Antonia Maria">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO IV – Antonia Maria</div>
-        <a class="video-link" href="https://youtu.be/NKNEgdCnfGc" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 5 -->
-    <div class="video-card">
-      <a href="https://youtu.be/cFEJ3pq9Gu4" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/cFEJ3pq9Gu4/hqdefault.jpg" alt="Vídeo V – Niver Antonia Maria 2003">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO V – Niver Antonia Maria 2003</div>
-        <a class="video-link" href="https://youtu.be/cFEJ3pq9Gu4" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 6 -->
-    <div class="video-card">
-      <a href="https://youtu.be/52HJuTaQ31Q" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/52HJuTaQ31Q/hqdefault.jpg" alt="Vídeo VI – Brincadeiras na piscina">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO VI – Brincadeiras na piscina</div>
-        <a class="video-link" href="https://youtu.be/52HJuTaQ31Q" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 7 -->
-    <div class="video-card">
-      <a href="https://youtu.be/Srax4QPlVU0" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/Srax4QPlVU0/hqdefault.jpg" alt="Vídeo VII – Helena Pacheco Cunha">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO VII – Helena Pacheco Cunha</div>
-        <a class="video-link" href="https://youtu.be/Srax4QPlVU0" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 8 -->
-    <div class="video-card">
-      <a href="https://youtu.be/W_cX_g1d430" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/W_cX_g1d430/hqdefault.jpg" alt="Vídeo VIII – Nossos bebês">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO VIII – Nossos bebês</div>
-        <a class="video-link" href="https://youtu.be/W_cX_g1d430" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 9 -->
-    <div class="video-card">
-      <a href="https://youtu.be/LNEuBi096Gg" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/LNEuBi096Gg/hqdefault.jpg" alt="Vídeo IX – Passeio Boião e visita Richard">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO IX – Passeio Boião e visita Richard</div>
-        <a class="video-link" href="https://youtu.be/LNEuBi096Gg" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 10 -->
-    <div class="video-card">
-      <a href="https://youtu.be/tHSvfMHf8Q8" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/tHSvfMHf8Q8/hqdefault.jpg" alt="Vídeo X – Pescaria inusitada">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO X – Pescaria inusitada</div>
-        <a class="video-link" href="https://youtu.be/tHSvfMHf8Q8" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 11 -->
-    <div class="video-card">
-      <a href="https://youtu.be/RWgjgyPpwXQ" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/RWgjgyPpwXQ/hqdefault.jpg" alt="Vídeo XI – Arnaldo e familiares">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO XI – Arnaldo e familiares</div>
-        <a class="video-link" href="https://youtu.be/RWgjgyPpwXQ" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 12 -->
-    <div class="video-card">
-      <a href="https://youtu.be/84uCEvwn_vM" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/84uCEvwn_vM/hqdefault.jpg" alt="Vídeo XII – Viagens Crefisul">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO XII – Viagens Crefisul</div>
-        <a class="video-link" href="https://youtu.be/84uCEvwn_vM" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 13 -->
-    <div class="video-card">
-      <a href="https://youtu.be/wDL5Uv0V6iA" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/wDL5Uv0V6iA/hqdefault.jpg" alt="Vídeo XIII – Arnaldo bacharel em Direito">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO XIII – Arnaldo bacharel em Direito</div>
-        <a class="video-link" href="https://youtu.be/wDL5Uv0V6iA" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 14 -->
-    <div class="video-card">
-      <a href="https://youtu.be/ZBjO5QsZuuM" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/ZBjO5QsZuuM/hqdefault.jpg" alt="Vídeo XIV – Fotos do passado">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO XIV – Fotos do passado</div>
-        <a class="video-link" href="https://youtu.be/ZBjO5QsZuuM" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 15 -->
-    <div class="video-card">
-      <a href="https://youtu.be/4bENCFtFX1E" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/4bENCFtFX1E/hqdefault.jpg" alt="Vídeo XV – Natal de 1996">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO XV – Natal de 1996</div>
-        <a class="video-link" href="https://youtu.be/4bENCFtFX1E" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 16 -->
-    <div class="video-card">
-      <a href="https://youtu.be/uDaUIyba9as" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/uDaUIyba9as/hqdefault.jpg" alt="Vídeo XVI – Núpcías Arnaldo & Antonia">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO XVI – Núpcías Arnaldo &amp; Antonia</div>
-        <a class="video-link" href="https://youtu.be/uDaUIyba9as" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 17 -->
-    <div class="video-card">
-      <a href="https://youtu.be/z1s4q_iT3BY" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/z1s4q_iT3BY/hqdefault.jpg" alt="Vídeo XVII – Passeios de lancha">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO XVII – Passeios de lancha</div>
-        <a class="video-link" href="https://youtu.be/z1s4q_iT3BY" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 18 -->
-    <div class="video-card">
-      <a href="https://youtu.be/HS-Hg7jCuZk" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/HS-Hg7jCuZk/hqdefault.jpg" alt="Vídeo XVIII – Álbum para os Gracianos">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO XVIII – Álbum para os Gracianos</div>
-        <a class="video-link" href="https://youtu.be/HS-Hg7jCuZk" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 19 -->
-    <div class="video-card">
-      <a href="https://youtu.be/EKs3SkZW0E0" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/EKs3SkZW0E0/hqdefault.jpg" alt="Vídeo XIX – Aniversário Beatriz, Vanessa, Fabíola">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO XIX – Aniversário Beatriz, Vanessa, Fabíola</div>
-        <a class="video-link" href="https://youtu.be/EKs3SkZW0E0" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 20 -->
-    <div class="video-card">
-      <a href="https://youtu.be/DjrEXJwnOZk" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/DjrEXJwnOZk/hqdefault.jpg" alt="Vídeo XX – Fotos Lourdes e Tadeu">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO XX – Fotos Lourdes e Tadeu</div>
-        <a class="video-link" href="https://youtu.be/DjrEXJwnOZk" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 21 -->
-    <div class="video-card">
-      <a href="https://youtu.be/AV-MCzLzKTA" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/AV-MCzLzKTA/hqdefault.jpg" alt="Vídeo XXI – Gracianos Arte Final">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO XXI – Gracianos Arte Final</div>
-        <a class="video-link" href="https://youtu.be/AV-MCzLzKTA" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 22 -->
-    <div class="video-card">
-      <a href="https://youtu.be/9QHYsjrSWKU" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/9QHYsjrSWKU/hqdefault.jpg" alt="Vídeo XXII – Os Gracianos">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO XXII – Os Gracianos</div>
-        <a class="video-link" href="https://youtu.be/9QHYsjrSWKU" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 23 -->
-    <div class="video-card">
-      <a href="https://youtu.be/7BZbAkAhUro" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/7BZbAkAhUro/hqdefault.jpg" alt="Vídeo XXIII – Marcelo Pizzirani Neto">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO XXIII – Marcelo Pizzirani Neto</div>
-        <a class="video-link" href="https://youtu.be/7BZbAkAhUro" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 24 -->
-    <div class="video-card">
-      <a href="https://youtu.be/6fJx5Av4rkc" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/6fJx5Av4rkc/hqdefault.jpg" alt="Vídeo XXIV – Formatura Marcelo Pizzirani Neto">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO XXIV – Formatura Marcelo Pizzirani Neto</div>
-        <a class="video-link" href="https://youtu.be/6fJx5Av4rkc" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 25 -->
-    <div class="video-card">
-      <a href="https://youtu.be/Fwur1my12N4" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/Fwur1my12N4/hqdefault.jpg" alt="Vídeo XXV – Sessão solene – Formatura Marcelo">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO XXV – Sessão solene – Formatura Marcelo</div>
-        <a class="video-link" href="https://youtu.be/Fwur1my12N4" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 26 -->
-    <div class="video-card">
-      <a href="https://youtu.be/StHc8aC2ZlE" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/StHc8aC2ZlE/hqdefault.jpg" alt="Vídeo XXVI – Baile de formatura – Marcelo">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO XXVI – Baile de formatura – Marcelo</div>
-        <a class="video-link" href="https://youtu.be/StHc8aC2ZlE" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 27 -->
-    <div class="video-card">
-      <a href="https://youtu.be/a_VIF5T6Xiw" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/a_VIF5T6Xiw/hqdefault.jpg" alt="Vídeo XXVII – Barbara – filha do Marcelo">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO XXVII – Barbara – filha do Marcelo</div>
-        <a class="video-link" href="https://youtu.be/a_VIF5T6Xiw" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 28 -->
-    <div class="video-card">
-      <a href="https://youtu.be/VtEeSF4EYck" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/VtEeSF4EYck/hqdefault.jpg" alt="Vídeo XXVIII – Mergulhando em Paraty">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO XXVIII – Mergulhando em Paraty</div>
-        <a class="video-link" href="https://youtu.be/VtEeSF4EYck" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 29 -->
-    <div class="video-card">
-      <a href="https://youtu.be/3Lxya36N6iM" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/3Lxya36N6iM/hqdefault.jpg" alt="Vídeo XXIX – Na boquinha da garrafa – Marcelinho">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO XXIX – Na boquinha da garrafa – Marcelinho</div>
-        <a class="video-link" href="https://youtu.be/3Lxya36N6iM" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 30 -->
-    <div class="video-card">
-      <a href="https://youtu.be/HNPuzkQW1o8" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/HNPuzkQW1o8/hqdefault.jpg" alt="Vídeo XXX – Aniversário Antonia Maria – Novembro 2016">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO XXX – Aniversário Antonia Maria – Novembro 2016</div>
-        <a class="video-link" href="https://youtu.be/HNPuzkQW1o8" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 31 -->
-    <div class="video-card">
-      <a href="https://youtu.be/hGWB6XLebMM" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/hGWB6XLebMM/hqdefault.jpg" alt="Vídeo XXXI – Aniversário Arnaldo – Setembro 2017">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO XXXI – Aniversário Arnaldo – Setembro 2017</div>
-        <a class="video-link" href="https://youtu.be/hGWB6XLebMM" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 32 -->
-    <div class="video-card">
-      <a href="https://youtu.be/sVA_GpDWnww" target="_blank">
-        <img class="video-thumb" src="https://img.youtube.com/vi/sVA_GpDWnww/hqdefault.jpg" alt="Vídeo XXXII – Acidente de moto – Sthefanie">
-      </a>
-      <div class="video-content">
-        <div class="video-title">VÍDEO XXXII – Acidente de moto – Sthefanie</div>
-        <a class="video-link" href="https://youtu.be/sVA_GpDWnww" target="_blank">Abrir no YouTube</a>
-      </div>
-    </div>
-
-    <!-- 33 (aguardando) -->
-    <div class="video-card">
-      <div class="video-content">
-        <div class="video-title">VÍDEO XXXIII – Aguardando novo vídeo</div>
-        <div style="font-size:0.85rem;color:#777;">Em breve, mais memórias da família.</div>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="back-button">
-    <a href="../index.html">Voltar para página inicial</a>
-  </div>
-
-</main>
-
-<footer>
-  © Família Pizzirani – Memórias e Histórias
-  <br>
-  <img src="../imagens/familia/favicon.ico" alt="Família Pizzirani">
-</footer>
-
-</body>
-</html>

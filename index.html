@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Pizzirani Home Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -13,12 +14,14 @@
       color: #333;
       line-height: 1.6;
     }
+
     header {
       background: #1976d2;
       color: white;
       padding: 20px;
       text-align: center;
     }
+
     main {
       max-width: 900px;
       margin: 20px auto;
@@ -27,17 +30,22 @@
       border-radius: 10px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
+
+    .welcome-block {
+      text-align:center;
+      margin: 30px 0;
+      font-size: 1.1rem;
+      line-height: 1.8;
     }
 
-    .section-title { font-size:32px; margin:40px 0 20px; text-align:center; }
+    /* Árvore */
     .tree { text-align:center; }
 
     .person {
       display: inline-block;
       margin: 6px 4px;
+      text-align:center;
+      font-size: 0.9rem;
     }
 
     .person img {
@@ -49,8 +57,20 @@
     .level { margin:30px 0; }
 
     .level.pais .person img { width:100px; height:100px; }
-    .level.filhos .person img { width:80px; height:80px; }
-    .level.netos .person img { width:70px; height:70px; }
+    .level.filhos .person img { width:85px; height:85px; }
+
+    /* NETOS — agora 14 fotos em 2 linhas */
+    .level.netos {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 12px;
+      justify-items: center;
+    }
+    .level.netos .person img {
+      width: 95px;
+      height: 95px;
+    }
+
     .level.bisnetos .person img { width:85px; height:85px; }
 
     footer {
@@ -62,14 +82,7 @@
       border-top: 2px solid #ccc;
     }
 
-    .welcome-block {
-      text-align:center;
-      margin: 30px 0;
-      font-size: 1.1rem;
-      line-height: 1.8;
-    }
-
-    /* Ícone secreto do rodapé */
+    /* Ícone secreto */
     .secret-icon img {
       width: 26px;
       height: 26px;
@@ -77,6 +90,32 @@
       transition: 0.3s;
     }
     .secret-icon img:hover {
+      opacity: 0.9;
+    }
+
+    /* Botão VIAGENS — totalmente redesenhado */
+    .travel-button {
+      display: block;
+      background: #1976d2;
+      color: white;
+      padding: 40px 20px;
+      margin: 40px auto;
+      border-radius: 25px;
+      font-size: 42px;
+      text-decoration: none;
+      text-align: center;
+      width: 90%;
+      max-width: 700px;
+      box-shadow: 0 8px 12px rgba(0,0,0,0.25);
+      transition: 0.3s;
+    }
+    .travel-button:hover {
+      background: #0f5ca4;
+    }
+    .travel-subtitle {
+      font-size: 20px;
+      margin-top: 10px;
+      display: block;
       opacity: 0.9;
     }
 
@@ -90,6 +129,7 @@
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -106,9 +146,9 @@
     Bienvenue sur la Page de la Famille Pizzirani
   </div>
 
-  <h1 class="section-title">PIRÂMIDE FAMILIAR</h1>
-
+  <!-- ÁRVORE FAMILIAR -->
   <div class="tree">
+
       <div class="level pais">
           <div class="person"><img src="imagens/familia/Arnaldo_InPixio.png"><div>Arnaldo</div></div>
           <div class="person"><img src="imagens/familia/amaria_InPixio.png"><div>Amaria</div></div>
@@ -117,46 +157,43 @@
       <div class="level filhos">
         <div class="person"><img src="imagens/familia/newsidnei1.jpeg"><div>Sidnei</div></div>   
         <div class="person"><img src="imagens/familia/newpatricia1.jpeg"><div>Patrícia</div></div>
-          <div class="person"><img src="imagens/familia/andrea_InPixio.png"><div>Andréa</div></div>
-          <div class="person"><img src="imagens/familia/marcelo_InPixio.png"><div>Marcelo</div></div>
+        <div class="person"><img src="imagens/familia/andrea_InPixio.png"><div>Andréa</div></div>
+        <div class="person"><img src="imagens/familia/marcelo_InPixio.png"><div>Marcelo</div></div>
       </div>
 
       <div class="level netos">
           <div class="person"><img src="imagens/familia/Lucas.jpg"><div>Lucas</div></div>
-        <div class="person"><img src="imagens/familia/new_luiz.jpeg"><div>Luiz</div></div>
+          <div class="person"><img src="imagens/familia/new_luiz.jpeg"><div>Luiz</div></div>
           <div class="person"><img src="imagens/familia/new_sthefanie.jpeg"><div>Sthefanie</div></div>
-         <div class="person"><img src="imagens/familia/new_marcos.jpeg"><div>Marcos</div></div>
+          <div class="person"><img src="imagens/familia/new_marcos.jpeg"><div>Marcos</div></div>
           <div class="person"><img src="imagens/familia/new_paula.jpeg"><div>Paula</div></div>
           <div class="person"><img src="imagens/familia/pamela.jpg"><div>Pamela</div></div>
           <div class="person"><img src="imagens/familia/michele.jpg"><div>Michele</div></div>
-         <div class="person"><img src="imagens/familia/newflavio1.jpeg"><div>Flavio</div></div>
-        <div class="person"><img src="imagens/familia/newbarbara1.jpeg"><div>Barbara</div></div>
-        <div class="person"><img src="imagens/familia/newlivia.jpeg"><div>Livia</div></div>
+          <div class="person"><img src="imagens/familia/newflavio1.jpeg"><div>Flavio</div></div>
+          <div class="person"><img src="imagens/familia/newbarbara1.jpeg"><div>Barbara</div></div>
+          <div class="person"><img src="imagens/familia/newlivia.jpeg"><div>Livia</div></div>
           <div class="person"><img src="imagens/familia/newmarcella.jpeg"><div>Marcella</div></div>
-                  <div class="person"><img src="imagens/familia/marcelo_neto.jpg"><div>Marcelo (neto)</div></div>
+          <div class="person"><img src="imagens/familia/marcelo_neto.jpg"><div>Marcelo (neto)</div></div>
       </div>
 
       <div class="level bisnetos">
           <div class="person"><img src="imagens/familia/new_lorena.jpeg"><div>Lorena</div></div>
           <div class="person"><img src="imagens/familia/new_alice.jpeg"><div>Alice</div></div>
-        <div class="person"><img src="imagens/familia/new_rafael.jpeg"><div>Rafael</div></div>
+          <div class="person"><img src="imagens/familia/new_rafael.jpeg"><div>Rafael</div></div>
           <div class="person"><img src="imagens/familia/newpedro1.jpeg"><div>Pedro</div></div>
-        <div class="person"><img src="imagens/familia/new_luna.jpeg"><div>Luna</div></div>
-        <div class="person"><img src="imagens/familia/gabrielaultrs.jpeg"><div>Gabriela</div></div>
+          <div class="person"><img src="imagens/familia/new_luna.jpeg"><div>Luna</div></div>
+          <div class="person"><img src="imagens/familia/gabrielaultrs.jpeg"><div>Gabriela</div></div>
       </div>
+
   </div>
 
-  <!-- ============================
-       ACESSO RÁPIDO
-       ============================ -->
-  <h1 class="section-title">ACESSO RÁPIDO</h1>
-
-  <div style="text-align:center; margin: 30px 0;">
-    <a href="viagens.html"
-       style="display:inline-block;background:#1976d2;color:white;padding:30px 60px;margin:20px;border-radius:20px;font-size:40px;text-decoration:none;box-shadow:0 8px 10px rgba(0,0,0,0.25);transition:0.3s;"
-       onmouseover="this.style.background='#0f5ca4'"
-       onmouseout="this.style.background='#1976d2'">🌍 Viagens da Família</a>
-  </div>
+  <!-- BOTÃO VIAGENS -->
+  <a href="viagens.html" class="travel-button">
+      🌍 VIAGENS
+      <span class="travel-subtitle">
+        Conheça conosco mais de 50 países e mais de uma centena de cidades no Brasil e no exterior.
+      </span>
+  </a>
 
   <!-- BLOCO DO GIF DE CONSTRUÇÃO -->
   <div class="construction-block">

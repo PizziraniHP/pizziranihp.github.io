@@ -234,16 +234,15 @@
       <label for="audioChoice" style="font-size:0.95rem;">Escolha um áudio:</label>
       <select id="audioChoice" style="font-size:0.95rem; padding:6px 10px; border-radius:6px; border:1px solid #ccc;">
         <option value="test">Áudio de teste</option>
-        <option value="local">Arquivo local</option>
+        <option value="song1">Música 1</option>
+        <option value="song2">Música 2</option>
+        <option value="song3">Música 3</option>
       </select>
-    </div>
-    <div id="localInput" style="margin-top:14px; display:none;">
-      <input id="audioFile" type="file" accept="audio/*" style="font-size:0.95rem;" />
     </div>
     <button id="botaoPlay" style="margin-top:12px; padding:12px 22px; font-size:1rem; border:none; border-radius:6px; background:#1976d2; color:#fff; cursor:pointer;">
       Tocar áudio
     </button>
-    <p id="audioHint" style="margin-top:8px; font-size:0.95rem; color:#555;">Use o áudio de teste ou selecione um arquivo local.</p>
+    <p id="audioHint" style="margin-top:8px; font-size:0.95rem; color:#555;">Selecione uma música do site e use o botão para tocar.</p>
   </div>
 
   <!-- BOTÃO VIAGENS -->
@@ -265,40 +264,25 @@
 <script>
   const musica = document.getElementById('musica');
   const audioChoice = document.getElementById('audioChoice');
-  const audioFile = document.getElementById('audioFile');
-  const localInput = document.getElementById('localInput');
   const audioHint = document.getElementById('audioHint');
   const botaoPlay = document.getElementById('botaoPlay');
-  const defaultSrc = 'audio/test.wav';
 
-  function setDefaultAudio() {
-    musica.src = defaultSrc;
+  const options = {
+    test: 'audio/test.wav',
+    song1: 'audio/song1.wav',
+    song2: 'audio/song2.wav',
+    song3: 'audio/song3.wav'
+  };
+
+  function setAudio(option) {
+    musica.src = options[option] || options.test;
     musica.load();
-    audioHint.textContent = 'Usando o áudio de teste. Selecione outro arquivo se quiser.';
-  }
-
-  function showLocalInput(show) {
-    localInput.style.display = show ? 'block' : 'none';
+    const label = audioChoice.options[audioChoice.selectedIndex].text;
+    audioHint.textContent = `Selecionado: ${label}`;
   }
 
   audioChoice.addEventListener('change', function(event) {
-    const value = event.target.value;
-    if (value === 'local') {
-      showLocalInput(true);
-      audioHint.textContent = 'Selecione um arquivo local para tocar.';
-    } else {
-      showLocalInput(false);
-      setDefaultAudio();
-    }
-  });
-
-  audioFile.addEventListener('change', function(event) {
-    const file = event.target.files[0];
-    if (!file) return;
-    const url = URL.createObjectURL(file);
-    musica.src = url;
-    musica.load();
-    audioHint.textContent = `Arquivo selecionado: ${file.name}`;
+    setAudio(event.target.value);
   });
 
   botaoPlay.addEventListener('click', function() {
@@ -307,6 +291,8 @@
       alert('O áudio não pôde ser reproduzido automaticamente. Toque novamente ou verifique o navegador.');
     });
   });
+
+  setAudio('test');
 </script>
 
 <footer>

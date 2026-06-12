@@ -226,16 +226,24 @@
   </div>
 
   <!-- ÁUDIO OPCIONAL - toque para iniciar -->
-  <div style="text-align:center; margin:30px 0;">
-    <audio id="musica" controls preload="auto">
-      <source src="audio/test.wav" type="audio/wav">
+  <div class="audio-block" style="text-align:center; margin:30px 0;">
+    <audio id="musica" controls preload="auto" src="audio/test.wav">
       Seu navegador não suporta o elemento de áudio.
     </audio>
-    <br>
+    <div style="margin-top:14px; display:flex; justify-content:center; gap:10px; align-items:center; flex-wrap:wrap;">
+      <label for="audioChoice" style="font-size:0.95rem;">Escolha um áudio:</label>
+      <select id="audioChoice" style="font-size:0.95rem; padding:6px 10px; border-radius:6px; border:1px solid #ccc;">
+        <option value="test">Áudio de teste</option>
+        <option value="local">Arquivo local</option>
+      </select>
+    </div>
+    <div id="localInput" style="margin-top:14px; display:none;">
+      <input id="audioFile" type="file" accept="audio/*" style="font-size:0.95rem;" />
+    </div>
     <button id="botaoPlay" style="margin-top:12px; padding:12px 22px; font-size:1rem; border:none; border-radius:6px; background:#1976d2; color:#fff; cursor:pointer;">
-      Tocar música
+      Tocar áudio
     </button>
-    <p style="margin-top:8px; font-size:0.95rem; color:#555;">Se o botão não funcionar, use o player acima ou abra a página via servidor local.</p>
+    <p id="audioHint" style="margin-top:8px; font-size:0.95rem; color:#555;">Use o áudio de teste ou selecione um arquivo local.</p>
   </div>
 
   <!-- BOTÃO VIAGENS -->
@@ -255,8 +263,45 @@
 </main>
 
 <script>
-  document.getElementById('botaoPlay').addEventListener('click', function() {
-    const musica = document.getElementById('musica');
+  const musica = document.getElementById('musica');
+  const audioChoice = document.getElementById('audioChoice');
+  const audioFile = document.getElementById('audioFile');
+  const localInput = document.getElementById('localInput');
+  const audioHint = document.getElementById('audioHint');
+  const botaoPlay = document.getElementById('botaoPlay');
+  const defaultSrc = 'audio/test.wav';
+
+  function setDefaultAudio() {
+    musica.src = defaultSrc;
+    musica.load();
+    audioHint.textContent = 'Usando o áudio de teste. Selecione outro arquivo se quiser.';
+  }
+
+  function showLocalInput(show) {
+    localInput.style.display = show ? 'block' : 'none';
+  }
+
+  audioChoice.addEventListener('change', function(event) {
+    const value = event.target.value;
+    if (value === 'local') {
+      showLocalInput(true);
+      audioHint.textContent = 'Selecione um arquivo local para tocar.';
+    } else {
+      showLocalInput(false);
+      setDefaultAudio();
+    }
+  });
+
+  audioFile.addEventListener('change', function(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+    const url = URL.createObjectURL(file);
+    musica.src = url;
+    musica.load();
+    audioHint.textContent = `Arquivo selecionado: ${file.name}`;
+  });
+
+  botaoPlay.addEventListener('click', function() {
     musica.play().catch(function(error) {
       console.log('Não foi possível reproduzir o áudio:', error);
       alert('O áudio não pôde ser reproduzido automaticamente. Toque novamente ou verifique o navegador.');

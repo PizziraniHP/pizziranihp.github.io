@@ -129,6 +129,20 @@
       font-size: 1rem;
       color: #444;
     }
+
+    .audio-block button {
+      padding: 12px 22px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 6px;
+      background: #1976d2;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .audio-block button:hover {
+      background: #0f5ca4;
+    }
   </style>
 </head>
 
@@ -211,6 +225,19 @@
 
   </div>
 
+  <!-- ÁUDIO OPCIONAL - toque para iniciar -->
+  <div style="text-align:center; margin:30px 0;">
+    <audio id="musica" controls preload="auto">
+      <source src="audio/test.wav" type="audio/wav">
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
+    <br>
+    <button id="botaoPlay" style="margin-top:12px; padding:12px 22px; font-size:1rem; border:none; border-radius:6px; background:#1976d2; color:#fff; cursor:pointer;">
+      Tocar música
+    </button>
+    <p style="margin-top:8px; font-size:0.95rem; color:#555;">Se o botão não funcionar, use o player acima ou abra a página via servidor local.</p>
+  </div>
+
   <!-- BOTÃO VIAGENS -->
   <a href="viagens.html" class="travel-button">
       🌍 VIAGENS
@@ -226,6 +253,16 @@
   </div>
 
 </main>
+
+<script>
+  document.getElementById('botaoPlay').addEventListener('click', function() {
+    const musica = document.getElementById('musica');
+    musica.play().catch(function(error) {
+      console.log('Não foi possível reproduzir o áudio:', error);
+      alert('O áudio não pôde ser reproduzido automaticamente. Toque novamente ou verifique o navegador.');
+    });
+  });
+</script>
 
 <footer>
   © Família Pizzirani – Memórias e Histórias

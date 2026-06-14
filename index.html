@@ -239,7 +239,7 @@
       <option value="audio/test.wav">Teste</option>
       <option value="audio/song1.mp3">Música 1</option>
       <option value="audio/song2.mp3">Música 2</option>
-      <option value="audio/076-Mariah-Carey-My-All.mp3">Mariah Carey - My All</option>
+      <option value="audio/076-Mariah-Carey-My-All.mp3">Mariah Carey – My All</option>
     </select>
   </div>
 
@@ -256,66 +256,32 @@
   const audio = document.getElementById("musica");
   const select = document.getElementById("audioChoice");
   const botao = document.getElementById("botaoPlay");
+  const hint = document.getElementById("audioHint");
 
   botao.addEventListener("click", () => {
     if (select.value) {
       audio.src = select.value;
       audio.play();
+      hint.textContent = "Reproduzindo: " + select.options[select.selectedIndex].text;
     }
   });
 </script>
 
-  </div>
+<!-- BOTÃO VIAGENS -->
+<a href="viagens.html" class="travel-button">
+    🌍 VIAGENS
+    <span class="travel-subtitle">
+      Conheça conosco mais de 50 países e mais de uma centena de cidades no Brasil e no exterior.
+    </span>
+</a>
 
-  <!-- BOTÃO VIAGENS -->
-  <a href="viagens.html" class="travel-button">
-      🌍 VIAGENS
-      <span class="travel-subtitle">
-        Conheça conosco mais de 50 países e mais de uma centena de cidades no Brasil e no exterior.
-      </span>
-  </a>
-
-  <!-- BLOCO DO GIF DE CONSTRUÇÃO -->
-  <div class="construction-block">
-      <img src="imagens/familia/mantrab.gif" alt="Site em construção" style="max-width:200px;">
-      <div><strong>SITE EM CONSTRUÇÃO</strong></div>
-  </div>
+<!-- BLOCO DO GIF DE CONSTRUÇÃO -->
+<div class="construction-block">
+    <img src="imagens/familia/mantrab.gif" alt="Site em construção" style="max-width:200px;">
+    <div><strong>SITE EM CONSTRUÇÃO</strong></div>
+</div>
 
 </main>
-
-<script>
-  const musica = document.getElementById('musica');
-  const audioChoice = document.getElementById('audioChoice');
-  const audioHint = document.getElementById('audioHint');
-  const botaoPlay = document.getElementById('botaoPlay');
-
-  const options = {
-    test: 'audio/test.wav',
-    song1: 'audio/song1.wav',
-    song2: 'audio/song2.wav',
-    song3: 'audio/my all.wav'
-  };
-
-  function setAudio(option) {
-    musica.src = options[option] || options.test;
-    musica.load();
-    const label = audioChoice.options[audioChoice.selectedIndex].text;
-    audioHint.textContent = `Selecionado: ${label}`;
-  }
-
-  audioChoice.addEventListener('change', function(event) {
-    setAudio(event.target.value);
-  });
-
-  botaoPlay.addEventListener('click', function() {
-    musica.play().catch(function(error) {
-      console.log('Não foi possível reproduzir o áudio:', error);
-      alert('O áudio não pôde ser reproduzido automaticamente. Toque novamente ou verifique o navegador.');
-    });
-  });
-
-  setAudio('test');
-</script>
 
 <footer>
   © Família Pizzirani – Memórias e Histórias

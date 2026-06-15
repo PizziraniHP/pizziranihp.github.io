@@ -5,70 +5,6 @@
   <link rel="icon" type="image/x-icon" href="imagens/familia/favicon.ico">
   <title>Pizzirani Home Page</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- CSS DO CARTÃO DE ÁUDIO -->
-  <style>
-      .audio-card {
-        background: #f2f2f2;
-        border-radius: 12px;
-        padding: 25px;
-        max-width: 500px;
-        margin: 40px auto;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-        border: 1px solid #ddd;
-        text-align: center;
-      }
-
-      .audio-card h3 {
-        margin-top: 0;
-        font-size: 1.3rem;
-        color: #333;
-      }
-
-      .audio-card select,
-      .audio-card button {
-        margin-top: 12px;
-      }
-
-      body {
-        font-family: Arial, Helvetica, sans-serif;
-        background: #f5f5f5;
-        margin: 0;
-        padding: 0;
-        color: #333;
-        line-height: 1.6;
-      }
-
-      header {
-        background: #1976d2;
-        color: white;
-        padding: 20px;
-        text-align: center;
-      }
-
-      main {
-        max-width: 900px;
-        margin: 20px auto;
-        background: #fff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      }
-
-      .welcome-block {
-        text-align:center;
-        margin: 30px 0;
-        font-size: 1.1rem;
-        line-height: 1.8;
-      }
-
-      /* resto do seu CSS continua aqui normalmente */
-  </style>
-</head>
-
-  <title>Pizzirani Home Page</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <style>
     body {
       font-family: Arial, Helvetica, sans-serif;
@@ -192,18 +128,82 @@
       color: #444;
     }
 
-    .audio-block button {
-      padding: 12px 22px;
-      font-size: 1rem;
-      border: none;
-      border-radius: 6px;
-      background: #1976d2;
-      color: #fff;
-      cursor: pointer;
+    .audio-card {
+      background: linear-gradient(180deg, #ffffff 0%, #e9eef8 100%);
+      border: 1px solid #d4dee9;
+      border-radius: 20px;
+      padding: 24px;
+      margin: 30px auto;
+      max-width: 780px;
+      box-shadow: 0 14px 30px rgba(0,0,0,0.08);
     }
-
-    .audio-block button:hover {
-      background: #0f5ca4;
+    .audio-card h2 {
+      margin: 0 0 10px;
+      color: #164a82;
+      font-size: 1.7rem;
+    }
+    .audio-card p {
+      margin: 0 0 18px;
+      color: #475569;
+      line-height: 1.5;
+    }
+    .audio-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+    .audio-card label {
+      min-width: 120px;
+      font-weight: 600;
+      color: #24374a;
+    }
+    .audio-card select,
+    .audio-card audio {
+      border: 1px solid #bbc8d7;
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-size: 1rem;
+      background: #ffffff;
+      color: #1f2937;
+      min-width: 220px;
+      width: 100%;
+      max-width: 460px;
+    }
+    .audio-card audio {
+      width: 100%;
+      margin-top: 8px;
+    }
+    .audio-actions {
+      text-align: center;
+      margin-top: 18px;
+    }
+    .audio-card button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      background: #1976d2;
+      color: #ffffff;
+      cursor: pointer;
+      transition: background 0.25s ease, transform 0.2s ease;
+      box-shadow: 0 10px 22px rgba(25,118,210,0.24);
+    }
+    .audio-card button:hover {
+      background: #1459a3;
+      transform: translateY(-1px);
+    }
+    .audio-note {
+      margin-top: 12px;
+      font-size: 0.95rem;
+      color: #4b5768;
     }
   </style>
 </head>
@@ -287,46 +287,68 @@
 
   </div>
 
-<!-- ÁUDIO OPCIONAL - toque para iniciar -->
-<div class="audio-block" style="text-align:center; margin:30px 0;">
-  <audio id="musica" controls preload="auto">
-    Seu navegador não suporta o elemento de áudio.
-  </audio>
+  <!-- ÁUDIO OPCIONAL - toque para iniciar -->
+  <section class="audio-card" aria-label="Seção de áudio">
+    <h2>Opção de áudio</h2>
+    <p>Escolha uma faixa e toque para ouvir no navegador. O botão abaixo mantém o controle do player acessível e simples.</p>
 
-  <div style="margin-top:14px; display:flex; justify-content:center; gap:10px; align-items:center; flex-wrap:wrap;">
-    <label for="audioChoice" style="font-size:0.95rem;">Escolha um áudio:</label>
+    <div class="audio-row">
+      <label for="audioChoice">Música</label>
+      <select id="audioChoice" aria-label="Escolha uma música">
+        <option value="test">Teste rápido</option>
+        <option value="song1">Song 1</option>
+        <option value="song2">Song 2</option>
+        <option value="song3">Song 3</option>
+        <option value="myall">My All</option>
+        <option value="seawaves">Sea Waves</option>
+      </select>
+    </div>
 
-    <select id="audioChoice" style="font-size:0.95rem; padding:6px 10px; border-radius:6px; border:1px solid #ccc;">
-      <option value="">Selecione...</option>
-      <option value="audio/test.wav">Teste</option>
-      <option value="audio/song1.mp3">Música 1</option>
-      <option value="audio/song2.mp3">Música 2</option>
-      <option value="audio/My_All.mp3">Mariah Carey – My All</option>
-    </select>
-  </div>
+    <audio id="musica" controls preload="metadata" src="audio/test.wav">
+      Seu navegador não suporta o elemento de áudio.
+    </audio>
 
-  <button id="botaoPlay" style="margin-top:12px; padding:12px 22px; font-size:1rem; border:none; border-radius:6px; background:#1976d2; color:#fff; cursor:pointer;">
-    Tocar áudio
-  </button>
+    <div class="audio-actions">
+      <button id="botaoPlay" type="button">► Tocar áudio</button>
+    </div>
 
-  <p id="audioHint" style="margin-top:8px; font-size:0.95rem; color:#555;">
-    Selecione uma música e clique no botão para tocar.
-  </p>
-</div>
+    <p id="audioHint" class="audio-note">Selecionado: Teste rápido</p>
+  </section>
 
 <script>
-  const audio = document.getElementById("musica");
-  const select = document.getElementById("audioChoice");
-  const botao = document.getElementById("botaoPlay");
-  const hint = document.getElementById("audioHint");
+  const musica = document.getElementById('musica');
+  const audioChoice = document.getElementById('audioChoice');
+  const audioHint = document.getElementById('audioHint');
+  const botaoPlay = document.getElementById('botaoPlay');
 
-  botao.addEventListener("click", () => {
-    if (select.value) {
-      audio.src = select.value;
-      audio.play();
-      hint.textContent = "Reproduzindo: " + select.options[select.selectedIndex].text;
-    }
+  const options = {
+    test: 'audio/test.wav',
+    song1: 'audio/song1.wav',
+    song2: 'audio/song2.wav',
+    song3: 'audio/song3.wav',
+    myall: 'audio/My_All.mp3',
+    seawaves: 'audio/SeaWaves.wav'
+  };
+
+  function setAudio(option) {
+    musica.src = options[option] || options.test;
+    musica.load();
+    const label = audioChoice.options[audioChoice.selectedIndex].text;
+    audioHint.textContent = `Selecionado: ${label}`;
+  }
+
+  audioChoice.addEventListener('change', function(event) {
+    setAudio(event.target.value);
   });
+
+  botaoPlay.addEventListener('click', function() {
+    musica.play().catch(function(error) {
+      console.log('Não foi possível reproduzir o áudio:', error);
+      alert('O áudio não pôde ser reproduzido automaticamente. Toque novamente ou verifique o navegador.');
+    });
+  });
+
+  setAudio('test');
 </script>
 
 <!-- BOTÃO VIAGENS -->

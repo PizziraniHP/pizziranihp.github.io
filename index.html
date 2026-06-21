@@ -76,21 +76,35 @@
     footer {
       margin-top: 40px;
       padding: 20px;
-      background-color: #e9e9e9;
+      background-color: #f6f6f6;
       text-align: center;
       font-size: 0.85rem;
       border-top: 2px solid #ccc;
+      color: #bdbdbd;
     }
 
     /* Ícone secreto */
     .secret-icon img {
-      width: 26px;
-      height: 26px;
-      opacity: 0.45;
+      width: 22px;
+      height: 22px;
+      opacity: 0.14;
+      filter: grayscale(1) saturate(0.3) brightness(1.05) contrast(0.8);
       transition: 0.3s;
     }
+    .secret-links {
+      margin-top: 8px;
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      align-items: center;
+    }
+    .secret-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
     .secret-icon img:hover {
-      opacity: 0.9;
+      opacity: 0.3;
     }
 
     /* Botão VIAGENS — totalmente redesenhado */
@@ -369,10 +383,13 @@
 
 <footer>
   © Família Pizzirani – Memórias e Histórias
-  <div class="secret-icon" style="margin-top:10px;">
-      <a href="familyrestrita/videosfamilia.html" title="Área restrita da família">
-          <img src="imagens/familia/favicon.ico" alt="Acesso restrito">
-      </a>
+  <div class="secret-links">
+    <a class="secret-icon" href="familyrestrita/videosfamilia.html" title="Área restrita da família">
+      <img src="imagens/familia/favicon.ico" alt="Acesso restrito familiar">
+    </a>
+        <a class="secret-icon" href="https://pizziranihp.github.io/nucleo-familiar-reservado/" title="Projeto reservado" target="_blank" rel="noopener noreferrer">
+      <img src="imagens/familia/favicon.ico" alt="Acesso local reservado">
+    </a>
   </div>
 </footer>
 

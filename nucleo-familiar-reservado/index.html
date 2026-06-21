@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>NUCLEO-FAMILIAR-RESERVADO</title>
+    <style>
+        :root {
+            --bg-1: #ece7df;
+            --bg-2: #d8ccbb;
+            --ink: #2f2a24;
+            --card: rgba(255, 255, 255, 0.88);
+            --line: #b59d7a;
+            --accent: #6b4c2f;
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            color: var(--ink);
+            background: radial-gradient(circle at top left, var(--bg-1), var(--bg-2));
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+        .painel {
+            width: min(820px, 100%);
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+            padding: 24px;
+        }
+        h1 {
+            margin: 0 0 10px;
+            font-size: clamp(1.4rem, 2.8vw, 2rem);
+            letter-spacing: 0.5px;
+            text-align: center;
+        }
+        p {
+            margin: 0 0 16px;
+            line-height: 1.45;
+            text-align: center;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+            margin-top: 14px;
+        }
+        a {
+            display: block;
+            text-decoration: none;
+            color: var(--ink);
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            padding: 12px 10px;
+            text-align: center;
+            background: #fff;
+            transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+        }
+        a:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+            box-shadow: 0 8px 18px rgba(107, 76, 47, .18);
+        }
+        .rodape {
+            margin-top: 14px;
+            font-size: .9rem;
+            color: #4f463c;
+        }
+    </style>
+</head>
+<body>
+    <main class="painel">
+        <h1>NUCLEO-FAMILIAR-RESERVADO</h1>
+        <p>Pagina de acesso interno para arvores genealogicas individuais. Conteudo com informacoes minimizadas.</p>
+
+        <section class="grid" aria-label="Arvores individuais">
+            <a href="arvore-lorena/lorena.html">Arvore Lorena</a>
+            <a href="arvore-alice/alice.html">Arvore Alice</a>
+            <a href="arvore-pedro/pedro.html">Arvore Pedro</a>
+            <a href="arvore-rafael/rafael.html">Arvore Rafael</a>
+            <a href="arvore-luna/luna.html">Arvore Luna</a>
+            <a href="arvore-gabriela/gabriela.html">Arvore Gabriela</a>
+        </section>
+
+        <p class="rodape">Sugestao: manter este link apenas em area discreta do seu site principal.</p>
+    </main>
+</body>
+</html>

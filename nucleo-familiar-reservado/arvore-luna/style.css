@@ -1,0 +1,220 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.container {
+    width: 95%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 10px;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.intro-block, .curiosidade-block, .piramide-inversa {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.piramide-inversa-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.linha-geracao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+/* linhas que devem conter exatamente 8 cartões e preencher a largura */
+.linha-geracao.linha-8 {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.linha-geracao.linha-8 .card-pessoa {
+    margin: 5px 0;
+    flex: 0 1 calc((100% - 70px) / 8);
+    width: calc((100% - 70px) / 8);
+    max-width: calc((100% - 70px) / 8);
+}
+
+.card-pessoa {
+    background: #e2e2e2;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    flex: 0 1 110px;
+    width: 110px;
+}
+
+.card-bisneta {
+    flex: 0 1 140px;
+    width: 140px;
+}
+
+.card-pais {
+    flex: 0 1 120px;
+    width: 120px;
+}
+
+.card-avos {
+    flex: 0 1 110px;
+    width: 110px;
+}
+
+.card-bisavos {
+    flex: 0 1 125px;
+    width: 125px;
+}
+
+.card-trisavos,
+.card-tataravos {
+    flex: 0 1 95px;
+    width: 95px;
+}
+
+.card-pessoa img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+    cursor: zoom-in;
+}
+
+.nome {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.detalhe {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.legenda-linha {
+    text-align: center;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.linha-separadora {
+    height: 2px;
+    background: #35424a;
+    margin: 20px 0;
+}
+
+.quote {
+    font-style: italic;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+@media (max-width: 1200px) {
+    .card-pessoa {
+        flex: 0 1 100px;
+        width: 100px;
+    }
+
+    .card-bisneta {
+        flex: 0 1 130px;
+        width: 130px;
+    }
+
+    .card-pais {
+        flex: 0 1 110px;
+        width: 110px;
+    }
+
+    .card-avos {
+        flex: 0 1 100px;
+        width: 100px;
+    }
+}
+
+@media (max-width: 900px) {
+    .card-pessoa {
+        flex: 0 1 90px;
+        width: 90px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 700px) {
+    .card-pessoa {
+        flex: 0 1 45%;
+        width: 45%;
+    }
+}
+
+@media (max-width: 520px) {
+    .container {
+        width: 100%;
+        padding: 0 8px;
+    }
+
+    .card-pessoa {
+        flex: 0 1 100%;
+        width: 100%;
+    }
+}
+
+
+.acesso-discreto {
+    text-align: right;
+    margin: 8px 0 14px;
+    font-size: 0.85rem;
+}
+
+.acesso-discreto a {
+    color: #5f5a54;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.acesso-discreto a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+

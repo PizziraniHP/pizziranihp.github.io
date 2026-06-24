@@ -1,0 +1,341 @@
+﻿{
+  "updatedAt": "2026-06-22",
+  "padraoIds": {
+    "100": "Bisnetos",
+    "200": "Pais",
+    "300": "Avos",
+    "400": "Bisavos",
+    "500": "Trisavos",
+    "600": "Tetravos",
+    "700": "Hexavos"
+  },
+  "people": [
+    {
+      "id": "0102",
+      "nome": "Alice",
+      "apelido": "Bisneta Alice",
+      "foto": "imagens/bisnetos/0102_alice_v01.jpeg",
+      "resumo": "Base da arvore da Alice.",
+      "textoCompleto": "Registro inicial criado para ser ampliado com lembrancas, historias e documentos da familia.",
+      "galeria": [],
+      "fontes": []
+    }, 
+       {
+      "id": "0106",
+      "nome": "Gabriela",
+      "apelido": "Bisneta Gabriela",
+      "foto": "imagens/bisnetos/0106_gabriela_v01.jpeg",
+      "resumo": "Base da arvore da Gabriela.",
+      "textoCompleto": "Registro inicial criado para ser ampliado com lembrancas, historias e documentos da familia.",
+      "galeria": [],
+      "fontes": []
+    }, 
+     {
+      "id": "0101",
+      "nome": "Lorena",
+      "apelido": "Bisneta Lorena",
+      "foto": "imagens/bisnetos/0101_lorena_v01.jpeg",
+      "resumo": "Base da arvore da Lorena.",
+      "textoCompleto": "Registro inicial criado para ser ampliado com lembrancas, historias e documentos da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+     {
+
+      "id": "0103",
+      "nome": "Pedro",
+      "apelido": "Bisneto Pedro",
+      "foto": "imagens/bisnetos/0103_pedro_v01.jpeg",
+      "resumo": "Base da arvore do Pedro.",
+      "textoCompleto": "Registro inicial criado para ser ampliado com lembrancas, historias e documentos da familia.",
+      "galeria": [],
+      "fontes": []
+    }, {
+      
+      "id": "0104",
+      "nome": "Rafael",
+      "apelido": "Bisneto Rafael",
+      "foto": "imagens/bisnetos/0104_rafael_v01.jpeg",
+      "resumo": "Base da arvore do Rafael.",
+      "textoCompleto": "Registro inicial criado para ser ampliado com lembrancas, historias e documentos da familia.",
+      "galeria": [],
+      "fontes": []
+    }, {
+      
+      "id": "0105",
+      "nome": "Luna",
+      "apelido": "Bisneta Luna",
+      "foto": "imagens/bisnetos/0105_luna_v01.jpeg",
+      "resumo": "Base da arvore da Luna.",
+      "textoCompleto": "Registro inicial criado para ser ampliado com lembrancas, historias e documentos da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+    {
+      "id": "0201",
+      "nome": "Marcos",
+      "apelido": "Pai da Alice e do Rafael",
+      "foto": "imagens/pais/new_marcos.jpeg",
+      "resumo": "Pessoa cadastrada para reutilizacao em diferentes arvores.",
+      "textoCompleto": "Aqui voce pode colar o texto vindo do Word com fatos, datas e historias da pessoa.",
+      "galeria": [],
+      "fontes": []
+    },
+    {
+      "id": "0202",
+      "nome": "Paula",
+      "apelido": "Mae da Alice",
+      "foto": "imagens/pais/new_paula.jpeg",
+      "resumo": "Pessoa cadastrada para reutilizacao em diferentes arvores.",
+      "textoCompleto": "Aqui voce pode colar o texto vindo do Word com fatos, datas e historias da pessoa.",
+      "galeria": [],
+      "fontes": []
+    }, {
+      "id": "0203",
+      "nome": "Anderson",
+      "apelido": "Pai da Lorena",
+      "foto": "imagens/pais/0203_anderson_v01.jpeg",
+      "resumo": "Pessoa cadastrada para reutilizacao em diferentes arvores.",
+      "textoCompleto": "Aqui voce pode colar o texto vindo do Word com fatos, datas e historias da pessoa.",
+      "galeria": [],
+      "fontes": []
+    },
+    {
+      "id": "0204",
+      "nome": "Sthefanie",
+      "apelido": "Mae da Lorena",
+      "foto": "imagens/pais/0204_sthefanie_v01.jpeg",
+      "resumo": "Pessoa cadastrada para reutilizacao em diferentes arvores.",
+      "textoCompleto": "Aqui voce pode colar o texto vindo do Word com fatos, datas e historias da pessoa.",
+      "galeria": [],
+      "fontes": []
+    }, {
+      "id": "0205",
+      "nome": "Flavio",
+      "apelido": "Pai do Pedro",
+      "foto": "imagens/pais/0205_flaviopaipedro_v01.jpeg",
+      "resumo": "Pessoa cadastrada para reutilizacao em diferentes arvores.",
+      "textoCompleto": "Aqui voce pode colar o texto vindo do Word com fatos, datas e historias da pessoa.",
+      "galeria": [],
+      "fontes": []
+    },
+    {
+      "id": "0206",
+      "nome": "Barbara",
+      "apelido": "Mae do Pedro",
+      "foto": "imagens/pais/0206_barbara_pedro_v01.jpeg",
+      "resumo": "Pessoa cadastrada para reutilizacao em diferentes arvores.",
+      "textoCompleto": "Aqui voce pode colar o texto vindo do Word com fatos, datas e historias da pessoa.",
+      "galeria": [],
+      "fontes": []
+    },
+    {
+      "id": "0209",
+      "nome": "Luiz",
+      "apelido": "Pai da Luna",
+      "foto": "imagens/pais/0209_luiz_v01.jpeg",
+      "resumo": "Pessoa cadastrada para reutilizacao em diferentes arvores.",
+      "textoCompleto": "Aqui voce pode colar o texto vindo do Word com fatos, datas e historias da pessoa.",
+      "galeria": [],
+      "fontes": []
+    }, {
+      "id": "0207",
+      "nome": "Livia",
+      "apelido": "Mae da Gabriela",
+      "foto": "imagens/pais/0207_livia_v01.jpeg",
+      "resumo": "Pessoa cadastrada para reutilizacao em diferentes arvores.",
+      "textoCompleto": "Aqui voce pode colar o texto vindo do Word com fatos, datas e historias da pessoa.",
+      "galeria": [],
+      "fontes": []
+    },
+    {
+      "id": "0208",
+      "nome": "Marcella",
+      "apelido": "Mãe da Gabriela",
+      "foto": "imagens/pais/0208_marcella_v01.jpeg",
+      "resumo": "Pessoa cadastrada para reutilizacao em diferentes arvores.",
+      "textoCompleto": "Aqui voce pode colar o texto vindo do Word com fatos, datas e historias da pessoa.",
+      "galeria": [],
+      "fontes": []
+    },
+    {
+      "id": "0301",
+      "nome": "Sidnei",
+      "apelido": "Avo materno",
+      "foto": "imagens/avos/0301_sidnei_v01.jpeg",
+      "resumo": "Exemplo de ancestral com cadastro unico.",
+      "textoCompleto": "Registro em fase inicial. Acrescente biografia, fotos e relatos aos poucos.",
+      "galeria": [],
+      "fontes": []
+    },
+    {
+      "id": "302",
+      "nome": "Patricia",
+      "apelido": "Avo materna",
+      "foto": "imagens/avos/0302_patricia_v01.jpeg",
+      "resumo": "Exemplo de ancestral com cadastro unico.",
+      "textoCompleto": "Registro em fase inicial. Acrescente biografia, fotos e relatos aos poucos.",
+      "galeria": [],
+      "fontes": []
+    },
+    {
+      "id": "0402",
+      "nome": "Arnaldo",
+      "apelido": "Bisavo",
+      "foto": "imagens/bisavos/0402_Arnaldo_InPixio_v01.png",
+      "resumo": "Exemplo de ancestral repetido em mais de uma arvore.",
+      "textoCompleto": "Com o mesmo ID, esta pessoa pode aparecer em varias arvores e apontar para uma unica pagina Saiba mais.",
+      "galeria": [],
+      "fontes": []
+    },
+    {
+      "id": "0401",
+      "nome": "Amaria",
+      "apelido": "Bisavo",
+      "foto": "imagens/bisavos/0401_Amaria_InPixio_v01.png",
+      "resumo": "Exemplo de ancestral repetido em mais de uma arvore.",
+      "textoCompleto": "Com o mesmo ID, esta pessoa pode aparecer em varias arvores e apontar para uma unica pagina Saiba mais.",
+      "galeria": [],
+      "fontes": []
+    },
+    {
+      "id": "501",
+      "nome": "Trisavo 1",
+      "apelido": "Linha Alice",
+      "foto": "",
+      "resumo": "Cadastro inicial para trisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+    {
+      "id": "502",
+      "nome": "Trisavo 2",
+      "apelido": "Linha Alice",
+      "foto": "",
+      "resumo": "Cadastro inicial para trisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+    {
+      "id": "503",
+      "nome": "Trisavo 3",
+      "apelido": "Linha Alice",
+      "foto": "",
+      "resumo": "Cadastro inicial para trisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+    {
+      "id": "504",
+      "nome": "Trisavo 4",
+      "apelido": "Linha Alice",
+      "foto": "",
+      "resumo": "Cadastro inicial para trisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+    {
+      "id": "505",
+      "nome": "Trisavo 5",
+      "apelido": "Linha Alice",
+      "foto": "",
+      "resumo": "Cadastro inicial para trisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+    {
+      "id": "506",
+      "nome": "Trisavo 6",
+      "apelido": "Linha Alice",
+      "foto": "",
+      "resumo": "Cadastro inicial para trisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+    {
+      "id": "507",
+      "nome": "Trisavo 7",
+      "apelido": "Linha Alice",
+      "foto": "",
+      "resumo": "Cadastro inicial para trisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+    {
+      "id": "508",
+      "nome": "Trisavo 8",
+      "apelido": "Linha Alice",
+      "foto": "",
+      "resumo": "Cadastro inicial para trisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+     {
+      "id": "601",
+      "nome": "Tetravo 1",
+      "apelido": "Linha Alice",
+      "foto": "imagens/tetravos/0601_nicola_pizzirani_v01.png",
+      "resumo": "Cadastro inicial para tetravo.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+    {
+      "id": "602",
+      "nome": "Tetravo 2",
+      "apelido": "Linha Alice",
+      "foto": "imagens/tetravos/0602_maria_mazzini_v01.png",
+      "resumo": "Cadastro inicial para tetravo.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },  {
+      "id": "603",
+      "nome": "Tetravo 3",
+      "apelido": "Linha Alice",
+      "foto": "imagens/tetravos/0603_henrique_lienhardtv01.png",
+      "resumo": "Cadastro inicial para tetravo.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+    {
+      "id": "604",
+      "nome": "Tetravo 4",
+      "apelido": "Linha Alice",
+      "foto": "imagens/tetravos/0604_ana_petru_v01.png",
+      "resumo": "Cadastro inicial para tetravo.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    }, {
+      "id": "0405",
+      "nome": "bisavo 7",
+      "apelido": "Linha Alice",
+      "foto": "imagens/bisavos/0405_terezinha_avo_marcos_v01.jpeg",
+      "resumo": "Cadastro inicial para bisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": ["000_terezinha-avo_marcos_v01"],
+      "fontes": []
+    },
+    {
+      "id": "702",
+      "nome": "Hexavo 2",
+      "apelido": "Linha Alice",
+      "foto": "",
+      "resumo": "Cadastro inicial para hexavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    }
+  ]
+}
+

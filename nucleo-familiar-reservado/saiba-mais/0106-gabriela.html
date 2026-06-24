@@ -1,0 +1,137 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Saiba mais - Gabriela</title>
+    <style>
+        :root {
+            --bg: #f7f5ef;
+            --panel: #ffffff;
+            --ink: #222222;
+            --muted: #666666;
+            --line: #ddd7ca;
+            --accent: #7a2e2e;
+        }
+        
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            color: var(--ink);
+            background: radial-gradient(circle at top right, #efe8d8, var(--bg) 45%);
+            line-height: 1.55;
+        }
+        .page {
+            width: min(980px, 92vw);
+            margin: 32px auto;
+            padding: 24px;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+        }
+        .top-links {
+            margin: 0 0 18px;
+            font-size: 14px;
+            color: var(--muted);
+        }
+        .top-links a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        .top-links a:hover { text-decoration: underline; }
+        .hero {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 22px;
+            align-items: start;
+            margin-bottom: 20px;
+        }
+        .photo-box {
+            background: #f2efe5;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .photo-box img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .meta h1 {
+            margin: 0 0 8px;
+            font-size: clamp(28px, 4vw, 42px);
+            line-height: 1.08;
+        }
+        .meta .chip {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        .meta p { margin: 6px 0; }
+        .story {
+            border-top: 1px solid var(--line);
+            padding-top: 16px;
+        }
+        .story h2 {
+            margin: 0 0 10px;
+            font-size: 22px;
+        }
+        .story p {
+            margin: 0 0 12px;
+            text-align: justify;
+        }
+        @media (max-width: 760px) {
+            .hero { grid-template-columns: 1fr; }
+            .photo-box { max-width: 320px; }
+        }
+        .topo-fixo {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 999;
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            background: #fffdf8;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 13px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+        .topo-fixo:hover {
+            text-decoration: underline;
+        }
+</head>
+<body id="topo">
+    <main class="page">
+        <p class="top-links">
+            <a href="../index.html">voltar ao Nucleo Familiar Reservado</a>
+        </p>
+        <section class="hero">
+            <figure class="photo-box">
+                <img src="../imagens/bisnetos/0106_gabriela_v01.jpeg" alt="Foto de Gabriela">
+            </figure>
+            <div class="meta">
+                <h1>Gabriela</h1>
+                <span class="chip">ID 0106</span>
+                <p><strong>Bisneta Gabriela</strong></p>
+                <p>Base da arvore da Gabriela.</p>
+            </div>
+        </section>
+        <section class="story">
+            <h2>Historia</h2>
+            <p>Preencha aqui a historia familiar com seus textos do Word.</p>
+            <p>Se preferir, adicione parágrafos curtos para leitura mais confortável.</p>
+        </section>
+    </main>
+    <a href="#topo" class="topo-fixo" aria-label="Voltar ao topo">Topo</a>
+</body>
+</html>
+

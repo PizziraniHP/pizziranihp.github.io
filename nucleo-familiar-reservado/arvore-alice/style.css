@@ -218,3 +218,22 @@ header {
     text-decoration: underline;
 }
 
+.saiba-mais-wrap {
+    margin-top: 8px;
+}
+
+.saiba-mais-link {
+    display: inline-block;
+    font-size: 0.72rem;
+    color: #4d5964;
+    text-decoration: none;
+    border: 1px solid #c9d2dc;
+    border-radius: 999px;
+    padding: 2px 8px;
+    background: #f8fbff;
+}
+
+.saiba-mais-link:hover {
+    text-decoration: underline;
+}
+

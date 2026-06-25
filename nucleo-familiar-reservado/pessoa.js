@@ -17,6 +17,12 @@
         return '<div class="empty-state">Registro nao encontrado para o ID ' + escapeHtml(id || "(vazio)") + ".</div>";
     }
 
+    function parseJsonAllowingComments(rawText) {
+        // Permite manter comentarios visuais no cadastro sem quebrar o carregamento.
+        const withoutBlockComments = rawText.replace(/\/\*[\s\S]*?\*\//g, "");
+        return JSON.parse(withoutBlockComments);
+    }
+
     async function loadPerson() {
         const container = document.getElementById("personCard");
         const personId = getPersonId();
@@ -36,7 +42,8 @@
                 throw new Error("Falha ao carregar base de pessoas");
             }
 
-            const data = await response.json();
+            const rawText = await response.text();
+            const data = parseJsonAllowingComments(rawText);
             const people = Array.isArray(data.people) ? data.people : [];
             const person = people.find(function (p) { return p.id === personId; });
 

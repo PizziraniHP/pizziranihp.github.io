@@ -10,27 +10,10 @@
     "700": "Hexavos"
   },
   "people": [
+    /* ==================== GERAÇÃO 01 (0100) - BISNETOS ==================== */
+
+    /* ---- ID 0101 - LORENA ---- */
     {
-      "id": "0102",
-      "nome": "Alice",
-      "apelido": "Bisneta Alice",
-      "foto": "imagens/bisnetos/0102_alice_v01.jpeg",
-      "resumo": "Base da arvore da Alice.",
-      "textoCompleto": "Registro inicial criado para ser ampliado com lembrancas, historias e documentos da familia.",
-      "galeria": [],
-      "fontes": []
-    }, 
-       {
-      "id": "0106",
-      "nome": "Gabriela",
-      "apelido": "Bisneta Gabriela",
-      "foto": "imagens/bisnetos/0106_gabriela_v01.jpeg",
-      "resumo": "Base da arvore da Gabriela.",
-      "textoCompleto": "Registro inicial criado para ser ampliado com lembrancas, historias e documentos da familia.",
-      "galeria": [],
-      "fontes": []
-    }, 
-     {
       "id": "0101",
       "nome": "Lorena",
       "apelido": "Bisneta Lorena",
@@ -40,8 +23,21 @@
       "galeria": [],
       "fontes": []
     },
-     {
 
+    /* ---- ID 0102 - ALICE ---- */
+    {
+      "id": "0102",
+      "nome": "Alice",
+      "apelido": "Bisneta Alice",
+      "foto": "imagens/bisnetos/0102_alice_v01.jpeg",
+      "resumo": "Base da arvore da Alice.",
+      "textoCompleto": "Registro inicial criado para ser ampliado com lembrancas, historias e documentos da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ---- ID 0103 - PEDRO ---- */
+    {
       "id": "0103",
       "nome": "Pedro",
       "apelido": "Bisneto Pedro",
@@ -50,8 +46,10 @@
       "textoCompleto": "Registro inicial criado para ser ampliado com lembrancas, historias e documentos da familia.",
       "galeria": [],
       "fontes": []
-    }, {
-      
+    },
+
+    /* ---- ID 0104 - RAFAEL ---- */
+    {
       "id": "0104",
       "nome": "Rafael",
       "apelido": "Bisneto Rafael",
@@ -60,8 +58,10 @@
       "textoCompleto": "Registro inicial criado para ser ampliado com lembrancas, historias e documentos da familia.",
       "galeria": [],
       "fontes": []
-    }, {
-      
+    },
+
+    /* ---- ID 0105 - LUNA ---- */
+    {
       "id": "0105",
       "nome": "Luna",
       "apelido": "Bisneta Luna",
@@ -71,6 +71,22 @@
       "galeria": [],
       "fontes": []
     },
+
+    /* ---- ID 0106 - GABRIELA ---- */
+    {
+      "id": "0106",
+      "nome": "Gabriela",
+      "apelido": "Bisneta Gabriela",
+      "foto": "imagens/bisnetos/0106_gabriela_v01.jpeg",
+      "resumo": "Base da arvore da Gabriela.",
+      "textoCompleto": "Registro inicial criado para ser ampliado com lembrancas, historias e documentos da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ==================== GERAÇÃO 02 (0200) - PAIS ==================== */
+
+    /* ---- ID 0201 - MARCOS ---- */
     {
       "id": "0201",
       "nome": "Marcos",
@@ -81,6 +97,8 @@
       "galeria": [],
       "fontes": []
     },
+
+    /* ---- ID 0202 - PAULA ---- */
     {
       "id": "0202",
       "nome": "Paula",
@@ -90,7 +108,10 @@
       "textoCompleto": "Aqui voce pode colar o texto vindo do Word com fatos, datas e historias da pessoa.",
       "galeria": [],
       "fontes": []
-    }, {
+    },
+
+    /* ---- ID 0203 - ANDERSON ---- */
+    {
       "id": "0203",
       "nome": "Anderson",
       "apelido": "Pai da Lorena",
@@ -100,6 +121,8 @@
       "galeria": [],
       "fontes": []
     },
+
+    /* ---- ID 0204 - STHEFANIE ---- */
     {
       "id": "0204",
       "nome": "Sthefanie",
@@ -109,7 +132,10 @@
       "textoCompleto": "Aqui voce pode colar o texto vindo do Word com fatos, datas e historias da pessoa.",
       "galeria": [],
       "fontes": []
-    }, {
+    },
+
+    /* ---- ID 0205 - FLAVIO ---- */
+    {
       "id": "0205",
       "nome": "Flavio",
       "apelido": "Pai do Pedro",
@@ -119,6 +145,8 @@
       "galeria": [],
       "fontes": []
     },
+
+    /* ---- ID 0206 - BARBARA ---- */
     {
       "id": "0206",
       "nome": "Barbara",
@@ -129,16 +157,9 @@
       "galeria": [],
       "fontes": []
     },
+
+    /* ---- ID 0207 - LIVIA ---- */
     {
-      "id": "0209",
-      "nome": "Luiz",
-      "apelido": "Pai da Luna",
-      "foto": "imagens/pais/0209_luiz_v01.jpeg",
-      "resumo": "Pessoa cadastrada para reutilizacao em diferentes arvores.",
-      "textoCompleto": "Aqui voce pode colar o texto vindo do Word com fatos, datas e historias da pessoa.",
-      "galeria": [],
-      "fontes": []
-    }, {
       "id": "0207",
       "nome": "Livia",
       "apelido": "Mae da Gabriela",
@@ -148,6 +169,8 @@
       "galeria": [],
       "fontes": []
     },
+
+    /* ---- ID 0208 - MARCELLA ---- */
     {
       "id": "0208",
       "nome": "Marcella",
@@ -158,6 +181,22 @@
       "galeria": [],
       "fontes": []
     },
+
+    /* ---- ID 0209 - LUIZ ---- */
+    {
+      "id": "0209",
+      "nome": "Luiz",
+      "apelido": "Pai da Luna",
+      "foto": "imagens/pais/0209_luiz_v01.jpeg",
+      "resumo": "Pessoa cadastrada para reutilizacao em diferentes arvores.",
+      "textoCompleto": "Aqui voce pode colar o texto vindo do Word com fatos, datas e historias da pessoa.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ==================== GERAÇÃO 03 (0300) - AVOS ==================== */
+
+    /* ---- ID 0301 - SIDNEI ---- */
     {
       "id": "0301",
       "nome": "Sidnei",
@@ -168,8 +207,10 @@
       "galeria": [],
       "fontes": []
     },
+
+    /* ---- ID 0302 - PATRICIA ---- */
     {
-      "id": "302",
+      "id": "0302",
       "nome": "Patricia",
       "apelido": "Avo materna",
       "foto": "imagens/avos/0302_patricia_v01.jpeg",
@@ -178,6 +219,22 @@
       "galeria": [],
       "fontes": []
     },
+
+    /* ==================== GERAÇÃO 04 (0400) - BISAVOS ==================== */
+
+    /* ---- ID 0401 - AMARIA ---- */
+    {
+      "id": "0401",
+      "nome": "Amaria",
+      "apelido": "Bisavo",
+      "foto": "imagens/bisavos/0401_v04.png",
+      "resumo": "Exemplo de ancestral repetido em mais de uma arvore.",
+      "textoCompleto": "Com o mesmo ID, esta pessoa pode aparecer em varias arvores e apontar para uma unica pagina Saiba mais.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ---- ID 0402 - ARNALDO ---- */
     {
       "id": "0402",
       "nome": "Arnaldo",
@@ -188,135 +245,9 @@
       "galeria": [],
       "fontes": []
     },
+
+    /* ---- ID 0405 - TEREZINHA ---- */
     {
-      "id": "0401",
-      "nome": "Amaria",
-      "apelido": "Bisavo",
-      "foto": "imagens/bisavos/0401_Amaria_InPixio_v01.png",
-      "resumo": "Exemplo de ancestral repetido em mais de uma arvore.",
-      "textoCompleto": "Com o mesmo ID, esta pessoa pode aparecer em varias arvores e apontar para uma unica pagina Saiba mais.",
-      "galeria": [],
-      "fontes": []
-    },
-    {
-      "id": "501",
-      "nome": "Trisavo 1",
-      "apelido": "Linha Alice",
-      "foto": "",
-      "resumo": "Cadastro inicial para trisavos.",
-      "textoCompleto": "Preencher com historia, datas e registros da familia.",
-      "galeria": [],
-      "fontes": []
-    },
-    {
-      "id": "502",
-      "nome": "Trisavo 2",
-      "apelido": "Linha Alice",
-      "foto": "",
-      "resumo": "Cadastro inicial para trisavos.",
-      "textoCompleto": "Preencher com historia, datas e registros da familia.",
-      "galeria": [],
-      "fontes": []
-    },
-    {
-      "id": "503",
-      "nome": "Trisavo 3",
-      "apelido": "Linha Alice",
-      "foto": "",
-      "resumo": "Cadastro inicial para trisavos.",
-      "textoCompleto": "Preencher com historia, datas e registros da familia.",
-      "galeria": [],
-      "fontes": []
-    },
-    {
-      "id": "504",
-      "nome": "Trisavo 4",
-      "apelido": "Linha Alice",
-      "foto": "",
-      "resumo": "Cadastro inicial para trisavos.",
-      "textoCompleto": "Preencher com historia, datas e registros da familia.",
-      "galeria": [],
-      "fontes": []
-    },
-    {
-      "id": "505",
-      "nome": "Trisavo 5",
-      "apelido": "Linha Alice",
-      "foto": "",
-      "resumo": "Cadastro inicial para trisavos.",
-      "textoCompleto": "Preencher com historia, datas e registros da familia.",
-      "galeria": [],
-      "fontes": []
-    },
-    {
-      "id": "506",
-      "nome": "Trisavo 6",
-      "apelido": "Linha Alice",
-      "foto": "",
-      "resumo": "Cadastro inicial para trisavos.",
-      "textoCompleto": "Preencher com historia, datas e registros da familia.",
-      "galeria": [],
-      "fontes": []
-    },
-    {
-      "id": "507",
-      "nome": "Trisavo 7",
-      "apelido": "Linha Alice",
-      "foto": "",
-      "resumo": "Cadastro inicial para trisavos.",
-      "textoCompleto": "Preencher com historia, datas e registros da familia.",
-      "galeria": [],
-      "fontes": []
-    },
-    {
-      "id": "508",
-      "nome": "Trisavo 8",
-      "apelido": "Linha Alice",
-      "foto": "",
-      "resumo": "Cadastro inicial para trisavos.",
-      "textoCompleto": "Preencher com historia, datas e registros da familia.",
-      "galeria": [],
-      "fontes": []
-    },
-     {
-      "id": "601",
-      "nome": "Tetravo 1",
-      "apelido": "Linha Alice",
-      "foto": "imagens/tetravos/0601_nicola_pizzirani_v01.png",
-      "resumo": "Cadastro inicial para tetravo.",
-      "textoCompleto": "Preencher com historia, datas e registros da familia.",
-      "galeria": [],
-      "fontes": []
-    },
-    {
-      "id": "602",
-      "nome": "Tetravo 2",
-      "apelido": "Linha Alice",
-      "foto": "imagens/tetravos/0602_maria_mazzini_v01.png",
-      "resumo": "Cadastro inicial para tetravo.",
-      "textoCompleto": "Preencher com historia, datas e registros da familia.",
-      "galeria": [],
-      "fontes": []
-    },  {
-      "id": "603",
-      "nome": "Tetravo 3",
-      "apelido": "Linha Alice",
-      "foto": "imagens/tetravos/0603_henrique_lienhardtv01.png",
-      "resumo": "Cadastro inicial para tetravo.",
-      "textoCompleto": "Preencher com historia, datas e registros da familia.",
-      "galeria": [],
-      "fontes": []
-    },
-    {
-      "id": "604",
-      "nome": "Tetravo 4",
-      "apelido": "Linha Alice",
-      "foto": "imagens/tetravos/0604_ana_petru_v01.png",
-      "resumo": "Cadastro inicial para tetravo.",
-      "textoCompleto": "Preencher com historia, datas e registros da familia.",
-      "galeria": [],
-      "fontes": []
-    }, {
       "id": "0405",
       "nome": "bisavo 7",
       "apelido": "Linha Alice",
@@ -326,8 +257,160 @@
       "galeria": ["000_terezinha-avo_marcos_v01"],
       "fontes": []
     },
+
+    /* ==================== GERAÇÃO 05 (0500) - TRISAVOS ==================== */
+
+    /* ---- ID 0501 - TRISAVO 1 ---- */
     {
-      "id": "702",
+      "id": "0501",
+      "nome": "Trisavo 1",
+      "apelido": "Linha Alice",
+      "foto": "",
+      "resumo": "Cadastro inicial para trisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ---- ID 0502 - TRISAVO 2 ---- */
+    {
+      "id": "0502",
+      "nome": "Trisavo 2",
+      "apelido": "Linha Alice",
+      "foto": "",
+      "resumo": "Cadastro inicial para trisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ---- ID 0503 - TRISAVO 3 ---- */
+    {
+      "id": "0503",
+      "nome": "Trisavo 3",
+      "apelido": "Linha Alice",
+      "foto": "",
+      "resumo": "Cadastro inicial para trisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ---- ID 0504 - TRISAVO 4 ---- */
+    {
+      "id": "0504",
+      "nome": "Trisavo 4",
+      "apelido": "Linha Alice",
+      "foto": "",
+      "resumo": "Cadastro inicial para trisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ---- ID 0505 - TRISAVO 5 ---- */
+    {
+      "id": "0505",
+      "nome": "Trisavo 5",
+      "apelido": "Linha Alice",
+      "foto": "",
+      "resumo": "Cadastro inicial para trisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ---- ID 0506 - TRISAVO 6 ---- */
+    {
+      "id": "0506",
+      "nome": "Trisavo 6",
+      "apelido": "Linha Alice",
+      "foto": "",
+      "resumo": "Cadastro inicial para trisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ---- ID 0507 - TRISAVO 7 ---- */
+    {
+      "id": "0507",
+      "nome": "Trisavo 7",
+      "apelido": "Linha Alice",
+      "foto": "",
+      "resumo": "Cadastro inicial para trisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ---- ID 0508 - TRISAVO 8 ---- */
+    {
+      "id": "0508",
+      "nome": "Trisavo 8",
+      "apelido": "Linha Alice",
+      "foto": "",
+      "resumo": "Cadastro inicial para trisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ==================== GERAÇÃO 06 (0600) - TETRAVOS ==================== */
+
+    /* ---- ID 0601 - TETRAVO 1 ---- */
+    {
+      "id": "0601",
+      "nome": "Tetravo 1",
+      "apelido": "Linha Alice",
+      "foto": "imagens/tetravos/0601_nicola_pizzirani_v01.png",
+      "resumo": "Cadastro inicial para tetravo.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ---- ID 0602 - TETRAVO 2 ---- */
+    {
+      "id": "0602",
+      "nome": "Tetravo 2",
+      "apelido": "Linha Alice",
+      "foto": "imagens/tetravos/0602_maria_mazzini_v01.png",
+      "resumo": "Cadastro inicial para tetravo.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ---- ID 0603 - TETRAVO 3 ---- */
+    {
+      "id": "0603",
+      "nome": "Tetravo 3",
+      "apelido": "Linha Alice",
+      "foto": "imagens/tetravos/0603_henrique_lienhardtv01.png",
+      "resumo": "Cadastro inicial para tetravo.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ---- ID 0604 - TETRAVO 4 ---- */
+    {
+      "id": "0604",
+      "nome": "Tetravo 4",
+      "apelido": "Linha Alice",
+      "foto": "imagens/tetravos/0604_ana_petru_v01.png",
+      "resumo": "Cadastro inicial para tetravo.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ==================== GERAÇÃO 07 (0700) - HEXAVOS ==================== */
+
+    /* ---- ID 0702 - HEXAVO 2 ---- */
+    {
+      "id": "0702",
       "nome": "Hexavo 2",
       "apelido": "Linha Alice",
       "foto": "",
@@ -336,6 +419,7 @@
       "galeria": [],
       "fontes": []
     }
+
   ]
 }
 

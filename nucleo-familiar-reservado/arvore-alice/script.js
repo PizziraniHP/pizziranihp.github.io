@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+﻿document.addEventListener('DOMContentLoaded', function () {
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
 
@@ -32,7 +32,16 @@ document.addEventListener('DOMContentLoaded', function () {
         const link = document.createElement('a');
         link.className = 'saiba-mais-link';
         link.href = personPage || ('../pessoa.html?id=' + encodeURIComponent(personId));
-        link.textContent = 'Saiba mais';
+        const icon = document.createElement('span');
+        icon.className = 'saiba-mais-icone';
+        icon.setAttribute('aria-hidden', 'true');
+
+        const label = document.createElement('span');
+        label.className = 'saiba-mais-texto';
+        label.textContent = 'SAIBA MAIS';
+
+        link.appendChild(icon);
+        link.appendChild(label);
         link.setAttribute('aria-label', 'Saiba mais sobre o ID ' + personId);
 
         wrap.appendChild(link);

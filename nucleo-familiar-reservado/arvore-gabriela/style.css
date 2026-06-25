@@ -218,3 +218,52 @@ header {
     text-decoration: underline;
 }
 
+
+
+.saiba-mais-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #4d5964;
+    text-decoration: none;
+    border: 1px solid #c9d2dc;
+    border-radius: 999px;
+    padding: 3px 10px;
+    background: #f8fbff;
+}
+
+.saiba-mais-link:hover {
+    text-decoration: none;
+    border-color: #9fb0c0;
+    background: #eef5fb;
+}
+
+.saiba-mais-icone {
+    width: 14px;
+    height: 9px;
+    border: 1.5px solid #4d5964;
+    border-radius: 100% / 75%;
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    flex: 0 0 auto;
+}
+
+.saiba-mais-icone::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #4d5964;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.saiba-mais-texto {
+    line-height: 1;
+}

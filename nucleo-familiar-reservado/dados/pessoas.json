@@ -218,45 +218,236 @@
       "textoCompleto": "Registro em fase inicial. Acrescente biografia, fotos e relatos aos poucos.",
       "galeria": [],
       "fontes": []
+    }, /* ---- ID 0303 - FLAVIO MELO ---- */
+    {
+      "id": "0303",
+      "nome": "Flavio Melo",
+      "apelido": "Avo paterno",
+      "foto": "imagens/avos/0303_flavio_melo_v01.jpeg",
+      "resumo": "Exemplo de ancestral com cadastro unico.",
+      "textoCompleto": "Registro em fase inicial. Acrescente biografia, fotos e relatos aos poucos.",
+      "galeria": [],
+      "fontes": []
+    }, /* ---- ID 0304 - ANDREA ---- */
+    {
+      "id": "0304",
+      "nome": "Andrea",
+      "apelido": "Avó Materna",
+      "foto": "imagens/avos/0304_andrea_v01.jpeg",
+      "resumo": "Exemplo de ancestral com cadastro unico.",
+      "textoCompleto": "Registro em fase inicial. Acrescente biografia, fotos e relatos aos poucos.",
+      "galeria": [],
+      "fontes": []
+    },   
+      /* ---- ID 0305 - LUIZ AUGUSTO GIAPONESI ---- */
+    {
+      "id": "0305",
+      "nome": "Luiz Augusto Giaponesi",
+      "apelido": "Avo paterno",
+      "foto": "imagens/avos/0305_luizgiaponesi_v00.png",
+      "resumo": "Exemplo de ancestral com cadastro unico.",
+      "textoCompleto": "Registro em fase inicial. Acrescente biografia, fotos e relatos aos poucos.",
+      "galeria": [],
+      "fontes": []
     },
+     /* ---- ID 0306 - SILVANA SANTOS ---- */
+    {
+      "id": "0306",
+      "nome": "Silvana Santos",
+      "apelido": "Avó PATERNA",
+      "foto": "imagens/avos/0306_silvanasantos_v00.png",
+      "resumo": "Exemplo de ancestral com cadastro unico.",
+      "textoCompleto": "Registro em fase inicial. Acrescente biografia, fotos e relatos aos poucos.",
+      "galeria": [],
+      "fontes": []
+    },   
+      /* ---- ID 0307 - ? AVO DO PEDRO ---- */
+    {
+      "id": "0307",
+      "nome": "AVO DO PEDRO",
+      "apelido": "Avo paterno",
+      "foto": "imagens/avos/0307_avodopedrinho_v00.png",
+      "resumo": "Exemplo de ancestral com cadastro unico.",
+      "textoCompleto": "Registro em fase inicial. Acrescente biografia, fotos e relatos aos poucos.",
+      "galeria": [],
+      "fontes": []
+    },
+       /* ---- ID 0308 - ? AVÓ DO PEDRO ---- */
+    {
+      "id": "0308",
+      "nome": "AVÓ DO PEDRO",
+      "apelido": "Avó paterna",
+      "foto": "imagens/avos/0308_avodopedrinho_v00.png",
+      "resumo": "Exemplo de ancestral com cadastro unico.",
+      "textoCompleto": "Registro em fase inicial. Acrescente biografia, fotos e relatos aos poucos.",
+      "galeria": [],
+      "fontes": []
+    },
+/* ---- ID 0309 - ? MARCELO ---- */
+    {
+      "id": "0309",
+      "nome": "Marcelo",
+      "apelido": "Avo MATERNO",
+      "foto": "imagens/avos/0309_marceloneto_v00.png",
+      "resumo": "Exemplo de ancestral com cadastro unico.",
+      "textoCompleto": "Registro em fase inicial. Acrescente biografia, fotos e relatos aos poucos.",
+      "galeria": [],
+      "fontes": []
+    },
+       /* ---- ID 0310 - ? AVÓ DO PEDRO ---- */
+    {
+      "id": "0310",
+      "nome": "Lia ",
+      "apelido": "Avó MATERNA",
+      "foto": "imagens/avos/0310_lia_fake_v00.png",
+      "resumo": "Exemplo de ancestral com cadastro unico.",
+      "textoCompleto": "Registro em fase inicial. Acrescente biografia, fotos e relatos aos poucos.",
+      "galeria": [],
+      "fontes": []
+    },
+    /* ---- ID 0311 - ?  pai da liviaavo gabriela ---- */
+    {
+      "id": "0311",
+      "nome": "AVÔ DA GABRIELA",
+      "apelido": "Avo materno",
+      "foto": "imagens/avos/0311_paidalivia_avogabriela_v00.png",
+      "resumo": "Exemplo de ancestral com cadastro unico.",
+      "textoCompleto": "Registro em fase inicial. Acrescente biografia, fotos e relatos aos poucos.",
+      "galeria": [],
+      "fontes": []
+    },
+       /* ---- ID 0312 - ? PAI DA LIVIA ---- */
+    {
+      "id": "0312",
+      "nome": "AVó DA GABRIELA",
+      "apelido": "Avô materno",
+      "foto": "imagens/avos/0312_marcia_fake_v00.png",
+      "resumo": "Exemplo de ancestral com cadastro unico.",
+      "textoCompleto": "Registro em fase inicial. Acrescente biografia, fotos e relatos aos poucos.",
+      "galeria": [],
+      "fontes": []
+    },
+
+
+
 
     /* ==================== GERAÇÃO 04 (0400) - BISAVOS ==================== */
 
-    /* ---- ID 0401 - AMARIA ---- */
+    /* ---- ID 0401 - ARNALDO ---- */
     {
       "id": "0401",
-      "nome": "Amaria",
-      "apelido": "Bisavo",
-      "foto": "imagens/bisavos/0401_v04.png",
+      "nome": "Arnaldo",
+      "apelido": "Bisavô",
+      "foto": "imagens/bisavos/0401_Arnaldo_Inpixiov_v01.png",
       "resumo": "Exemplo de ancestral repetido em mais de uma arvore.",
       "textoCompleto": "Com o mesmo ID, esta pessoa pode aparecer em varias arvores e apontar para uma unica pagina Saiba mais.",
       "galeria": [],
       "fontes": []
     },
 
-    /* ---- ID 0402 - ARNALDO ---- */
+    /* ---- ID 0402 - AMARIA ---- */
     {
       "id": "0402",
-      "nome": "Arnaldo",
-      "apelido": "Bisavo",
-      "foto": "imagens/bisavos/0402_Arnaldo_InPixio_v01.png",
+      "nome": "Amaria",
+      "apelido": "Bisavó",
+      "foto": "imagens/bisavos/0401_amaria__v04.png",
+      "resumo": "Exemplo de ancestral repetido em mais de uma arvore.",
+      "textoCompleto": "Com o mesmo ID, esta pessoa pode aparecer em varias arvores e apontar para uma unica pagina Saiba mais.",
+      "galeria": [],
+      "fontes": []
+    },
+    /* ---- ID 0403 - PAI DO FLAVIO MELO---- */
+    {
+      "id": "0403",
+      "nome": "Pai do Flavio Melo",
+      "apelido": "Bisavô da Lorena e da Luna",
+      "foto": "imagens/bisavos/0403_PaidoFlavioMelo_v01.png",
       "resumo": "Exemplo de ancestral repetido em mais de uma arvore.",
       "textoCompleto": "Com o mesmo ID, esta pessoa pode aparecer em varias arvores e apontar para uma unica pagina Saiba mais.",
       "galeria": [],
       "fontes": []
     },
 
-    /* ---- ID 0405 - TEREZINHA ---- */
+    /* ---- ID 0404 - MAE DO FLAVIO MELO ---- */
     {
-      "id": "0405",
-      "nome": "bisavo 7",
-      "apelido": "Linha Alice",
-      "foto": "imagens/bisavos/0405_terezinha_avo_marcos_v01.jpeg",
-      "resumo": "Cadastro inicial para bisavos.",
-      "textoCompleto": "Preencher com historia, datas e registros da familia.",
-      "galeria": ["000_terezinha-avo_marcos_v01"],
+      "id": "0404",
+      "nome": "Mae do Flavio Melo",
+      "apelido": "Bisavó",
+      "foto": "imagens/bisavos/0404_maedoflaviomelo_v01.png",
+      "resumo": "Exemplo de ancestral repetido em mais de uma arvore.",
+      "textoCompleto": "Com o mesmo ID, esta pessoa pode aparecer em varias arvores e apontar para uma unica pagina Saiba mais.",
+      "galeria": [],
       "fontes": []
     },
+
+    /* ---- ID 0405 - JULIO DE SOUZA ROCHA ---- */
+    {
+      "id": "0405",
+      "nome": "Julio de Souza Rocha",
+      "apelido": "Linha Alice",
+      "foto": "imagens/bisavos/0405_JuliodeSouzaRocha_v01.jpeg",
+      "resumo": "Cadastro inicial para bisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+    /* ---- ID 0406 - TEREZINHA DE SOUZA ROCHA ---- */
+    {
+      "id": "0406",
+      "nome": "Terezinha Souza Rocha",
+      "apelido": "Linha Alice",
+      "foto": "imagens/bisavos/0406_TerezinhaDeSouzaRocha_v01.jpeg",
+      "resumo": "Cadastro inicial para bisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+     /* ---- ID 0407 - JULIO RAMOS ---- */
+    {
+      "id": "0407",
+      "nome": "Julio Ramos",
+      "apelido": "Linha Alice",
+      "foto": "imagens/bisavos/0407_JulioRamos_v01.jpeg",
+      "resumo": "Cadastro inicial para bisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+    /* ---- ID 0408 - LEONTINA MARIA RAMOS ---- */
+    {
+      "id": "0408",
+      "nome": "Leontina Maria Ramos",
+      "apelido": "Linha Alice",
+      "foto": "imagens/bisavos/0408_LeontinaMariaRamos_v01.jpeg",
+      "resumo": "Cadastro inicial para bisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+      /* ---- ID 0409 - INDALECIO MAROLA ---- */
+    {
+      "id": "0409",
+      "nome": "Indalecio Marola",
+      "apelido": "Linha Alice",
+      "foto": "imagens/bisavos/0409_IndalecioMarola_v01.jpeg",
+      "resumo": "Cadastro inicial para bisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+    /* ---- ID 0410 - TEREZA MAROLA ---- */
+    {
+      "id": "0410",
+      "nome": "Tereza Marola",
+      "apelido": "Linha Alice",
+      "foto": "imagens/bisavos/0410_TerezaMarola_v01.jpeg",
+      "resumo": "Cadastro inicial para bisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
 
     /* ==================== GERAÇÃO 05 (0500) - TRISAVOS ==================== */
 

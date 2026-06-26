@@ -9,6 +9,16 @@
     "600": "Tetravos",
     "700": "Hexavos"
   },
+  "regrasCadastro": {
+    "paridade": {
+      "0100": "Excecao por ordem etaria (sem paridade obrigatoria)",
+      "0200plus": "Convencao: ID impar para masculino e ID par para feminino"
+    },
+    "parentalidade": {
+      "modelo": "responsavel1/responsavel2",
+      "observacao": "Nao depende de genero. Pode ser par+par, impar+impar ou par+impar."
+    }
+  },
   "people": [
     /* ==================== GERAÇÃO 01 (0100) - BISNETOS ==================== */
 
@@ -338,7 +348,7 @@
       "id": "0401",
       "nome": "Arnaldo",
       "apelido": "Bisavô",
-      "foto": "imagens/bisavos/0401_Arnaldo_Inpixiov_v01.png",
+      "foto": "imagens/bisavos/0402_Arnaldo_InPixio_v01.png",
       "resumo": "Exemplo de ancestral repetido em mais de uma arvore.",
       "textoCompleto": "Com o mesmo ID, esta pessoa pode aparecer em varias arvores e apontar para uma unica pagina Saiba mais.",
       "galeria": [],
@@ -350,7 +360,7 @@
       "id": "0402",
       "nome": "Amaria",
       "apelido": "Bisavó",
-      "foto": "imagens/bisavos/0401_amaria__v04.png",
+      "foto": "imagens/bisavos/0401_amaria_InPixio_v01.png",
       "resumo": "Exemplo de ancestral repetido em mais de uma arvore.",
       "textoCompleto": "Com o mesmo ID, esta pessoa pode aparecer em varias arvores e apontar para uma unica pagina Saiba mais.",
       "galeria": [],
@@ -454,9 +464,9 @@
     /* ---- ID 0501 - TRISAVO 1 ---- */
     {
       "id": "0501",
-      "nome": "Trisavo 1",
+      "nome": "Marcelo Pizzirani",
       "apelido": "Linha Alice",
-      "foto": "",
+      "foto": "../imagens/trisavos/0501_MarceloPizzirani_v01.png",
       "resumo": "Cadastro inicial para trisavos.",
       "textoCompleto": "Preencher com historia, datas e registros da familia.",
       "galeria": [],
@@ -466,9 +476,9 @@
     /* ---- ID 0502 - TRISAVO 2 ---- */
     {
       "id": "0502",
-      "nome": "Trisavo 2",
+      "nome": "Ana Cristina Pizzirani",
       "apelido": "Linha Alice",
-      "foto": "",
+      "foto": "../imagens/trisavos/0502_AnaCristinaPizzirani_v01.png",
       "resumo": "Cadastro inicial para trisavos.",
       "textoCompleto": "Preencher com historia, datas e registros da familia.",
       "galeria": [],

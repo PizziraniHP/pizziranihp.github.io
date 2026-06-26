@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex,nofollow">
-    <title>Saiba mais - </title>
+    <title>Saiba mais - Ana Cristina Lienhardt Pizzirani</title>
     <style>
         :root {
             --bg: #f7f5ef;
@@ -15,6 +15,7 @@
             --accent: #7a2e2e;
         }
 
+        
         html { scroll-behavior: smooth; }
 
         body {
@@ -46,42 +47,8 @@
             text-decoration: none;
         }
 
-        .top-links a:hover { text-decoration: underline; }
-        .saiba-mais-badge {
-            margin: 0 0 16px;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 11px;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: #5b2a2a;
-            border: 1px solid #d6c9b8;
-            border-radius: 999px;
-            background: #fff8ec;
-            padding: 6px 12px;
-        }
-
-        .saiba-mais-icone {
-            width: 16px;
-            height: 10px;
-            border: 1.6px solid #7a2e2e;
-            border-radius: 100% / 75%;
-            position: relative;
-            display: inline-block;
-            background: #fff;
-        }
-
-        .saiba-mais-icone::after {
-            content: '';
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            border-radius: 50%;
-            background: #7a2e2e;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        .top-links a:hover {
+            text-decoration: underline;
         }
 
         .hero {
@@ -121,18 +88,23 @@
             margin-bottom: 10px;
         }
 
-        .meta p { margin: 6px 0; }
-        .meta a,
-        .extra-item p a,
-        .story a {
-            color: var(--accent);
-            text-decoration: underline;
-            text-underline-offset: 2px;
+        .meta p {
+            margin: 6px 0;
         }
-        .meta a:hover,
-        .extra-item p a:hover,
-        .story a:hover {
-            text-decoration-thickness: 2px;
+
+        .story {
+            border-top: 1px solid var(--line);
+            padding-top: 16px;
+        }
+
+        .story h2 {
+            margin: 0 0 10px;
+            font-size: 22px;
+        }
+
+        .story p {
+            margin: 0 0 12px;
+            text-align: justify;
         }
         .extra {
             border-top: 1px solid var(--line);
@@ -185,23 +157,7 @@
             color: var(--muted);
             line-height: 1.55;
             overflow-wrap: anywhere;
-        }.story {
-            border-top: 1px solid var(--line);
-            padding-top: 16px;
-            margin-bottom: 20px;
-        }
-
-        .story h2 {
-            margin: 0 0 10px;
-            font-size: 22px;
-        }
-
-        .story p {
-            margin: 0 0 12px;
-            text-align: justify;
-        }
-
-        @media (max-width: 760px) {
+        }@media (max-width: 760px) {
             .hero { grid-template-columns: 1fr; }
             .photo-box { max-width: 320px; }
             .extra-grid { grid-template-columns: 1fr; }
@@ -269,7 +225,6 @@
             font-size: 13px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
         }
-
         .topo-fixo:hover {
             text-decoration: underline;
         }
@@ -286,55 +241,43 @@
         </p>
         <section class="hero">
             <figure class="photo-box">
-                <img src="../imagens/bisavos/0402_Arnaldo_InPixio_v01.png" alt="Foto de Arnaldo">
+                <img src="../imagens/trisavos/0502_anacristinalienhardt_v01.png" alt="Foto da pessoa">
             </figure>
             <div class="meta">
-                <h1>Arnaldo Pizzirani</h1>
-                <span class="chip">ID 0402</span>
-                <p><strong>Família Pizzirani</strong></p>
-                <p>Casado com <a href="0401_amaria.html">Antonia Maria Cunha</a>. Bisavô de <a href="0101-lorena.html">Lorena</a>, <a href="0102-alice.html">Alice</a>, <a href="0103-pedro.html">Pedro</a>, <a href="0104-rafael.html">Rafael</a>, <a href="0105-luna.html">Luna</a>, <a href="0106-gabriela.html">Gabriela</a>. Base da arvore da família Pizzirani. Avô de <a href="0302-patricia.html">Patricia</a> e <a href="0304_andrea.html">Andrea</a>.</p>
+                <h1>Ana Cristina Lienhardt Pizzirani</h1>
+                <span class="chip">ID 0502</span>
+                <p><strong>Linha Alice</strong></p>
+                <p>Mãe do <a href="../saiba-mais/0401_arnaldo.html">Arnaldo Pizzirani</a>, filha de Henique Lienhardt e Ana Petru Lienhardt, avó de <a href="../saiba-mais/0302-patricia.html">Patricia</a>, <a href="../saiba-mais/0304_andrea.html">Andrea</a> e <a href="../saiba-mais/0309_marcelopaibarbara.html">Marcelo Pizzirani Neto</a>, bisavó de Lucas, Sthefanie, Paula, Pamela, Michele, Barbara e Marcelo Eduardo S Pizzirani.</p>
             </div>
         </section>
 
-        <section class="extra">
+                <section class="extra">
             <h2>Fotos e comentarios</h2>
             <div class="extra-grid">
                 <figure class="extra-item">
-                    <img src="../imagens_smais/Arnaldo/arnaldoamariamarceloanacunhahelena.png" alt="Foto da reunião de família de Nicola Pizzirani">
-                    <p>Casamento Arnaldo Pizzirani & Antonia Maria Cunha Pizzirani, a direita dos nubentes Ezequiel e Helena pais da noiva a esquerda os pais do noivo Marcelo e Ana Cristina.</p>
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4MDAnIGhlaWdodD0nNTYwJyB2aWV3Qm94PScwIDAgODAwIDU2MCc+CiAgPHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0nI2YyZWZlNScvPgogIDxyZWN0IHg9JzI0JyB5PScyNCcgd2lkdGg9Jzc1MicgaGVpZ2h0PSc1MTInIHJ4PScxOCcgcnk9JzE4JyBmaWxsPSdub25lJyBzdHJva2U9JyNkZGQ3Y2EnIHN0cm9rZS13aWR0aD0nNCcgc3Ryb2tlLWRhc2hhcnJheT0nMTIgMTAnLz4KICA8dGV4dCB4PSc1MCUnIHk9JzQ2JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzdhMmUyZScgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nNDInPkZvdG8gMTwvdGV4dD4KICA8dGV4dCB4PSc1MCUnIHk9JzU4JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzY2NjY2NicgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nMjQnPnN1YnN0aXR1YSBwb3IgdW1hIGltYWdlbTwvdGV4dD4KPC9zdmc+" alt="Foto 1">
+                    <p>Comentario da foto 1.</p>
                 </figure>
                 <figure class="extra-item">
-                    <img src="../imagens_smais/Arnaldo/tudojuntoemisturado_2023.jpg" alt="Reunião na residencia do casal Sidnei/Patricia">
-                    <p>Encontro em 2023 na casa de <a href="0301-sidnei.html">Sidnei</a> e <a href="0302-patricia.html">Patricia</a> - acredito reuniao com todos do cla <a href="0402_arnaldo.html">Arnaldo</a>/<a href="0401_amaria.html">Antonia Maria</a>.</p>
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4MDAnIGhlaWdodD0nNTYwJyB2aWV3Qm94PScwIDAgODAwIDU2MCc+CiAgPHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0nI2YyZWZlNScvPgogIDxyZWN0IHg9JzI0JyB5PScyNCcgd2lkdGg9Jzc1MicgaGVpZ2h0PSc1MTInIHJ4PScxOCcgcnk9JzE4JyBmaWxsPSdub25lJyBzdHJva2U9JyNkZGQ3Y2EnIHN0cm9rZS13aWR0aD0nNCcgc3Ryb2tlLWRhc2hhcnJheT0nMTIgMTAnLz4KICA8dGV4dCB4PSc1MCUnIHk9JzQ2JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzdhMmUyZScgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nNDInPkZvdG8gMjwvdGV4dD4KICA8dGV4dCB4PSc1MCUnIHk9JzU4JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzY2NjY2NicgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nMjQnPnN1YnN0aXR1YSBwb3IgdW1hIGltYWdlbTwvdGV4dD4KPC9zdmc+" alt="Foto 2">
+                    <p>Comentario da foto 2.</p>
                 </figure>
                 <figure class="extra-item">
-                    <img src="../imagens_smais/Arnaldo/tudojuntoemisturado_2023_v02.jpg" alt="Reunião na residencia do casal Sidnei/Patricia (versão diferente)">
-                    <p>Encontro em 2023 na casa do Sidnei/Patricia - acredito reunião com todos do clã Arnaldo/Antonia Maria.(versão diferente).</p>
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4MDAnIGhlaWdodD0nNTYwJyB2aWV3Qm94PScwIDAgODAwIDU2MCc+CiAgPHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0nI2YyZWZlNScvPgogIDxyZWN0IHg9JzI0JyB5PScyNCcgd2lkdGg9Jzc1MicgaGVpZ2h0PSc1MTInIHJ4PScxOCcgcnk9JzE4JyBmaWxsPSdub25lJyBzdHJva2U9JyNkZGQ3Y2EnIHN0cm9rZS13aWR0aD0nNCcgc3Ryb2tlLWRhc2hhcnJheT0nMTIgMTAnLz4KICA8dGV4dCB4PSc1MCUnIHk9JzQ2JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzdhMmUyZScgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nNDInPkZvdG8gMzwvdGV4dD4KICA8dGV4dCB4PSc1MCUnIHk9JzU4JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzY2NjY2NicgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nMjQnPnN1YnN0aXR1YSBwb3IgdW1hIGltYWdlbTwvdGV4dD4KPC9zdmc+" alt="Foto 3">
+                    <p>Comentario da foto 3.</p>
                 </figure>
                 <figure class="extra-item">
-                    <img src="../imagens_smais/Arnaldo/oscinco2023.jpg" alt="Foto 3">
-                    <p>Em 2023, na casa da Patricia/Sidnei- nós; Patricia, Antonia Maria, Arnaldo Andrea e Marcelo.</p>
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4MDAnIGhlaWdodD0nNTYwJyB2aWV3Qm94PScwIDAgODAwIDU2MCc+CiAgPHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0nI2YyZWZlNScvPgogIDxyZWN0IHg9JzI0JyB5PScyNCcgd2lkdGg9Jzc1MicgaGVpZ2h0PSc1MTInIHJ4PScxOCcgcnk9JzE4JyBmaWxsPSdub25lJyBzdHJva2U9JyNkZGQ3Y2EnIHN0cm9rZS13aWR0aD0nNCcgc3Ryb2tlLWRhc2hhcnJheT0nMTIgMTAnLz4KICA8dGV4dCB4PSc1MCUnIHk9JzQ2JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzdhMmUyZScgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nNDInPkZvdG8gNDwvdGV4dD4KICA8dGV4dCB4PSc1MCUnIHk9JzU4JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzY2NjY2NicgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nMjQnPnN1YnN0aXR1YSBwb3IgdW1hIGltYWdlbTwvdGV4dD4KPC9zdmc+" alt="Foto 4">
+                    <p>Comentario da foto 4.</p>
                 </figure>
-                 <figure class="extra-item">
-                    <img src="../imagens_smais/Arnaldo/familia_nicola_pizzirani_v02.jpeg" alt="Foto 4 ">
-                    <p>Familia NICOLA PIZZIRANI & MARIA MAZZINI sentados ao centro, atrás em pé da esquerda p/ a direita, Alexandre, Lazaro, Marcelo, Augusto, Roque o jovem a esquerda Efésio, da direita Ismael, entre o casal Joel, as moças, da esquerda Dometila e da direita Hermenegilda.</p>
-                </figure>
-                 <figure class="extra-item">
-                    <img src="../imagens_smais/Arnaldo/familia_nicola_pizzirani_v03.png" alt="Foto 5">
-                    <p>Armazem de  SECOS E MOLHADOS NICOLA PIZZIRANI, Rua quatro esquina com Avenida doze, nesse local também eram comercializados (tijolos comuns), produzidos na OLARIA da familia, no Sitio Boa Vista, localizado na Rua 6 proximo ao Rio Corumbatai.</p>
-                </figure>
-                 <figure class="extra-item">
-                    <img src="../imagens_smais/Arnaldo/reuniao_comnetosebisnetos-29-11-23.jpg" alt="Foto 6">
-                          <p>Encontro com familiares em 23/11/23, no ap de <a href="0402_arnaldo.html">Arnaldo</a> e <a href="0401_amaria.html">Antonia Maria</a>; no fundo, <a href="0401_amaria.html">Amaria</a> e <a href="0304_andrea.html">Andrea</a>, <a href="0208-marcella.html">Marcella</a>, <a href="0101-lorena.html">Lorena</a> e <a href="0204-sthefanie.html">Sthefanie</a>, <a href="0207-livia.html">Livia</a> e <a href="0402_arnaldo.html">Arnaldo</a>.</p>
-                 </figure>  
-            </div>        </section>
-
+            </div>
+        </section>
         <section class="story">
             <h2>Historia</h2>
-            <p>Nicola Pizzirani imigrou da Italia ........</p>
-            <p>Se preferir, adicione parágrafos curtos para leitura mais confortável.</p>
-            <p>Paragrafo 3 da historia.</p>
-            <p>Paragrafo 4 da historia.</p>
+                <p>Escreva aqui o texto historico principal. Pode ser feito no Word e depois colado nesta pagina.</p>
+                <p>Se preferir, use mais paragrafos curtos para facilitar leitura em celular.</p>
+                <p>Paragrafo 3 da historia.</p>
+                <p>Paragrafo 4 da historia.</p>
         </section>
     </main>
 
@@ -394,6 +337,7 @@
     </script>
 </body>
 </html>
+
 
 
 

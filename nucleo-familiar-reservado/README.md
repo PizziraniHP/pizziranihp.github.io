@@ -23,6 +23,13 @@ Este README é o manual rápido do projeto. Ele explica:
 
 O cadastro é feito em um único lugar: `dados/pessoas.json`.
 
+## Paridade e parentalidade
+
+- Geracao `0100` (bisnetos): excecao por ordem etaria, sem paridade obrigatoria.
+- Geracoes `0200+`: convencao de ID (impar masculino, par feminino).
+- Parentalidade usa modelo neutro: `responsavel1` e `responsavel2`.
+- O casal parental nao depende de genero e pode ser: par+par, impar+impar ou par+impar.
+
 Os cartões das árvores só precisam do ID da pessoa, por exemplo:
 
 ```html
@@ -177,6 +184,8 @@ Use este modelo para acelerar novos registros em `dados/pessoas.json`:
 	"id": "0000",
 	"nome": "Nome Completo",
 	"apelido": "Descricao curta",
+	"responsavel1": "0000",
+	"responsavel2": "0000",
 	"foto": "imagens/geracao/geracao_0000_nome-sobrenome_v01.jpg",
 	"resumo": "Resumo curto.",
 	"textoCompleto": "Texto completo com historia, lembrancas e datas.",

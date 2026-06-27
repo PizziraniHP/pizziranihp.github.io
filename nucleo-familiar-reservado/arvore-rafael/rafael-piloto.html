@@ -593,6 +593,25 @@
          PILOTO: Script de colapso por geração
     ===================================================== -->
     <script>
+    function aplicarCoresPorMetade(generationId) {
+        var container = document.getElementById('conteudo-' + generationId);
+        if (!container) return;
+        var cards = Array.prototype.slice.call(container.querySelectorAll('.card-pessoa'));
+        if (!cards.length) return;
+
+        var metade = Math.ceil(cards.length / 2);
+        cards.forEach(function(card, index) {
+            if (card.classList.contains('ramo-base')) return;
+            card.classList.remove('ramo-paterno');
+            card.classList.remove('ramo-materno');
+            if (index < metade) {
+                card.classList.add('ramo-paterno');
+            } else {
+                card.classList.add('ramo-materno');
+            }
+        });
+    }
+
     // Adiciona ID discreto automaticamente em todos os cartões com data-person-id
     document.querySelectorAll('[data-person-id]').forEach(function(card) {
         var pid = card.getAttribute('data-person-id');
@@ -603,6 +622,11 @@
             card.appendChild(badge);
         }
     });
+
+    // Aplica cores por ramo também nas 3 últimas gerações.
+    aplicarCoresPorMetade('05');
+    aplicarCoresPorMetade('06');
+    aplicarCoresPorMetade('07');
 
     function toggleGeracao(id) {
         var conteudo = document.getElementById('conteudo-' + id);

@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Gabriela - Arvore Genealogica [PILOTO visual]</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* =====================================================
+           PILOTO: Ramos hereditários – cores por segmento
+        ===================================================== */
+
+        /* Ramo paterno (lado do Pai do bisneto) */
+        .ramo-paterno {
+            background: #d6e8f7 !important;
+            border-left: 4px solid #2980b9 !important;
+        }
+
+        /* Ramo materno (lado da Mãe do bisneto) */
+        .ramo-materno {
+            background: #d5f0e0 !important;
+            border-left: 4px solid #27ae60 !important;
+        }
+
+        /* Base – o próprio bisneto */
+        .ramo-base {
+            background: #e8f4fd !important;
+            border: 3px solid #3498db !important;
+            border-radius: 7px !important;
+        }
+
+        /* =====================================================
+           PILOTO: Legenda de cores
+        ===================================================== */
+        .legenda-ramos {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 12px 0 20px;
+            font-size: 0.85rem;
+        }
+        .legenda-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .legenda-cor {
+            width: 22px;
+            height: 22px;
+            border-radius: 4px;
+            border: 2px solid #999;
+            flex-shrink: 0;
+        }
+
+        /* =====================================================
+           PILOTO: Colapso de gerações
+        ===================================================== */
+        .geracao-bloco {
+            width: 100%;
+            margin: 10px 0;
+        }
+        .geracao-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #35424a;
+            color: #fff;
+            padding: 9px 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            user-select: none;
+            gap: 10px;
+        }
+        .geracao-toggle:hover {
+            background: #4a5f6e;
+        }
+        .geracao-toggle .titulo-geracao {
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        .geracao-toggle .btn-toggle {
+            background: rgba(255,255,255,0.18);
+            border: 1px solid rgba(255,255,255,0.4);
+            color: #fff;
+            padding: 4px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.82rem;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        .geracao-toggle .btn-toggle:hover {
+            background: rgba(255,255,255,0.32);
+        }
+        .geracao-conteudo.colapsado {
+            display: none;
+        }
+
+        /* =====================================================
+           PILOTO: ID discreto no cartão
+        ===================================================== */
+        .card-id {
+            font-size: 0.62rem;
+            color: #aaa;
+            margin-top: 5px;
+            letter-spacing: 0.04em;
+        }
+
+        /* =====================================================
+           PILOTO: badge de identificação
+        ===================================================== */
+        .badge-piloto {
+            display: inline-block;
+            background: #e67e22;
+            color: #fff;
+            font-size: 0.70rem;
+            font-weight: bold;
+            padding: 3px 10px;
+            border-radius: 999px;
+            margin-left: 10px;
+            vertical-align: middle;
+            letter-spacing: 0.05em;
+        }
+        .aviso-piloto {
+            background: #fef3cd;
+            border: 1px solid #f0c040;
+            border-radius: 6px;
+            padding: 10px 18px;
+            font-size: 0.85rem;
+            margin: 10px 0 18px;
+            color: #7d5e00;
+        }
+    </style>
+</head>
+<body>
+    <!-- LIGHTBOX -->
+    <div id="lightbox" class="lightbox">
+        <img id="lightbox-img" src="">
+    </div>
+    <script src="script.js?v=20260625"></script>
+
+    <div class="container">
+        <header>
+            <h1>Bisneta Gabriela – Pirâmide da Família <span class="badge-piloto">PILOTO VISUAL</span></h1>
+            <h2>"Um universo de ancestrais visto a partir da bisneta Gabriela"</h2>
+        </header>
+
+        <div class="acesso-discreto">
+            <a href="../index.html">voltar ao Núcleo Familiar Reservado</a>
+            &nbsp;·&nbsp;
+            <a href="gabriela.html">versão atual (sem piloto)</a>
+        </div>
+
+        <div class="aviso-piloto">
+            <strong>Versão Piloto:</strong> Esta página testa três novidades —
+            <strong>cores por ramo hereditário</strong>, <strong>colapso de gerações</strong>
+            e <strong>legenda visual</strong>. Nenhum dado foi alterado.
+            Gerações 5, 6 e 7 podem ser expandidas ou recolhidas com um clique.
+        </div>
+
+        <!-- ============================
+             LEGENDA DE RAMOS
+        ============================ -->
+        <div class="legenda-ramos">
+            <div class="legenda-item">
+                <div class="legenda-cor" style="background:#e8f4fd;border-color:#3498db;"></div>
+                <span><strong>Gabriela</strong> – base da pirâmide</span>
+            </div>
+            <div class="legenda-item">
+                <div class="legenda-cor" style="background:#d6e8f7;border-color:#2980b9;"></div>
+                <span>Ramo <strong>paterno</strong> (lado do Pai)</span>
+            </div>
+            <div class="legenda-item">
+                <div class="legenda-cor" style="background:#d5f0e0;border-color:#27ae60;"></div>
+                <span>Ramo <strong>materno</strong> (lado da Mãe)</span>
+            </div>
+        </div>
+
+        <!-- ============================
+             BLOCO INTRODUTÓRIO
+        ============================ -->
+        <section class="intro-block">
+            <p>
+                Esta página foi criada com um propósito muito especial: registrar, enquanto ainda é possível,
+                as imagens, os nomes e as histórias que chegaram até nós. Talvez consigamos alcançar seis gerações,
+                talvez um pouco mais. O que importa é deixar um caminho iluminado para os bisnetos e para todos
+                que vierem depois.
+            </p>
+            <p>
+                Com o passar do tempo, vamos perdendo o contato direto com quem veio antes de nós. As histórias
+                dos avós, bisavós e daqueles que os antecederam tornam-se mais distantes, mais difíceis de
+                reconstruir. Ao organizar estas informações agora, deixamos um legado para que as futuras
+                gerações possam conhecer suas raízes, entender de onde vieram e sentir orgulho da história
+                que as trouxe até aqui.
+            </p>
+            <p>
+                Esta página não é um trabalho terminado, mas um ponto de partida. Ela mostra até onde conseguimos
+                chegar hoje e abre espaço para que, no futuro, novas informações sejam acrescentadas, novas fotos
+                sejam incluídas e novas histórias sejam contadas. Que cada geração da Família Pizzirani encontre
+                aqui um pedaço de si mesma e se sinta convidada a continuar escrevendo esta história.
+            </p>
+            <p class="quote">
+                "A ancestralidade é tão grandiosa, misteriosa e inimaginável quanto o universo."
+            </p>
+        </section>
+
+        <!-- ============================
+             BLOCO DE CURIOSIDADE
+        ============================ -->
+        <section class="curiosidade-block">
+            <div class="curiosidade-title">
+                Curiosidade – A grandeza invisível da nossa ancestralidade
+            </div>
+            <p>
+                Quando pensamos em família, normalmente lembramos dos pais, avós e talvez bisavós. Mas, do ponto
+                de vista matemático, cada pessoa carrega uma história muito maior — tão grande que chega a ser
+                difícil de imaginar.
+            </p>
+            <p>
+                Em cada geração, o número de antepassados dobra: 2 pais, 4 avós, 8 bisavós, 16 trisavós, 32
+                tetravós e assim por diante. Em apenas 20 gerações, isso significa mais de
+                <span class="highlight">1 milhão de antepassados diretos</span>. Somando todas as gerações até
+                esse ponto, são mais de <span class="highlight">2 milhões de vidas</span> que, de alguma forma,
+                contribuíram para que cada um de nós exista hoje.
+            </p>
+            <p>
+                Esta pirâmide inversa é uma tentativa de registrar o máximo possível dessas raízes antes que o
+                tempo apague os detalhes que ainda podemos recuperar.
+            </p>
+        </section>
+
+        <!-- ============================
+             PIRÂMIDE INVERSA
+        ============================ -->
+        <section class="piramide-inversa">
+            <div class="piramide-title">Pirâmide Inversa – Da base (bisneto) às raízes</div>
+            <div class="piramide-subtitle">
+                Gerações 5, 6 e 7 podem ser expandidas ou recolhidas com o botão de cada seção.
+            </div>
+
+            <div class="piramide-inversa-inner">
+
+                <!-- ========== GERAÇÃO 01 - BASE (GABRIELA) ========== -->
+                <div class="linha-geracao">
+                    <div class="card-pessoa card-bisneta ramo-base" data-person-id="0106" data-person-page="../saiba-mais/0106-gabriela.html">
+                        <img src="../imagens/bisnetos/0106_gabriela_v01.jpeg" class="foto-bisneta">
+                        <div class="nome">Gabriela</div>
+                        <div class="detalhe">Base da pirâmide</div>
+                    </div>
+                </div>
+                <div class="legenda-linha">Base da pirâmide – Bisneta (1)</div>
+                <div class="linha-separadora"></div>
+
+                <!-- ========== GERAÇÃO 02 - PAIS ========== -->
+                <div class="linha-geracao">
+                    <!-- Pai do bisneto → ramo paterno (azul) -->
+                    <div class="card-pessoa card-pais ramo-paterno" data-person-id="0201" data-person-page="../saiba-mais/0201-marcos.html">
+                        <img src="../imagens/pais/0201_marcos_v01.jpeg" class="foto-pais">
+                        <div class="nome">Pai do bisneto</div>
+                        <div class="detalhe">Filho de ???? e ????, neto de Y</div>
+                    </div>
+                    <!-- Mãe do bisneto → ramo materno (verde) -->
+                    <div class="card-pessoa card-pais ramo-materno" data-person-id="0202" data-person-page="../saiba-mais/0202-paula.html">
+                        <img src="../imagens/pais/0202_paula_v01.jpeg" class="foto-pais">
+                        <div class="nome">Mãe do bisneto</div>
+                        <div class="detalhe">Filha de Sidnei e Patricia, neta de Arnaldo e Antonia Maria</div>
+                    </div>
+                </div>
+                <div class="legenda-linha">Pais do bisneto (2)</div>
+                <div class="linha-separadora"></div>
+
+                <!-- ========== GERAÇÃO 03 - AVÓS ========== -->
+                <div class="linha-geracao">
+                    <!-- Avô Paterno → ramo paterno (azul) -->
+                    <div class="card-pessoa card-avos ramo-paterno" data-person-id="0318" data-person-page="../saiba-mais/0318-odeon.html">
+                        <img src="../imagens/avos/0318_odeon_v01.png" class="foto-avos">
+                        <div class="nome">ODEON DE S R</div>
+                        <div class="detalhe">AVÔ PATERNO</div>
+                    </div>
+                    <!-- Avó Paterna → ramo paterno (azul) -->
+                    <div class="card-pessoa card-avos ramo-paterno" data-person-id="0319" data-person-page="../saiba-mais/0319-luciene.html">
+                        <img src="../imagens/avos/0319_luciene_v01.png" class="foto-avos">
+                        <div class="nome">LUCIENE R R</div>
+                        <div class="detalhe">AVÓ PATERNA</div>
+                    </div>
+                    <!-- Avô Materno → ramo materno (verde) -->
+                    <div class="card-pessoa card-avos ramo-materno" data-person-id="0301" data-person-page="../saiba-mais/0301-sidnei.html">
+                        <img src="../imagens/avos/0301_sidnei_v01.jpeg" class="foto-avos">
+                        <div class="nome">SIDNEI</div>
+                        <div class="detalhe">AVÔ MATERNO</div>
+                    </div>
+                    <!-- Avó Materna → ramo materno (verde) -->
+                    <div class="card-pessoa card-avos ramo-materno" data-person-id="0302" data-person-page="../saiba-mais/0302-patricia.html">
+                        <img src="../imagens/avos/0302_patricia_v01.jpeg" class="foto-avos">
+                        <div class="nome">PATRICIA</div>
+                        <div class="detalhe">AVÓ MATERNA</div>
+                    </div>
+                </div>
+                <div class="legenda-linha">Avós (4)</div>
+                <div class="linha-separadora"></div>
+
+                <!-- ========== GERAÇÃO 04 - BISAVÓS ========== -->
+                <!-- Posições 1-4: ramo paterno · Posições 5-8: ramo materno -->
+                <div class="linha-geracao linha-8">
+                    <!-- ---- G04-01 ramo paterno ---- -->
+                    <div class="card-pessoa card-bisavos ramo-paterno" data-person-id="0405" data-person-page="../saiba-mais/0405_juliodesouzarocha.html">
+                        <img src="../imagens/bisavos/0407_juliodesouzarocha_v01.jpeg" class="foto-bisavos">
+                        <div class="nome">JULIO DE SOUZA ROCHA</div>
+                        <div class="detalhe">BISAVÔ PATERNO</div>
+                    </div>
+                    <!-- ---- G04-02 ramo paterno ---- -->
+                    <div class="card-pessoa card-bisavos ramo-paterno" data-person-id="0406" data-person-page="../saiba-mais/0406_terezinhadesouzarocha.html">
+                        <img src="../imagens/bisavos/0406_terezinhadesouzarocha_v01.jpeg" class="foto-bisavos">
+                        <div class="nome">TEREZINHA DE SOUZA ROCHA</div>
+                        <div class="detalhe"></div>
+                    </div>
+                    <!-- ---- G04-03 ramo paterno (Julio Ramos – azul) ---- -->
+                    <div class="card-pessoa card-bisavos ramo-paterno" data-person-id="0407" data-person-page="../saiba-mais/0407_julioramos.html">
+                        <img src="../imagens/bisavos/0408_julioramos_v01.png" class="foto-bisavos">
+                        <div class="nome">JULIO RAMOS</div>
+                        <div class="detalhe">BISAVÔ</div>
+                    </div>
+                    <!-- ---- G04-04 ramo paterno (Leontina – azul) ---- -->
+                    <div class="card-pessoa card-bisavos ramo-paterno" data-person-id="0408" data-person-page="../saiba-mais/0408_leontinaramos.html">
+                        <img src="../imagens/bisavos/0405_leontinamariaramos_v01.jpeg" class="foto-bisavos">
+                        <div class="nome">LEONTINA MARIA RAMOS</div>
+                        <div class="detalhe">BISAVÓ</div>
+                    </div>
+                    <!-- ---- G04-05 ramo materno (Indalécio – verde) ---- -->
+                    <div class="card-pessoa card-bisavos ramo-materno" data-person-id="0409" data-person-page="../saiba-mais/0409_indaleciomarola.html">
+                        <img src="../imagens/bisavos/0410_indaleciomarola_v01.png" class="foto-bisavos">
+                        <div class="nome">INDALÉCIO MAROLA</div>
+                        <div class="detalhe">BISAVÔ</div>
+                    </div>
+                    <!-- ---- G04-06 ramo materno (Tereza – verde) ---- -->
+                    <div class="card-pessoa card-bisavos ramo-materno" data-person-id="0410" data-person-page="../saiba-mais/0410_terezamarola.html">
+                        <img src="../imagens/bisavos/0411_terezamarola_v01.png" class="foto-bisavos">
+                        <div class="nome">TEREZA MAROLA</div>
+                        <div class="detalhe">BISAVÓ</div>
+                    </div>
+                    <!-- ---- G04-07 ramo materno ---- -->
+                    <div class="card-pessoa card-bisavos ramo-materno" data-person-id="0401">
+                        <img src="../imagens/bisavos/0401_Arnaldo_InPixio_v01.png" class="foto-bisavos">
+                        <div class="nome">Bisavô / Bisavó</div>
+                        <div class="detalhe">Informações</div>
+                    </div>
+                    <!-- ---- G04-08 ramo materno ---- -->
+                    <div class="card-pessoa card-bisavos ramo-materno" data-person-id="0402">
+                        <img src="../imagens/bisavos/0402_amaria_InPixio_v01.png" class="foto-bisavos">
+                        <div class="nome">Bisavô / Bisavó</div>
+                        <div class="detalhe">Informações</div>
+                    </div>
+                </div>
+                <div class="legenda-linha">Bisavós (8)</div>
+                <div class="linha-separadora"></div>
+
+                <!-- ========== GERAÇÃO 05 – TRISAVÓS (collapsível, aberta por padrão) ========== -->
+                <div class="geracao-bloco">
+                    <div class="geracao-toggle" onclick="toggleGeracao('05')">
+                        <span class="titulo-geracao">Geração 5 – Trisavós (até 16)</span>
+                        <button class="btn-toggle" id="btn-05">▲ Recolher</button>
+                    </div>
+                    <div class="geracao-conteudo" id="conteudo-05">
+                        <div class="linha-geracao linha-8">
+                            <div class="card-pessoa card-trisavos">
+                                <img src="../imagens/trisavo1.png" class="foto-tataravos">
+                                <div class="nome">Trisavô / Trisavó</div>
+                                <div class="detalhe">Informações</div>
+                            </div>
+                            <div class="card-pessoa card-trisavos">
+                                <img src="../imagens/trisavo2.png" class="foto-tataravos">
+                                <div class="nome">Trisavô / Trisavó</div>
+                                <div class="detalhe">Informações</div>
+                            </div>
+                            <div class="card-pessoa card-trisavos">
+                                <img src="../imagens/trisavo3.png" class="foto-tataravos">
+                                <div class="nome">Trisavô / Trisavó</div>
+                                <div class="detalhe">Informações</div>
+                            </div>
+                            <div class="card-pessoa card-trisavos">
+                                <img src="../imagens/trisavo4.png" class="foto-tataravos">
+                                <div class="nome">Trisavô / Trisavó</div>
+                                <div class="detalhe">Informações</div>
+                            </div>
+                            <div class="card-pessoa card-trisavos">
+                                <img src="../imagens/trisavo5.png" class="foto-tataravos">
+                                <div class="nome">Trisavô / Trisavó</div>
+                                <div class="detalhe">Informações</div>
+                            </div>
+                            <div class="card-pessoa card-trisavos">
+                                <img src="../imagens/trisavo6.png" class="foto-tataravos">
+                                <div class="nome">Trisavô / Trisavó</div>
+                                <div class="detalhe">Informações</div>
+                            </div>
+                            <div class="card-pessoa card-trisavos">
+                                <img src="../imagens/trisavo7.png" class="foto-tataravos">
+                                <div class="nome">Trisavô / Trisavó</div>
+                                <div class="detalhe">Informações</div>
+                            </div>
+                            <div class="card-pessoa card-trisavos">
+                                <img src="../imagens/trisavo8.png" class="foto-tataravos">
+                                <div class="nome">Trisavô / Trisavó</div>
+                                <div class="detalhe">Informações</div>
+                            </div>
+                        </div>
+                        <div class="linha-geracao linha-8">
+                            <div class="card-pessoa card-trisavos">
+                                <img src="../imagens/trisavo9.png" class="foto-tataravos">
+                                <div class="nome">Trisavô / Trisavó</div>
+                                <div class="detalhe">Informações</div>
+                            </div>
+                            <div class="card-pessoa card-trisavos">
+                                <img src="../imagens/trisavo10.png" class="foto-tataravos">
+                                <div class="nome">Trisavô / Trisavó</div>
+                                <div class="detalhe">Informações</div>
+                            </div>
+                            <div class="card-pessoa card-trisavos">
+                                <img src="../imagens/trisavo11.png" class="foto-tataravos">
+                                <div class="nome">Trisavô / Trisavó</div>
+                                <div class="detalhe">Informações</div>
+                            </div>
+                            <div class="card-pessoa card-trisavos">
+                                <img src="../imagens/trisavo12.png" class="foto-tataravos">
+                                <div class="nome">Trisavô / Trisavó</div>
+                                <div class="detalhe">Informações</div>
+                            </div>
+                            <div class="card-pessoa card-trisavos" data-person-id="0501" data-person-page="../saiba-mais/0501_marcelopizzirani.html">
+                                <img src="../imagens/marcelomeupai.jpg" class="foto-tataravos">
+                                <div class="nome">Marcelo Pizzirani</div>
+                                <div class="detalhe">Trisavô paterno</div>
+                            </div>
+                            <div class="card-pessoa card-trisavos" data-person-id="0502" data-person-page="../saiba-mais/0502_anacristinalienhardt.html">
+                                <img src="../imagens/anaminhamae.jpg" class="foto-tataravos">
+                                <div class="nome">Ana Cristina</div>
+                                <div class="detalhe">Trisavó paterna</div>
+                            </div>
+                            <div class="card-pessoa card-trisavos">
+                                <img src="../imagens/" class="foto-tataravos">
+                                <div class="nome">Trisavô / Trisavó</div>
+                                <div class="detalhe">Informações</div>
+                            </div>
+                            <div class="card-pessoa card-trisavos">
+                                <img src="../imagens/" class="foto-tataravos">
+                                <div class="nome">Trisavô / Trisavó</div>
+                                <div class="detalhe">Informações</div>
+                            </div>
+                        </div>
+                        <div class="legenda-linha">Trisavós (16)</div>
+                        <div class="linha-separadora"></div>
+                    </div>
+                </div>
+
+                <!-- ========== GERAÇÃO 06 – TETRAVÓS (colapsada por padrão) ========== -->
+                <div class="geracao-bloco">
+                    <div class="geracao-toggle" onclick="toggleGeracao('06')">
+                        <span class="titulo-geracao">Geração 6 – Tetravós (até 32)</span>
+                        <button class="btn-toggle" id="btn-06">▼ Expandir</button>
+                    </div>
+                    <div class="geracao-conteudo colapsado" id="conteudo-06">
+                        <div class="linha-geracao linha-8">
+                            <div class="card-pessoa card-tataravos">
+                                <img src="../imagens/tataravo1.png" class="foto-tetravos">
+                                <div class="nome">Tetravô / Tetravó</div>
+                                <div class="detalhe">Informações</div>
+                            </div>
+                            <div class="card-pessoa card-tataravos">
+                                <img src="../imagens/" class="foto-tetravos">
+                                <div class="nome">Tetravô / Tetravó</div>
+                                <div class="detalhe">Informações</div>
+                            </div>
+                            <div class="card-pessoa card-tataravos">
+                                <img src="../imagens/" class="foto-tetravos">
+                                <div class="nome">Tetravô / Tetravó</div>
+                                <div class="detalhe">Informações</div>
+                            </div>
+                            <div class="card-pessoa card-tataravos" data-person-id="0601" data-person-page="../saiba-mais/0601_nicola_pizzirani.html">
+                                <img src="../imagens/tetravos/0601_nicola_pizzirani_v01.jpeg" class="foto-tetravos">
+                                <div class="nome">Nicola Pizzirani</div>
+                                <div class="detalhe">AVÔ DO AUTOR DESTA ARVORE</div>
+                            </div>
+                            <div class="card-pessoa card-tataravos" data-person-id="0602" data-person-page="../saiba-mais/0602_maria_mazzini.html">
+                                <img src="../imagens/tetravos/0602_maria_mazzini_v01.jpeg" class="foto-tetravos">
+                                <div class="nome">Maria Mazzini</div>
+                                <div class="detalhe">AVÓ DO AUTOR DESTA ARVORE</div>
+                            </div>
+                            <div class="card-pessoa card-tataravos" data-person-id="0603" data-person-page="../saiba-mais/0603_henrique_lienhardt.html">
+                                <img src="../imagens/tetravos/0603_henrique_lienhardt_v01.png" class="foto-tetravos">
+                                <div class="nome">Henrique</div>
+                                <div class="detalhe">Informações</div>
+                            </div>
+                            <div class="card-pessoa card-tataravos" data-person-id="0604" data-person-page="../saiba-mais/0604_ana_petru.html">
+                                <img src="../imagens/tetravos/0604_ana_petru_v01.png" class="foto-tetravos">
+                                <div class="nome">Ana Petru</div>
+                                <div class="detalhe">Informações</div>
+                            </div>
+                            <div class="card-pessoa card-tataravos">
+                                <img src="../imagens/" class="foto-tetravos">
+                                <div class="nome">Tetravô / Tetravó</div>
+                                <div class="detalhe">Informações</div>
+                            </div>
+                        </div>
+                        <div class="linha-geracao linha-8">
+                            <div class="card-pessoa card-tataravos"><img src="../imagens/" class="foto-tetravos"><div class="nome">Tetravô / Tetravó</div><div class="detalhe">Informações</div></div>
+                            <div class="card-pessoa card-tataravos"><img src="../imagens/" class="foto-tetravos"><div class="nome">Tetravô / Tetravó</div><div class="detalhe">Informações</div></div>
+                            <div class="card-pessoa card-tataravos"><img src="../imagens/" class="foto-tetravos"><div class="nome">Tetravô / Tetravó</div><div class="detalhe">Informações</div></div>
+                            <div class="card-pessoa card-tataravos"><img src="../imagens/" class="foto-tetravos"><div class="nome">Tetravô / Tetravó</div><div class="detalhe">Informações</div></div>
+                            <div class="card-pessoa card-tataravos"><img src="../imagens/" class="foto-tetravos"><div class="nome">Tetravô / Tetravó</div><div class="detalhe">Informações</div></div>
+                            <div class="card-pessoa card-tataravos"><img src="../imagens/" class="foto-tetravos"><div class="nome">Tetravô / Tetravó</div><div class="detalhe">Informações</div></div>
+                            <div class="card-pessoa card-tataravos"><img src="../imagens/" class="foto-tetravos"><div class="nome">Tetravô / Tetravó</div><div class="detalhe">Informações</div></div>
+                            <div class="card-pessoa card-tataravos"><img src="../imagens/" class="foto-tetravos"><div class="nome">Tetravô / Tetravó</div><div class="detalhe">Informações</div></div>
+                        </div>
+                        <div class="linha-geracao linha-8">
+                            <div class="card-pessoa card-tataravos"><img src="../imagens/" class="foto-tetravos"><div class="nome">Tetravô / Tetravó</div><div class="detalhe">Informações</div></div>
+                            <div class="card-pessoa card-tataravos"><img src="../imagens/" class="foto-tetravos"><div class="nome">Tetravô / Tetravó</div><div class="detalhe">Informações</div></div>
+                            <div class="card-pessoa card-tataravos"><img src="../imagens/" class="foto-tetravos"><div class="nome">Tetravô / Tetravó</div><div class="detalhe">Informações</div></div>
+                            <div class="card-pessoa card-tataravos"><img src="../imagens/" class="foto-tetravos"><div class="nome">Tetravô / Tetravó</div><div class="detalhe">Informações</div></div>
+                            <div class="card-pessoa card-tataravos"><img src="../imagens/" class="foto-tetravos"><div class="nome">Tetravô / Tetravó</div><div class="detalhe">Informações</div></div>
+                            <div class="card-pessoa card-tataravos"><img src="../imagens/" class="foto-tetravos"><div class="nome">Tetravô / Tetravó</div><div class="detalhe">Informações</div></div>
+                            <div class="card-pessoa card-tataravos"><img src="../imagens/" class="foto-tetravos"><div class="nome">Tetravô / Tetravó</div><div class="detalhe">Informações</div></div>
+                            <div class="card-pessoa card-tataravos"><img src="../imagens/" class="foto-tetravos"><div class="nome">Tetravô / Tetravó</div><div class="detalhe">Informações</div></div>
+                        </div>
+                        <div class="linha-geracao linha-8">
+                            <div class="card-pessoa card-tataravos"><img src="../imagens/" class="foto-tetravos"><div class="nome">Tetravô / Tetravó</div><div class="detalhe">Informações</div></div>
+                            <div class="card-pessoa card-tataravos"><img src="../imagens/" class="foto-tetravos"><div class="nome">Tetravô / Tetravó</div><div class="detalhe">Informações</div></div>
+                            <div class="card-pessoa card-tataravos"><img src="../imagens/" class="foto-tetravos"><div class="nome">Tetravô / Tetravó</div><div class="detalhe">Informações</div></div>
+                            <div class="card-pessoa card-tataravos"><img src="../imagens/" class="foto-tetravos"><div class="nome">Tetravô / Tetravó</div><div class="detalhe">Informações</div></div>
+                            <div class="card-pessoa card-tataravos"><img src="../imagens/" class="foto-tetravos"><div class="nome">Tetravô / Tetravó</div><div class="detalhe">Informações</div></div>
+                            <div class="card-pessoa card-tataravos"><img src="../imagens/" class="foto-tetravos"><div class="nome">Tetravô / Tetravó</div><div class="detalhe">Informações</div></div>
+                            <div class="card-pessoa card-tataravos"><img src="../imagens/" class="foto-tetravos"><div class="nome">Tetravô / Tetravó</div><div class="detalhe">Informações</div></div>
+                            <div class="card-pessoa card-tataravos"><img src="../imagens/" class="foto-tetravos"><div class="nome">Tetravô / Tetravó</div><div class="detalhe">Informações</div></div>
+                        </div>
+                        <div class="legenda-linha">Tetravós (32)</div>
+                        <div class="linha-separadora"></div>
+                    </div>
+                </div>
+
+                <!-- ========== GERAÇÃO 07 – PENTAVÓS (colapsada por padrão) ========== -->
+                <div class="geracao-bloco">
+                    <div class="geracao-toggle" onclick="toggleGeracao('07')">
+                        <span class="titulo-geracao">Geração 7 – Pentavós (até 64)</span>
+                        <button class="btn-toggle" id="btn-07">▼ Expandir</button>
+                    </div>
+                    <div class="geracao-conteudo colapsado" id="conteudo-07">
+                        <div class="linha-geracao">
+                            <div class="card-pessoa card-tataravos">
+                                <img src="../imagens/pentavos/0701_luizmazzini_v01.jpeg" class="foto-hexaavos">
+                                <div class="nome">Luiz Mazzini</div>
+                                <div class="detalhe">PENTAVÔ DOS BISNETOS DO AUTOR DESTA ARVORE</div>
+                            </div>
+                            <div class="card-pessoa card-tataravos" data-person-id="0702">
+                                <img src="../imagens/pentavos/0702_beatrizmazzini_v01.jpeg" class="foto-hexaavos">
+                                <div class="nome">Beatriz Mazzini</div>
+                                <div class="detalhe">PENTAVÓ DOS BISNETOS DO AUTOR DESTA ARVORE</div>
+                            </div>
+                            <div class="card-pessoa card-tataravos">
+                                <img src="../imagens/pentavos/0703_alessandropizzirani_v01.jpg" class="foto-hexaavos">
+                                <div class="nome">Alessandro Pizzirani</div>
+                                <div class="detalhe">PENTAVÔ DOS BISNETOS DO AUTOR DESTA ARVORE</div>
+                            </div>
+                            <div class="card-pessoa card-tataravos">
+                                <img src="../imagens/pentavos/0704_mariapiazzipizzirani_v01.jpg" class="foto-hexaavos">
+                                <div class="nome">Maria Piazzi Pizzirani</div>
+                                <div class="detalhe">PENTAVÓ DOS BISNETOS DO AUTOR DESTA ARVORE</div>
+                            </div>
+                            <div class="card-pessoa card-tataravos">
+                                <img src="../imagens/" class="foto-hexaavos">
+                                <div class="nome">Pentavô / Pentavó</div>
+                                <div class="detalhe">Espaço</div>
+                            </div>
+                            <div class="card-pessoa card-tataravos">
+                                <img src="../imagens/" class="foto-hexaavos">
+                                <div class="nome">Pentavô / Pentavó</div>
+                                <div class="detalhe">Espaço</div>
+                            </div>
+                            <div class="card-pessoa card-tataravos">
+                                <img src="../imagens/" class="foto-hexaavos">
+                                <div class="nome">Pentavô / Pentavó</div>
+                                <div class="detalhe">Espaço</div>
+                            </div>
+                        </div>
+                        <div class="legenda-linha">Pentavós confirmados (4 de até 64)</div>
+                        <div class="linha-separadora"></div>
+                    </div>
+                </div>
+
+            </div><!-- /piramide-inversa-inner -->
+        </section>
+
+    </div><!-- /container -->
+
+    <!-- =====================================================
+         PILOTO: Script de colapso por geração
+    ===================================================== -->
+    <script>
+    function aplicarCoresPorMetade(generationId) {
+        var container = document.getElementById('conteudo-' + generationId);
+        if (!container) return;
+        var cards = Array.prototype.slice.call(container.querySelectorAll('.card-pessoa'));
+        if (!cards.length) return;
+
+        var metade = Math.ceil(cards.length / 2);
+        cards.forEach(function(card, index) {
+            if (card.classList.contains('ramo-base')) return;
+            card.classList.remove('ramo-paterno');
+            card.classList.remove('ramo-materno');
+            if (index < metade) {
+                card.classList.add('ramo-paterno');
+            } else {
+                card.classList.add('ramo-materno');
+            }
+        });
+    }
+
+    // Adiciona ID discreto automaticamente em todos os cartões com data-person-id
+    document.querySelectorAll('[data-person-id]').forEach(function(card) {
+        var pid = card.getAttribute('data-person-id');
+        if (pid) {
+            var badge = document.createElement('div');
+            badge.className = 'card-id';
+            badge.textContent = 'id ' + pid;
+            card.appendChild(badge);
+        }
+    });
+
+    // Aplica cores por ramo também nas 3 últimas gerações.
+    aplicarCoresPorMetade('05');
+    aplicarCoresPorMetade('06');
+    aplicarCoresPorMetade('07');
+
+    function toggleGeracao(id) {
+        var conteudo = document.getElementById('conteudo-' + id);
+        var btn = document.getElementById('btn-' + id);
+        if (!conteudo || !btn) return;
+        if (conteudo.classList.contains('colapsado')) {
+            conteudo.classList.remove('colapsado');
+            btn.textContent = '▲ Recolher';
+        } else {
+            conteudo.classList.add('colapsado');
+            btn.textContent = '▼ Expandir';
+        }
+    }
+    </script>
+
+</body>
+</html>

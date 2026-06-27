@@ -98,6 +98,16 @@
         }
 
         /* =====================================================
+           PILOTO: ID discreto no cartão
+        ===================================================== */
+        .card-id {
+            font-size: 0.62rem;
+            color: #aaa;
+            margin-top: 5px;
+            letter-spacing: 0.04em;
+        }
+
+        /* =====================================================
            PILOTO: badge de identificação
         ===================================================== */
         .badge-piloto {
@@ -305,29 +315,29 @@
                         <div class="nome">TEREZINHA DE SOUZA ROCHA</div>
                         <div class="detalhe"></div>
                     </div>
-                    <!-- ---- G04-03 ramo paterno ---- -->
+                    <!-- ---- G04-03 ramo paterno (Julio Ramos – azul) ---- -->
                     <div class="card-pessoa card-bisavos ramo-paterno">
-                        <img src="../imagens/bisavos/0410_indaleciomarola_v01.png" class="foto-bisavos">
-                        <div class="nome">INDALÉCIO MAROLA</div>
-                        <div class="detalhe">BISAVÔ PATERNO</div>
-                    </div>
-                    <!-- ---- G04-04 ramo paterno ---- -->
-                    <div class="card-pessoa card-bisavos ramo-paterno">
-                        <img src="../imagens/bisavos/0411_terezamarola_v01.png" class="foto-bisavos">
-                        <div class="nome">TEREZA MAROLA</div>
-                        <div class="detalhe">BISAVÓ PATERNA</div>
-                    </div>
-                    <!-- ---- G04-05 ramo materno ---- -->
-                    <div class="card-pessoa card-bisavos ramo-materno">
                         <img src="../imagens/bisavos/0408_julioramos_v01.png" class="foto-bisavos">
                         <div class="nome">JULIO RAMOS</div>
-                        <div class="detalhe">BISAVÔ MATERNO</div>
+                        <div class="detalhe">BISAVÔ</div>
                     </div>
-                    <!-- ---- G04-06 ramo materno ---- -->
-                    <div class="card-pessoa card-bisavos ramo-materno">
+                    <!-- ---- G04-04 ramo paterno (Leontina – azul) ---- -->
+                    <div class="card-pessoa card-bisavos ramo-paterno">
                         <img src="../imagens/bisavos/0405_leontinamariaramos_v01.jpeg" class="foto-bisavos">
                         <div class="nome">LEONTINA MARIA RAMOS</div>
-                        <div class="detalhe">BISAVÓ MATERNA</div>
+                        <div class="detalhe">BISAVÓ</div>
+                    </div>
+                    <!-- ---- G04-05 ramo materno (Indalécio – verde) ---- -->
+                    <div class="card-pessoa card-bisavos ramo-materno">
+                        <img src="../imagens/bisavos/0410_indaleciomarola_v01.png" class="foto-bisavos">
+                        <div class="nome">INDALÉCIO MAROLA</div>
+                        <div class="detalhe">BISAVÔ</div>
+                    </div>
+                    <!-- ---- G04-06 ramo materno (Tereza – verde) ---- -->
+                    <div class="card-pessoa card-bisavos ramo-materno">
+                        <img src="../imagens/bisavos/0411_terezamarola_v01.png" class="foto-bisavos">
+                        <div class="nome">TEREZA MAROLA</div>
+                        <div class="detalhe">BISAVÓ</div>
                     </div>
                     <!-- ---- G04-07 ramo materno ---- -->
                     <div class="card-pessoa card-bisavos ramo-materno" data-person-id="0401">
@@ -583,6 +593,17 @@
          PILOTO: Script de colapso por geração
     ===================================================== -->
     <script>
+    // Adiciona ID discreto automaticamente em todos os cartões com data-person-id
+    document.querySelectorAll('[data-person-id]').forEach(function(card) {
+        var pid = card.getAttribute('data-person-id');
+        if (pid) {
+            var badge = document.createElement('div');
+            badge.className = 'card-id';
+            badge.textContent = 'id ' + pid;
+            card.appendChild(badge);
+        }
+    });
+
     function toggleGeracao(id) {
         var conteudo = document.getElementById('conteudo-' + id);
         var btn = document.getElementById('btn-' + id);

@@ -1,27 +1,27 @@
-# Núcleo Familiar Reservado
+﻿# NÃºcleo Familiar Reservado
 
-Este diretório concentra as árvores genealógicas reservadas da família e o novo modelo de cadastro interno por pessoa.
+Este diretÃ³rio concentra as Ã¡rvores genealÃ³gicas reservadas da famÃ­lia e o novo modelo de cadastro interno por pessoa.
 
 ## Para que serve este README
 
-Este README é o manual rápido do projeto. Ele explica:
+Este README Ã© o manual rÃ¡pido do projeto. Ele explica:
 
 1. Onde cadastrar pessoas.
 2. Como os links "Saiba mais" funcionam.
-3. Em qual arquivo mexer para cada tipo de alteração.
+3. Em qual arquivo mexer para cada tipo de alteraÃ§Ã£o.
 
 ## Estrutura Atual
 
-- `index.html`: página de entrada do núcleo reservado.
-- `arvore-alice/`, `arvore-gabriela/`, `arvore-lorena/`, `arvore-luna/`, `arvore-pedro/`, `arvore-rafael/`: páginas de cada bisneto, com seus cartões.
-- `dados/pessoas.json`: cadastro interno centralizado (fonte única da verdade).
-- `pessoa.html`: página de detalhes "Saiba mais".
-- `pessoa.js`: lê o ID da URL, consulta `dados/pessoas.json` e monta a página.
-- `pessoa.css`: estilos da página de detalhes.
+- `index.html`: pÃ¡gina de entrada do nÃºcleo reservado.
+- `arvore-alice/`, `arvore-gabriela/`, `arvore-lorena/`, `arvore-luna/`, `arvore-pedro/`, `arvore-rafael/`: pÃ¡ginas de cada bisneto, com seus cartÃµes.
+- `dados/pessoas.json`: cadastro interno centralizado (fonte Ãºnica da verdade).
+- `pessoa.html`: pÃ¡gina de detalhes "Saiba mais".
+- `pessoa.js`: lÃª o ID da URL, consulta `dados/pessoas.json` e monta a pÃ¡gina.
+- `pessoa.css`: estilos da pÃ¡gina de detalhes.
 
 ## Regra Principal
 
-O cadastro é feito em um único lugar: `dados/pessoas.json`.
+O cadastro Ã© feito em um Ãºnico lugar: `dados/pessoas.json`.
 
 ## Paridade e parentalidade
 
@@ -30,7 +30,7 @@ O cadastro é feito em um único lugar: `dados/pessoas.json`.
 - Parentalidade usa modelo neutro: `responsavel1` e `responsavel2`.
 - O casal parental nao depende de genero e pode ser: par+par, impar+impar ou par+impar.
 
-Os cartões das árvores só precisam do ID da pessoa, por exemplo:
+Os cartÃµes das Ã¡rvores sÃ³ precisam do ID da pessoa, por exemplo:
 
 ```html
 <div class="card-pessoa" data-person-id="0202">
@@ -63,11 +63,37 @@ Comportamento:
 - Se `data-person-page` existir: abre a pagina independente.
 - Se nao existir: continua abrindo `../pessoa.html?id=...` (modo antigo).
 
+## Copiar e Colar (modo leigo)
+
+Objetivo: replicar paginas de forma rapida, sem risco de quebrar layout.
+
+Passo a passo simples:
+
+1. Duplicar uma pagina da pasta `saiba-mais/`.
+2. Trocar nome do arquivo para o novo ID (ex: `0102-alice.html` -> `0107-novoparente.html`).
+3. Abrir o bloco pronto em `saiba-mais/_bloco-fotos-padrao.html`.
+4. Copiar e colar as secoes de fotos (grandes e menores).
+5. Trocar apenas 3 itens em cada foto:
+	- `src` (caminho da imagem)
+	- `alt` (descricao curta)
+	- texto do `<p>` (comentario da foto)
+6. Testar no navegador clicando na foto para validar o zoom.
+
+Regra pratica:
+
+- Nao mexer em classes CSS (`extra-grid`, `extra-item`, `extra-grid-small`, `extra-item-small`).
+- Nao mexer no script de lightbox (zoom). Ele ja funciona para fotos grandes e pequenas.
+- Se so trocar `src`, `alt` e comentario, o layout permanece estavel.
+
+Arquivo de apoio:
+
+- `saiba-mais/_bloco-fotos-padrao.html` (template de copiar/colar para leigos)
+
 ## Fluxo de Cadastro (manual, pessoa por pessoa)
 
 1. Cadastrar ou atualizar a pessoa em `dados/pessoas.json`.
-2. Garantir que o cartão na árvore tenha `data-person-id` com o mesmo ID.
-3. Abrir a árvore no navegador e clicar em "Saiba mais" para testar.
+2. Garantir que o cartÃ£o na Ã¡rvore tenha `data-person-id` com o mesmo ID.
+3. Abrir a Ã¡rvore no navegador e clicar em "Saiba mais" para testar.
 
 ## Exemplo de Registro no JSON
 
@@ -86,10 +112,10 @@ Comportamento:
 
 ## O que editar em cada caso
 
-- Alterar história, resumo, foto, galeria: `dados/pessoas.json`.
-- Alterar visual da página de detalhes: `pessoa.css`.
-- Alterar lógica de carregamento do cadastro: `pessoa.js`.
-- Adicionar novo cartão em uma árvore: arquivo `.html` da árvore correspondente.
+- Alterar histÃ³ria, resumo, foto, galeria: `dados/pessoas.json`.
+- Alterar visual da pÃ¡gina de detalhes: `pessoa.css`.
+- Alterar lÃ³gica de carregamento do cadastro: `pessoa.js`.
+- Adicionar novo cartÃ£o em uma Ã¡rvore: arquivo `.html` da Ã¡rvore correspondente.
 - Criar conteudo livre por pessoa: `saiba-mais/*.html`.
 
 ## Convencoes de Imagem (padrao)
@@ -104,7 +130,7 @@ Use sempre a pasta central de imagens do nucleo reservado:
 - `imagens/bisavos/`
 - `imagens/trisavos/`
 - `imagens/tetravos/`
-- `imagens/hexavos/`
+- `imagens/pentavos/`
 
 Nao duplicar fotos por arvore (`arvore-alice`, `arvore-gabriela`, etc.).
 
@@ -202,7 +228,7 @@ Use este modelo para acelerar novos registros em `dados/pessoas.json`:
 
 Trocas rapidas no template:
 
-- `geracao`: bisnetos, pais, avos, bisavos, trisavos, tetravos, hexavos
+- `geracao`: bisnetos, pais, avos, bisavos, trisavos, tetravos, pentavos
 - `0000`: ID da pessoa (ex: 0101 para Alice)
 - `nome-sobrenome`: nome sem acento e sem espaco
 - `doc01`, `doc02`...: fotos extras da galeria (documentos, registros historicos)
@@ -238,6 +264,6 @@ Por isso:
 - deve evitar duplicacao de fotos
 - deve manter organizacao por geracao na pasta central
 
-## Observação de Privacidade
+## ObservaÃ§Ã£o de Privacidade
 
-Este núcleo foi pensado para conteúdo familiar reservado. Mantenha dados sensíveis somente aqui e evite exposição desnecessária nas páginas públicas.
+Este nÃºcleo foi pensado para conteÃºdo familiar reservado. Mantenha dados sensÃ­veis somente aqui e evite exposiÃ§Ã£o desnecessÃ¡ria nas pÃ¡ginas pÃºblicas.

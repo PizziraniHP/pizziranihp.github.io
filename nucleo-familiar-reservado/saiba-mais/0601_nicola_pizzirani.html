@@ -131,10 +131,17 @@
             margin: 0 0 12px;
             font-size: 22px;
         }
+        
         .extra-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 18px;
+            align-items: start;
+        }
+        .extra-grid-small {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 12px;
             align-items: start;
         }
         .extra-item {
@@ -173,7 +180,16 @@
             color: var(--muted);
             line-height: 1.55;
             overflow-wrap: anywhere;
-        }.story {
+        }
+        .extra-item-small img {
+            aspect-ratio: 1 / 1;
+        }
+        .extra-item-small p {
+            padding: 8px 9px;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+        .story {
             border-top: 1px solid var(--line);
             padding-top: 16px;
             margin-bottom: 20px;
@@ -188,11 +204,14 @@
             margin: 0 0 12px;
             text-align: justify;
         }
-
+        @media (max-width: 1080px) {
+            .extra-grid-small { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
         @media (max-width: 760px) {
             .hero { grid-template-columns: 1fr; }
             .photo-box { max-width: 320px; }
             .extra-grid { grid-template-columns: 1fr; }
+            .extra-grid-small { grid-template-columns: 1fr; }
             .extra-item img { aspect-ratio: auto; }
         }
 
@@ -303,6 +322,28 @@
                     <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4MDAnIGhlaWdodD0nNTYwJyB2aWV3Qm94PScwIDAgODAwIDU2MCc+CiAgPHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0nI2YyZWZlNScvPgogIDxyZWN0IHg9JzI0JyB5PScyNCcgd2lkdGg9Jzc1MicgaGVpZ2h0PSc1MTInIHJ4PScxOCcgcnk9JzE4JyBmaWxsPSdub25lJyBzdHJva2U9JyNkZGQ3Y2EnIHN0cm9rZS13aWR0aD0nNCcgc3Ryb2tlLWRhc2hhcnJheT0nMTIgMTAnLz4KICA8dGV4dCB4PSc1MCUnIHk9JzQ2JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzdhMmUyZScgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nNDInPkZvdG8gNDwvdGV4dD4KICA8dGV4dCB4PSc1MCUnIHk9JzU4JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzY2NjY2NicgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nMjQnPnN1YnN0aXR1YSBwb3IgdW1hIGltYWdlbTwvdGV4dD4KPC9zdmc+" alt="Foto 4">
                     <p>Comentario da foto 4.</p>
                 </figure>
+            </div>
+        </section>
+        <section class="extra extra-small">
+            <h2>Fotos menores (adicionais)</h2>
+            <div class="extra-grid-small">
+                <figure class="extra-item extra-item-small">
+                    <img src="../imagens/img_div/familia_nicola_pizzirani_v02.jpeg" alt="Foto da reunião de família de Nicola Pizzirani">
+                    <p>Na foto vemos nos fundos em pé os filhos mais velhos da esquerda para a direita Alexandre, Lazaro, Marcelo, Augusto e Roque. NO centro sentados NICOLA e esposa MARIA MAZZINI a esquerda fiha Dometila e a direita Hermenegilda, os meninos maiores, da esquerda Efésio e da direita Ismael, entre o casal o garotinho é o Joel.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../imagens/img_div/familia_nicola_pizzirani_v03.png" alt="Foto Armazem Secos e Molhados NICOLA PIZZIRANI">
+                    <p>Armazem de Secos e Molhados localizado na cidade de Rio Claro a Rua 4 esq com Av. 12, nesse local também era comercializado tijolos prduzidos na OLARIA de propriedade da familia.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4MDAnIGhlaWdodD0nNTYwJyB2aWV3Qm94PScwIDAgODAwIDU2MCc+CiAgPHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0nI2YyZWZlNScvPgogIDxyZWN0IHg9JzI0JyB5PScyNCcgd2lkdGg9Jzc1MicgaGVpZ2h0PSc1MTInIHJ4PScxOCcgcnk9JzE4JyBmaWxsPSdub25lJyBzdHJva2U9JyNkZGQ3Y2EnIHN0cm9rZS13aWR0aD0nNCcgc3Ryb2tlLWRhc2hhcnJheT0nMTIgMTAnLz4KICA8dGV4dCB4PSc1MCUnIHk9JzQ2JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzdhMmUyZScgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nNDInPkZvdG8gMzwvdGV4dD4KICA8dGV4dCB4PSc1MCUnIHk9JzU4JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzY2NjY2NicgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nMjQnPnN1YnN0aXR1YSBwb3IgdW1hIGltYWdlbTwvdGV4dD4KPC9zdmc+" alt="Foto 3">
+                    <p>Comentario da foto 3.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4MDAnIGhlaWdodD0nNTYwJyB2aWV3Qm94PScwIDAgODAwIDU2MCc+CiAgPHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0nI2YyZWZlNScvPgogIDxyZWN0IHg9JzI0JyB5PScyNCcgd2lkdGg9Jzc1MicgaGVpZ2h0PSc1MTInIHJ4PScxOCcgcnk9JzE4JyBmaWxsPSdub25lJyBzdHJva2U9JyNkZGQ3Y2EnIHN0cm9rZS13aWR0aD0nNCcgc3Ryb2tlLWRhc2hhcnJheT0nMTIgMTAnLz4KICA8dGV4dCB4PSc1MCUnIHk9JzQ2JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzdhMmUyZScgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nNDInPkZvdG8gNDwvdGV4dD4KICA8dGV4dCB4PSc1MCUnIHk9JzU4JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzY2NjY2NicgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nMjQnPnN1YnN0aXR1YSBwb3IgdW1hIGltYWdlbTwvdGV4dD4KPC9zdmc+" alt="Foto 4">
+                    <p>Comentario da foto 4.</p>
+                </figure>
+            
             </div>
         </section>
 

@@ -143,10 +143,17 @@
             margin: 0 0 12px;
             font-size: 22px;
         }
+        
         .extra-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 18px;
+            align-items: start;
+        }
+        .extra-grid-small {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 12px;
             align-items: start;
         }
         .extra-item {
@@ -185,7 +192,16 @@
             color: var(--muted);
             line-height: 1.55;
             overflow-wrap: anywhere;
-        }.story {
+        }
+        .extra-item-small img {
+            aspect-ratio: 1 / 1;
+        }
+        .extra-item-small p {
+            padding: 8px 9px;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+        .story {
             border-top: 1px solid var(--line);
             padding-top: 16px;
             margin-bottom: 20px;
@@ -200,11 +216,14 @@
             margin: 0 0 12px;
             text-align: justify;
         }
-
+        @media (max-width: 1080px) {
+            .extra-grid-small { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
         @media (max-width: 760px) {
             .hero { grid-template-columns: 1fr; }
             .photo-box { max-width: 320px; }
             .extra-grid { grid-template-columns: 1fr; }
+            .extra-grid-small { grid-template-columns: 1fr; }
             .extra-item img { aspect-ratio: auto; }
         }
 
@@ -328,6 +347,40 @@
                           <p>Encontro com familiares em 23/11/23, no ap de <a href="0401_arnaldo.html">Arnaldo</a> e <a href="0402_amaria.html">Antonia Maria</a>; no fundo, <a href="0402_amaria.html">Amaria</a> e <a href="0304_andrea.html">Andrea</a>, <a href="0208-marcella.html">Marcella</a>, <a href="0101-lorena.html">Lorena</a> e <a href="0204-sthefanie.html">Sthefanie</a>, <a href="0207-livia.html">Livia</a> e <a href="0401_arnaldo.html">Arnaldo</a>.</p>
                  </figure>  
             </div>        </section>
+        <section class="extra extra-small">
+            <h2>Fotos menores (adicionais)</h2>
+            <div class="extra-grid-small">
+                <figure class="extra-item extra-item-small">
+                    <img src="../imagens_smais/Arnaldo/arnaldoamariamarceloanacunhahelena.png" alt="Foto da reunião de família de Nicola Pizzirani">
+                    <p>Casamento Arnaldo Pizzirani & Antonia Maria Cunha Pizzirani, a direita dos nubentes Ezequiel e Helena pais da noiva a esquerda os pais do noivo Marcelo e Ana Cristina.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../imagens_smais/Arnaldo/tudojuntoemisturado_2023.jpg" alt="Reunião na residencia do casal Sidnei/Patricia">
+                    <p>Encontro em 2023 na casa de <a href="0301-sidnei.html">Sidnei</a> e <a href="0302-patricia.html">Patricia</a> - acredito reuniao com todos do cla <a href="0401_arnaldo.html">Arnaldo</a>/<a href="0402_amaria.html">Antonia Maria</a>.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../imagens_smais/Arnaldo/tudojuntoemisturado_2023_v02.jpg" alt="Reunião na residencia do casal Sidnei/Patricia (versão diferente)">
+                    <p>Encontro em 2023 na casa do Sidnei/Patricia - acredito reunião com todos do clã Arnaldo/Antonia Maria.(versão diferente).</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../imagens_smais/Arnaldo/oscinco2023.jpg" alt="Foto 3">
+                    <p>Em 2023, na casa da Patricia/Sidnei- nós; Patricia, Antonia Maria, Arnaldo Andrea e Marcelo.</p>
+                </figure>
+                 <figure class="extra-item extra-item-small">
+                    <img src="../imagens_smais/Arnaldo/familia_nicola_pizzirani_v02.jpeg" alt="Foto 4 ">
+                    <p>Familia NICOLA PIZZIRANI & MARIA MAZZINI sentados ao centro, atrás em pé da esquerda p/ a direita, Alexandre, Lazaro, Marcelo, Augusto, Roque o jovem a esquerda Efésio, da direita Ismael, entre o casal Joel, as moças, da esquerda Dometila e da direita Hermenegilda.</p>
+                </figure>
+                 <figure class="extra-item extra-item-small">
+                    <img src="../imagens_smais/Arnaldo/familia_nicola_pizzirani_v03.png" alt="Foto 5">
+                    <p>Armazem de  SECOS E MOLHADOS NICOLA PIZZIRANI, Rua quatro esquina com Avenida doze, nesse local também eram comercializados (tijolos comuns), produzidos na OLARIA da familia, no Sitio Boa Vista, localizado na Rua 6 proximo ao Rio Corumbatai.</p>
+                </figure>
+                 <figure class="extra-item extra-item-small">
+                    <img src="../imagens_smais/Arnaldo/reuniao_comnetosebisnetos-29-11-23.jpg" alt="Foto 6">
+                          <p>Encontro com familiares em 23/11/23, no ap de <a href="0401_arnaldo.html">Arnaldo</a> e <a href="0402_amaria.html">Antonia Maria</a>; no fundo, <a href="0402_amaria.html">Amaria</a> e <a href="0304_andrea.html">Andrea</a>, <a href="0208-marcella.html">Marcella</a>, <a href="0101-lorena.html">Lorena</a> e <a href="0204-sthefanie.html">Sthefanie</a>, <a href="0207-livia.html">Livia</a> e <a href="0401_arnaldo.html">Arnaldo</a>.</p>
+                 </figure>  
+            
+            </div>
+        </section>
 
         <section class="story">
             <h2>Historia</h2>

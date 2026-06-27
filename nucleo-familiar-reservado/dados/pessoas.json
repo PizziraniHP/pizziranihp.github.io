@@ -7,7 +7,7 @@
     "400": "Bisavos",
     "500": "Trisavos",
     "600": "Tetravos",
-    "700": "Hexavos"
+    "700": "Pentavos"
   },
   "regrasCadastro": {
     "paridade": {
@@ -607,7 +607,7 @@
       "fontes": []
     },
 
-    /* ==================== GERAÇÃO 07 (0700) - HEXAVOS ==================== */
+    /* ==================== GERAÇÃO 07 (0700) - PENTAVOS ==================== */
 
     /* ---- ID 0702 - HEXAVO 2 ---- */
     {
@@ -615,7 +615,7 @@
       "nome": "Hexavo 2",
       "apelido": "Linha Alice",
       "foto": "",
-      "resumo": "Cadastro inicial para hexavos.",
+      "resumo": "Cadastro inicial para pentavos.",
       "textoCompleto": "Preencher com historia, datas e registros da familia.",
       "galeria": [],
       "fontes": []

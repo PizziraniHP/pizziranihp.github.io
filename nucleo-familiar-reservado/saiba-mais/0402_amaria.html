@@ -131,10 +131,17 @@
             margin: 0 0 12px;
             font-size: 22px;
         }
+        
         .extra-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 18px;
+            align-items: start;
+        }
+        .extra-grid-small {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 12px;
             align-items: start;
         }
         .extra-item {
@@ -173,7 +180,16 @@
             color: var(--muted);
             line-height: 1.55;
             overflow-wrap: anywhere;
-        }.story {
+        }
+        .extra-item-small img {
+            aspect-ratio: 1 / 1;
+        }
+        .extra-item-small p {
+            padding: 8px 9px;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+        .story {
             border-top: 1px solid var(--line);
             padding-top: 16px;
             margin-bottom: 20px;
@@ -202,11 +218,14 @@
         .story a:hover {
             text-decoration-thickness: 2px;
         }
-
+        @media (max-width: 1080px) {
+            .extra-grid-small { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
         @media (max-width: 760px) {
             .hero { grid-template-columns: 1fr; }
             .photo-box { max-width: 320px; }
             .extra-grid { grid-template-columns: 1fr; }
+            .extra-grid-small { grid-template-columns: 1fr; }
             .extra-item img { aspect-ratio: auto; }
         }
 
@@ -325,6 +344,35 @@
                     <img src="../imagens_smais/Arnaldo/arnaldoamariamarceloanacunhahelena.png" alt="Casamento de Antonia Maria Cunha Pizzirani e Arnaldo Pizzirani">
                     <p>Comentario da foto 4.</p>
                 </figure>
+            </div>
+        </section>
+        <section class="extra extra-small">
+            <h2>Fotos menores (adicionais)</h2>
+            <div class="extra-grid-small">
+                <!-- ========== FOTO GALERIA 1 - PRINCIPAL ========== -->
+                <figure class="extra-item extra-item-small">
+                    <img src="../imagens_smais/amaria/amaria_v04.png" alt="Foto da empresaria/executiva Antonia Maria Cunha Pizzirani">
+                    <p>Antonia Maria Cunha Pizzirani</p>
+                </figure>
+
+                <!-- ========== FOTO GALERIA 2 - GRUPO DE AMIGAS, COLEGIAIS ========== -->
+                <figure class="extra-item extra-item-small">
+                    <img src="../imagens_smais/amaria/amaria-ligia-lourdes-odete.png" alt="COLEGIAIS-AMIGAS">
+                    <p>Colegas, amigas, Antonia Maria, Ligia Harmitte, Lourdes, Odete</p>
+                </figure>
+
+                <!-- ========== FOTO GALERIA 3 ========== -->
+                <figure class="extra-item extra-item-small">
+                     <img src="../imagens_smais/Arnaldo/arnaldoamariamarceloanacunhahelena.png" alt="Casamento de Antonia Maria Cunha Pizzirani e Arnaldo Pizzirani">
+                    <p>Comentario da foto 3.</p>
+                </figure>
+
+                <!-- ========== FOTO GALERIA 4 ========== -->
+                <figure class="extra-item extra-item-small">
+                    <img src="../imagens_smais/Arnaldo/arnaldoamariamarceloanacunhahelena.png" alt="Casamento de Antonia Maria Cunha Pizzirani e Arnaldo Pizzirani">
+                    <p>Comentario da foto 4.</p>
+                </figure>
+            
             </div>
         </section>
 

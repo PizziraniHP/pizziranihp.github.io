@@ -91,7 +91,6 @@
         .meta p {
             margin: 6px 0;
         }
-
         .story {
             border-top: 1px solid var(--line);
             padding-top: 16px;
@@ -115,10 +114,17 @@
             margin: 0 0 12px;
             font-size: 22px;
         }
+        
         .extra-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 18px;
+            align-items: start;
+        }
+        .extra-grid-small {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 12px;
             align-items: start;
         }
         .extra-item {
@@ -157,10 +163,23 @@
             color: var(--muted);
             line-height: 1.55;
             overflow-wrap: anywhere;
-        }@media (max-width: 760px) {
+        }
+        .extra-item-small img {
+            aspect-ratio: 1 / 1;
+        }
+        .extra-item-small p {
+            padding: 8px 9px;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+        @media (max-width: 1080px) {
+            .extra-grid-small { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 760px) {
             .hero { grid-template-columns: 1fr; }
             .photo-box { max-width: 320px; }
             .extra-grid { grid-template-columns: 1fr; }
+            .extra-grid-small { grid-template-columns: 1fr; }
             .extra-item img { aspect-ratio: auto; }
         }
 
@@ -270,6 +289,28 @@
                     <img src="../imagens/bisavos/0410_terezamarola_v01.png" alt="Foto 4">
                     <p>Comentario da foto 4.</p>
                 </figure>
+            </div>
+        </section>
+        <section class="extra extra-small">
+            <h2>Fotos menores (adicionais)</h2>
+            <div class="extra-grid-small">
+                <figure class="extra-item extra-item-small">
+                    <img src="../imagens/bisavos/0410_terezamarola_v01.png" alt="Foto 1">
+                    <p>Comentario da foto 1.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../imagens/bisavos/0410_terezamarola_v01.png" alt="Foto 2">
+                    <p>Comentario da foto 2.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../imagens/bisavos/0410_terezamarola_v01.png" alt="Foto 3">
+                    <p>Comentario da foto 3.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../imagens/bisavos/0410_terezamarola_v01.png" alt="Foto 4">
+                    <p>Comentario da foto 4.</p>
+                </figure>
+            
             </div>
         </section>
         <section class="story">

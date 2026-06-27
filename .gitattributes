@@ -1,0 +1,16 @@
+# Normalize text files automatically
+* text=auto
+
+# Web/source files keep LF in repository and working tree
+*.html text eol=lf
+*.css  text eol=lf
+*.js   text eol=lf
+*.json text eol=lf
+*.md   text eol=lf
+*.yml  text eol=lf
+*.yaml text eol=lf
+
+# Windows scripts keep CRLF for better local compatibility
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf

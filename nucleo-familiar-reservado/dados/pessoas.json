@@ -488,9 +488,9 @@
     /* ---- ID 0503 - TRISAVO 3 ---- */
     {
       "id": "0503",
-      "nome": "Trisavo 3",
+      "nome": "Ezequiel Alves da Cunha",
       "apelido": "Linha Alice",
-      "foto": "",
+      "foto": "../imagens/trisavos/0503_ezequieladacunha._v01.png",
       "resumo": "Cadastro inicial para trisavos.",
       "textoCompleto": "Preencher com historia, datas e registros da familia.",
       "galeria": [],
@@ -500,9 +500,9 @@
     /* ---- ID 0504 - TRISAVO 4 ---- */
     {
       "id": "0504",
-      "nome": "Trisavo 4",
+      "nome": "Helena Ferraz Pacheco",
       "apelido": "Linha Alice",
-      "foto": "",
+      "foto": "../imagens/trisavos/0504_helenaferrazpacheco_v01.png",
       "resumo": "Cadastro inicial para trisavos.",
       "textoCompleto": "Preencher com historia, datas e registros da familia.",
       "galeria": [],
@@ -512,9 +512,9 @@
     /* ---- ID 0505 - TRISAVO 5 ---- */
     {
       "id": "0505",
-      "nome": "Trisavo 5",
+      "nome": "Pai de Indalecio Marola",
       "apelido": "Linha Alice",
-      "foto": "",
+      "foto": "../imagens/trisavos/0505_paiindalecio_v01.png",
       "resumo": "Cadastro inicial para trisavos.",
       "textoCompleto": "Preencher com historia, datas e registros da familia.",
       "galeria": [],
@@ -524,9 +524,9 @@
     /* ---- ID 0506 - TRISAVO 6 ---- */
     {
       "id": "0506",
-      "nome": "Trisavo 6",
+      "nome": "Mae de Indalecio Marola",
       "apelido": "Linha Alice",
-      "foto": "",
+      "foto": "../imagens/trisavos/0506_maedeindalecio_v01.png",
       "resumo": "Cadastro inicial para trisavos.",
       "textoCompleto": "Preencher com historia, datas e registros da familia.",
       "galeria": [],
@@ -536,9 +536,9 @@
     /* ---- ID 0507 - TRISAVO 7 ---- */
     {
       "id": "0507",
-      "nome": "Trisavo 7",
+      "nome": "Pai de Tereza Marola",
       "apelido": "Linha Alice",
-      "foto": "",
+      "foto": "../imagens/trisavos/0507_paideterezamarola_v01.png",
       "resumo": "Cadastro inicial para trisavos.",
       "textoCompleto": "Preencher com historia, datas e registros da familia.",
       "galeria": [],
@@ -548,9 +548,105 @@
     /* ---- ID 0508 - TRISAVO 8 ---- */
     {
       "id": "0508",
-      "nome": "Trisavo 8",
+      "nome": "Mae de Tereza Marola",
       "apelido": "Linha Alice",
-      "foto": "",
+      "foto": "../imagens/trisavos/0508_maedeterezamarola_v01.png",
+      "resumo": "Cadastro inicial para trisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ---- ID 0509 - TRISAVO 9 ---- */
+    {
+      "id": "0509",
+      "nome": "Pai de Julio de Souza Rocha",
+      "apelido": "Linha Alice",
+      "foto": "../imagens/trisavos/0509_paijuliosrochatrisavoali_rafael.png",
+      "resumo": "Cadastro inicial para trisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ---- ID 0510 - TRISAVO 10 ---- */
+    {
+      "id": "0510",
+      "nome": "Mae de Julio de Souza Rocha",
+      "apelido": "Linha Alice",
+      "foto": "../imagens/trisavos/0510_maejuliosrocha_v01.png",
+      "resumo": "Cadastro inicial para trisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ---- ID 0511 - TRISAVO 11 ---- */
+    {
+      "id": "0511",
+      "nome": "Pai de Terezinha de Souza Rocha",
+      "apelido": "Linha Alice",
+      "foto": "../imagens/trisavos/0511_paidaterezinhatrisavoalice_rafael.png",
+      "resumo": "Cadastro inicial para trisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ---- ID 0512 - TRISAVO 12 ---- */
+    {
+      "id": "0512",
+      "nome": "Mae de Terezinha de Souza Rocha",
+      "apelido": "Linha Alice",
+      "foto": "../imagens/trisavos/0512_maeterezinhasrochatrisavoalice_rafael_v01.png",
+      "resumo": "Cadastro inicial para trisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ---- ID 0513 - TRISAVO 13 ---- */
+    {
+      "id": "0513",
+      "nome": "Pai de Julio Ramos",
+      "apelido": "Linha Alice",
+      "foto": "../imagens/trisavos/0513_paidejulioramostrisavoalice_rafael.png",
+      "resumo": "Cadastro inicial para trisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ---- ID 0514 - TRISAVO 14 ---- */
+    {
+      "id": "0514",
+      "nome": "Mae de Julio Ramos",
+      "apelido": "Linha Alice",
+      "foto": "../imagens/trisavos/0514_maejulioramos_v01.png",
+      "resumo": "Cadastro inicial para trisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ---- ID 0515 - TRISAVO 15 ---- */
+    {
+      "id": "0515",
+      "nome": "Pai de Leontina Maria Ramos",
+      "apelido": "Linha Alice",
+      "foto": "../imagens/trisavos/0515_paileontinatrisavoalice_rafael.png",
+      "resumo": "Cadastro inicial para trisavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ---- ID 0516 - TRISAVO 16 ---- */
+    {
+      "id": "0516",
+      "nome": "Mae de Leontina Maria Ramos",
+      "apelido": "Linha Alice",
+      "foto": "../imagens/trisavos/0516_maeleontina_v01.png",
       "resumo": "Cadastro inicial para trisavos.",
       "textoCompleto": "Preencher com historia, datas e registros da familia.",
       "galeria": [],

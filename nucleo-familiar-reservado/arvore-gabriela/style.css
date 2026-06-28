@@ -46,6 +46,34 @@ header {
     margin: 10px 0;
 }
 
+.linha-geracao .ramo-paterno {
+    order: 1;
+}
+
+.linha-geracao .ramo-materno {
+    order: 2;
+}
+
+.ramo-paterno {
+    background: #d6e8f7 !important;
+    border-left: 4px solid #2980b9 !important;
+}
+
+.ramo-materno {
+    background: #d5f0e0 !important;
+    border-left: 4px solid #27ae60 !important;
+}
+
+.card-trisavos.ramo-paterno {
+    background: #d5f0e0 !important;
+    border-left: 4px solid #27ae60 !important;
+}
+
+.card-trisavos.ramo-materno {
+    background: #d6e8f7 !important;
+    border-left: 4px solid #2980b9 !important;
+}
+
 /* linhas que devem conter exatamente 8 cartões e preencher a largura */
 .linha-geracao.linha-8 {
     width: 100%;
@@ -122,6 +150,40 @@ header {
     height: 2px;
     background: #35424a;
     margin: 20px 0;
+}
+
+.geracao-barra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 12px 0 8px;
+    padding: 8px 10px;
+    border: 1px solid #bcc7d3;
+    border-radius: 8px;
+    background: #f6f9fc;
+}
+
+.geracao-titulo {
+    font-weight: 700;
+    color: #26323d;
+    font-size: 0.95rem;
+}
+
+.geracao-toggle {
+    border: 1px solid #9fb0c0;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #23313f;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+.geracao-toggle:hover {
+    background: #eef5fb;
 }
 
 .quote {
@@ -218,7 +280,9 @@ header {
     text-decoration: underline;
 }
 
-
+.saiba-mais-wrap {
+    margin-top: 8px;
+}
 
 .saiba-mais-link {
     display: inline-flex;
@@ -267,3 +331,5 @@ header {
 .saiba-mais-texto {
     line-height: 1;
 }
+
+

@@ -3,9 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex,nofollow">
-    <title>Alice - Arvore Genealogica</title>
+    <title>Alice - Arvore Genealogica [PILOTO visual]</title>
 
     <link rel="stylesheet" href="style.css">
+    <style>
+        .ramo-paterno {
+            background: #d6e8f7 !important;
+            border-left: 4px solid #2980b9 !important;
+        }
+
+        .ramo-materno {
+            background: #d5f0e0 !important;
+            border-left: 4px solid #27ae60 !important;
+        }
+
+        .card-id {
+            display: inline-block;
+            margin-top: 6px;
+            font-size: 11px;
+            line-height: 1;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 10px;
+            background: #fff;
+            color: #1f2a37;
+            border: 1px solid #9aa6b2;
+            pointer-events: none;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+        }
+
+        .linha-geracao .card-bisneta {
+            flex: 0 1 160px;
+            width: 160px;
+        }
+    </style>
 </head>
 <body>
     <!-- LIGHTBOX -->
@@ -16,7 +47,7 @@
 
     <div class="container">
         <header>
-            <h1>Bisneta Alice - Piramide da Familia</h1>
+            <h1>Bisneta Alice - Piramide da Familia [PILOTO]</h1>
             <h2>"Um universo de ancestrais visto a partir da bisneta Alice"</h2>
         </header>
 
@@ -112,14 +143,14 @@
                 <!-- LINHA 2 – PAIS (2) -->
                 <div class="linha-geracao">
                     <!-- ---- CARD: ID 0201 - MARCOS ---- -->
-                    <div class="card-pessoa card-pais" data-person-id="201" data-person-page="../saiba-mais/0201-marcos.html">
+                    <div class="card-pessoa card-pais ramo-paterno" data-person-id="201" data-person-page="../saiba-mais/0201-marcos.html">
                         <img src="../imagens/pais/0201_marcos_v01.jpeg" class="foto-pais">
                         <div class="nome">Pai da Alice</div>
                         <div class="detalhe">Filho de ???? e ????, neto de Y</div>
                     </div>
 
                     <!-- ---- CARD: ID 0202 - PAULA ---- -->
-                    <div class="card-pessoa card-pais" data-person-id="202" data-person-page="../saiba-mais/0202-paula.html">
+                    <div class="card-pessoa card-pais ramo-materno" data-person-id="202" data-person-page="../saiba-mais/0202-paula.html">
                         <img src="../imagens/pais/0202_paula_v01.jpeg" class="foto-pais">
                         <div class="nome">Mãe da Alice</div>
                         <div class="detalhe">Filha de Sidnei e Patricia, neta de Arnaldo e Antonia Maria Bisneta de Marcelo e Ana</div>
@@ -133,28 +164,28 @@
                 <!-- LINHA 3 – AVÓS (4) -->
                 <div class="linha-geracao">
                     <!-- ---- CARD: ID 0301 - SIDNEI ---- -->
-                    <div class="card-pessoa card-avos" data-person-id="0301" data-person-page="../saiba-mais/0301-sidnei.html">
+                    <div class="card-pessoa card-avos ramo-materno" data-person-id="0301" data-person-page="../saiba-mais/0301-sidnei.html">
                         <img src="../imagens/avos/0301_sidnei_v01.jpeg" class="foto-avos">
                         <div class="nome">SIDNEI</div>
                         <div class="detalhe">AVÔ MATERNO</div>
                     </div>
 
                     <!-- ---- CARD: ID 0302 - PATRICIA ---- -->
-                    <div class="card-pessoa card-avos" data-person-id="0302" data-person-page="../saiba-mais/0302-patricia.html">
+                    <div class="card-pessoa card-avos ramo-materno" data-person-id="0302" data-person-page="../saiba-mais/0302-patricia.html">
                         <img src="../imagens/avos/0302_patricia_v01.jpeg" class="foto-avos">
                         <div class="nome">PATRICIA</div>
                         <div class="detalhe">AVÓ MATERNA</div>
                     </div>
 
                     <!-- ---- CARD: ID 0318 - ODEON ---- -->
-                    <div class="card-pessoa card-avos" data-person-id="0318" data-person-page="../saiba-mais/0318-odeon.html">
+                    <div class="card-pessoa card-avos ramo-paterno" data-person-id="0318" data-person-page="../saiba-mais/0318-odeon.html">
                         <img src="../imagens/avos/0318_odeon_v01.png" class="foto-avos">
                         <div class="nome">ODEON DE S R Avô</div>
                         <div class="detalhe">AVÔ PATERNO</div>
                     </div>
 
                     <!-- ---- CARD: ID 0319 - LUCIENE ---- -->
-                    <div class="card-pessoa card-avos" data-person-id="0319" data-person-page="../saiba-mais/0319-luciene.html">
+                    <div class="card-pessoa card-avos ramo-paterno" data-person-id="0319" data-person-page="../saiba-mais/0319-luciene.html">
                         <img src="../imagens/avos/0319_luciene_v01.png" class="foto-avos">
                         <div class="nome">LUCIENE R R</div>
                         <div class="detalhe">AVÓ PATERNA</div>
@@ -169,15 +200,15 @@
                 <div class="linha-geracao linha-8">
                     <!-- ---- CARD: JULIO DE SOUZA ROCHA ---- -->
                     <!-- ---- CARD G04-01 ---- -->
-                    <div class="card-pessoa card-bisavos">
-                        <img src="../imagens/bisavos/0407_juliodesouzarocha_v01.jpeg" class="foto-bisavos">
+                    <div class="card-pessoa card-bisavos ramo-paterno" data-person-id="0405">
+                        <img src="../imagens/bisavos/0405_juliodesouzarocha_v01.jpeg" class="foto-bisavos">
                         <div class="nome">JULIO DE SOUZA ROCHA</div>
                         <div class="detalhe">BISAVÔ PATERNO</div>
                     </div>
 
                     <!-- ---- CARD: TEREZINHA DE SOUZA ROCHA ---- -->
                     <!-- ---- CARD G04-02 ---- -->
-                    <div class="card-pessoa card-bisavos">
+                    <div class="card-pessoa card-bisavos ramo-paterno" data-person-id="0406">
                         <img src="../imagens/bisavos/0406_terezinhadesouzarocha_v01.jpeg" class="foto-bisavos">
                         <div class="nome">TEREZINHA DE SOUZA ROCHA</div>
                         <div class="detalhe"></div>
@@ -185,7 +216,7 @@
 
                     <!-- ---- CARD: JULIO RAMOS ---- -->
                     <!-- ---- CARD G04-03 ---- -->
-                    <div class="card-pessoa card-bisavos">
+                    <div class="card-pessoa card-bisavos ramo-paterno" data-person-id="0407">
                         <img src="../imagens/bisavos/0408_julioramos_v01.png" class="foto-bisavos">
                         <div class="nome">JULIO RAMOS</div>
                         <div class="detalhe">BISAVÔ MATERNO</div>
@@ -193,15 +224,15 @@
 
                     <!-- ---- CARD: LEONTINA MARIA RAMOS ---- -->
                     <!-- ---- CARD G04-04 ---- -->
-                    <div class="card-pessoa card-bisavos">
-                        <img src="../imagens/bisavos/0405_leontinamariaramos_v01.jpeg" class="foto-bisavos">
+                    <div class="card-pessoa card-bisavos ramo-paterno" data-person-id="0408">
+                        <img src="../imagens/bisavos/0408_leontinamariaramos_v01.jpeg" class="foto-bisavos">
                         <div class="nome">LEONTINA MARIA RAMOS</div>
                         <div class="detalhe">BISAVÓ MATERNA</div>
                     </div>
 
                     <!-- ---- CARD: INDALECIO MAROLA ---- -->
                     <!-- ---- CARD G04-05 ---- -->
-                    <div class="card-pessoa card-bisavos">
+                    <div class="card-pessoa card-bisavos ramo-materno" data-person-id="0409">
                         <img src="../imagens/bisavos/0410_indaleciomarola_v01.png" class="foto-bisavos">
                         <div class="nome">INDALÉCIO MAROLA</div>
                         <div class="detalhe">BISAVÔ PATERNO</div>
@@ -209,7 +240,7 @@
 
                     <!-- ---- CARD: TEREZA MAROLA ---- -->
                     <!-- ---- CARD G04-06 ---- -->
-                    <div class="card-pessoa card-bisavos">
+                    <div class="card-pessoa card-bisavos ramo-materno" data-person-id="0410">
                         <img src="../imagens/bisavos/0411_terezamarola_v01.png" class="foto-bisavos">
                         <div class="nome">TEREZA MAROLA</div>
                         <div class="detalhe">BISAVÓ PATERNA</div>
@@ -217,14 +248,14 @@
 
                     <!-- ---- CARD: ID 0402 - ARNALDO ---- -->
                     <!-- ---- CARD G04-07 - ID 0402 ---- -->
-                    <div class="card-pessoa card-bisavos" data-person-id="0402">
+                    <div class="card-pessoa card-bisavos ramo-materno" data-person-id="0402">
                         <img src="../imagens/bisavos/0401_Arnaldo_InPixio_v01.png" class="foto-bisavos">
                         <div class="nome">Bisavô / Bisavó</div>
                         <div class="detalhe">Informações</div>
                     </div>
 
                     <!-- ---- CARD G04-08 - ID 0401 ---- -->
-                    <div class="card-pessoa card-bisavos" data-person-id="0401">
+                    <div class="card-pessoa card-bisavos ramo-materno" data-person-id="0401">
                         <img src="../imagens/bisavos/0402_amaria_InPixio_v01.png" class="foto-bisavos">
                         <div class="nome">Bisavô / Bisavó</div>
                         <div class="detalhe">Informações</div>
@@ -232,106 +263,90 @@
                 </div>
 
                 <!-- ========== GERAÇÃO 05 - TRISAVOS ========== -->
-                <!-- LINHA 5 – TRISAVÓS (ATÉ 16) - dividida em 2 linhas de 8 -->
+                <!-- LINHA 5 – TRISAVÓS (16) - dividida em 2 linhas de 8 -->
                 <div class="linha-geracao linha-8">
-                    <!-- ---- CARD G05-01 ---- -->
-                    <div class="card-pessoa card-trisavos">
-                        <img src="../imagens/trisavo1.png" class="foto-tataravos">
-                        <div class="nome">Trisavô / Trisavó</div>
-                        <div class="detalhe">Informações</div>
+                    <div class="card-pessoa card-trisavos ramo-paterno" data-person-id="0501" data-person-page="../saiba-mais/0501_marcelopizzirani.html">
+                        <img src="../imagens/trisavos/0501_MarceloPizzirani_v01.png" class="foto-tataravos">
+                        <div class="nome">Marcelo Pizzirani</div>
+                        <div class="detalhe">Trisavô paterno</div>
                     </div>
-                    <!-- ---- CARD G05-02 ---- -->
-                    <div class="card-pessoa card-trisavos">
-                        <img src="../imagens/trisavo2.png" class="foto-tataravos">
-                        <div class="nome">Trisavô / Trisavó</div>
-                        <div class="detalhe">Informações</div>
+                    <div class="card-pessoa card-trisavos ramo-paterno" data-person-id="0502" data-person-page="../saiba-mais/0502_anacristinalienhardt.html">
+                        <img src="../imagens/trisavos/0502_anacristinalienhardt_v01.png" class="foto-tataravos">
+                        <div class="nome">Ana Cristina</div>
+                        <div class="detalhe">Trisavó paterna</div>
                     </div>
-                    <!-- ---- CARD G05-03 ---- -->
-                    <div class="card-pessoa card-trisavos">
-                        <img src="../imagens/trisavo3.png" class="foto-tataravos">
-                        <div class="nome">Trisavô / Trisavó</div>
-                        <div class="detalhe">Informações</div>
+                    <div class="card-pessoa card-trisavos ramo-paterno" data-person-id="0503" data-person-page="../saiba-mais/0503_ezequieldacunha.html">
+                        <img src="../imagens/trisavos/0503_ezequieladacunha._v01.png" class="foto-tataravos">
+                        <div class="nome">Ezequiel Alves da Cunha</div>
+                        <div class="detalhe">Trisavô materno dos bisnetos.</div>
                     </div>
-                    <!-- ---- CARD G05-04 ---- -->
-                    <div class="card-pessoa card-trisavos">
-                        <img src="../imagens/trisavo4.png" class="foto-tataravos">
-                        <div class="nome">Trisavô / Trisavó</div>
-                        <div class="detalhe">Informações</div>
+                    <div class="card-pessoa card-trisavos ramo-paterno" data-person-id="0504" data-person-page="../saiba-mais/0504_helenaferraspacheco.html">
+                        <img src="../imagens/trisavos/0504_helenaferraspacheco_v01.png" class="foto-tataravos">
+                        <div class="nome">Helena Ferraz Pacheco</div>
+                        <div class="detalhe">Trisavó materna dos bisnetos.</div>
                     </div>
-                    <!-- ---- CARD G05-05 ---- -->
-                    <div class="card-pessoa card-trisavos">
-                        <img src="../imagens/trisavo5.png" class="foto-tataravos">
-                        <div class="nome">Trisavô / Trisavó</div>
-                        <div class="detalhe">Informações</div>
+                    <div class="card-pessoa card-trisavos ramo-paterno" data-person-id="0505" data-person-page="../saiba-mais/0505_paiindalecio.html">
+                        <img src="../imagens/trisavos/0505_paiindalecio_v01.png" class="foto-tataravos">
+                        <div class="nome">Pai de Indalecio Marola</div>
+                        <div class="detalhe">Trisavô</div>
                     </div>
-                    <!-- ---- CARD G05-06 ---- -->
-                    <div class="card-pessoa card-trisavos">
-                        <img src="../imagens/trisavo6.png" class="foto-tataravos">
-                        <div class="nome">Trisavô / Trisavó</div>
-                        <div class="detalhe">Informações</div>
+                    <div class="card-pessoa card-trisavos ramo-paterno" data-person-id="0506" data-person-page="../saiba-mais/0506_maeindalecio.html">
+                        <img src="../imagens/trisavos/0506_maedeindalecio_v01.png" class="foto-tataravos">
+                        <div class="nome">Mae de Indalecio Marola</div>
+                        <div class="detalhe">Trisavó</div>
                     </div>
-                    <!-- ---- CARD G05-07 ---- -->
-                    <div class="card-pessoa card-trisavos">
-                        <img src="../imagens/trisavo7.png" class="foto-tataravos">
-                        <div class="nome">Trisavô / Trisavó</div>
-                        <div class="detalhe">Informações</div>
+                    <div class="card-pessoa card-trisavos ramo-paterno" data-person-id="0507" data-person-page="../saiba-mais/0507_paideterezamarola.html">
+                        <img src="../imagens/trisavos/0507_paideterezamarola_v01.png" class="foto-tataravos">
+                        <div class="nome">Pai de Tereza Marola</div>
+                        <div class="detalhe">Trisavô</div>
                     </div>
-                    <!-- ---- CARD G05-08 ---- -->
-                    <div class="card-pessoa card-trisavos">
-                        <img src="../imagens/trisavo8.png" class="foto-tataravos">
-                        <div class="nome">Trisavô / Trisavó</div>
-                        <div class="detalhe">Informações</div>
+                    <div class="card-pessoa card-trisavos ramo-paterno" data-person-id="0508" data-person-page="../saiba-mais/0508_maedeterezamarola.html">
+                        <img src="../imagens/trisavos/0508_maedeterezamarola_v01.png" class="foto-tataravos">
+                        <div class="nome">Mae de Tereza Marola</div>
+                        <div class="detalhe">Trisavó</div>
                     </div>
                 </div>
 
                 <div class="linha-geracao linha-8">
-                    <!-- ---- CARD G05-09 ---- -->
-                    <div class="card-pessoa card-trisavos">
-                        <img src="../imagens/trisavo9.png" class="foto-tataravos">
-                        <div class="nome">Trisavô / Trisavó</div>
-                        <div class="detalhe">Informações</div>
+                    <div class="card-pessoa card-trisavos ramo-materno" data-person-id="0509" data-person-page="../saiba-mais/0509_paijuliorocha.html">
+                        <img src="../imagens/trisavos/0509_paijuliosrochatrisavoali_rafael.png" class="foto-tataravos">
+                        <div class="nome">Pai de Julio de Souza Rocha</div>
+                        <div class="detalhe">Trisavô</div>
                     </div>
-                    <!-- ---- CARD G05-10 ---- -->
-                    <div class="card-pessoa card-trisavos">
-                        <img src="../imagens/trisavo10.png" class="foto-tataravos">
-                        <div class="nome">Trisavô / Trisavó</div>
-                        <div class="detalhe">Informações</div>
+                    <div class="card-pessoa card-trisavos ramo-materno" data-person-id="0510" data-person-page="../saiba-mais/0510_maejuliorocha.html">
+                        <img src="../imagens/trisavos/0510_maejuliosrocha_v01.png" class="foto-tataravos">
+                        <div class="nome">Mae de Julio de Souza Rocha</div>
+                        <div class="detalhe">Trisavó</div>
                     </div>
-                    <!-- ---- CARD G05-11 ---- -->
-                    <div class="card-pessoa card-trisavos">
-                        <img src="../imagens/trisavo11.png" class="foto-tataravos">
-                        <div class="nome">Trisavô / Trisavó</div>
-                        <div class="detalhe">Informações</div>
+                    <div class="card-pessoa card-trisavos ramo-materno" data-person-id="0511" data-person-page="../saiba-mais/0511_paidaterezinha.html">
+                        <img src="../imagens/trisavos/0511_paidaterezinhatrisavoalice_rafael.png" class="foto-tataravos">
+                        <div class="nome">Pai de Terezinha de Souza Rocha</div>
+                        <div class="detalhe">Trisavô</div>
                     </div>
-                    <!-- ---- CARD G05-12 ---- -->
-                    <div class="card-pessoa card-trisavos">
-                        <img src="../imagens/trisavo12.png" class="foto-tataravos">
-                        <div class="nome">Trisavô / Trisavó</div>
-                        <div class="detalhe">Informações</div>
+                    <div class="card-pessoa card-trisavos ramo-materno" data-person-id="0512" data-person-page="../saiba-mais/0512_maeterezinha.html">
+                        <img src="../imagens/trisavos/0512_maeterezinhasrochatrisavoalice_rafael_v01.png" class="foto-tataravos">
+                        <div class="nome">Mae de Terezinha de Souza Rocha</div>
+                        <div class="detalhe">Trisavó</div>
                     </div>
-                    <!-- ---- CARD G05-13 ---- -->
-                    <div class="card-pessoa card-trisavos">
-                        <img src="../imagens/marcelomeupai.jpg" class="foto-tataravos">
-                        <div class="nome">Trisavô / Trisavó</div>
-                        <div class="detalhe">Informações</div>
+                    <div class="card-pessoa card-trisavos ramo-materno" data-person-id="0513" data-person-page="../saiba-mais/0513_paijulioramos.html">
+                        <img src="../imagens/trisavos/0513_paidejulioramostrisavoalice_rafael.png" class="foto-tataravos">
+                        <div class="nome">Pai de Julio Ramos</div>
+                        <div class="detalhe">Trisavô</div>
                     </div>
-                    <!-- ---- CARD G05-14 ---- -->
-                    <div class="card-pessoa card-trisavos">
-                        <img src="../imagens/anaminhamae.jpg" class="foto-tataravos">
-                        <div class="nome">Trisavô / Trisavó</div>
-                        <div class="detalhe">Informações</div>
+                    <div class="card-pessoa card-trisavos ramo-materno" data-person-id="0514" data-person-page="../saiba-mais/0514_maejulioramos.html">
+                        <img src="../imagens/trisavos/0514_maejulioramos_v01.png" class="foto-tataravos">
+                        <div class="nome">Mae de Julio Ramos</div>
+                        <div class="detalhe">Trisavó</div>
                     </div>
-                    <!-- ---- CARD G05-15 ---- -->
-                    <div class="card-pessoa card-trisavos">
-                        <img src="../imagens/" class="foto-tataravos">
-                        <div class="nome">Trisavô / Trisavó</div>
-                        <div class="detalhe">Informações</div>
+                    <div class="card-pessoa card-trisavos ramo-materno" data-person-id="0515" data-person-page="../saiba-mais/0515_paileontina.html">
+                        <img src="../imagens/trisavos/0515_paileontinatrisavoalice_rafael.png" class="foto-tataravos">
+                        <div class="nome">Pai de Leontina Maria Ramos</div>
+                        <div class="detalhe">Trisavô</div>
                     </div>
-                    <!-- ---- CARD G05-16 ---- -->
-                    <div class="card-pessoa card-trisavos">
-                        <img src="../imagens/" class="foto-tataravos">
-                        <div class="nome">Trisavô / Trisavó</div>
-                        <div class="detalhe">Informações</div>
+                    <div class="card-pessoa card-trisavos ramo-materno" data-person-id="0516" data-person-page="../saiba-mais/0516_maeleontina.html">
+                        <img src="../imagens/trisavos/0516_maeleontina_v01.png" class="foto-tataravos">
+                        <div class="nome">Mae de Leontina Maria Ramos</div>
+                        <div class="detalhe">Trisavó</div>
                     </div>
                 </div>
 
@@ -358,32 +373,32 @@
                     </div>
                     <!-- ---- CARD G06-04 ---- -->
                     <div class="card-pessoa card-tataravos">
+                        <img src="../imagens/" class="foto-tetravos">
+                        <div class="nome">Tetravô / Tetravó</div>
+                        <div class="detalhe">Informações</div>
+                    </div>
+                    <!-- ---- CARD G06-05 ---- -->
+                    <div class="card-pessoa card-tataravos ramo-materno" data-person-id="0601">
                         <img src="../imagens/tetravos/0601_nicola_pizzirani_v01.jpeg" class="foto-tetravos">
                         <div class="nome">Nicola Pizzirani - AVÔ DO AUTOR DESTA ARVORE</div>
                         <div class="detalhe">Informações</div>
                     </div>
-                    <!-- ---- CARD G06-05 ---- -->
-                    <div class="card-pessoa card-tataravos">
+                    <!-- ---- CARD G06-06 ---- -->
+                    <div class="card-pessoa card-tataravos ramo-materno" data-person-id="0602">
                         <img src="../imagens/tetravos/0602_maria_mazzini_v01.jpeg" class="foto-tetravos">
                         <div class="nome">Maria Mazzini - AVÓ DO AUTOR DESTA ARVORE</div>
                         <div class="detalhe">Informações</div>
                     </div>
-                    <!-- ---- CARD G06-06 ---- -->
-                    <div class="card-pessoa card-tataravos">
+                    <!-- ---- CARD G06-07 ---- -->
+                    <div class="card-pessoa card-tataravos ramo-materno" data-person-id="0603">
                         <img src="../imagens/tetravos/0603_henrique_lienhardt_v01.png" class="foto-tetravos">
                         <div class="nome">Henrique</div>
                         <div class="detalhe">Informações</div>
                     </div>
-                    <!-- ---- CARD G06-07 ---- -->
-                    <div class="card-pessoa card-tataravos">
+                    <!-- ---- CARD G06-08 ---- -->
+                    <div class="card-pessoa card-tataravos ramo-materno" data-person-id="0604">
                         <img src="../imagens/tetravos/0604_ana_petru_v01.png" class="foto-tetravos">
                         <div class="nome">Ana Petru</div>
-                        <div class="detalhe">Informações</div>
-                    </div>
-                    <!-- ---- CARD G06-08 ---- -->
-                    <div class="card-pessoa card-tataravos">
-                        <img src="../imagens/" class="foto-tetravos">
-                        <div class="nome">Tetravô / Tetravó</div>
                         <div class="detalhe">Informações</div>
                     </div>
                 </div>
@@ -490,49 +505,49 @@
                     </div>
                 </div>                <div class="linha-geracao linha-8">
                     <!-- ---- CARD G06-25 ---- -->
-                    <div class="card-pessoa card-tataravos">
+                    <div class="card-pessoa card-tataravos ramo-materno">
                         <img src="../imagens/" class="foto-tetravos">
                         <div class="nome">Tetravo / Tetravo</div>
                         <div class="detalhe">Informacoes</div>
                     </div>
                     <!-- ---- CARD G06-26 ---- -->
-                    <div class="card-pessoa card-tataravos">
+                    <div class="card-pessoa card-tataravos ramo-materno">
                         <img src="../imagens/" class="foto-tetravos">
                         <div class="nome">Tetravo / Tetravo</div>
                         <div class="detalhe">Informacoes</div>
                     </div>
                     <!-- ---- CARD G06-27 ---- -->
-                    <div class="card-pessoa card-tataravos">
+                    <div class="card-pessoa card-tataravos ramo-materno">
                         <img src="../imagens/" class="foto-tetravos">
                         <div class="nome">Tetravo / Tetravo</div>
                         <div class="detalhe">Informacoes</div>
                     </div>
                     <!-- ---- CARD G06-28 ---- -->
-                    <div class="card-pessoa card-tataravos">
+                    <div class="card-pessoa card-tataravos ramo-materno">
                         <img src="../imagens/" class="foto-tetravos">
                         <div class="nome">Tetravo / Tetravo</div>
                         <div class="detalhe">Informacoes</div>
                     </div>
                     <!-- ---- CARD G06-29 ---- -->
-                    <div class="card-pessoa card-tataravos">
+                    <div class="card-pessoa card-tataravos ramo-materno">
                         <img src="../imagens/" class="foto-tetravos">
                         <div class="nome">Tetravo / Tetravo</div>
                         <div class="detalhe">Informacoes</div>
                     </div>
                     <!-- ---- CARD G06-30 ---- -->
-                    <div class="card-pessoa card-tataravos">
+                    <div class="card-pessoa card-tataravos ramo-materno">
                         <img src="../imagens/" class="foto-tetravos">
                         <div class="nome">Tetravo / Tetravo</div>
                         <div class="detalhe">Informacoes</div>
                     </div>
                     <!-- ---- CARD G06-31 ---- -->
-                    <div class="card-pessoa card-tataravos">
+                    <div class="card-pessoa card-tataravos ramo-materno">
                         <img src="../imagens/" class="foto-tetravos">
                         <div class="nome">Tetravo / Tetravo</div>
                         <div class="detalhe">Informacoes</div>
                     </div>
                     <!-- ---- CARD G06-32 ---- -->
-                    <div class="card-pessoa card-tataravos">
+                    <div class="card-pessoa card-tataravos ramo-materno">
                         <img src="../imagens/" class="foto-tetravos">
                         <div class="nome">Tetravo / Tetravo</div>
                         <div class="detalhe">Informacoes</div>
@@ -540,49 +555,56 @@
                 </div>
 
                 <!-- ========== GERAÇÃO 07 - PENTAVOS ========== -->
-                <div class="linha-geracao">
+                <div class="linha-geracao linha-8">
                     <!-- ---- CARD G07-01 ---- -->
                     <div class="card-pessoa card-tataravos">
+                        <img src="../imagens/" class="foto-hexaavos">
+                        <div class="nome">Pentavô / Pentavó</div>
+                        <div class="detalhe">Espaço</div>
+                    </div>
+                    <!-- ---- CARD G07-02 ---- -->
+                    <div class="card-pessoa card-tataravos">
+                        <img src="../imagens/" class="foto-hexaavos">
+                        <div class="nome">Pentavô / Pentavó</div>
+                        <div class="detalhe">Espaço</div>
+                    </div>
+                    <!-- ---- CARD G07-03 ---- -->
+                     <div class="card-pessoa card-tataravos">
+                        <img src="../imagens/" class="foto-hexaavos">
+                        <div class="nome">Pentavô / Pentavó</div>
+                        <div class="detalhe">Espaço</div>
+                    </div>
+                    <!-- ---- CARD G07-04 ---- -->
+                    <div class="card-pessoa card-tataravos">
+                        <img src="../imagens/" class="foto-hexaavos">
+                        <div class="nome">Pentavô / Pentavó</div>
+                        <div class="detalhe">Espaço</div>
+                    </div>
+                    <!-- ---- CARD G07-05 ---- -->
+                    <div class="card-pessoa card-tataravos ramo-materno" data-person-id="0701">
                         <img src="../imagens/pentavos/0701_luizmazzini_v01.jpeg" class="foto-hexaavos">
                         <div class="nome">Luiz Mazzini</div>
                         <div class="detalhe">PENTAVÔ DOS BISNETOS DO AUTOR DESTA ARVORE</div>
                     </div>
-                    <!-- ---- CARD G07-02 ---- -->
-                    <div class="card-pessoa card-tataravos">
+                    <!-- ---- CARD G07-06 ---- -->
+                    <div class="card-pessoa card-tataravos ramo-materno" data-person-id="0702">
                         <img src="../imagens/pentavos/0702_beatrizmazzini_v01.jpeg" class="foto-hexaavos">
                         <div class="nome">Beatriz Mazzini</div>
                         <div class="detalhe">PENTAVÓ DOS BISNETOS DO AUTOR DESTA ARVORE</div>
                     </div>
-                    <!-- ---- CARD G07-03 ---- -->
-                     <div class="card-pessoa card-tataravos">
+                    <!-- ---- CARD G07-07 ---- -->
+                    <div class="card-pessoa card-tataravos ramo-materno" data-person-id="0703">
                         <img src="../imagens/pentavos/0703_alessandropizzirani_v01.jpg" class="foto-hexaavos">
                         <div class="nome">Alessandro Pizzirani</div>
                         <div class="detalhe">PENTAVÔ DOS BISNETOS DO AUTOR DESTA ARVORE</div>
                     </div>
-                    <!-- ---- CARD G07-04 ---- -->
-                    <div class="card-pessoa card-tataravos">
+                    <!-- ---- CARD G07-07A ---- -->
+                    <div class="card-pessoa card-tataravos ramo-materno" data-person-id="0704">
                         <img src="../imagens/pentavos/0704_mariapiazzipizzirani_v01.jpg" class="foto-hexaavos">
                         <div class="nome">Maria Piazzi Pizzirani</div>
                         <div class="detalhe">PENTAVÓ DOS BISNETOS DO AUTOR DESTA ARVORE</div>
                     </div>
-                    <!-- ---- CARD G07-05 ---- -->
-                    <div class="card-pessoa card-tataravos">
-                        <img src="../imagens/" class="foto-hexaavos">
-                        <div class="nome">Pentavô / Pentavó</div>
-                        <div class="detalhe">Espaço</div>
-                    </div>
-                    <!-- ---- CARD G07-06 ---- -->
-                    <div class="card-pessoa card-tataravos">
-                        <img src="../imagens/" class="foto-hexaavos">
-                        <div class="nome">Pentavô / Pentavó</div>
-                        <div class="detalhe">Espaço</div>
-                    </div>
-                    <!-- ---- CARD G07-07 ---- -->
-                    <div class="card-pessoa card-tataravos">
-                        <img src="../imagens/" class="foto-hexaavos">
-                        <div class="nome">Pentavô / Pentavó</div>
-                        <div class="detalhe">Espaço</div>
-                    </div>
+                </div>
                 <div class="linha-geracao linha-8">
                     <!-- ---- CARD G07-08 ---- -->
                     <div class="card-pessoa card-tataravos">
@@ -934,6 +956,18 @@
                     </div>
                 </div>
     </div>
+
+    <script>
+    document.querySelectorAll('[data-person-id]').forEach(function(card) {
+        if (card.querySelector('.card-id')) return;
+        var pid = card.getAttribute('data-person-id');
+        if (!pid) return;
+        var badge = document.createElement('div');
+        badge.className = 'card-id';
+        badge.textContent = 'id ' + pid;
+        card.appendChild(badge);
+    });
+    </script>
 </body>
 </html>
 

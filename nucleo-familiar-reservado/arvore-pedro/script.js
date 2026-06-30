@@ -218,6 +218,15 @@
                 return;
             }
 
+            // For generation 6 rows, keep the row-level color rule (verde/azul)
+            // and clear per-card ramo classes that could override it.
+            if (row.classList.contains('linha-tetravos-verde') || row.classList.contains('linha-tetravos-azul')) {
+                cards.forEach(function (card) {
+                    card.classList.remove('ramo-paterno', 'ramo-materno');
+                });
+                return;
+            }
+
             cards.forEach(function (card) {
                 if (card.classList.contains('card-bisneta') || card.classList.contains('card-bisneto')) {
                     return;

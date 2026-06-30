@@ -30,6 +30,41 @@ O cadastro Ã© feito em um Ãºnico lugar: `dados/pessoas.json`.
 - Parentalidade usa modelo neutro: `responsavel1` e `responsavel2`.
 - O casal parental nao depende de genero e pode ser: par+par, impar+impar ou par+impar.
 
+## Padrao de Codigo Genealogico (novo)
+
+Para manter o sistema atual estavel, o projeto continua usando `id` numerico como chave unica.
+
+Novo conceito recomendado:
+
+- `id`: chave tecnica fixa (ex.: `0201`).
+- `codigoGenealogico`: etiqueta humana com significado familiar (ex.: `G2PP-201`).
+
+Composicao do `codigoGenealogico`:
+
+- `G1`, `G2`, `G3`... = geracao.
+- Letra/bloco da geracao:
+	- `B` = bisnetos (geracao 1).
+	- `PP` = linha paterna na geracao de pais.
+	- `PM` = linha materna na geracao de pais.
+	- para avos e acima, manter o mesmo principio de ramo (`P` paterno, `M` materno).
+- Sufixo numerico apos `-` = numero sequencial da pessoa no grupo.
+
+Exemplos:
+
+- `G1B-101`, `G1B-102`, `G1B-103`...
+- `G2PP-201`, `G2PM-202`, `G2PP-203`, `G2PM-204`...
+
+Regra de paridade para pais (G2):
+
+- sequencias impares: pais (masculino, ramo paterno do casal).
+- sequencias pares: maes (feminino, ramo materno do casal).
+- em cadastro historico legado, se houver conflito, prevalece o papel real informado no `apelido` (Pai/Mae).
+
+Regra pratica importante:
+
+- O sistema de links e busca continua apontando pelo `id` numerico.
+- O `codigoGenealogico` entra como camada de organizacao e leitura humana.
+
 Os cartÃµes das Ã¡rvores sÃ³ precisam do ID da pessoa, por exemplo:
 
 ```html
@@ -208,6 +243,10 @@ Use este modelo para acelerar novos registros em `dados/pessoas.json`:
 ```json
 {
 	"id": "0000",
+	"codigoGenealogico": "G0X-000",
+	"geracao": 0,
+	"ramo": "P|M|N",
+	"sexo": "M|F|N",
 	"nome": "Nome Completo",
 	"apelido": "Descricao curta",
 	"responsavel1": "0000",

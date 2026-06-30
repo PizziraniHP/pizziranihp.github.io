@@ -25,6 +25,10 @@
     /* ---- ID 0101 - LORENA ---- */
     {
       "id": "0101",
+      "codigoGenealogico": "G1B-101",
+      "geracao": 1,
+      "ramo": "N",
+      "sexo": "N",
       "nome": "Lorena",
       "apelido": "Bisneta Lorena",
       "foto": "imagens/bisnetos/0101_lorena_v01.jpeg",
@@ -37,6 +41,10 @@
     /* ---- ID 0102 - ALICE ---- */
     {
       "id": "0102",
+      "codigoGenealogico": "G1B-102",
+      "geracao": 1,
+      "ramo": "N",
+      "sexo": "N",
       "nome": "Alice",
       "apelido": "Bisneta Alice",
       "foto": "imagens/bisnetos/0102_alice_v01.jpeg",
@@ -49,6 +57,10 @@
     /* ---- ID 0103 - PEDRO ---- */
     {
       "id": "0103",
+      "codigoGenealogico": "G1B-103",
+      "geracao": 1,
+      "ramo": "N",
+      "sexo": "N",
       "nome": "Pedro",
       "apelido": "Bisneto Pedro",
       "foto": "imagens/bisnetos/0103_pedro_v01.jpeg",
@@ -61,6 +73,10 @@
     /* ---- ID 0104 - RAFAEL ---- */
     {
       "id": "0104",
+      "codigoGenealogico": "G1B-104",
+      "geracao": 1,
+      "ramo": "N",
+      "sexo": "N",
       "nome": "Rafael",
       "apelido": "Bisneto Rafael",
       "foto": "imagens/bisnetos/0104_rafael_v01.jpeg",
@@ -73,6 +89,10 @@
     /* ---- ID 0105 - LUNA ---- */
     {
       "id": "0105",
+      "codigoGenealogico": "G1B-105",
+      "geracao": 1,
+      "ramo": "N",
+      "sexo": "N",
       "nome": "Luna",
       "apelido": "Bisneta Luna",
       "foto": "imagens/bisnetos/0105_luna_v01.jpeg",
@@ -85,6 +105,10 @@
     /* ---- ID 0106 - GABRIELA ---- */
     {
       "id": "0106",
+      "codigoGenealogico": "G1B-106",
+      "geracao": 1,
+      "ramo": "N",
+      "sexo": "N",
       "nome": "Gabriela",
       "apelido": "Bisneta Gabriela",
       "foto": "imagens/bisnetos/0106_gabriela_v01.jpeg",
@@ -99,6 +123,10 @@
     /* ---- ID 0201 - MARCOS ---- */
     {
       "id": "0201",
+      "codigoGenealogico": "G2PP-201",
+      "geracao": 2,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "Marcos",
       "apelido": "Pai da Alice e do Rafael",
       "foto": "imagens/pais/new_marcos.jpeg",
@@ -111,6 +139,10 @@
     /* ---- ID 0202 - PAULA ---- */
     {
       "id": "0202",
+      "codigoGenealogico": "G2PM-202",
+      "geracao": 2,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Paula",
       "apelido": "Mae da Alice",
       "foto": "imagens/pais/new_paula.jpeg",
@@ -123,6 +155,10 @@
     /* ---- ID 0203 - ANDERSON ---- */
     {
       "id": "0203",
+      "codigoGenealogico": "G2PP-203",
+      "geracao": 2,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "Anderson",
       "apelido": "Pai da Lorena",
       "foto": "imagens/pais/0203_anderson_v01.jpeg",
@@ -135,6 +171,10 @@
     /* ---- ID 0204 - STHEFANIE ---- */
     {
       "id": "0204",
+      "codigoGenealogico": "G2PM-204",
+      "geracao": 2,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Sthefanie",
       "apelido": "Mae da Lorena",
       "foto": "imagens/pais/0204_sthefanie_v01.jpeg",
@@ -147,6 +187,10 @@
     /* ---- ID 0205 - FLAVIO ---- */
     {
       "id": "0205",
+      "codigoGenealogico": "G2PP-205",
+      "geracao": 2,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "Flavio",
       "apelido": "Pai do Pedro",
       "foto": "imagens/pais/0205_flaviopaipedro_v01.jpeg",
@@ -159,6 +203,10 @@
     /* ---- ID 0206 - BARBARA ---- */
     {
       "id": "0206",
+      "codigoGenealogico": "G2PM-206",
+      "geracao": 2,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Barbara",
       "apelido": "Mae do Pedro",
       "foto": "imagens/pais/0206_barbara_pedro_v01.jpeg",
@@ -171,6 +219,10 @@
     /* ---- ID 0207 - LIVIA ---- */
     {
       "id": "0207",
+      "codigoGenealogico": "G2PM-207",
+      "geracao": 2,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Livia",
       "apelido": "Mae da Gabriela",
       "foto": "imagens/pais/0207_livia_v01.jpeg",
@@ -183,6 +235,10 @@
     /* ---- ID 0208 - MARCELLA ---- */
     {
       "id": "0208",
+      "codigoGenealogico": "G2PM-208",
+      "geracao": 2,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Marcella",
       "apelido": "Mãe da Gabriela",
       "foto": "imagens/pais/0208_marcella_v01.jpeg",
@@ -195,6 +251,10 @@
     /* ---- ID 0209 - LUIZ ---- */
     {
       "id": "0209",
+      "codigoGenealogico": "G2PP-209",
+      "geracao": 2,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "Luiz",
       "apelido": "Pai da Luna",
       "foto": "imagens/pais/0209_luiz_v01.jpeg",
@@ -209,6 +269,10 @@
     /* ---- ID 0301 - SIDNEI ---- */
     {
       "id": "0301",
+      "codigoGenealogico": "G3PP-301",
+      "geracao": 3,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "Sidnei",
       "apelido": "Avo materno",
       "foto": "imagens/avos/0301_sidnei_v01.jpeg",
@@ -221,6 +285,10 @@
     /* ---- ID 0302 - PATRICIA ---- */
     {
       "id": "0302",
+      "codigoGenealogico": "G3PM-302",
+      "geracao": 3,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Patricia",
       "apelido": "Avo materna",
       "foto": "imagens/avos/0302_patricia_v01.jpeg",
@@ -231,6 +299,10 @@
     }, /* ---- ID 0303 - FLAVIO MELO ---- */
     {
       "id": "0303",
+      "codigoGenealogico": "G3PP-303",
+      "geracao": 3,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "Flavio Melo",
       "apelido": "Avo paterno",
       "foto": "imagens/avos/0303_flavio_melo_v01.jpeg",
@@ -241,6 +313,10 @@
     }, /* ---- ID 0304 - ANDREA ---- */
     {
       "id": "0304",
+      "codigoGenealogico": "G3PM-304",
+      "geracao": 3,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Andrea",
       "apelido": "Avó Materna",
       "foto": "imagens/avos/0304_andrea_v01.jpeg",
@@ -252,6 +328,10 @@
       /* ---- ID 0305 - LUIZ AUGUSTO GIAPONESI ---- */
     {
       "id": "0305",
+      "codigoGenealogico": "G3PP-305",
+      "geracao": 3,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "Luiz Augusto Giaponesi",
       "apelido": "Avo paterno",
       "foto": "imagens/avos/0305_luizgiaponesi_v00.png",
@@ -263,6 +343,10 @@
      /* ---- ID 0306 - SILVANA SANTOS ---- */
     {
       "id": "0306",
+      "codigoGenealogico": "G3PM-306",
+      "geracao": 3,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Silvana Santos",
       "apelido": "Avó PATERNA",
       "foto": "imagens/avos/0306_silvanasantos_v00.png",
@@ -274,6 +358,10 @@
       /* ---- ID 0307 - ? AVO DO PEDRO ---- */
     {
       "id": "0307",
+      "codigoGenealogico": "G3PP-307",
+      "geracao": 3,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "AVO DO PEDRO",
       "apelido": "Avo paterno",
       "foto": "imagens/avos/0307_avodopedrinho_v00.png",
@@ -285,6 +373,10 @@
        /* ---- ID 0308 - ? AVÓ DO PEDRO ---- */
     {
       "id": "0308",
+      "codigoGenealogico": "G3PM-308",
+      "geracao": 3,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "AVÓ DO PEDRO",
       "apelido": "Avó paterna",
       "foto": "imagens/avos/0308_avodopedrinho_v00.png",
@@ -296,6 +388,10 @@
 /* ---- ID 0309 - ? MARCELO ---- */
     {
       "id": "0309",
+      "codigoGenealogico": "G3PP-309",
+      "geracao": 3,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "Marcelo",
       "apelido": "Avo MATERNO",
       "foto": "imagens/avos/0309_marceloneto_v00.png",
@@ -307,6 +403,10 @@
        /* ---- ID 0310 - ? AVÓ DO PEDRO ---- */
     {
       "id": "0310",
+      "codigoGenealogico": "G3PM-310",
+      "geracao": 3,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Lia ",
       "apelido": "Avó MATERNA",
       "foto": "imagens/avos/0310_lia_fake_v00.png",
@@ -318,6 +418,10 @@
     /* ---- ID 0311 - ?  pai da liviaavo gabriela ---- */
     {
       "id": "0311",
+      "codigoGenealogico": "G3PP-311",
+      "geracao": 3,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "AVÔ DA GABRIELA",
       "apelido": "Avo materno",
       "foto": "imagens/avos/0311_paidalivia_avogabriela_v00.png",
@@ -329,6 +433,10 @@
        /* ---- ID 0312 - ? PAI DA LIVIA ---- */
     {
       "id": "0312",
+      "codigoGenealogico": "G3PM-312",
+      "geracao": 3,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "AVó DA GABRIELA",
       "apelido": "Avô materno",
       "foto": "imagens/avos/0312_marcia_fake_v00.png",
@@ -346,6 +454,10 @@
     /* ---- ID 0401 - ARNALDO ---- */
     {
       "id": "0401",
+      "codigoGenealogico": "G4PP-401",
+      "geracao": 4,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "Arnaldo",
       "apelido": "Bisavô",
       "foto": "imagens/bisavos/0401_Arnaldo_InPixio_v01.png",
@@ -358,6 +470,10 @@
     /* ---- ID 0402 - AMARIA ---- */
     {
       "id": "0402",
+      "codigoGenealogico": "G4PM-402",
+      "geracao": 4,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Amaria",
       "apelido": "Bisavó",
       "foto": "imagens/bisavos/0402_amaria_InPixio_v01.png",
@@ -369,6 +485,10 @@
     /* ---- ID 0403 - PAI DO FLAVIO MELO---- */
     {
       "id": "0403",
+      "codigoGenealogico": "G4PP-403",
+      "geracao": 4,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "Pai do Flavio Melo",
       "apelido": "Bisavô da Lorena e da Luna",
       "foto": "imagens/bisavos/0403_PaidoFlavioMelo_v01.png",
@@ -381,6 +501,10 @@
     /* ---- ID 0404 - MAE DO FLAVIO MELO ---- */
     {
       "id": "0404",
+      "codigoGenealogico": "G4PM-404",
+      "geracao": 4,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Mae do Flavio Melo",
       "apelido": "Bisavó",
       "foto": "imagens/bisavos/0404_maedoflaviomelo_v01.png",
@@ -393,6 +517,10 @@
     /* ---- ID 0405 - JULIO DE SOUZA ROCHA ---- */
     {
       "id": "0405",
+      "codigoGenealogico": "G4PP-405",
+      "geracao": 4,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "Julio de Souza Rocha",
       "apelido": "Linha Alice",
       "foto": "imagens/bisavos/0405_JuliodeSouzaRocha_v01.jpeg",
@@ -404,6 +532,10 @@
     /* ---- ID 0406 - TEREZINHA DE SOUZA ROCHA ---- */
     {
       "id": "0406",
+      "codigoGenealogico": "G4PM-406",
+      "geracao": 4,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Terezinha Souza Rocha",
       "apelido": "Linha Alice",
       "foto": "imagens/bisavos/0406_TerezinhaDeSouzaRocha_v01.jpeg",
@@ -416,6 +548,10 @@
      /* ---- ID 0407 - JULIO RAMOS ---- */
     {
       "id": "0407",
+      "codigoGenealogico": "G4PP-407",
+      "geracao": 4,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "Julio Ramos",
       "apelido": "Linha Alice",
       "foto": "imagens/bisavos/0407_JulioRamos_v01.jpeg",
@@ -427,6 +563,10 @@
     /* ---- ID 0408 - LEONTINA MARIA RAMOS ---- */
     {
       "id": "0408",
+      "codigoGenealogico": "G4PM-408",
+      "geracao": 4,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Leontina Maria Ramos",
       "apelido": "Linha Alice",
       "foto": "imagens/bisavos/0408_LeontinaMariaRamos_v01.jpeg",
@@ -438,6 +578,10 @@
       /* ---- ID 0409 - INDALECIO MAROLA ---- */
     {
       "id": "0409",
+      "codigoGenealogico": "G4PP-409",
+      "geracao": 4,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "Indalecio Marola",
       "apelido": "Linha Alice",
       "foto": "imagens/bisavos/0409_IndalecioMarola_v01.jpeg",
@@ -449,6 +593,10 @@
     /* ---- ID 0410 - TEREZA MAROLA ---- */
     {
       "id": "0410",
+      "codigoGenealogico": "G4PM-410",
+      "geracao": 4,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Tereza Marola",
       "apelido": "Linha Alice",
       "foto": "imagens/bisavos/0410_TerezaMarola_v01.jpeg",
@@ -464,6 +612,10 @@
     /* ---- ID 0501 - TRISAVO 1 ---- */
     {
       "id": "0501",
+      "codigoGenealogico": "G5PP-501",
+      "geracao": 5,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "Marcelo Pizzirani",
       "apelido": "Linha Alice",
       "foto": "../imagens/trisavos/0501_MarceloPizzirani_v01.png",
@@ -476,6 +628,10 @@
     /* ---- ID 0502 - TRISAVO 2 ---- */
     {
       "id": "0502",
+      "codigoGenealogico": "G5PM-502",
+      "geracao": 5,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Ana Cristina Pizzirani",
       "apelido": "Linha Alice",
       "foto": "../imagens/trisavos/0502_AnaCristinaPizzirani_v01.png",
@@ -488,6 +644,10 @@
     /* ---- ID 0503 - TRISAVO 3 ---- */
     {
       "id": "0503",
+      "codigoGenealogico": "G5PP-503",
+      "geracao": 5,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "Ezequiel Alves da Cunha",
       "apelido": "Linha Alice",
       "foto": "../imagens/trisavos/0503_ezequieladacunha._v01.png",
@@ -500,6 +660,10 @@
     /* ---- ID 0504 - TRISAVO 4 ---- */
     {
       "id": "0504",
+      "codigoGenealogico": "G5PM-504",
+      "geracao": 5,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Helena Ferraz Pacheco",
       "apelido": "Linha Alice",
       "foto": "../imagens/trisavos/0504_helenaferrazpacheco_v01.png",
@@ -512,6 +676,10 @@
     /* ---- ID 0505 - TRISAVO 5 ---- */
     {
       "id": "0505",
+      "codigoGenealogico": "G5PP-505",
+      "geracao": 5,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "Pai de Indalecio Marola",
       "apelido": "Linha Alice",
       "foto": "../imagens/trisavos/0505_paiindalecio_v01.png",
@@ -524,6 +692,10 @@
     /* ---- ID 0506 - TRISAVO 6 ---- */
     {
       "id": "0506",
+      "codigoGenealogico": "G5PM-506",
+      "geracao": 5,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Mae de Indalecio Marola",
       "apelido": "Linha Alice",
       "foto": "../imagens/trisavos/0506_maedeindalecio_v01.png",
@@ -536,6 +708,10 @@
     /* ---- ID 0507 - TRISAVO 7 ---- */
     {
       "id": "0507",
+      "codigoGenealogico": "G5PP-507",
+      "geracao": 5,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "Pai de Tereza Marola",
       "apelido": "Linha Alice",
       "foto": "../imagens/trisavos/0507_paideterezamarola_v01.png",
@@ -548,6 +724,10 @@
     /* ---- ID 0508 - TRISAVO 8 ---- */
     {
       "id": "0508",
+      "codigoGenealogico": "G5PM-508",
+      "geracao": 5,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Mae de Tereza Marola",
       "apelido": "Linha Alice",
       "foto": "../imagens/trisavos/0508_maedeterezamarola_v01.png",
@@ -560,6 +740,10 @@
     /* ---- ID 0509 - TRISAVO 9 ---- */
     {
       "id": "0509",
+      "codigoGenealogico": "G5PP-509",
+      "geracao": 5,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "Pai de Julio de Souza Rocha",
       "apelido": "Linha Alice",
       "foto": "../imagens/trisavos/0509_paijuliosrochatrisavoali_rafael.png",
@@ -572,6 +756,10 @@
     /* ---- ID 0510 - TRISAVO 10 ---- */
     {
       "id": "0510",
+      "codigoGenealogico": "G5PM-510",
+      "geracao": 5,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Mae de Julio de Souza Rocha",
       "apelido": "Linha Alice",
       "foto": "../imagens/trisavos/0510_maejuliosrocha_v01.png",
@@ -584,6 +772,10 @@
     /* ---- ID 0511 - TRISAVO 11 ---- */
     {
       "id": "0511",
+      "codigoGenealogico": "G5PP-511",
+      "geracao": 5,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "Pai de Terezinha de Souza Rocha",
       "apelido": "Linha Alice",
       "foto": "../imagens/trisavos/0511_paidaterezinhatrisavoalice_rafael.png",
@@ -596,6 +788,10 @@
     /* ---- ID 0512 - TRISAVO 12 ---- */
     {
       "id": "0512",
+      "codigoGenealogico": "G5PM-512",
+      "geracao": 5,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Mae de Terezinha de Souza Rocha",
       "apelido": "Linha Alice",
       "foto": "../imagens/trisavos/0512_maeterezinhasrochatrisavoalice_rafael_v01.png",
@@ -608,6 +804,10 @@
     /* ---- ID 0513 - TRISAVO 13 ---- */
     {
       "id": "0513",
+      "codigoGenealogico": "G5PP-513",
+      "geracao": 5,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "Pai de Julio Ramos",
       "apelido": "Linha Alice",
       "foto": "../imagens/trisavos/0513_paidejulioramostrisavoalice_rafael.png",
@@ -620,6 +820,10 @@
     /* ---- ID 0514 - TRISAVO 14 ---- */
     {
       "id": "0514",
+      "codigoGenealogico": "G5PM-514",
+      "geracao": 5,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Mae de Julio Ramos",
       "apelido": "Linha Alice",
       "foto": "../imagens/trisavos/0514_maejulioramos_v01.png",
@@ -632,6 +836,10 @@
     /* ---- ID 0515 - TRISAVO 15 ---- */
     {
       "id": "0515",
+      "codigoGenealogico": "G5PP-515",
+      "geracao": 5,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "Pai de Leontina Maria Ramos",
       "apelido": "Linha Alice",
       "foto": "../imagens/trisavos/0515_paileontinatrisavoalice_rafael.png",
@@ -644,6 +852,10 @@
     /* ---- ID 0516 - TRISAVO 16 ---- */
     {
       "id": "0516",
+      "codigoGenealogico": "G5PM-516",
+      "geracao": 5,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Mae de Leontina Maria Ramos",
       "apelido": "Linha Alice",
       "foto": "../imagens/trisavos/0516_maeleontina_v01.png",
@@ -658,6 +870,10 @@
     /* ---- ID 0601 - TETRAVO 1 ---- */
     {
       "id": "0601",
+      "codigoGenealogico": "G6PP-601",
+      "geracao": 6,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "Tetravo 1",
       "apelido": "Linha Alice",
       "foto": "imagens/tetravos/0601_nicola_pizzirani_v01.png",
@@ -670,6 +886,10 @@
     /* ---- ID 0602 - TETRAVO 2 ---- */
     {
       "id": "0602",
+      "codigoGenealogico": "G6PM-602",
+      "geracao": 6,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Tetravo 2",
       "apelido": "Linha Alice",
       "foto": "imagens/tetravos/0602_maria_mazzini_v01.png",
@@ -682,6 +902,10 @@
     /* ---- ID 0603 - TETRAVO 3 ---- */
     {
       "id": "0603",
+      "codigoGenealogico": "G6PP-603",
+      "geracao": 6,
+      "ramo": "P",
+      "sexo": "M",
       "nome": "Tetravo 3",
       "apelido": "Linha Alice",
       "foto": "imagens/tetravos/0603_henrique_lienhardtv01.png",
@@ -694,6 +918,10 @@
     /* ---- ID 0604 - TETRAVO 4 ---- */
     {
       "id": "0604",
+      "codigoGenealogico": "G6PM-604",
+      "geracao": 6,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Tetravo 4",
       "apelido": "Linha Alice",
       "foto": "imagens/tetravos/0604_ana_petru_v01.png",
@@ -708,6 +936,10 @@
     /* ---- ID 0702 - HEXAVO 2 ---- */
     {
       "id": "0702",
+      "codigoGenealogico": "G7PM-702",
+      "geracao": 7,
+      "ramo": "M",
+      "sexo": "F",
       "nome": "Hexavo 2",
       "apelido": "Linha Alice",
       "foto": "",
@@ -719,4 +951,5 @@
 
   ]
 }
+
 

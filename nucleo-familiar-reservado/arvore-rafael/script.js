@@ -1,5 +1,6 @@
 ﻿document.addEventListener('DOMContentLoaded', function () {
     const supportStyleId = 'auto-genealogia-ramo-id-style';
+    const genealogicalCodeById = new Map();
 
     function ensureSupportStyles() {
         if (document.getElementById(supportStyleId)) {
@@ -14,8 +15,78 @@
             '.card-id { display: inline-block; margin-top: 6px; font-size: 11px; line-height: 1; font-weight: 700;',
             'padding: 4px 8px; border-radius: 10px; background: #fff; color: #1f2a37; border: 1px solid #9aa6b2;',
             'pointer-events: none; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12); }'
+            ,
+            '.card-codigo-genealogico { display: inline-block; margin-top: 4px; font-size: 10px; line-height: 1.1; font-weight: 700;',
+            'padding: 3px 7px; border-radius: 9px; background: #f8fafc; color: #304255; border: 1px dashed #9aa6b2;',
+            'pointer-events: none; letter-spacing: 0.3px; }'
         ].join(' ');
         document.head.appendChild(style);
+    }
+
+    function buildFallbackGenealogicalCode(personId) {
+        const normalized = normalizePersonId(personId);
+        if (!normalized) {
+            return '';
+        }
+
+        const generation = parseInt(normalized.slice(0, 2), 10);
+        const suffix = normalized.slice(1);
+
+        if (generation === 1) {
+            return 'G1B-' + suffix;
+        }
+
+        const lastDigit = parseInt(normalized.slice(-1), 10);
+        const role = Number.isNaN(lastDigit) ? 'PP' : (lastDigit % 2 === 0 ? 'PM' : 'PP');
+        return 'G' + String(generation) + role + '-' + suffix;
+    }
+
+    function ensureGenealogicalBadge(card, personId) {
+        const codigo = genealogicalCodeById.get(personId) || buildFallbackGenealogicalCode(personId);
+        if (!codigo) {
+            return;
+        }
+
+        let badge = card.querySelector('.card-codigo-genealogico');
+        if (!badge) {
+            badge = document.createElement('span');
+            badge.className = 'card-codigo-genealogico';
+            card.appendChild(badge);
+        }
+        badge.textContent = codigo;
+    }
+
+    function applyGenealogicalBadges() {
+        document.querySelectorAll('.card-pessoa[data-person-id]').forEach(function (card) {
+            const personId = normalizePersonId(card.getAttribute('data-person-id'));
+            if (!personId) {
+                return;
+            }
+            ensureGenealogicalBadge(card, personId);
+        });
+    }
+
+    async function loadGenealogicalCodes() {
+        try {
+            const response = await fetch('../dados/pessoas.json', { cache: 'no-store' });
+            if (!response.ok) {
+                return;
+            }
+            const raw = await response.text();
+            const sanitized = raw.replace(/\/\*[\s\S]*?\*\//g, '');
+            const data = JSON.parse(sanitized);
+            const people = Array.isArray(data && data.people) ? data.people : [];
+
+            people.forEach(function (person) {
+                const personId = normalizePersonId(person && person.id);
+                const code = String(person && person.codigoGenealogico || '').trim();
+                if (personId && code) {
+                    genealogicalCodeById.set(personId, code);
+                }
+            });
+        } catch (err) {
+            // Silently fallback to computed labels when local JSON is unavailable.
+        }
     }
 
     function slugify(value) {
@@ -133,6 +204,8 @@
                 badge.textContent = 'ID ' + personId;
                 card.appendChild(badge);
             }
+
+            ensureGenealogicalBadge(card, personId);
         });
     }
 
@@ -185,6 +258,7 @@
     ensureSupportStyles();
     autoFillCardData();
     autoFillRamoClasses();
+    loadGenealogicalCodes().then(applyGenealogicalBadges);
 
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');

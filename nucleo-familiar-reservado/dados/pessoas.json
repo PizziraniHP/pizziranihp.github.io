@@ -963,6 +963,38 @@
       "fontes": []
     },
 
+    /* ---- ID 0607 - TETRAVO 7 ---- */
+    {
+      "id": "0607",
+      "codigoGenealogico": "G6PP-607",
+      "geracao": 6,
+      "ramo": "P",
+      "sexo": "M",
+      "nome": "Pai de Ezequiel A da Cunha",
+      "apelido": "",
+      "foto": "",
+      "resumo": "Cadastro inicial para tetravo.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ---- ID 0608 - TETRAVÓ 8 ---- */
+    {
+      "id": "0608",
+      "codigoGenealogico": "G6PM-608",
+      "geracao": 6,
+      "ramo": "M",
+      "sexo": "F",
+      "nome": "Antonia M dos Santos",
+      "apelido": "",
+      "foto": "",
+      "resumo": "Cadastro inicial para tetravo.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
     /* ==================== GERAÇÃO 07 (0700) - PENTAVOS ==================== */
 
     /* ---- ID 0702 - HEXAVO 2 ---- */

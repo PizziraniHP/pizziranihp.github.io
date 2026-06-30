@@ -1,5 +1,5 @@
 ﻿{
-  "updatedAt": "2026-06-22",
+  "updatedAt": "2026-06-30",
   "padraoIds": {
     "100": "Bisnetos",
     "200": "Pais",
@@ -925,6 +925,38 @@
       "nome": "Tetravo 4",
       "apelido": "Linha Alice",
       "foto": "imagens/tetravos/0604_ana_petru_v01.png",
+      "resumo": "Cadastro inicial para tetravo.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ---- ID 0605 - TETRAVO 5 ---- */
+    {
+      "id": "0605",
+      "codigoGenealogico": "G6PP-605",
+      "geracao": 6,
+      "ramo": "P",
+      "sexo": "M",
+      "nome": "Aquilino Pacheco Filho",
+      "apelido": "",
+      "foto": "imagens/tetravos/0605_aquilinoPachecofilho_v01.jpeg",
+      "resumo": "Cadastro inicial para tetravo.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ---- ID 0606 - TETRAVÓ 6 ---- */
+    {
+      "id": "0606",
+      "codigoGenealogico": "G6PM-606",
+      "geracao": 6,
+      "ramo": "M",
+      "sexo": "F",
+      "nome": "Antonieta Silveira Ferraz Pacheco",
+      "apelido": "",
+      "foto": "imagens/tetravos/0606_antonietasilveira_ferraz_pacheco_v01.jpeg",
       "resumo": "Cadastro inicial para tetravo.",
       "textoCompleto": "Preencher com historia, datas e registros da familia.",
       "galeria": [],

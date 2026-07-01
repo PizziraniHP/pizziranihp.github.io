@@ -159,11 +159,32 @@
         return match ? normalizePersonId(match[1]) : '';
     }
 
+    function isPlaceholderCard(card) {
+        const nome = String(card.querySelector('.nome') && card.querySelector('.nome').textContent || '').trim().toUpperCase();
+        const detalhe = String(card.querySelector('.detalhe') && card.querySelector('.detalhe').textContent || '').trim().toUpperCase();
+        const img = card.querySelector('img');
+        const src = String(img && img.getAttribute('src') || '').trim();
+
+        const genericNames = new Set([
+            'BISAVÔ / BISAVÓ', 'BISAVO / BISAVO',
+            'TRISAVÔ / TRISAVÓ', 'TRISAVO / TRISAVO',
+            'TETRAVÔ / TETRAVÓ', 'TETRAVO / TETRAVO',
+            'PENTAVÔ / PENTAVÓ', 'PENTAVO / PENTAVO'
+        ]);
+        const genericDetails = new Set(['INFORMAÇÕES', 'INFORMACOES', 'ESPAÇO', 'ESPACO']);
+
+        return genericNames.has(nome) || genericDetails.has(detalhe) || src === '../imagens/' || src === '..\/imagens/';
+    }
+
     function autoFillCardData() {
         const cards = Array.from(document.querySelectorAll('.card-pessoa'));
         const perPrefixCounter = {};
 
         cards.forEach(function (card) {
+            if (isPlaceholderCard(card)) {
+                return;
+            }
+
             let personId = normalizePersonId(card.getAttribute('data-person-id'));
             if (!personId) {
                 personId = normalizePersonId(extractIdFromText(card.getAttribute('data-person-page')));

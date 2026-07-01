@@ -318,6 +318,19 @@
         card.appendChild(wrap);
     });
 
+
+    // Permite abrir o Saiba Mais ao clicar no cartao inteiro.
+    document.querySelectorAll('.card-pessoa[data-person-page]').forEach(function (card) {
+        card.addEventListener('click', function (event) {
+            if (event.target.closest('a') || event.target.closest('button') || event.target.tagName === 'IMG') {
+                return;
+            }
+            const targetPage = card.getAttribute('data-person-page');
+            if (targetPage) {
+                window.location.href = targetPage;
+            }
+        });
+    });
     // Cria barras de geracao com botao de recolher/mostrar por bloco.
     const piramideInner = document.querySelector('.piramide-inversa-inner');
     if (!piramideInner) {
@@ -385,3 +398,4 @@
         piramideInner.insertBefore(bar, firstRow);
     });
 });
+

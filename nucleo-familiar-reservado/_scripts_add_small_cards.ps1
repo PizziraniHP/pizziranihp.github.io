@@ -1,4 +1,4 @@
-$files = Get-ChildItem "nucleo-familiar-reservado/saiba-mais" -File -Filter "*.html"
+﻿$files = Get-ChildItem "nucleo-familiar-reservado/saiba-mais" -File -Filter "*.html"
 
 foreach ($f in $files) {
     $path = $f.FullName
@@ -12,7 +12,7 @@ foreach ($f in $files) {
     $content = [regex]::Replace(
         $content,
         '(?s)(\.extra-grid\s*\{[\s\S]*?\})',
-        "$1`r`n        .extra-grid-small {`r`n            display: grid;`r`n            grid-template-columns: repeat(4, minmax(0, 1fr));`r`n            gap: 12px;`r`n            align-items: start;`r`n        }",
+        "$1`r`n        .extra-grid-small {`r`n            display: grid;`r`n            grid-template-columns: repeat(3, minmax(0, 1fr));`r`n            gap: 12px;`r`n            align-items: start;`r`n        }",
         1
     )
 
@@ -64,3 +64,4 @@ foreach ($f in $files) {
 }
 
 Write-Output "DONE"
+

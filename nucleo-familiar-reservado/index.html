@@ -45,6 +45,29 @@
             line-height: 1.45;
             text-align: center;
         }
+        .guia {
+            margin: 0 0 14px;
+            border: 1px solid #cbb89c;
+            border-radius: 10px;
+            background: #f9f4e9;
+            padding: 12px;
+        }
+        .guia h2 {
+            margin: 0 0 8px;
+            font-size: 1.05rem;
+            text-align: center;
+            color: #4a3220;
+        }
+        .guia p {
+            margin: 6px 0;
+            text-align: center;
+        }
+        .guia strong {
+            display: block;
+            text-align: center;
+            margin-bottom: 2px;
+            color: #4a3220;
+        }
         .retorno {
             margin-bottom: 10px;
             text-align: left;
@@ -59,6 +82,29 @@
             grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 10px;
             margin-top: 14px;
+        }
+        .menu-bisnetos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 10px;
+            margin-top: 14px;
+        }
+        .card-bisneto {
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            background: #fff;
+            padding: 10px;
+        }
+        .card-bisneto h3 {
+            margin: 0 0 8px;
+            text-align: center;
+            font-size: 1rem;
+            color: #3f2f21;
+        }
+        .acoes {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 8px;
         }
         .secao-complementar {
             margin-top: 18px;
@@ -107,13 +153,56 @@
         <h1>NUCLEO-FAMILIAR-RESERVADO</h1>
         <p>Pagina de acesso interno para arvores genealogicas individuais. Conteudo com informacoes minimizadas.</p>
 
-        <section class="grid" aria-label="Arvores individuais">
-            <a href="arvore-lorena/lorena.html">Arvore Lorena</a>
-            <a href="arvore-alice/alice.html">Arvore Alice</a>
-            <a href="arvore-pedro/pedro.html">Arvore Pedro</a>
-            <a href="arvore-rafael/rafael.html">Arvore Rafael</a>
-            <a href="arvore-luna/luna.html">Arvore Luna</a>
-            <a href="arvore-gabriela/gabriela.html">Arvore Gabriela</a>
+        <section class="guia" aria-label="Guia rapido">
+            <h2>Guia rapido de navegacao</h2>
+            <p><strong>Pagina principal da arvore:</strong> abre o mapa genealogico da pessoa.</p>
+            <p><strong>Pagina Saiba Mais:</strong> abre texto, fotos e detalhes da pessoa.</p>
+            <p>Cada bisneto abaixo tem os dois caminhos separados para evitar confusao.</p>
+        </section>
+
+        <section class="menu-bisnetos" aria-label="Arvores e Saiba Mais dos seis bisnetos">
+            <article class="card-bisneto">
+                <h3>0101 - Lorena</h3>
+                <div class="acoes">
+                    <a href="arvore-lorena/lorena.html">Abrir pagina principal da arvore</a>
+                    <a href="saiba-mais/0101-lorena.html">Abrir pagina Saiba Mais</a>
+                </div>
+            </article>
+            <article class="card-bisneto">
+                <h3>0102 - Alice</h3>
+                <div class="acoes">
+                    <a href="arvore-alice/alice.html">Abrir pagina principal da arvore</a>
+                    <a href="saiba-mais/0102-alice.html">Abrir pagina Saiba Mais</a>
+                </div>
+            </article>
+            <article class="card-bisneto">
+                <h3>0103 - Pedro</h3>
+                <div class="acoes">
+                    <a href="arvore-pedro/pedro.html">Abrir pagina principal da arvore</a>
+                    <a href="saiba-mais/0103-pedro.html">Abrir pagina Saiba Mais</a>
+                </div>
+            </article>
+            <article class="card-bisneto">
+                <h3>0104 - Rafael</h3>
+                <div class="acoes">
+                    <a href="arvore-rafael/rafael.html">Abrir pagina principal da arvore</a>
+                    <a href="saiba-mais/0104-rafael.html">Abrir pagina Saiba Mais</a>
+                </div>
+            </article>
+            <article class="card-bisneto">
+                <h3>0105 - Luna</h3>
+                <div class="acoes">
+                    <a href="arvore-luna/luna.html">Abrir pagina principal da arvore</a>
+                    <a href="saiba-mais/0105-luna.html">Abrir pagina Saiba Mais</a>
+                </div>
+            </article>
+            <article class="card-bisneto">
+                <h3>0106 - Gabriela</h3>
+                <div class="acoes">
+                    <a href="arvore-gabriela/gabriela.html">Abrir pagina principal da arvore</a>
+                    <a href="saiba-mais/0106-gabriela.html">Abrir pagina Saiba Mais</a>
+                </div>
+            </article>
         </section>
 
         <section class="secao-complementar" aria-label="Indice de pessoas">

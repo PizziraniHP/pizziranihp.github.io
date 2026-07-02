@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex,nofollow">
-    <title>Indice Saiba Mais</title>
+    <title>Indice Saiba Mais - Navegacao</title>
     <style>
         :root {
             --bg: #f7f5ef;
@@ -46,6 +46,32 @@
             margin: 0 0 14px;
             text-align: center;
             color: var(--muted);
+        }
+
+        .guia {
+            margin: 0 0 16px;
+            border: 1px solid #d8cfbe;
+            border-radius: 12px;
+            background: #fffaf0;
+            padding: 12px 14px;
+        }
+
+        .guia h2 {
+            margin: 0 0 8px;
+            font-size: 1.05rem;
+            color: #5f2f2f;
+        }
+
+        .guia p {
+            margin: 6px 0;
+            text-align: center;
+        }
+
+        .guia strong {
+            display: block;
+            text-align: center;
+            margin-bottom: 2px;
+            color: #4f2929;
         }
 
         .top-links {
@@ -104,6 +130,55 @@
             box-shadow: 0 8px 18px rgba(107, 76, 47, .18);
         }
 
+        .bisnetos-menu {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 12px;
+        }
+
+        .bisneto-card {
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            background: #fff;
+            padding: 12px;
+        }
+
+        .bisneto-card h3 {
+            margin: 0 0 8px;
+            font-size: 1.02rem;
+            color: #3f2323;
+            text-align: center;
+        }
+
+        .btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .btns a {
+            text-decoration: none;
+            border-radius: 8px;
+            padding: 8px 10px;
+            font-size: 0.95rem;
+            border: 1px solid #ccbfa6;
+        }
+
+        .btn-arvore {
+            background: #f2e7cc;
+            color: #3f2e13;
+        }
+
+        .btn-saiba {
+            background: #fdf3e6;
+            color: #5b2e2e;
+        }
+
+        .btns a:hover {
+            text-decoration: underline;
+            border-color: #9f7b57;
+        }
+
         .rodape {
             margin-top: 16px;
             font-size: 0.92rem;
@@ -120,8 +195,63 @@
         <h1>Indice Saiba Mais</h1>
         <p class="sub">Lista das paginas individuais existentes no diretorio Saiba Mais.</p>
 
+        <section class="guia" aria-label="Guia rapido de navegacao">
+            <h2>Guia rapido: dois tipos de pagina</h2>
+            <p><strong>Pagina principal da arvore:</strong> mostra a arvore daquela pessoa (exemplo: lorena.html, alice.html, pedro.html).</p>
+            <p><strong>Pagina Saiba Mais:</strong> mostra biografia, fotos e detalhes da pessoa (exemplo: 0101-lorena.html, 0102-alice.html).</p>
+            <p>Neste indice voce esta vendo as paginas <strong>Saiba Mais</strong>. Nos atalhos abaixo, cada bisneto tem os dois caminhos separados.</p>
+        </section>
+
+        <section class="group" aria-label="Atalhos dos seis bisnetos">
+            <h2>Atalhos claros dos 6 bisnetos</h2>
+            <div class="bisnetos-menu">
+                <article class="bisneto-card">
+                    <h3>0101 - Lorena</h3>
+                    <div class="btns">
+                        <a class="btn-arvore" href="../arvore-lorena/lorena.html">Abrir pagina principal da arvore</a>
+                        <a class="btn-saiba" href="0101-lorena.html">Abrir pagina Saiba Mais</a>
+                    </div>
+                </article>
+                <article class="bisneto-card">
+                    <h3>0102 - Alice</h3>
+                    <div class="btns">
+                        <a class="btn-arvore" href="../arvore-alice/alice.html">Abrir pagina principal da arvore</a>
+                        <a class="btn-saiba" href="0102-alice.html">Abrir pagina Saiba Mais</a>
+                    </div>
+                </article>
+                <article class="bisneto-card">
+                    <h3>0103 - Pedro</h3>
+                    <div class="btns">
+                        <a class="btn-arvore" href="../arvore-pedro/pedro.html">Abrir pagina principal da arvore</a>
+                        <a class="btn-saiba" href="0103-pedro.html">Abrir pagina Saiba Mais</a>
+                    </div>
+                </article>
+                <article class="bisneto-card">
+                    <h3>0104 - Rafael</h3>
+                    <div class="btns">
+                        <a class="btn-arvore" href="../arvore-rafael/rafael.html">Abrir pagina principal da arvore</a>
+                        <a class="btn-saiba" href="0104-rafael.html">Abrir pagina Saiba Mais</a>
+                    </div>
+                </article>
+                <article class="bisneto-card">
+                    <h3>0105 - Luna</h3>
+                    <div class="btns">
+                        <a class="btn-arvore" href="../arvore-luna/luna.html">Abrir pagina principal da arvore</a>
+                        <a class="btn-saiba" href="0105-luna.html">Abrir pagina Saiba Mais</a>
+                    </div>
+                </article>
+                <article class="bisneto-card">
+                    <h3>0106 - Gabriela</h3>
+                    <div class="btns">
+                        <a class="btn-arvore" href="../arvore-gabriela/gabriela.html">Abrir pagina principal da arvore</a>
+                        <a class="btn-saiba" href="0106-gabriela.html">Abrir pagina Saiba Mais</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
         <section class="group" aria-label="Bisnetos">
-            <h2>Bisnetos (0100)</h2>
+            <h2>Bisnetos (0100) - links diretos Saiba Mais</h2>
             <div class="grid">
                 <a href="0101-lorena.html">0101 - Lorena</a>
                 <a href="0102-alice.html">0102 - Alice</a>

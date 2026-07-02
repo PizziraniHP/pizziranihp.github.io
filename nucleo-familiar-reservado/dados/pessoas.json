@@ -7,7 +7,8 @@
     "400": "Bisavos",
     "500": "Trisavos",
     "600": "Tetravos",
-    "700": "Pentavos"
+    "700": "Pentavos",
+    "800": "Hexavos"
   },
   "regrasCadastro": {
     "paridade": {
@@ -1008,6 +1009,40 @@
       "apelido": "Linha Alice",
       "foto": "",
       "resumo": "Cadastro inicial para pentavos.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ==================== GERAÇÃO 08 (0800) - HEXAVOS ==================== */
+
+    /* ---- ID 0801 - FIRMIANO BOTTO PACHECO ---- */
+    {
+      "id": "0801",
+      "codigoGenealogico": "G8PP-801",
+      "geracao": 8,
+      "ramo": "P",
+      "sexo": "M",
+      "nome": "Firmiano Botto Pacheco",
+      "apelido": "",
+      "foto": "imagens/hexavos/0801_firmianobottopacheco_v01.svg",
+      "resumo": "Cadastro inicial para hexavo.",
+      "textoCompleto": "Preencher com historia, datas e registros da familia.",
+      "galeria": [],
+      "fontes": []
+    },
+
+    /* ---- ID 0802 - MARIA LUIZA COSTA PACHECO ---- */
+    {
+      "id": "0802",
+      "codigoGenealogico": "G8PM-802",
+      "geracao": 8,
+      "ramo": "M",
+      "sexo": "F",
+      "nome": "Maria Luiza Costa Pacheco",
+      "apelido": "",
+      "foto": "imagens/hexavos/0802_marialuizacostapacheco_v01.svg",
+      "resumo": "Cadastro inicial para hexava.",
       "textoCompleto": "Preencher com historia, datas e registros da familia.",
       "galeria": [],
       "fontes": []

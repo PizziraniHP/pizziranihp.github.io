@@ -78,7 +78,7 @@ function Test-CardRules([string]$relativePath) {
         if ($expected.Count -gt 0) {
             $okClass = $false
             foreach ($c in $expected) {
-                if ($classes -match ("\\b" + [regex]::Escape($c) + "\\b")) {
+                if ($classes -match ("\b" + [regex]::Escape($c) + "\b")) {
                     $okClass = $true
                     break
                 }

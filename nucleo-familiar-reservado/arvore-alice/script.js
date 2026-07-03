@@ -30,7 +30,7 @@
         }
 
         const generation = parseInt(normalized.slice(0, 2), 10);
-        const suffix = normalized.slice(1);
+        const suffix = generation >= 7 ? normalized : normalized.slice(1);
 
         if (generation === 1) {
             return 'G1B-' + suffix;

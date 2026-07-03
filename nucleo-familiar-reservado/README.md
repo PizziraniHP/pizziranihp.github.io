@@ -147,8 +147,8 @@ Arquivo de apoio:
 
 ## O que editar em cada caso
 
-- Alterar histÃ³ria, resumo, foto, galeria: `dados/pessoas.json`.
-- Alterar visual da pÃ¡gina de detalhes: `pessoa.css`.
+- Alterar história, resumo, foto, galeria: `dados/pessoas.json`.
+- Alterar visual da pagina de detalhes: `pessoa.css`.
 - Alterar lÃ³gica de carregamento do cadastro: `pessoa.js`.
 - Adicionar novo cartÃ£o em uma Ã¡rvore: arquivo `.html` da Ã¡rvore correspondente.
 - Criar conteudo livre por pessoa: `saiba-mais/*.html`.
@@ -166,6 +166,8 @@ Use sempre a pasta central de imagens do nucleo reservado:
 - `imagens/trisavos/`
 - `imagens/tetravos/`
 - `imagens/pentavos/`
+- `imagens/hexavos/`
+
 
 Nao duplicar fotos por arvore (`arvore-alice`, `arvore-gabriela`, etc.).
 
@@ -293,6 +295,29 @@ Quando for cadastrar muitas pessoas:
 4. Corrigir inconsistencias de caminho.
 5. Seguir para o proximo lote.
 
+## Checklist Operacional (insercao por geracao)
+
+Para evitar erros de classe, ramo, cor/lado e link de Saiba mais ao inserir novos cards:
+
+- consulte `CHECKLIST_INSERCAO_GERACAO.md`
+- siga o passo a passo antes de salvar
+- valide no navegador com refresh forcado (Ctrl+F5)
+
+## Fiscal automatico (pre-commit)
+
+Para bloquear commit com insercao inadequada na geracao 07:
+
+1. Execute `powershell -NoProfile -ExecutionPolicy Bypass -File nucleo-familiar-reservado\_instalar_fiscal_precommit.ps1`
+2. O hook pre-commit passara a validar arquivos `arvore-*/**/*.html` alterados no commit.
+3. Em caso de erro, o commit e bloqueado com lista de ajustes necessarios.
+
+Regras atuais do fiscal (todos os casos por faixa de ID):
+
+- valida classe esperada por geracao (01 a 08)
+- valida classe da imagem em geracoes altas (`foto-tetravos` para 06; `foto-hexaavos` para 07/08)
+- valida existencia de arquivo referenciado em `data-person-page`
+- ignora placeholders vazios (Espaco/Informacoes e `src="../imagens/"`)
+
 ## Regra de Ouro
 
 Texto no JSON pesa pouco. O que pesa sao as imagens.
@@ -303,6 +328,6 @@ Por isso:
 - deve evitar duplicacao de fotos
 - deve manter organizacao por geracao na pasta central
 
-## ObservaÃ§Ã£o de Privacidade
+## Observações de Privacidade
 
-Este nÃºcleo foi pensado para conteÃºdo familiar reservado. Mantenha dados sensÃ­veis somente aqui e evite exposiÃ§Ã£o desnecessÃ¡ria nas pÃ¡ginas pÃºblicas.
+Este nucleo foi pensado para conteudo familiar reservado. Mantenha dados sensiveis somente aqui e evite exposição desnecessaria nas paginas publicas.

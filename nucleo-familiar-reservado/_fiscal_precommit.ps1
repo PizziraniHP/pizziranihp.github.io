@@ -110,6 +110,49 @@ function Test-CardRules([string]$relativePath) {
     return $errors
 }
 
+function Test-PeopleJsonRules([string]$relativePath) {
+    $errors = @()
+    $fullPath = Resolve-RepoPath $relativePath
+
+    if (-not (Test-Path $fullPath)) {
+        return $errors
+    }
+
+    $content = Get-Content -Path $fullPath -Raw -Encoding UTF8
+    $sanitized = [regex]::Replace($content, '/\*[\s\S]*?\*/', '')
+
+    try {
+        $json = $sanitized | ConvertFrom-Json -ErrorAction Stop
+    } catch {
+        $errors += "$relativePath :: JSON invalido para validacao de regras genealogicas."
+        return $errors
+    }
+
+    $people = @($json.people)
+    foreach ($p in $people) {
+        $id = Normalize-PersonId([string]$p.id)
+        if (-not $id) {
+            continue
+        }
+
+        $code = [string]$p.codigoGenealogico
+        if (-not $code) {
+            continue
+        }
+
+        if ($code -notmatch '^G\d+[A-Z]{1,3}-\d{4}$') {
+            $errors += "$relativePath :: ID $id com codigoGenealogico fora do padrao alfa-numerico (ex.: G2PP-0201)."
+            continue
+        }
+
+        if ($code -notmatch ('-' + [regex]::Escape($id) + '$')) {
+            $errors += "$relativePath :: ID $id com codigoGenealogico inconsistente com o proprio ID (esperado sufixo -$id)."
+        }
+    }
+
+    return $errors
+}
+
 if ($ValidateAll) {
     $treeHtmlFiles = Get-ChildItem -Path 'nucleo-familiar-reservado' -Recurse -File |
         Where-Object { $_.FullName -match 'arvore-[^\\/]+[\\/].+\.html$' } |
@@ -130,12 +173,27 @@ if ($ValidateAll) {
 }
 
 if (-not $treeHtmlFiles.Count) {
-    exit 0
+    if (-not $ValidateAll) {
+        $stagedFiles = Get-StagedFiles
+    }
 }
 
 $allErrors = @()
 foreach ($file in $treeHtmlFiles) {
     $allErrors += Test-CardRules -relativePath $file
+}
+
+$shouldValidatePeopleJson = $ValidateAll
+if (-not $shouldValidatePeopleJson) {
+    $shouldValidatePeopleJson = $stagedFiles -contains 'nucleo-familiar-reservado/dados/pessoas.json'
+}
+
+if ($shouldValidatePeopleJson) {
+    $allErrors += Test-PeopleJsonRules -relativePath 'nucleo-familiar-reservado/dados/pessoas.json'
+}
+
+if (-not $treeHtmlFiles.Count -and -not $shouldValidatePeopleJson) {
+    exit 0
 }
 
 if ($allErrors.Count -gt 0) {

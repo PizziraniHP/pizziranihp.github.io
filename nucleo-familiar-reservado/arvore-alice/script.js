@@ -388,6 +388,28 @@
     });
 
     groups.forEach(function (group) {
+        if (group.key === 'g7') {
+            group.rows = group.rows.filter(function (row) {
+                const cards = Array.from(row.querySelectorAll(':scope > .card-pessoa'));
+                if (cards.length === 1) {
+                    row.style.display = 'none';
+                    return false;
+                }
+                return cards.length !== 1;
+            });
+        }
+
+        if (group.key === 'g7' || group.key === 'g8') {
+            if (group.rows[0]) {
+                group.rows[0].classList.add('linha-tetravos-verde');
+                group.rows[0].classList.remove('linha-tetravos-azul');
+            }
+            if (group.rows[1]) {
+                group.rows[1].classList.add('linha-tetravos-azul');
+                group.rows[1].classList.remove('linha-tetravos-verde');
+            }
+        }
+
         const firstRow = group.rows[0];
         if (!firstRow || firstRow.previousElementSibling && firstRow.previousElementSibling.classList.contains('geracao-barra')) {
             return;

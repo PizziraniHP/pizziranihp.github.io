@@ -26,7 +26,7 @@
     /* ---- ID 0101 - LORENA ---- */
     {
       "id": "0101",
-      "codigoGenealogico": "G1B-101",
+      "codigoGenealogico": "G1B-0101",
       "geracao": 1,
       "ramo": "N",
       "sexo": "N",
@@ -42,7 +42,7 @@
     /* ---- ID 0102 - ALICE ---- */
     {
       "id": "0102",
-      "codigoGenealogico": "G1B-102",
+      "codigoGenealogico": "G1B-0102",
       "geracao": 1,
       "ramo": "N",
       "sexo": "N",
@@ -58,7 +58,7 @@
     /* ---- ID 0103 - PEDRO ---- */
     {
       "id": "0103",
-      "codigoGenealogico": "G1B-103",
+      "codigoGenealogico": "G1B-0103",
       "geracao": 1,
       "ramo": "N",
       "sexo": "N",
@@ -74,7 +74,7 @@
     /* ---- ID 0104 - RAFAEL ---- */
     {
       "id": "0104",
-      "codigoGenealogico": "G1B-104",
+      "codigoGenealogico": "G1B-0104",
       "geracao": 1,
       "ramo": "N",
       "sexo": "N",
@@ -90,7 +90,7 @@
     /* ---- ID 0105 - LUNA ---- */
     {
       "id": "0105",
-      "codigoGenealogico": "G1B-105",
+      "codigoGenealogico": "G1B-0105",
       "geracao": 1,
       "ramo": "N",
       "sexo": "N",
@@ -106,7 +106,7 @@
     /* ---- ID 0106 - GABRIELA ---- */
     {
       "id": "0106",
-      "codigoGenealogico": "G1B-106",
+      "codigoGenealogico": "G1B-0106",
       "geracao": 1,
       "ramo": "N",
       "sexo": "N",
@@ -124,7 +124,7 @@
     /* ---- ID 0201 - MARCOS ---- */
     {
       "id": "0201",
-      "codigoGenealogico": "G2PP-201",
+      "codigoGenealogico": "G2PP-0201",
       "geracao": 2,
       "ramo": "P",
       "sexo": "M",
@@ -140,7 +140,7 @@
     /* ---- ID 0202 - PAULA ---- */
     {
       "id": "0202",
-      "codigoGenealogico": "G2PM-202",
+      "codigoGenealogico": "G2PM-0202",
       "geracao": 2,
       "ramo": "M",
       "sexo": "F",
@@ -156,7 +156,7 @@
     /* ---- ID 0203 - ANDERSON ---- */
     {
       "id": "0203",
-      "codigoGenealogico": "G2PP-203",
+      "codigoGenealogico": "G2PP-0203",
       "geracao": 2,
       "ramo": "P",
       "sexo": "M",
@@ -172,7 +172,7 @@
     /* ---- ID 0204 - STHEFANIE ---- */
     {
       "id": "0204",
-      "codigoGenealogico": "G2PM-204",
+      "codigoGenealogico": "G2PM-0204",
       "geracao": 2,
       "ramo": "M",
       "sexo": "F",
@@ -188,7 +188,7 @@
     /* ---- ID 0205 - FLAVIO ---- */
     {
       "id": "0205",
-      "codigoGenealogico": "G2PP-205",
+      "codigoGenealogico": "G2PP-0205",
       "geracao": 2,
       "ramo": "P",
       "sexo": "M",
@@ -204,7 +204,7 @@
     /* ---- ID 0206 - BARBARA ---- */
     {
       "id": "0206",
-      "codigoGenealogico": "G2PM-206",
+      "codigoGenealogico": "G2PM-0206",
       "geracao": 2,
       "ramo": "M",
       "sexo": "F",
@@ -220,7 +220,7 @@
     /* ---- ID 0207 - LIVIA ---- */
     {
       "id": "0207",
-      "codigoGenealogico": "G2PM-207",
+      "codigoGenealogico": "G2PM-0207",
       "geracao": 2,
       "ramo": "M",
       "sexo": "F",
@@ -236,7 +236,7 @@
     /* ---- ID 0208 - MARCELLA ---- */
     {
       "id": "0208",
-      "codigoGenealogico": "G2PM-208",
+      "codigoGenealogico": "G2PM-0208",
       "geracao": 2,
       "ramo": "M",
       "sexo": "F",
@@ -252,7 +252,7 @@
     /* ---- ID 0209 - LUIZ ---- */
     {
       "id": "0209",
-      "codigoGenealogico": "G2PP-209",
+      "codigoGenealogico": "G2PP-0209",
       "geracao": 2,
       "ramo": "P",
       "sexo": "M",
@@ -270,7 +270,7 @@
     /* ---- ID 0301 - SIDNEI ---- */
     {
       "id": "0301",
-      "codigoGenealogico": "G3PP-301",
+      "codigoGenealogico": "G3PP-0301",
       "geracao": 3,
       "ramo": "P",
       "sexo": "M",
@@ -286,7 +286,7 @@
     /* ---- ID 0302 - PATRICIA ---- */
     {
       "id": "0302",
-      "codigoGenealogico": "G3PM-302",
+      "codigoGenealogico": "G3PM-0302",
       "geracao": 3,
       "ramo": "M",
       "sexo": "F",
@@ -300,7 +300,7 @@
     }, /* ---- ID 0303 - FLAVIO MELO ---- */
     {
       "id": "0303",
-      "codigoGenealogico": "G3PP-303",
+      "codigoGenealogico": "G3PP-0303",
       "geracao": 3,
       "ramo": "P",
       "sexo": "M",
@@ -314,7 +314,7 @@
     }, /* ---- ID 0304 - ANDREA ---- */
     {
       "id": "0304",
-      "codigoGenealogico": "G3PM-304",
+      "codigoGenealogico": "G3PM-0304",
       "geracao": 3,
       "ramo": "M",
       "sexo": "F",
@@ -329,7 +329,7 @@
       /* ---- ID 0305 - LUIZ AUGUSTO GIAPONESI ---- */
     {
       "id": "0305",
-      "codigoGenealogico": "G3PP-305",
+      "codigoGenealogico": "G3PP-0305",
       "geracao": 3,
       "ramo": "P",
       "sexo": "M",
@@ -344,7 +344,7 @@
      /* ---- ID 0306 - SILVANA SANTOS ---- */
     {
       "id": "0306",
-      "codigoGenealogico": "G3PM-306",
+      "codigoGenealogico": "G3PM-0306",
       "geracao": 3,
       "ramo": "M",
       "sexo": "F",
@@ -359,7 +359,7 @@
       /* ---- ID 0307 - ? AVO DO PEDRO ---- */
     {
       "id": "0307",
-      "codigoGenealogico": "G3PP-307",
+      "codigoGenealogico": "G3PP-0307",
       "geracao": 3,
       "ramo": "P",
       "sexo": "M",
@@ -374,7 +374,7 @@
        /* ---- ID 0308 - ? AVÓ DO PEDRO ---- */
     {
       "id": "0308",
-      "codigoGenealogico": "G3PM-308",
+      "codigoGenealogico": "G3PM-0308",
       "geracao": 3,
       "ramo": "M",
       "sexo": "F",
@@ -389,7 +389,7 @@
 /* ---- ID 0309 - ? MARCELO ---- */
     {
       "id": "0309",
-      "codigoGenealogico": "G3PP-309",
+      "codigoGenealogico": "G3PP-0309",
       "geracao": 3,
       "ramo": "P",
       "sexo": "M",
@@ -404,7 +404,7 @@
        /* ---- ID 0310 - ? AVÓ DO PEDRO ---- */
     {
       "id": "0310",
-      "codigoGenealogico": "G3PM-310",
+      "codigoGenealogico": "G3PM-0310",
       "geracao": 3,
       "ramo": "M",
       "sexo": "F",
@@ -419,7 +419,7 @@
     /* ---- ID 0311 - ?  pai da liviaavo gabriela ---- */
     {
       "id": "0311",
-      "codigoGenealogico": "G3PP-311",
+      "codigoGenealogico": "G3PP-0311",
       "geracao": 3,
       "ramo": "P",
       "sexo": "M",
@@ -434,7 +434,7 @@
        /* ---- ID 0312 - ? PAI DA LIVIA ---- */
     {
       "id": "0312",
-      "codigoGenealogico": "G3PM-312",
+      "codigoGenealogico": "G3PM-0312",
       "geracao": 3,
       "ramo": "M",
       "sexo": "F",
@@ -455,7 +455,7 @@
     /* ---- ID 0401 - ARNALDO ---- */
     {
       "id": "0401",
-      "codigoGenealogico": "G4PP-401",
+      "codigoGenealogico": "G4PP-0401",
       "geracao": 4,
       "ramo": "P",
       "sexo": "M",
@@ -471,7 +471,7 @@
     /* ---- ID 0402 - AMARIA ---- */
     {
       "id": "0402",
-      "codigoGenealogico": "G4PM-402",
+      "codigoGenealogico": "G4PM-0402",
       "geracao": 4,
       "ramo": "M",
       "sexo": "F",
@@ -486,7 +486,7 @@
     /* ---- ID 0403 - PAI DO FLAVIO MELO---- */
     {
       "id": "0403",
-      "codigoGenealogico": "G4PP-403",
+      "codigoGenealogico": "G4PP-0403",
       "geracao": 4,
       "ramo": "P",
       "sexo": "M",
@@ -502,7 +502,7 @@
     /* ---- ID 0404 - MAE DO FLAVIO MELO ---- */
     {
       "id": "0404",
-      "codigoGenealogico": "G4PM-404",
+      "codigoGenealogico": "G4PM-0404",
       "geracao": 4,
       "ramo": "M",
       "sexo": "F",
@@ -518,7 +518,7 @@
     /* ---- ID 0405 - JULIO DE SOUZA ROCHA ---- */
     {
       "id": "0405",
-      "codigoGenealogico": "G4PP-405",
+      "codigoGenealogico": "G4PP-0405",
       "geracao": 4,
       "ramo": "P",
       "sexo": "M",
@@ -533,7 +533,7 @@
     /* ---- ID 0406 - TEREZINHA DE SOUZA ROCHA ---- */
     {
       "id": "0406",
-      "codigoGenealogico": "G4PM-406",
+      "codigoGenealogico": "G4PM-0406",
       "geracao": 4,
       "ramo": "M",
       "sexo": "F",
@@ -549,7 +549,7 @@
      /* ---- ID 0407 - JULIO RAMOS ---- */
     {
       "id": "0407",
-      "codigoGenealogico": "G4PP-407",
+      "codigoGenealogico": "G4PP-0407",
       "geracao": 4,
       "ramo": "P",
       "sexo": "M",
@@ -564,7 +564,7 @@
     /* ---- ID 0408 - LEONTINA MARIA RAMOS ---- */
     {
       "id": "0408",
-      "codigoGenealogico": "G4PM-408",
+      "codigoGenealogico": "G4PM-0408",
       "geracao": 4,
       "ramo": "M",
       "sexo": "F",
@@ -579,7 +579,7 @@
       /* ---- ID 0409 - INDALECIO MAROLA ---- */
     {
       "id": "0409",
-      "codigoGenealogico": "G4PP-409",
+      "codigoGenealogico": "G4PP-0409",
       "geracao": 4,
       "ramo": "P",
       "sexo": "M",
@@ -594,7 +594,7 @@
     /* ---- ID 0410 - TEREZA MAROLA ---- */
     {
       "id": "0410",
-      "codigoGenealogico": "G4PM-410",
+      "codigoGenealogico": "G4PM-0410",
       "geracao": 4,
       "ramo": "M",
       "sexo": "F",
@@ -613,7 +613,7 @@
     /* ---- ID 0501 - TRISAVO 1 ---- */
     {
       "id": "0501",
-      "codigoGenealogico": "G5PP-501",
+      "codigoGenealogico": "G5PP-0501",
       "geracao": 5,
       "ramo": "P",
       "sexo": "M",
@@ -629,7 +629,7 @@
     /* ---- ID 0502 - TRISAVO 2 ---- */
     {
       "id": "0502",
-      "codigoGenealogico": "G5PM-502",
+      "codigoGenealogico": "G5PM-0502",
       "geracao": 5,
       "ramo": "M",
       "sexo": "F",
@@ -645,7 +645,7 @@
     /* ---- ID 0503 - TRISAVO 3 ---- */
     {
       "id": "0503",
-      "codigoGenealogico": "G5PP-503",
+      "codigoGenealogico": "G5PP-0503",
       "geracao": 5,
       "ramo": "P",
       "sexo": "M",
@@ -661,7 +661,7 @@
     /* ---- ID 0504 - TRISAVO 4 ---- */
     {
       "id": "0504",
-      "codigoGenealogico": "G5PM-504",
+      "codigoGenealogico": "G5PM-0504",
       "geracao": 5,
       "ramo": "M",
       "sexo": "F",
@@ -677,7 +677,7 @@
     /* ---- ID 0505 - TRISAVO 5 ---- */
     {
       "id": "0505",
-      "codigoGenealogico": "G5PP-505",
+      "codigoGenealogico": "G5PP-0505",
       "geracao": 5,
       "ramo": "P",
       "sexo": "M",
@@ -693,7 +693,7 @@
     /* ---- ID 0506 - TRISAVO 6 ---- */
     {
       "id": "0506",
-      "codigoGenealogico": "G5PM-506",
+      "codigoGenealogico": "G5PM-0506",
       "geracao": 5,
       "ramo": "M",
       "sexo": "F",
@@ -709,7 +709,7 @@
     /* ---- ID 0507 - TRISAVO 7 ---- */
     {
       "id": "0507",
-      "codigoGenealogico": "G5PP-507",
+      "codigoGenealogico": "G5PP-0507",
       "geracao": 5,
       "ramo": "P",
       "sexo": "M",
@@ -725,7 +725,7 @@
     /* ---- ID 0508 - TRISAVO 8 ---- */
     {
       "id": "0508",
-      "codigoGenealogico": "G5PM-508",
+      "codigoGenealogico": "G5PM-0508",
       "geracao": 5,
       "ramo": "M",
       "sexo": "F",
@@ -741,7 +741,7 @@
     /* ---- ID 0509 - TRISAVO 9 ---- */
     {
       "id": "0509",
-      "codigoGenealogico": "G5PP-509",
+      "codigoGenealogico": "G5PP-0509",
       "geracao": 5,
       "ramo": "P",
       "sexo": "M",
@@ -757,7 +757,7 @@
     /* ---- ID 0510 - TRISAVO 10 ---- */
     {
       "id": "0510",
-      "codigoGenealogico": "G5PM-510",
+      "codigoGenealogico": "G5PM-0510",
       "geracao": 5,
       "ramo": "M",
       "sexo": "F",
@@ -773,7 +773,7 @@
     /* ---- ID 0511 - TRISAVO 11 ---- */
     {
       "id": "0511",
-      "codigoGenealogico": "G5PP-511",
+      "codigoGenealogico": "G5PP-0511",
       "geracao": 5,
       "ramo": "P",
       "sexo": "M",
@@ -789,7 +789,7 @@
     /* ---- ID 0512 - TRISAVO 12 ---- */
     {
       "id": "0512",
-      "codigoGenealogico": "G5PM-512",
+      "codigoGenealogico": "G5PM-0512",
       "geracao": 5,
       "ramo": "M",
       "sexo": "F",
@@ -805,7 +805,7 @@
     /* ---- ID 0513 - TRISAVO 13 ---- */
     {
       "id": "0513",
-      "codigoGenealogico": "G5PP-513",
+      "codigoGenealogico": "G5PP-0513",
       "geracao": 5,
       "ramo": "P",
       "sexo": "M",
@@ -821,7 +821,7 @@
     /* ---- ID 0514 - TRISAVO 14 ---- */
     {
       "id": "0514",
-      "codigoGenealogico": "G5PM-514",
+      "codigoGenealogico": "G5PM-0514",
       "geracao": 5,
       "ramo": "M",
       "sexo": "F",
@@ -837,7 +837,7 @@
     /* ---- ID 0515 - TRISAVO 15 ---- */
     {
       "id": "0515",
-      "codigoGenealogico": "G5PP-515",
+      "codigoGenealogico": "G5PP-0515",
       "geracao": 5,
       "ramo": "P",
       "sexo": "M",
@@ -853,7 +853,7 @@
     /* ---- ID 0516 - TRISAVO 16 ---- */
     {
       "id": "0516",
-      "codigoGenealogico": "G5PM-516",
+      "codigoGenealogico": "G5PM-0516",
       "geracao": 5,
       "ramo": "M",
       "sexo": "F",
@@ -871,7 +871,7 @@
     /* ---- ID 0601 - TETRAVO 1 ---- */
     {
       "id": "0601",
-      "codigoGenealogico": "G6PP-601",
+      "codigoGenealogico": "G6PP-0601",
       "geracao": 6,
       "ramo": "P",
       "sexo": "M",
@@ -887,7 +887,7 @@
     /* ---- ID 0602 - TETRAVO 2 ---- */
     {
       "id": "0602",
-      "codigoGenealogico": "G6PM-602",
+      "codigoGenealogico": "G6PM-0602",
       "geracao": 6,
       "ramo": "M",
       "sexo": "F",
@@ -903,7 +903,7 @@
     /* ---- ID 0603 - TETRAVO 3 ---- */
     {
       "id": "0603",
-      "codigoGenealogico": "G6PP-603",
+      "codigoGenealogico": "G6PP-0603",
       "geracao": 6,
       "ramo": "P",
       "sexo": "M",
@@ -919,7 +919,7 @@
     /* ---- ID 0604 - TETRAVO 4 ---- */
     {
       "id": "0604",
-      "codigoGenealogico": "G6PM-604",
+      "codigoGenealogico": "G6PM-0604",
       "geracao": 6,
       "ramo": "M",
       "sexo": "F",
@@ -935,7 +935,7 @@
     /* ---- ID 0605 - TETRAVO 5 ---- */
     {
       "id": "0605",
-      "codigoGenealogico": "G6PP-605",
+      "codigoGenealogico": "G6PP-0605",
       "geracao": 6,
       "ramo": "P",
       "sexo": "M",
@@ -951,7 +951,7 @@
     /* ---- ID 0606 - TETRAVÓ 6 ---- */
     {
       "id": "0606",
-      "codigoGenealogico": "G6PM-606",
+      "codigoGenealogico": "G6PM-0606",
       "geracao": 6,
       "ramo": "M",
       "sexo": "F",
@@ -967,7 +967,7 @@
     /* ---- ID 0607 - TETRAVO 7 ---- */
     {
       "id": "0607",
-      "codigoGenealogico": "G6PP-607",
+      "codigoGenealogico": "G6PP-0607",
       "geracao": 6,
       "ramo": "P",
       "sexo": "M",
@@ -983,7 +983,7 @@
     /* ---- ID 0608 - TETRAVÓ 8 ---- */
     {
       "id": "0608",
-      "codigoGenealogico": "G6PM-608",
+      "codigoGenealogico": "G6PM-0608",
       "geracao": 6,
       "ramo": "M",
       "sexo": "F",
@@ -1001,7 +1001,7 @@
     /* ---- ID 0702 - HEXAVO 2 ---- */
     {
       "id": "0702",
-      "codigoGenealogico": "G7PM-702",
+      "codigoGenealogico": "G7PM-0702",
       "geracao": 7,
       "ramo": "M",
       "sexo": "F",
@@ -1019,7 +1019,7 @@
     /* ---- ID 0801 - FIRMIANO BOTTO PACHECO ---- */
     {
       "id": "0801",
-      "codigoGenealogico": "G8PP-801",
+      "codigoGenealogico": "G8PP-0801",
       "geracao": 8,
       "ramo": "P",
       "sexo": "M",
@@ -1035,7 +1035,7 @@
     /* ---- ID 0802 - MARIA LUIZA COSTA PACHECO ---- */
     {
       "id": "0802",
-      "codigoGenealogico": "G8PM-802",
+      "codigoGenealogico": "G8PM-0802",
       "geracao": 8,
       "ramo": "M",
       "sexo": "F",
@@ -1050,5 +1050,7 @@
 
   ]
 }
+
+
 
 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Luna - Arvore Genealogica</title>
+  <link rel="stylesheet" href="arvores.css">
+  <script defer src="../js/arvore-propagacao.js"></script>
+</head>
+<body>
+  <div id="lightbox" class="lightbox"><img id="lightbox-img" src="" alt=""></div>
+  <div class="container">
+    <header>
+      <h1 id="arvore-title">Bisneta Luna - Piramide da Familia</h1>
+      <h2 id="arvore-subtitle">Um universo de ancestrais visto a partir da bisneta Luna</h2>
+    </header>
+
+    <div class="acesso-discreto"><a href="../index.html">voltar ao Nucleo Familiar Planejado</a></div>
+
+    <nav class="ordem-arvores" aria-label="Ordem padrao das arvores">
+      <a class="ordem-link" href="lorena.html">1. Lorena</a>
+      <a class="ordem-link" href="alice.html">2. Alice</a>
+      <a class="ordem-link" href="pedro.html">3. Pedro</a>
+      <a class="ordem-link" href="rafael.html">4. Rafael</a>
+      <span class="ordem-link ordem-link-ativa">5. Luna</span>
+      <a class="ordem-link" href="gabriela.html">6. Gabriela</a>
+    </nav>
+
+    <section class="piramide-inversa">
+      <div class="piramide-title">Piramide Inversa - Da base (bisneto) as raizes</div>
+      <div class="piramide-subtitle">Modelo com propagacao automatica de ancestrais compartilhados.</div>
+      <div class="piramide-inversa-inner" id="piramide-root"></div>
+    </section>
+  </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      window.initArvorePropagacao({
+        treeKey: 'luna',
+        containerId: 'piramide-root',
+        dataPath: '../dados/arvores-propagacao.json',
+        imagePrefix: '../'
+      });
+    });
+  </script>
+</body>
+</html>

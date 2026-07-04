@@ -17,6 +17,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text);
   background: linear-gradient(180deg, #f8f3ea 0%, var(--bg) 100%);
+  min-height: 100vh;
 }
 
 .page-shell {
@@ -31,6 +32,16 @@ body {
   border: 1px solid var(--border);
   border-radius: 20px;
   box-shadow: 0 18px 40px rgba(77, 57, 40, 0.08);
+}
+
+.hero::after {
+  content: '';
+  display: block;
+  width: 120px;
+  height: 4px;
+  margin-top: 20px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), rgba(122, 92, 61, 0.15));
 }
 
 .eyebrow {
@@ -88,6 +99,14 @@ h1 {
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid var(--border);
   border-radius: 18px;
+  box-shadow: 0 10px 24px rgba(77, 57, 40, 0.05);
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(122, 92, 61, 0.35);
+  box-shadow: 0 18px 30px rgba(77, 57, 40, 0.1);
 }
 
 .card h2 {
@@ -106,7 +125,11 @@ h1 {
 }
 
 .links-grid {
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+}
+
+.links-grid .card {
+  padding: 14px;
 }
 
 .tree-card {
@@ -174,4 +197,66 @@ h1 {
 
 .section-text-compact {
   margin-top: 10px;
+}
+
+@media (min-width: 960px) {
+  .page-shell {
+    max-width: 1240px;
+    padding: 64px 28px 80px;
+  }
+
+  .hero {
+    padding: 40px 36px;
+    border-radius: 28px;
+  }
+
+  .hero h1 {
+    max-width: 10ch;
+  }
+
+  .lead {
+    font-size: 1.12rem;
+  }
+
+  .section-block {
+    margin-top: 28px;
+  }
+
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .section-head > :last-child {
+    max-width: 42ch;
+    margin-top: 0;
+    text-align: right;
+  }
+
+  .grid {
+    gap: 20px;
+  }
+
+  .tree-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .links-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .card {
+    padding: 22px;
+  }
+
+  .tree-card {
+    min-height: 200px;
+  }
+
+  .tree-link,
+  .tree-link-disabled {
+    font-size: 0.98rem;
+  }
 }

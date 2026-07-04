@@ -1,0 +1,179 @@
+{
+  "meta": {
+    "projeto": "nucleo-familiar-planejado",
+    "descricao": "Base de dados genealógica planejada com ID único, código genealógico, ramo e metadados contextuais",
+    "ultimaAtualizacao": "2026-07-03",
+    "versaoEstrutura": "1.0"
+  },
+  "pessoas": [
+    {
+      "id": "0101",
+      "idParidade": "0102",
+      "nome": "Lorena",
+      "sexo": "feminino",
+      "codigoGenealogico": "G1L-0102",
+      "ordemNascimento": 1,
+      "geracao": 1,
+      "ramo": "lorena",
+      "ramoPrincipal": "paterno",
+      "relacoes": {
+        "pai": "0201",
+        "mae": "0202"
+      },
+      "imagem": "imagens/ancestrais/1-bisnetos/0101_lorena.jpg",
+      "pagina": "paginas/saiba-mais/0101_lorena.html",
+      "cartao": {
+        "cor": "#d4a574",
+        "posicaoX": 1,
+        "posicaoY": 1,
+        "linha": 1
+      },
+      "metadata": {
+        "confianca": "confirmado",
+        "dataAdicao": "2026-07-03",
+        "ativo": true
+      }
+    },
+    {
+      "id": "0102",
+      "idParidade": "0104",
+      "nome": "Alice",
+      "sexo": "feminino",
+      "codigoGenealogico": "G1A-0104",
+      "ordemNascimento": 2,
+      "geracao": 1,
+      "ramo": "alice",
+      "ramoPrincipal": "paterno",
+      "relacoes": {
+        "pai": "0201",
+        "mae": "0202"
+      },
+      "imagem": "imagens/ancestrais/1-bisnetos/0102_alice.jpg",
+      "pagina": "paginas/saiba-mais/0102_alice.html",
+      "cartao": {
+        "cor": "#d4a574",
+        "posicaoX": 2,
+        "posicaoY": 1,
+        "linha": 1
+      },
+      "metadata": {
+        "confianca": "confirmado",
+        "dataAdicao": "2026-07-03",
+        "ativo": true
+      }
+    },
+    {
+      "id": "0103",
+      "idParidade": "0101",
+      "nome": "Pedro",
+      "sexo": "masculino",
+      "codigoGenealogico": "G1P-0101",
+      "ordemNascimento": 3,
+      "geracao": 1,
+      "ramo": "pedro",
+      "ramoPrincipal": "paterno",
+      "relacoes": {
+        "pai": "0201",
+        "mae": "0202"
+      },
+      "imagem": "imagens/ancestrais/1-bisnetos/0103_pedro.jpg",
+      "pagina": "paginas/saiba-mais/0103_pedro.html",
+      "cartao": {
+        "cor": "#a8c5dd",
+        "posicaoX": 3,
+        "posicaoY": 1,
+        "linha": 1
+      },
+      "metadata": {
+        "confianca": "confirmado",
+        "dataAdicao": "2026-07-03",
+        "ativo": true
+      }
+    },
+    {
+      "id": "0104",
+      "idParidade": "0103",
+      "nome": "Rafael",
+      "sexo": "masculino",
+      "codigoGenealogico": "G1R-0103",
+      "ordemNascimento": 4,
+      "geracao": 1,
+      "ramo": "rafael",
+      "ramoPrincipal": "paterno",
+      "relacoes": {
+        "pai": "0201",
+        "mae": "0202"
+      },
+      "imagem": "imagens/ancestrais/1-bisnetos/0104_rafael.jpg",
+      "pagina": "paginas/saiba-mais/0104_rafael.html",
+      "cartao": {
+        "cor": "#a8c5dd",
+        "posicaoX": 4,
+        "posicaoY": 1,
+        "linha": 1
+      },
+      "metadata": {
+        "confianca": "confirmado",
+        "dataAdicao": "2026-07-03",
+        "ativo": true
+      }
+    },
+    {
+      "id": "0105",
+      "idParidade": "0106",
+      "nome": "Luna",
+      "sexo": "feminino",
+      "codigoGenealogico": "G1LU-0106",
+      "ordemNascimento": 5,
+      "geracao": 1,
+      "ramo": "luna",
+      "ramoPrincipal": "materno",
+      "relacoes": {
+        "pai": "0201",
+        "mae": "0202"
+      },
+      "imagem": "imagens/ancestrais/1-bisnetos/0105_luna.jpg",
+      "pagina": "paginas/saiba-mais/0105_luna.html",
+      "cartao": {
+        "cor": "#d4a574",
+        "posicaoX": 5,
+        "posicaoY": 1,
+        "linha": 1
+      },
+      "metadata": {
+        "confianca": "confirmado",
+        "dataAdicao": "2026-07-03",
+        "ativo": true
+      }
+    },
+    {
+      "id": "0106",
+      "idParidade": "0108",
+      "nome": "Gabriela",
+      "sexo": "feminino",
+      "codigoGenealogico": "G1G-0108",
+      "ordemNascimento": 6,
+      "geracao": 1,
+      "ramo": "gabriela",
+      "ramoPrincipal": "materno",
+      "relacoes": {
+        "pai": "0201",
+        "mae": "0202"
+      },
+      "imagem": "imagens/ancestrais/1-bisnetos/0106_gabriela.jpg",
+      "pagina": "paginas/saiba-mais/0106_gabriela.html",
+      "cartao": {
+        "cor": "#d4a574",
+        "posicaoX": 6,
+        "posicaoY": 1,
+        "linha": 1
+      },
+      "metadata": {
+        "confianca": "confirmado",
+        "dataAdicao": "2026-07-03",
+        "ativo": true
+      }
+    }
+  ]
+}
+

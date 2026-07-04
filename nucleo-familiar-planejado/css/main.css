@@ -124,8 +124,16 @@ h1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
+.links-grid {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
 @media (min-width: 560px) {
   .tree-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .links-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
@@ -134,10 +142,10 @@ h1 {
   .tree-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
-}
 
-.links-grid {
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  .links-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 .links-grid .card {

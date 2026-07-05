@@ -47,11 +47,9 @@ header {
 }
 
 .linha-geracao .ramo-paterno {
-    order: 1;
 }
 
 .linha-geracao .ramo-materno {
-    order: 2;
 }
 
 .ramo-paterno {
@@ -64,14 +62,9 @@ header {
     border-left: 4px solid #27ae60 !important;
 }
 
-.card-trisavos.ramo-paterno {
-    background: #d5f0e0 !important;
-    border-left: 4px solid #27ae60 !important;
-}
-
-.card-trisavos.ramo-materno {
-    background: #d6e8f7 !important;
-    border-left: 4px solid #2980b9 !important;
+.ramo-centro {
+    background: #efe3c8 !important;
+    border-left: 4px solid #b8872f !important;
 }
 
 /* linhas que devem conter exatamente 8 cartões e preencher a largura */
@@ -92,6 +85,7 @@ header {
 .linha-geracao.linha-8.linha-parcial {
     justify-content: center;
     gap: 10px;
+    flex-wrap: nowrap;
 }
 
 .linha-geracao.linha-8.linha-parcial .card-bisavos,
@@ -100,6 +94,18 @@ header {
     flex: initial;
     width: initial;
     max-width: initial;
+}
+
+.linha-geracao.linha-8.linha-parcial .card-tataravos {
+    flex: 0 0 95px;
+    width: 95px;
+    max-width: 95px;
+}
+
+.linha-geracao.linha-8.linha-parcial .card-tataravos img {
+    width: 100%;
+    max-height: 128px;
+    object-fit: cover;
 }
 
 .card-pessoa {

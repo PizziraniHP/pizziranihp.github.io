@@ -8,13 +8,79 @@
     return digits ? digits.padStart(4, '0').slice(0, 4) : '';
   }
 
-  function codeFromId(id) {
+  function codeFromPerson(person) {
+    var id = person && person.id;
     var n = normalizeId(id);
     if (!n) return '';
     var g = parseInt(n.slice(0, 2), 10);
-    var last = parseInt(n.slice(-1), 10);
-    var role = Number.isNaN(last) ? 'PP' : (last % 2 === 0 ? 'PM' : 'PP');
-    return 'G' + g + role + '-' + n;
+    return 'G' + g + '-' + n;
+  }
+
+  function canonicalLineageFromPerson(person, generation) {
+    if (generation === 1) return 'C';
+    if (person && (person.linhagem === 'LP' || person.linhagem === 'LM')) {
+      return person.linhagem;
+    }
+    return person && person.ramo === 'materno' ? 'LM' : 'LP';
+  }
+
+  function canonicalCodeFromPerson(person, generation) {
+    var id = normalizeId(person && person.id);
+    if (!id) return '';
+    var g = Number.isFinite(generation) ? generation : parseInt(id.slice(0, 2), 10);
+    return 'G' + g + '-' + canonicalLineageFromPerson(person, g) + '-' + id;
+  }
+
+  function lineageFromCard(card, generation) {
+    if (card && (card.linhagem === 'LP' || card.linhagem === 'LM' || card.linhagem === 'C')) {
+      return card.linhagem;
+    }
+    return canonicalLineageFromPerson(card, generation);
+  }
+
+  function ramoClassFromCard(card, generation) {
+    var linhagem = lineageFromCard(card, generation);
+    if (linhagem === 'LP') return 'ramo-paterno';
+    if (linhagem === 'LM') return 'ramo-materno';
+    return 'ramo-centro';
+  }
+
+  function treeFromSlotList(slotList, treeKey) {
+    var grouped = { g1: [], g2: [], g3: [], g4: [], g5: [], g6: [], g7: [], g8: [] };
+    (slotList || []).forEach(function (slot) {
+      var g = Number(slot && slot.geracao);
+      if (!Number.isFinite(g) || g < 1 || g > 8) return;
+      var key = 'g' + g;
+      grouped[key].push({
+        id: normalizeId(slot.personId || ''),
+        codigoCartao: normalizeId(slot.codigoCartao || ''),
+        nome: slot.nome || '',
+        detalhe: (slot.linhagem === 'LP' ? 'PATERNO' : (slot.linhagem === 'LM' ? 'MATERNO' : 'CENTRO')),
+        ramo: slot.linhagem === 'LP' ? 'paterno' : (slot.linhagem === 'LM' ? 'materno' : 'centro'),
+        linhagem: slot.linhagem || '',
+        imagem: slot.imagem || '',
+        placeholder: slot.placeholder !== false
+      });
+    });
+
+    Object.keys(grouped).forEach(function (k) {
+      grouped[k].sort(function (a, b) {
+        return Number(a.codigoCartao || 0) - Number(b.codigoCartao || 0);
+      });
+    });
+
+    return {
+      titulo: 'Piloto V2 - ' + String(treeKey || '').toUpperCase(),
+      subtitulo: 'Visualizacao por slots LP/LM/C com codigos de cartao.',
+      g1: grouped.g1,
+      g2: grouped.g2,
+      g3: grouped.g3,
+      g4: grouped.g4,
+      g5: grouped.g5,
+      g6: grouped.g6,
+      g7: grouped.g7,
+      g8: grouped.g8
+    };
   }
 
   function clsByGeneration(g) {
@@ -195,22 +261,27 @@
         : 'linha-geracao';
       html += '<div class="' + rowClass + '">';
       row.forEach(function (p) {
-        var ramoCls = p.ramo === 'paterno' ? 'ramo-paterno' : 'ramo-materno';
-        var id = normalizeId(p.id);
-        var isPlaceholder = !id || !!p.placeholder;
-        var detalhe = p.detalhe || '';
-        var codigo = codeFromId(id);
-        var idAttr = id ? ' data-person-id="' + id + '"' : '';
+        var ramoCls = ramoClassFromCard(p, generation);
+        var personId = normalizeId(p.personId || p.id);
+        var slotCode = normalizeId(p.codigoCartao || p.id || p.personId);
+        var isPlaceholder = !!p.placeholder || !personId;
+        var detalhe = p.detalhe || (lineageFromCard(p, generation) === 'LP' ? 'PATERNO' : (lineageFromCard(p, generation) === 'LM' ? 'MATERNO' : 'CENTRO'));
+        var codigo = slotCode ? ('G' + generation + '-' + lineageFromCard(p, generation) + '-' + slotCode) : codeFromPerson(p);
+        var canonical = canonicalCodeFromPerson(p, generation);
+        var idAttr = personId ? ' data-person-id="' + personId + '"' : '';
+        var canonicalAttr = canonical ? ' data-codigo-canonico="' + canonical + '" data-linhagem-canonica="' + canonicalLineageFromPerson(p, generation) + '"' : '';
         var imgPrefix = typeof imagePrefix === 'string' ? imagePrefix : '../../';
         var imagem = p && p.imagem ? p.imagem : '';
+        var imgSrc = imagem ? (imgPrefix + imagem) : 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
+        var nomeExibicao = p.nome || (slotCode ? ('Slot ' + slotCode) : 'Aguardando cadastro');
         html += [
-          '<div class="card-pessoa ' + cfg.card + ' ' + ramoCls + '"' + idAttr + ' data-person-name="' + (p.nome || '') + '">',
-          '<img src="' + imgPrefix + imagem + '" class="' + cfg.img + '" alt="' + (p.nome || '') + '">',
-          '<div class="nome">' + (p.nome || '') + '</div>',
+          '<div class="card-pessoa ' + cfg.card + ' ' + ramoCls + '"' + idAttr + canonicalAttr + ' data-person-name="' + (p.nome || '') + '">',
+          '<img src="' + imgSrc + '" class="' + cfg.img + '" alt="' + nomeExibicao + '">',
+          '<div class="nome">' + nomeExibicao + '</div>',
           '<div class="detalhe">' + detalhe + '</div>',
-          isPlaceholder ? '' : '<span class="card-id">ID ' + id + '</span>',
-          isPlaceholder ? '' : '<span class="card-codigo-genealogico">' + codigo + '</span>',
-          isPlaceholder ? '' : '<div class="saiba-mais-wrap"><a class="saiba-mais-link" href="saiba-mais/index.html" data-saiba-mais="1" data-person-id="' + id + '" data-person-name="' + (p.nome || '') + '"><span class="saiba-mais-icone" aria-hidden="true"></span><span class="saiba-mais-texto">SAIBA MAIS</span></a></div>',
+          slotCode ? '<span class="card-id">SLOT ' + slotCode + '</span>' : '',
+          codigo ? '<span class="card-codigo-genealogico">' + codigo + '</span>' : '',
+          isPlaceholder ? '' : '<div class="saiba-mais-wrap"><a class="saiba-mais-link" href="saiba-mais/index.html" data-saiba-mais="1" data-person-id="' + personId + '" data-person-name="' + (p.nome || '') + '"><span class="saiba-mais-icone" aria-hidden="true"></span><span class="saiba-mais-texto">SAIBA MAIS</span></a></div>',
           '</div>'
         ].join('');
       });
@@ -220,25 +291,26 @@
     var known = cards.filter(function (p) {
       return p && !p.placeholder && normalizeId(p.id);
     }).length;
-    html += '<div class="legenda-linha">' + cfg.label + ' (' + known + ' de ' + expected + ')</div><div class="linha-separadora"></div>';
+    html += '<div class="linha-separadora"></div>';
     return html;
   }
 
   function generationInfoFromRow(row) {
-    if (row.querySelector('.card-bisneta, .card-bisneto')) return { key: 'g1', title: 'Geracao 1' };
-    if (row.querySelector('.card-pais')) return { key: 'g2', title: 'Geracao 2' };
-    if (row.querySelector('.card-avos')) return { key: 'g3', title: 'Geracao 3' };
-    if (row.querySelector('.card-bisavos')) return { key: 'g4', title: 'Geracao 4' };
-    if (row.querySelector('.card-trisavos')) return { key: 'g5', title: 'Geracao 5' };
-    if (row.querySelector('.foto-tetravos')) return { key: 'g6', title: 'Geracao 6' };
-    if (row.querySelector('.foto-pentaavos')) return { key: 'g7', title: 'Geracao 7' };
-    if (row.querySelector('.foto-hexaavos')) return { key: 'g8', title: 'Geracao 8' };
+    if (row.querySelector('.card-bisneta, .card-bisneto')) return { key: 'g1', title: 'Bisnetos' };
+    if (row.querySelector('.card-pais')) return { key: 'g2', title: 'Pais' };
+    if (row.querySelector('.card-avos')) return { key: 'g3', title: 'Avos' };
+    if (row.querySelector('.card-bisavos')) return { key: 'g4', title: 'Bisavos' };
+    if (row.querySelector('.card-trisavos')) return { key: 'g5', title: 'Trisavos' };
+    if (row.querySelector('.foto-tetravos')) return { key: 'g6', title: 'Tetravos' };
+    if (row.querySelector('.foto-pentaavos')) return { key: 'g7', title: 'Pentavos' };
+    if (row.querySelector('.foto-hexaavos')) return { key: 'g8', title: 'Hexavos' };
     return null;
   }
 
   function createGenerationBars(root) {
     var rows = Array.from(root.querySelectorAll(':scope > .linha-geracao'));
     var groups = [];
+    var totalTeoricoPorGeracao = { g1: 1, g2: 2, g3: 4, g4: 8, g5: 16, g6: 32, g7: 24, g8: 12 };
 
     rows.forEach(function (row) {
       var info = generationInfoFromRow(row);
@@ -277,7 +349,7 @@
 
       var title = document.createElement('div');
       title.className = 'geracao-titulo';
-      title.textContent = group.title;
+      title.textContent = 'Geracao ' + group.key.slice(1) + ' - ' + group.title + ' (' + (totalTeoricoPorGeracao[group.key] || 0) + ')';
 
       var btn = document.createElement('button');
       btn.type = 'button';
@@ -314,6 +386,9 @@
     var data = await res.json();
 
     var tree = data && data.trees && data.trees[treeKey];
+    if (Array.isArray(tree)) {
+      tree = treeFromSlotList(tree, treeKey);
+    }
     if (!tree) return;
 
     var sharedBlocks = data && data.sharedBlocks ? data.sharedBlocks : {};

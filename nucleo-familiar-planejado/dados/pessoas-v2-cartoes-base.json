@@ -9,10 +9,10 @@
       { "id": "0204", "nome": "Sthefanie", "detalhe": "", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/0204_sthefanie.jpg" }
     ],
     "g3-avos-comuns": [
-      { "id": "0301", "nome": "Odeon", "detalhe": "AVO PATERNO", "ramo": "materno", "imagem": "imagens/ancestrais/3-avos/0318_odeon.jpg" },
-      { "id": "0302", "nome": "Luciene", "detalhe": "AVO PATERNA", "ramo": "materno", "imagem": "imagens/ancestrais/3-avos/0319_luciene.jpg" },
-      { "id": "0303", "nome": "Sidnei", "detalhe": "AVO MATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0301_sidnei.jpg" },
-      { "id": "0304", "nome": "Patricia", "detalhe": "AVO MATERNA", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0302_patricia.jpg" }
+      { "id": "0301", "nome": "Odeon", "detalhe": "AVO PATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0318_odeon.jpg" },
+      { "id": "0302", "nome": "Luciene", "detalhe": "AVO PATERNA", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0319_luciene.jpg" },
+      { "id": "0303", "nome": "Sidnei", "detalhe": "AVO MATERNO", "ramo": "materno", "imagem": "imagens/ancestrais/3-avos/0301_sidnei.jpg" },
+      { "id": "0304", "nome": "Patricia", "detalhe": "AVO MATERNA", "ramo": "materno", "imagem": "imagens/ancestrais/3-avos/0302_patricia.jpg" }
     ],
     "g3-lorena": [
       { "id": "0305", "nome": "Luiz A. Giaponese", "detalhe": "AVO PATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0305_luizgiaponese.jpg" },
@@ -142,25 +142,37 @@
       { "id": "", "nome": "Bisavo / Bisavo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0400_paidef.jpg", "placeholder": true },
       { "id": "", "nome": "Bisavo / Bisavo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0400_maedef.jpg", "placeholder": true }
     ],
+    "g4-alice-ordem-ideal-paterno": [
+      { "id": "0405", "codigoCartao": "0401", "nome": "Julio", "detalhe": "BISAVO PATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0405_juliodesouzarocha.jpg" },
+      { "id": "0406", "codigoCartao": "0402", "nome": "Terezinha", "detalhe": "BISAVO PATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0406_terezinhadesouzarocha.jpg" },
+      { "id": "0407", "codigoCartao": "0403", "nome": "Julio", "detalhe": "BISAVO MATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0407_julioramos.jpg" },
+      { "id": "0408", "codigoCartao": "0404", "nome": "Leontina", "detalhe": "BISAVO MATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0408_leontinamariaramos.jpg" }
+    ],
+    "g4-alice-ordem-ideal-materno": [
+      { "id": "0409", "codigoCartao": "0405", "nome": "Indalecio", "detalhe": "BISAVO PATERNO", "ramo": "materno", "imagem": "imagens/ancestrais/4-bisavos/0409_indaleciomarola.jpg" },
+      { "id": "0410", "codigoCartao": "0406", "nome": "Tereza", "detalhe": "BISAVO PATERNO", "ramo": "materno", "imagem": "imagens/ancestrais/4-bisavos/0410_terezamarola.jpg" },
+      { "id": "0401", "codigoCartao": "0407", "nome": "Arnaldo", "detalhe": "BISAVO MATERNO", "ramo": "materno", "imagem": "imagens/ancestrais/4-bisavos/0401_arnaldo.jpg" },
+      { "id": "0402", "codigoCartao": "0408", "nome": "Antonia Maria", "detalhe": "BISAVO MATERNO", "ramo": "materno", "imagem": "imagens/ancestrais/4-bisavos/0402_amaria.jpg" }
+    ],
     "g5-paterno-comum": [
-      { "id": "0501", "nome": "Marcelo Pizzirani", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/5-trisavos/0501_marcelopizzirani.jpg" },
-      { "id": "0502", "nome": "Ana Cristina", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/5-trisavos/0502_anacristinalienhardt.jpg" },
-      { "id": "0503", "nome": "Ezequiel Alves Cunha", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/5-trisavos/0503_ezequieladacunha.jpg" },
-      { "id": "0504", "nome": "Helena Ferraz Pacheco", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/5-trisavos/0504_helenaferraspacheco.jpg" },
+      { "id": "0501", "nome": "Pai de Julio de Souza Rocha", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/5-trisavos/0509_paijuliosrocha_trisavoali_rafael.jpg" },
+      { "id": "0502", "nome": "Mae de Julio de Souza Rocha", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/5-trisavos/0510_maejuliosrocha.jpg" },
+      { "id": "0503", "nome": "Pai de Terezinha", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/5-trisavos/0511_paidaterezinha_trisavoalice_rafael.jpg" },
+      { "id": "0504", "nome": "Mae de Terezinha", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/5-trisavos/0512_maeterezinhasrocha_trisavoalice_rafael.jpg" },
       { "id": "0505", "nome": "Pai de Indalecio", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/5-trisavos/0505_paiindalecio.jpg" },
-      { "id": "0506", "nome": "Mae de Indalecio", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/5-trisavos/0506_maedeindalecio.jpg" },
+      { "id": "0506", "nome": "Mae de Indalecio", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/5-trisavos/0506_maedeindalecio.jpg" },
       { "id": "0507", "nome": "Pai de Tereza", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/5-trisavos/0507_paideterezamarola.jpg" },
-      { "id": "0508", "nome": "Mae de Tereza", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/5-trisavos/0508_maedeterezamarola.jpg" }
+      { "id": "0508", "nome": "Mae de Tereza", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/5-trisavos/0508_maedeterezamarola.jpg" }
     ],
     "g5-materno-comum": [
-      { "id": "0509", "nome": "Pai de Julio de Souza Rocha", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/5-trisavos/0509_paijuliosrocha_trisavoali_rafael.jpg" },
-      { "id": "0510", "nome": "Mae de Julio de Souza Rocha", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/5-trisavos/0510_maejuliosrocha.jpg" },
-      { "id": "0511", "nome": "Pai de Terezinha", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/5-trisavos/0511_paidaterezinha_trisavoalice_rafael.jpg" },
-      { "id": "0512", "nome": "Mae de Terezinha", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/5-trisavos/0512_maeterezinhasrocha_trisavoalice_rafael.jpg" },
-      { "id": "0513", "nome": "Pai de Julio Ramos", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/5-trisavos/0513_paidejulioramos_trisavoalice_rafael.jpg" },
-      { "id": "0514", "nome": "Mae de Julio Ramos", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/5-trisavos/0514_maejulioramos.jpg" },
-      { "id": "0515", "nome": "Pai de Leontina", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/5-trisavos/0515_paileontina_trisavoalice_rafael.jpg" },
-      { "id": "0516", "nome": "Mae de Leontina", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/5-trisavos/0516_maeleontina.jpg" }
+      { "id": "0509", "nome": "Pai de Julio Ramos", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/5-trisavos/0513_paidejulioramos_trisavoalice_rafael.jpg" },
+      { "id": "0510", "nome": "Mae de Julio Ramos", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/5-trisavos/0514_maejulioramos.jpg" },
+      { "id": "0511", "nome": "Pai de Leontina", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/5-trisavos/0515_paileontina_trisavoalice_rafael.jpg" },
+      { "id": "0512", "nome": "Mae de Leontina", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/5-trisavos/0516_maeleontina.jpg" },
+      { "id": "0513", "nome": "Marcelo Pizzirani", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/5-trisavos/0501_marcelopizzirani.jpg" },
+      { "id": "0514", "nome": "Ana Cristina", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/5-trisavos/0502_anacristinalienhardt.jpg" },
+      { "id": "0515", "nome": "Ezequiel Alves Cunha", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/5-trisavos/0503_ezequieladacunha.jpg" },
+      { "id": "0516", "nome": "Helena Ferraz Pacheco", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/5-trisavos/0504_helenaferraspacheco.jpg" }
     ],
     "g5-lorena-desconhecidos": [
       { "id": "0517", "nome": "Trisavo / Trisavo", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0300_f.jpg" },
@@ -276,14 +288,42 @@
       { "id": "0608", "nome": "Antonia Marques", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0608_antonia_marques_dos_santos.jpg" }
     ],
     "g6-alice": [
-      { "id": "0601", "nome": "Nicola Pizzirani", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0601_nicola_pizzirani.jpg" },
-      { "id": "0602", "nome": "Maria Mazzini", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0602_maria_mazzini.jpg" },
-      { "id": "0603", "nome": "Henrique Lienhardt", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0603_henrique_lienhardt.jpg" },
-      { "id": "0604", "nome": "Ana Petru", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0604_ana_petru.jpg" },
-      { "id": "0607", "nome": "Jose Alves da Cunha", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0607_jose_alves_da_cunha.jpg" },
-      { "id": "0608", "nome": "Antonia Marques", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0608_antonia_marques_dos_santos.jpg" },
-      { "id": "0605", "nome": "Aquilino Pacheco Filho", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0605_aquilino_pacheco_filho.jpg" },
-      { "id": "0606", "nome": "Antonieta Silveira", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0606_antonieta_silveira_ferraz_pacheco.jpg" }
+      { "id": "", "codigoCartao": "0601", "nome": "Pai de Pai de Indalecio", "detalhe": "TETRAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "codigoCartao": "0602", "nome": "Mae de Pai de Indalecio", "detalhe": "TETRAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "codigoCartao": "0603", "nome": "Pai de Mae de Indalecio", "detalhe": "TETRAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "codigoCartao": "0604", "nome": "Mae de Mae de Indalecio", "detalhe": "TETRAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "0601", "codigoCartao": "0609", "nome": "Nicola Pizzirani", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0601_nicola_pizzirani.jpg" },
+      { "id": "0602", "codigoCartao": "0610", "nome": "Maria Mazzini", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0602_maria_mazzini.jpg" },
+      { "id": "0603", "codigoCartao": "0611", "nome": "Henrique Lienhardt", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0603_henrique_lienhardt.jpg" },
+      { "id": "0604", "codigoCartao": "0612", "nome": "Ana Petru", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0604_ana_petru.jpg" },
+
+      { "id": "", "codigoCartao": "0605", "nome": "Pai de Pai de Tereza", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "codigoCartao": "0606", "nome": "Mae de Pai de Tereza", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "codigoCartao": "0607", "nome": "Pai de Mae de Tereza", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "codigoCartao": "0608", "nome": "Mae de Mae de Tereza", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+
+      { "id": "0607", "codigoCartao": "0613", "nome": "Jose Alves da Cunha", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0607_jose_alves_da_cunha.jpg" },
+      { "id": "0608", "codigoCartao": "0614", "nome": "Antonia Marques", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0608_antonia_marques_dos_santos.jpg" },
+      { "id": "0605", "codigoCartao": "0615", "nome": "Aquilino Pacheco Filho", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0605_aquilino_pacheco_filho.jpg" },
+      { "id": "0606", "codigoCartao": "0616", "nome": "Antonieta Silveira", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0606_antonieta_silveira_ferraz_pacheco.jpg" },
+
+      { "id": "", "codigoCartao": "0617", "nome": "Tetravo / Tetrava", "detalhe": "TETRAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "codigoCartao": "0618", "nome": "Tetravo / Tetrava", "detalhe": "TETRAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "codigoCartao": "0619", "nome": "Tetravo / Tetrava", "detalhe": "TETRAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "codigoCartao": "0620", "nome": "Tetravo / Tetrava", "detalhe": "TETRAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "codigoCartao": "0621", "nome": "Tetravo / Tetrava", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "codigoCartao": "0622", "nome": "Tetravo / Tetrava", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "codigoCartao": "0623", "nome": "Tetravo / Tetrava", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "codigoCartao": "0624", "nome": "Tetravo / Tetrava", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+
+      { "id": "", "codigoCartao": "0625", "nome": "Tetravo / Tetrava", "detalhe": "TETRAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "codigoCartao": "0626", "nome": "Tetravo / Tetrava", "detalhe": "TETRAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "codigoCartao": "0627", "nome": "Tetravo / Tetrava", "detalhe": "TETRAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "codigoCartao": "0628", "nome": "Tetravo / Tetrava", "detalhe": "TETRAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "codigoCartao": "0629", "nome": "Tetravo / Tetrava", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "codigoCartao": "0630", "nome": "Tetravo / Tetrava", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "codigoCartao": "0631", "nome": "Tetravo / Tetrava", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "codigoCartao": "0632", "nome": "Tetravo / Tetrava", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true }
     ],
     "g7-paterno-comum": [
       { "id": "0701", "nome": "Luiz Mazzini", "detalhe": "PENTAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/7-pentavos/0701_luizmazzini.jpg" },
@@ -314,8 +354,8 @@
         { "$ref": "g3-avos-comuns" }
       ],
       "g4": [
-        { "$ref": "g4-paterno-comum" },
-        { "$ref": "g4-materno-comum" }
+        { "$ref": "g4-alice-ordem-ideal-paterno" },
+        { "$ref": "g4-alice-ordem-ideal-materno" }
       ],
       "g5": [
         { "$ref": "g5-paterno-comum" },

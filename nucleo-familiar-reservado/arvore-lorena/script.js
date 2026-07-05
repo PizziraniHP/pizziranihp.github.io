@@ -1,4 +1,4 @@
-ï»¿document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
     const supportStyleId = 'auto-genealogia-ramo-id-style';
     const genealogicalCodeById = new Map();
 
@@ -23,26 +23,37 @@
         document.head.appendChild(style);
     }
 
-    function buildFallbackGenealogicalCode(personId) {
+    function buildFallbackGenealogicalCode(card, personId) {
         const normalized = normalizePersonId(personId);
         if (!normalized) {
             return '';
         }
 
         const generation = parseInt(normalized.slice(0, 2), 10);
-        const suffix = generation >= 7 ? normalized : normalized.slice(1);
+        return 'G' + String(generation) + '-' + normalized;
+    }
 
-        if (generation === 1) {
-            return 'G1B-' + suffix;
+    function detectGenerationFromCard(card) {
+        if (card.classList.contains('card-bisneta') || card.classList.contains('card-bisneto')) return 1;
+        if (card.classList.contains('card-pais')) return 2;
+        if (card.classList.contains('card-avos')) return 3;
+        if (card.classList.contains('card-bisavos')) return 4;
+        if (card.classList.contains('card-trisavos')) return 5;
+
+        const img = card.querySelector('img');
+        if (!img) {
+            return 0;
         }
 
-        const lastDigit = parseInt(normalized.slice(-1), 10);
-        const role = Number.isNaN(lastDigit) ? 'PP' : (lastDigit % 2 === 0 ? 'PM' : 'PP');
-        return 'G' + String(generation) + role + '-' + suffix;
+        if (img.classList.contains('foto-tetravos')) return 6;
+        if (img.classList.contains('foto-hexaavos')) return 7;
+        return 0;
     }
 
     function ensureGenealogicalBadge(card, personId) {
-        const codigo = genealogicalCodeById.get(personId) || buildFallbackGenealogicalCode(personId);
+        const displayId = normalizePersonId(card.getAttribute('data-display-id'));
+        const sourceId = displayId || normalizePersonId(personId);
+        const codigo = buildFallbackGenealogicalCode(card, sourceId) || genealogicalCodeById.get(personId);
         if (!codigo) {
             return;
         }
@@ -54,6 +65,39 @@
             card.appendChild(badge);
         }
         badge.textContent = codigo;
+    }
+
+    function applyDisplaySequenceBadges() {
+        const counters = {};
+        const rows = Array.from(document.querySelectorAll('.linha-geracao'));
+
+        rows.forEach(function (row) {
+            const cards = Array.from(row.querySelectorAll(':scope > .card-pessoa'));
+            cards.forEach(function (card) {
+                if (isPlaceholderCard(card)) {
+                    return;
+                }
+
+                const generation = detectGenerationFromCard(card);
+                if (!generation) {
+                    return;
+                }
+
+                counters[generation] = (counters[generation] || 0) + 1;
+                const displayId = String(generation).padStart(2, '0') + String(counters[generation]).padStart(2, '0');
+                card.setAttribute('data-display-id', displayId);
+
+                let badge = card.querySelector('.card-id');
+                if (!badge) {
+                    badge = document.createElement('span');
+                    badge.className = 'card-id';
+                    card.appendChild(badge);
+                }
+
+                badge.textContent = 'ID ' + displayId;
+                ensureGenealogicalBadge(card, displayId);
+            });
+        });
     }
 
     function applyGenealogicalBadges() {
@@ -166,12 +210,12 @@
         const src = String(img && img.getAttribute('src') || '').trim();
 
         const genericNames = new Set([
-            'BISAVÃ” / BISAVÃ“', 'BISAVO / BISAVO',
-            'TRISAVÃ” / TRISAVÃ“', 'TRISAVO / TRISAVO',
-            'TETRAVÃ” / TETRAVÃ“', 'TETRAVO / TETRAVO',
-            'PENTAVÃ” / PENTAVÃ“', 'PENTAVO / PENTAVO'
+            'BISAVÔ / BISAVÓ', 'BISAVO / BISAVO',
+            'TRISAVÔ / TRISAVÓ', 'TRISAVO / TRISAVO',
+            'TETRAVÔ / TETRAVÓ', 'TETRAVO / TETRAVO',
+            'PENTAVÔ / PENTAVÓ', 'PENTAVO / PENTAVO'
         ]);
-        const genericDetails = new Set(['INFORMAÃ‡Ã•ES', 'INFORMACOES', 'ESPAÃ‡O', 'ESPACO']);
+        const genericDetails = new Set(['INFORMAÇÕES', 'INFORMACOES', 'ESPAÇO', 'ESPACO']);
 
         return genericNames.has(nome) || genericDetails.has(detalhe) || src === '../imagens/' || src === '..\/imagens/';
     }
@@ -233,54 +277,84 @@
     function autoFillRamoClasses() {
         const rows = Array.from(document.querySelectorAll('.linha-geracao'));
 
+        function inferBranch(card, idx, total, ignoreCardClass) {
+            if (!ignoreCardClass && card.classList.contains('ramo-paterno')) {
+                return 'paterno';
+            }
+            if (!ignoreCardClass && card.classList.contains('ramo-materno')) {
+                return 'materno';
+            }
+
+            const nome = (card.querySelector('.nome') && card.querySelector('.nome').textContent || '').toUpperCase();
+            const detalhe = (card.querySelector('.detalhe') && card.querySelector('.detalhe').textContent || '').toUpperCase();
+            const combinado = (nome + ' ' + detalhe).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+            if (combinado.includes('PATERN')) {
+                return 'paterno';
+            }
+            if (combinado.includes('MATERN')) {
+                return 'materno';
+            }
+
+            return idx < Math.ceil(total / 2) ? 'paterno' : 'materno';
+        }
+
         rows.forEach(function (row) {
             const cards = Array.from(row.querySelectorAll(':scope > .card-pessoa'));
             if (!cards.length) {
                 return;
             }
 
-            // For generation 6 rows, keep the row-level color rule (verde/azul)
-            // and clear per-card ramo classes that could override it.
-            if (row.classList.contains('linha-tetravos-verde') || row.classList.contains('linha-tetravos-azul')) {
-                cards.forEach(function (card) {
+            const isG6Row = row.classList.contains('linha-tetravos-verde') || row.classList.contains('linha-tetravos-azul');
+            const allCardsMaterno = cards.every(function (card) { return card.classList.contains('ramo-materno'); });
+            const allCardsPaterno = cards.every(function (card) { return card.classList.contains('ramo-paterno'); });
+            const forcePositionSplit = isG6Row && (allCardsMaterno || allCardsPaterno);
+
+            const classified = cards.map(function (card, idx) {
+                const personId = parseInt(normalizePersonId(card.getAttribute('data-person-id')), 10);
+                return {
+                    card: card,
+                    idx: idx,
+                    branch: inferBranch(card, idx, cards.length, forcePositionSplit),
+                    personId: Number.isNaN(personId) ? Number.MAX_SAFE_INTEGER : personId,
+                    placeholder: isPlaceholderCard(card)
+                };
+            });
+
+            if (isG6Row) {
+                const known = classified.filter(function (entry) { return !entry.placeholder; });
+                if (!known.length) {
+                    cards.forEach(function (card) { card.classList.remove('ramo-paterno', 'ramo-materno'); });
+                    return;
+                }
+                const rowIsPartial = known.length < cards.length;
+                const singleBranch = known.every(function (entry) { return entry.branch === known[0].branch; }) ? known[0].branch : '';
+                if (rowIsPartial && singleBranch) {
+                    row.classList.remove('linha-tetravos-verde', 'linha-tetravos-azul');
+                    row.classList.add(singleBranch === 'materno' ? 'linha-tetravos-verde' : 'linha-tetravos-azul');
+                    cards.forEach(function (card) { card.classList.remove('ramo-paterno', 'ramo-materno'); });
+                    return;
+                }
+                row.classList.remove('linha-tetravos-verde', 'linha-tetravos-azul');
+            }
+
+            classified.sort(function (a, b) {
+                if (a.branch !== b.branch) {
+                    return a.branch === 'paterno' ? -1 : 1;
+                }
+                if (a.personId !== b.personId) {
+                    return a.personId - b.personId;
+                }
+                return a.idx - b.idx;
+            });
+
+            classified.forEach(function (entry) {
+                const card = entry.card;
+                if (!card.classList.contains('card-bisneta') && !card.classList.contains('card-bisneto')) {
                     card.classList.remove('ramo-paterno', 'ramo-materno');
-                });
-                return;
-            }
-
-            cards.forEach(function (card) {
-                if (card.classList.contains('card-bisneta') || card.classList.contains('card-bisneto')) {
-                    return;
+                    card.classList.add(entry.branch === 'paterno' ? 'ramo-paterno' : 'ramo-materno');
                 }
-                if (card.classList.contains('ramo-paterno') || card.classList.contains('ramo-materno')) {
-                    return;
-                }
-
-                const nome = (card.querySelector('.nome') && card.querySelector('.nome').textContent || '').toUpperCase();
-                const detalhe = (card.querySelector('.detalhe') && card.querySelector('.detalhe').textContent || '').toUpperCase();
-                const combinado = (nome + ' ' + detalhe).normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-
-                if (combinado.includes('PATERN')) {
-                    card.classList.add('ramo-paterno');
-                } else if (combinado.includes('MATERN')) {
-                    card.classList.add('ramo-materno');
-                }
-            });
-
-            const semRamo = cards.filter(function (card) {
-                return !card.classList.contains('card-bisneta')
-                    && !card.classList.contains('card-bisneto')
-                    && !card.classList.contains('ramo-paterno')
-                    && !card.classList.contains('ramo-materno');
-            });
-
-            if (!semRamo.length) {
-                return;
-            }
-
-            const metade = Math.ceil(semRamo.length / 2);
-            semRamo.forEach(function (card, idx) {
-                card.classList.add(idx < metade ? 'ramo-paterno' : 'ramo-materno');
+                row.appendChild(card);
             });
         });
     }
@@ -288,7 +362,7 @@
     ensureSupportStyles();
     autoFillCardData();
     autoFillRamoClasses();
-    loadGenealogicalCodes().then(applyGenealogicalBadges);
+    loadGenealogicalCodes().then(applyDisplaySequenceBadges);
 
     const lightbox = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightbox-img');
@@ -352,17 +426,25 @@
             }
         });
     });
-    // Cria barras de geracao com botao de recolher/mostrar por bloco.
+    // Cria uma barra superior por geracao, com contagem de antecessores.
     const piramideInner = document.querySelector('.piramide-inversa-inner');
     if (!piramideInner) {
         return;
     }
 
+    Array.from(piramideInner.querySelectorAll(':scope > .geracao-barra')).forEach(function (bar) {
+        bar.remove();
+    });
+
+    Array.from(piramideInner.querySelectorAll('.legenda-linha, .linha-separadora')).forEach(function (node) {
+        node.remove();
+    });
+
     const rows = Array.from(piramideInner.querySelectorAll(':scope > .linha-geracao'));
     const groups = [];
 
     function getGenerationInfo(row) {
-        if (row.querySelector('.card-bisneta')) return { key: 'g1', title: 'Geracao 1 - Bisneto' };
+        if (row.querySelector('.card-bisneta') || row.querySelector('.card-bisneto')) return { key: 'g1', title: 'Geracao 1 - Bisnetos' };
         if (row.querySelector('.card-pais')) return { key: 'g2', title: 'Geracao 2 - Pais' };
         if (row.querySelector('.card-avos')) return { key: 'g3', title: 'Geracao 3 - Avos' };
         if (row.querySelector('.card-bisavos')) return { key: 'g4', title: 'Geracao 4 - Bisavos' };
@@ -388,17 +470,40 @@
     });
 
     groups.forEach(function (group) {
+        group.rows.forEach(function (row) {
+            row.classList.remove('linha-geracao-compacta');
+            if (group.key === 'g7' || group.key === 'g8') {
+                row.classList.add('linha-geracao-compacta');
+            }
+        });
+
+        if (group.key === 'g7' || group.key === 'g8') {
+            const MAX_CARDS = 8;
+            const allCards = group.rows.flatMap(function (row) {
+                return Array.from(row.querySelectorAll(':scope > .card-pessoa'));
+            });
+            const reais = allCards.filter(function (c) { return !isPlaceholderCard(c); });
+            const placeholders = allCards.filter(function (c) { return isPlaceholderCard(c); });
+            const vagos = Math.max(0, MAX_CARDS - reais.length);
+            placeholders.forEach(function (c, i) {
+                c.style.display = i < vagos ? '' : 'none';
+            });
+        }
+
         const firstRow = group.rows[0];
         if (!firstRow || firstRow.previousElementSibling && firstRow.previousElementSibling.classList.contains('geracao-barra')) {
             return;
         }
+
+        const totalTeoricoPorGeracao = { g1: 1, g2: 2, g3: 4, g4: 8, g5: 16, g6: 32, g7: 24, g8: 12 };
+        const nomePorGeracao = { g1: 'Bisnetos', g2: 'Pais', g3: 'Avos', g4: 'Bisavos', g5: 'Trisavos', g6: 'Tetravos', g7: 'Pentavos', g8: 'Hexavos' };
 
         const bar = document.createElement('div');
         bar.className = 'geracao-barra';
 
         const title = document.createElement('div');
         title.className = 'geracao-titulo';
-        title.textContent = group.title;
+        title.textContent = 'Geracao ' + group.key.slice(1) + ' - ' + (nomePorGeracao[group.key] || group.title) + ' (' + (totalTeoricoPorGeracao[group.key] || 0) + ')';
 
         const btn = document.createElement('button');
         btn.type = 'button';
@@ -418,5 +523,7 @@
         bar.appendChild(btn);
         piramideInner.insertBefore(bar, firstRow);
     });
+
+    applyDisplaySequenceBadges();
 });
 

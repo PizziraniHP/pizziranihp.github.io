@@ -11,7 +11,7 @@ A estrutura principal esta em:
 
 Arquivos mais importantes:
 - dados/arvores-propagacao.json -> dados principais da arvore por geracao e por ramo
-- dados/pessoas.json -> cadastro geral de pessoas
+- dados/pessoas-v2-cartoes-base.json -> cadastro geral oficial de pessoas
 - paginas/*.html -> paginas principais das arvores (Lorena, Alice, Pedro, Rafael, Luna, Gabriela)
 - js/arvore-propagacao.js -> script que monta a arvore a partir do JSON
 - paginas/arvores.css -> estilos visuais das arvores
@@ -35,7 +35,7 @@ Opcao alternativa:
 
 Fluxo correto:
 1. Editar dados/arvores-propagacao.json
-2. Se necessario, editar dados/pessoas.json
+2. Se necessario, editar dados/pessoas-v2-cartoes-base.json
 3. Recarregar a pagina da arvore e conferir resultado
 
 ## 4) Backup e preservacao (recomendado)

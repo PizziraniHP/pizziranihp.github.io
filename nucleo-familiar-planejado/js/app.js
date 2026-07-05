@@ -43,7 +43,7 @@ if (container) {
 }
 
 if (treeContainer || linksContainer) {
-  fetch('dados/pessoas.json', { cache: 'no-store' })
+  fetch('dados/pessoas-v2-cartoes-base.json?v=20260705', { cache: 'no-store' })
     .then((res) => res.json())
     .then((data) => {
       const pessoas = Array.isArray(data?.pessoas) ? data.pessoas : [];

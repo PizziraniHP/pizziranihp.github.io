@@ -6,7 +6,7 @@ Definir um modelo previsivel para o novo nucleo, com menos risco de divergencia 
 
 ## Regras iniciais
 
-- A fonte principal deve ser `dados/pessoas.json`.
+- A fonte principal deve ser `dados/pessoas-v2-cartoes-base.json`.
 - Nenhuma imagem deve ficar solta na raiz de `imagens/`.
 - Cada tipo de imagem deve ter um subdiretorio proprio.
 - Paginas novas devem nascer com nomes consistentes e rastreaveis.

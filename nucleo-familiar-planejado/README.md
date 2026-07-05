@@ -35,7 +35,7 @@ Para evitar misturar arquivos manuais com arquivos de propagacao, use esta regra
 
 - Paginas principais canonicas dos 6 bisnetos ficam em `paginas/` (ex.: `paginas/lorena.html`, `paginas/alice.html`).
 - Quer alterar um ancestral compartilhado por varios bisnetos: editar `dados/arvores-propagacao.json`.
-- Quer alterar dados gerais de pessoa (nome, imagem, pagina): editar `dados/pessoas.json`.
+- Quer alterar dados gerais de pessoa (nome, imagem, pagina): editar `dados/pessoas-v2-cartoes-base.json`.
 - Quer alterar o comportamento de renderizacao para todas as arvores de propagacao: editar `js/arvore-propagacao.js`.
 - Quer alterar conteudo exclusivo de uma pessoa: editar somente a pagina dela em `paginas/saiba-mais/`.
 
@@ -101,7 +101,7 @@ Troque novamente para placeholder:
 
 ## Exemplo pratico com nome e endereco (ficticios)
 
-Quando quiser registrar um individuo de treino no cadastro geral, use `dados/pessoas.json` com dados claramente ficticios.
+Quando quiser registrar um individuo de treino no cadastro geral, use `dados/pessoas-v2-cartoes-base.json` com dados claramente ficticios.
 
 ```json
 {

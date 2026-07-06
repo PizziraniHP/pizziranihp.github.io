@@ -15,7 +15,7 @@
       { "id": "0319", "nome": "Luciene", "detalhe": "AVO PATERNA", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0319_luciene.jpg" }
     ],
     "g3-lorena": [
-      { "id": "0305", "nome": "Luiz A. Giaponese", "detalhe": "AVO PATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0305_luizgiaponese.jpg" },
+      { "id": "0305", "nome": "Luiz A. Giaponesi", "detalhe": "AVO PATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0305_luizgiaponesi.jpg" },
       { "id": "0306", "nome": "Silvana Santos", "detalhe": "AVO PATERNA", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0306_silvanasantos.jpg" },
       { "id": "0300", "nome": "F", "detalhe": "AVO MATERNO", "ramo": "materno", "imagem": "imagens/ancestrais/3-avos/0300_f.jpg" },
       { "id": "0304", "nome": "Andrea", "detalhe": "AVO MATERNA", "ramo": "materno", "imagem": "imagens/ancestrais/3-avos/0304_andrea.jpg" }
@@ -39,14 +39,14 @@
       { "id": "0310", "nome": "Lia", "detalhe": "AVO MATERNA", "ramo": "materno", "imagem": "imagens/ancestrais/3-avos/0310_lia_fake.jpg" }
     ],
     "g3-luna": [
-      { "id": "0317", "nome": "Luizao", "detalhe": "AVO PATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0317_luizao.jpg" },
-      { "id": "0316", "nome": "Ligia", "detalhe": "AVO PATERNA", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0316_ligia.jpg" },
+      { "id": "0317", "nome": "Luiz Carrasco", "detalhe": "AVO PATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0317_luizcarrasco.jpg" },
+      { "id": "0316", "nome": "Ligia Carrasco", "detalhe": "AVO PATERNA", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0316_ligia.jpg" },
       { "id": "0300", "nome": "F", "detalhe": "AVO MATERNO", "ramo": "materno", "imagem": "imagens/ancestrais/3-avos/0300_f.jpg" },
       { "id": "0304", "nome": "Andrea", "detalhe": "AVO MATERNA", "ramo": "materno", "imagem": "imagens/ancestrais/3-avos/0304_andrea.jpg" }
     ],
     "g3-gabriela": [
       { "id": "0311", "nome": "Pai da Livia", "detalhe": "AVO PATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0311_paidalivia_avogabriela.jpg" },
-      { "id": "0312", "nome": "Marcia", "detalhe": "AVO PATERNA", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0312_marcia_fake.jpg" },
+      { "id": "0312", "nome": "Marcia", "detalhe": "AVO PATERNA", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0312_marcia.jpg" },
       { "id": "0303", "nome": "Flavio Melo", "detalhe": "AVO MATERNO", "ramo": "materno", "imagem": "imagens/ancestrais/3-avos/0303_flaviomelo.jpg" },
       { "id": "0304", "nome": "Andrea", "detalhe": "AVO MATERNA", "ramo": "materno", "imagem": "imagens/ancestrais/3-avos/0304_andrea.jpg" }
     ],
@@ -125,8 +125,8 @@
       { "id": "0402", "nome": "Antonia Maria", "detalhe": "BISAVO MATERNO", "ramo": "materno", "imagem": "imagens/ancestrais/4-bisavos/0402_amaria.jpg" }
     ],
     "g4-lorena-anderson": [
-      { "id": "0411", "nome": "Pai de Luiz A. Giaponese", "detalhe": "BISAVO PATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0400_paidef.jpg" },
-      { "id": "0412", "nome": "Mae de Luiz A. Giaponese", "detalhe": "BISAVO PATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0400_maedef.jpg" },
+      { "id": "0411", "nome": "Pai de Luiz A. Giaponesi", "detalhe": "BISAVO PATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0400_paidef.jpg" },
+      { "id": "0412", "nome": "Mae de Luiz A. Giaponesi", "detalhe": "BISAVO PATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0400_maedef.jpg" },
       { "id": "0413", "nome": "Pai de Silvana Santos", "detalhe": "BISAVO MATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0400_paidef.jpg" },
       { "id": "0414", "nome": "Mae de Silvana Santos", "detalhe": "BISAVO MATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0400_maedef.jpg" }
     ],

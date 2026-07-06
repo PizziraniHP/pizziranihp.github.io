@@ -42,7 +42,8 @@ Definir um modelo previsivel para o novo nucleo, com menos risco de divergencia 
 ### Imagens do Saiba Mais
 
 - As imagens complementares do Saiba Mais ficam em `imagens/imagens_smais/`.
-- Cada pessoa deve ter sua propria subpasta com identificacao padronizada no formato `ID_slug`, por exemplo `0401_arnaldo`, `0402_amaria`, `0601_nicolapizzirani`.
+- Cada pessoa com conteudo extra deve ter sua propria subpasta com identificacao padronizada no formato `ID_slug`, por exemplo `0401_arnaldo`, `0402_amaria`, `0601_nicolapizzirani`.
+- Nem toda pessoa precisa de pagina Saiba Mais; quando nao houver material ou interesse de migracao, a pessoa pode ficar sem pasta dedicada.
 - Quando houver necessidade de separar tipos internos, use subpastas adicionais apenas se isso ajudar a manter a leitura clara; caso contrario, mantenha os arquivos diretamente na pasta da pessoa.
 - Nomes de arquivo devem permanecer previsiveis e, quando possivel, devem refletir o conteudo da foto sem quebrar o vinculo historico com a pessoa.
 - O caminho das paginas Saiba Mais deve apontar para esse novo repositório de extras sempre que a pagina for migrada para o nucleo planejado.

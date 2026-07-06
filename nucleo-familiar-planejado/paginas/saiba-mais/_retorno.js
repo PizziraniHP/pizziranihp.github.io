@@ -1,4 +1,4 @@
-(function () {
+﻿(function () {
   function readFromQuery() {
     try {
       var params = new URLSearchParams(window.location.search);
@@ -11,6 +11,8 @@
   function isSameOriginUrl(url) {
     try {
       var parsed = new URL(url, window.location.href);
+      // Rejeita origins nulas (about:blank, data:, etc.)
+      if (!parsed.origin || parsed.origin === 'null') return false;
       return parsed.origin === window.location.origin;
     } catch (err) {
       return false;
@@ -19,7 +21,7 @@
 
   function buildFallback(fallbackHref) {
     var href = String(fallbackHref || '').trim();
-    return href || '../index.html';
+    return href || '../../elo_indice.html';
   }
 
   function resolveBackTarget(fallbackHref) {
@@ -73,3 +75,4 @@
     applyDynamicBackLink();
   }
 })();
+

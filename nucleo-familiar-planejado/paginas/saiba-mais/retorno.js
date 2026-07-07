@@ -77,9 +77,6 @@
     backLinks.forEach(function (link) {
       link.setAttribute('href', target);
       link.setAttribute('data-dynamic-back', '1');
-      if (target !== buildFallback(defaultHref)) {
-        link.textContent = 'voltar para pagina anterior';
-      }
 
       link.addEventListener('click', function (event) {
         if (window.history && window.history.length > 1) {

@@ -1,7 +1,7 @@
 ﻿(function () {
   function applySharedTheme() {
+    console.log('[THEME] Starting theme application');
     // Verifica se theme já foi injetado
-    'use strict';
     if (document.querySelector('style[data-shared-theme="1"]')) return;
 
     var styleContent = `
@@ -146,6 +146,7 @@ figure figcaption,
     style.setAttribute('data-shared-theme', '1');
     style.textContent = styleContent;
     document.head.appendChild(style);
+    console.log('[THEME] Style tag appended to head');
   }
 
   function readFromQuery() {

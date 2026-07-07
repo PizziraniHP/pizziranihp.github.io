@@ -1,6 +1,7 @@
 ﻿(function () {
   function applySharedTheme() {
     // Verifica se theme já foi injetado
+    'use strict';
     if (document.querySelector('style[data-shared-theme="1"]')) return;
 
     var styleContent = `
@@ -16,6 +17,7 @@ body {
 .page {
     background: #fffdf7 !important;
     border: 8px solid #3a2210 !important;
+    /* v2 - Force CSS injection */
     border-radius: 14px !important;
     box-shadow:
         0 0 0 2px rgba(201, 168, 76, 0.65),

@@ -8,6 +8,15 @@
     return digits ? digits.padStart(4, '0').slice(0, 4) : '';
   }
 
+  function escapeHtml(text) {
+    return String(text || '')
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
+  }
+
   function codeFromPerson(person) {
     var id = person && person.id;
     var n = normalizeId(id);
@@ -310,7 +319,7 @@
   function createGenerationBars(root) {
     var rows = Array.from(root.querySelectorAll(':scope > .linha-geracao'));
     var groups = [];
-    var totalTeoricoPorGeracao = { g1: 1, g2: 2, g3: 4, g4: 8, g5: 16, g6: 32, g7: 24, g8: 12 };
+    var totalTeoricoPorGeracao = { g1: 1, g2: 2, g3: 4, g4: 8, g5: 16, g6: 32, g7: 64, g8: 128 };
 
     rows.forEach(function (row) {
       var info = generationInfoFromRow(row);
@@ -394,18 +403,31 @@
     var sharedBlocks = data && data.sharedBlocks ? data.sharedBlocks : {};
     var h1 = document.getElementById('arvore-title');
     var h2 = document.getElementById('arvore-subtitle');
-    if (h1) h1.textContent = tree.titulo || '';
+
+    var g1 = expandEntries(tree.g1 || [], sharedBlocks);
+    var g2 = expandEntries(tree.g2 || [], sharedBlocks);
+    var g3 = expandEntries(tree.g3 || [], sharedBlocks);
+    var g4 = expandEntries(tree.g4 || [], sharedBlocks);
+    var g5 = expandEntries(tree.g5 || [], sharedBlocks);
+    var g6 = expandEntries(tree.g6 || [], sharedBlocks);
+    var g7 = expandEntries(tree.g7 || [], sharedBlocks);
+    var g8 = expandEntries(tree.g8 || [], sharedBlocks);
+
+    if (h1) {
+      var nomeBisneto = (g1[0] && g1[0].nome) ? g1[0].nome : treeKey;
+      h1.innerHTML = '<span class="titulo-rotulo">Arvore de</span> <span class="titulo-nome">"' + escapeHtml(nomeBisneto) + '"</span>';
+    }
     if (h2) h2.textContent = tree.subtitulo || '';
 
     var html = '';
-    html += renderLine(expandEntries(tree.g1 || [], sharedBlocks), 1, imagePrefix);
-    html += renderLine(expandEntries(tree.g2 || [], sharedBlocks), 2, imagePrefix);
-    html += renderLine(expandEntries(tree.g3 || [], sharedBlocks), 3, imagePrefix);
-    html += renderLine(expandEntries(tree.g4 || [], sharedBlocks), 4, imagePrefix);
-    html += renderLine(expandEntries(tree.g5 || [], sharedBlocks), 5, imagePrefix);
-    html += renderLine(expandEntries(tree.g6 || [], sharedBlocks), 6, imagePrefix);
-    html += renderLine(expandEntries(tree.g7 || [], sharedBlocks), 7, imagePrefix);
-    html += renderLine(expandEntries(tree.g8 || [], sharedBlocks), 8, imagePrefix);
+    html += renderLine(g1, 1, imagePrefix);
+    html += renderLine(g2, 2, imagePrefix);
+    html += renderLine(g3, 3, imagePrefix);
+    html += renderLine(g4, 4, imagePrefix);
+    html += renderLine(g5, 5, imagePrefix);
+    html += renderLine(g6, 6, imagePrefix);
+    html += renderLine(g7, 7, imagePrefix);
+    html += renderLine(g8, 8, imagePrefix);
 
     target.innerHTML = html;
     createGenerationBars(target);

@@ -1,4 +1,29 @@
 ﻿(function () {
+  function getThemeHref() {
+    var path = (window.location.pathname || '').toLowerCase();
+    // Em paginas/saiba-mais o arquivo esta no mesmo diretorio.
+    if (path.indexOf('/paginas/saiba-mais/') !== -1) {
+      return '_tema-global.css';
+    }
+    // Em paginas/extra-saiba-mais o tema fica em ../saiba-mais.
+    if (path.indexOf('/paginas/extra-saiba-mais/') !== -1) {
+      return '../saiba-mais/_tema-global.css';
+    }
+    return '';
+  }
+
+  function applySharedTheme() {
+    var href = getThemeHref();
+    if (!href) return;
+    if (document.querySelector('link[data-shared-theme="1"]')) return;
+
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = href + '?v=20260706a';
+    link.setAttribute('data-shared-theme', '1');
+    document.head.appendChild(link);
+  }
+
   function readFromQuery() {
     try {
       var params = new URLSearchParams(window.location.search);
@@ -45,6 +70,8 @@
   }
 
   function applyDynamicBackLink() {
+    applySharedTheme();
+
     var backLinks = Array.from(document.querySelectorAll('.top-links a'));
     if (!backLinks.length) {
       return;

@@ -8,7 +8,7 @@ body {
 
 /* Painel de conteúdo — mantido claro para legibilidade do texto */
 .page {
-    background: #fffdf7 !important;
+    background: #f8f2e7 !important;
     border: 8px solid #3a2210 !important;
     border-radius: 14px !important;
     box-shadow:
@@ -111,7 +111,7 @@ h2 { color: #3f2a11; }
     border: 2px solid rgba(58, 34, 16, 0.25);
     border-left: 4px solid #3a2210;
     border-radius: 8px;
-    background: #fff8ee;
+    background: #f7efdf;
     padding: 14px 16px;
     margin-bottom: 14px;
     box-shadow: inset 0 0 0 1px rgba(201, 168, 76, 0.18);

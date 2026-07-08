@@ -137,8 +137,8 @@
       { "id": "0402", "nome": "Antonia Maria", "detalhe": "BISAVO MATERNO", "ramo": "materno", "imagem": "imagens/ancestrais/4-bisavos/0402_amaria.jpg" }
     ],
     "g4-luna-paterno-desconhecidos": [
-      { "id": "", "nome": "Bisavo / Bisavo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0400_paidef.jpg", "placeholder": true },
-      { "id": "", "nome": "Bisavo / Bisavo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0400_maedef.jpg", "placeholder": true },
+      { "id": "0417", "nome": "Bisavo paterno de Luiz Carrasco", "detalhe": "BISAVO PATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0417_bisavodeluna_paideluizaocarrasco.jpg" },
+      { "id": "0418", "nome": "Bisavo paterna de Luiz Carrasco", "detalhe": "BISAVO PATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0418_bisavadeluna_maedeluizaocarrasco.jpg" },
       { "id": "", "nome": "Bisavo / Bisavo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0400_paidef.jpg", "placeholder": true },
       { "id": "", "nome": "Bisavo / Bisavo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0400_maedef.jpg", "placeholder": true }
     ],

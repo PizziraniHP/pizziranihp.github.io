@@ -1,7 +1,7 @@
 :root {
   color-scheme: light;
-  --bg: #f3efe7;
-  --panel: #fffaf1;
+  --bg: #efe5d3;
+  --panel: #f8f1e3;
   --text: #2d241d;
   --muted: #6d5d51;
   --accent: #7a5c3d;
@@ -16,7 +16,10 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text);
-  background: linear-gradient(180deg, #f8f3ea 0%, var(--bg) 100%);
+  background:
+    radial-gradient(circle at 20% 12%, rgba(189, 151, 88, 0.12), transparent 38%),
+    radial-gradient(circle at 78% 20%, rgba(168, 134, 77, 0.08), transparent 34%),
+    linear-gradient(180deg, #f4ead8 0%, var(--bg) 100%);
   min-height: 100vh;
 }
 
@@ -96,7 +99,7 @@ h1 {
 
 .card {
   padding: 18px;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(252, 246, 235, 0.78);
   border: 1px solid var(--border);
   border-radius: 18px;
   box-shadow: 0 10px 24px rgba(77, 57, 40, 0.05);

@@ -95,12 +95,12 @@
   function clsByGeneration(g) {
     if (g === 1) return { card: 'card-bisneta', img: 'foto-bisneta', label: 'Bisneto' };
     if (g === 2) return { card: 'card-pais', img: 'foto-pais', label: 'Pais' };
-    if (g === 3) return { card: 'card-avos', img: 'foto-avos', label: 'Avos' };
-    if (g === 4) return { card: 'card-bisavos', img: 'foto-bisavos', label: 'Bisavos' };
-    if (g === 5) return { card: 'card-trisavos', img: 'foto-tataravos', label: 'Trisavos' };
-    if (g === 6) return { card: 'card-tataravos', img: 'foto-tetravos', label: 'Tetravos' };
-    if (g === 7) return { card: 'card-tataravos', img: 'foto-pentaavos', label: 'Pentavos' };
-    return { card: 'card-tataravos', img: 'foto-hexaavos', label: 'Hexavos' };
+    if (g === 3) return { card: 'card-avos', img: 'foto-avos', label: 'Avós' };
+    if (g === 4) return { card: 'card-bisavos', img: 'foto-bisavos', label: 'Bisavós' };
+    if (g === 5) return { card: 'card-trisavos', img: 'foto-tataravos', label: 'Trisavós' };
+    if (g === 6) return { card: 'card-tataravos', img: 'foto-tetravos', label: 'Tetravós' };
+    if (g === 7) return { card: 'card-tataravos', img: 'foto-pentaavos', label: 'Pentavós' };
+    return { card: 'card-tataravos', img: 'foto-hexaavos', label: 'Hexavós' };
   }
 
   function expectedCountByGeneration(g) {
@@ -307,12 +307,12 @@
   function generationInfoFromRow(row) {
     if (row.querySelector('.card-bisneta, .card-bisneto')) return { key: 'g1', title: 'Bisnetos' };
     if (row.querySelector('.card-pais')) return { key: 'g2', title: 'Pais' };
-    if (row.querySelector('.card-avos')) return { key: 'g3', title: 'Avos' };
-    if (row.querySelector('.card-bisavos')) return { key: 'g4', title: 'Bisavos' };
-    if (row.querySelector('.card-trisavos')) return { key: 'g5', title: 'Trisavos' };
-    if (row.querySelector('.foto-tetravos')) return { key: 'g6', title: 'Tetravos' };
-    if (row.querySelector('.foto-pentaavos')) return { key: 'g7', title: 'Pentavos' };
-    if (row.querySelector('.foto-hexaavos')) return { key: 'g8', title: 'Hexavos' };
+    if (row.querySelector('.card-avos')) return { key: 'g3', title: 'Avós' };
+    if (row.querySelector('.card-bisavos')) return { key: 'g4', title: 'Bisavós' };
+    if (row.querySelector('.card-trisavos')) return { key: 'g5', title: 'Trisavós' };
+    if (row.querySelector('.foto-tetravos')) return { key: 'g6', title: 'Tetravós' };
+    if (row.querySelector('.foto-pentaavos')) return { key: 'g7', title: 'Pentavós' };
+    if (row.querySelector('.foto-hexaavos')) return { key: 'g8', title: 'Hexavós' };
     return null;
   }
 
@@ -358,7 +358,7 @@
 
       var title = document.createElement('div');
       title.className = 'geracao-titulo';
-      title.textContent = 'Geracao ' + group.key.slice(1) + ' - ' + group.title + ' (' + (totalTeoricoPorGeracao[group.key] || 0) + ')';
+      title.textContent = 'Geração ' + group.key.slice(1) + ' - ' + group.title + ' (' + (totalTeoricoPorGeracao[group.key] || 0) + ')';
 
       var btn = document.createElement('button');
       btn.type = 'button';

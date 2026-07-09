@@ -82,6 +82,21 @@ header {
     align-items: center;
 }
 
+.rodape-arvore {
+    margin: 22px 0 0;
+    padding: 14px 16px;
+    border-top: 1px solid rgba(126, 90, 34, 0.2);
+    color: #5c4a34;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    background: rgba(255, 248, 236, 0.75);
+    border-radius: 0 0 10px 10px;
+}
+
+.rodape-arvore p {
+    margin: 0;
+}
+
 .linha-geracao {
     display: flex;
     flex-wrap: wrap;

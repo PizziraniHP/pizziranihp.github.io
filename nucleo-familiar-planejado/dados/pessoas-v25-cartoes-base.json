@@ -17,7 +17,7 @@
     "g3-lorena": [
       { "id": "0305", "nome": "Luiz A. Giaponesi", "detalhe": "AVO PATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0305_luizgiaponesi.jpg" },
       { "id": "0306", "nome": "Silvana Santos", "detalhe": "AVO PATERNA", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0306_silvanasantos.jpg" },
-      { "id": "0300", "nome": "F", "detalhe": "AVO MATERNO", "ramo": "materno", "imagem": "imagens/ancestrais/3-avos/0300_f.jpg" },
+      { "id": "0300", "nome": "LFT", "detalhe": "AVO MATERNO", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg" },
       { "id": "0304", "nome": "Andrea", "detalhe": "AVO MATERNA", "ramo": "materno", "imagem": "imagens/ancestrais/3-avos/0304_andrea.jpg" }
     ],
     "g2-flavio-barbara": [
@@ -125,20 +125,20 @@
       { "id": "0402", "nome": "Antonia Maria", "detalhe": "BISAVO MATERNO", "ramo": "materno", "imagem": "imagens/ancestrais/4-bisavos/0402_amaria.jpg" }
     ],
     "g4-lorena-anderson": [
-      { "id": "0411", "nome": "Pai de Luiz A. Giaponesi", "detalhe": "BISAVO PATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0400_paidef.jpg" },
-      { "id": "0412", "nome": "Mae de Luiz A. Giaponesi", "detalhe": "BISAVO PATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0400_maedef.jpg" },
+      { "id": "0411", "nome": "Pai de Luiz A. Giaponesi", "detalhe": "BISAVO PATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg" },
+      { "id": "0412", "nome": "Mae de Luiz A. Giaponesi", "detalhe": "BISAVO PATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figurafeminina.jpg" },
       { "id": "0413", "nome": "Pai de Silvana Santos", "detalhe": "BISAVO MATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0400_paidef.jpg" },
       { "id": "0414", "nome": "Mae de Silvana Santos", "detalhe": "BISAVO MATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0400_maedef.jpg" }
     ],
     "g4-lorena-materno": [
-      { "id": "0415", "nome": "Pai de F", "detalhe": "BISAVO PATERNO", "ramo": "materno", "imagem": "imagens/ancestrais/4-bisavos/0400_paidef.jpg" },
-      { "id": "0416", "nome": "Mae de F", "detalhe": "BISAVO PATERNO", "ramo": "materno", "imagem": "imagens/ancestrais/4-bisavos/0400_maedef.jpg" },
+      { "id": "0415", "nome": "Pai de LFT", "detalhe": "BISAVO PATERNO", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg" },
+      { "id": "0416", "nome": "Mae de LFT", "detalhe": "BISAVA PATERNA", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/figurafeminina.jpg" },
       { "id": "0401", "nome": "Arnaldo", "detalhe": "BISAVO MATERNO", "ramo": "materno", "imagem": "imagens/ancestrais/4-bisavos/0401_arnaldo.jpg" },
       { "id": "0402", "nome": "Antonia Maria", "detalhe": "BISAVO MATERNO", "ramo": "materno", "imagem": "imagens/ancestrais/4-bisavos/0402_amaria.jpg" }
     ],
     "g4-luna-paterno-desconhecidos": [
-      { "id": "0417", "nome": "Bisavo paterno de Luiz Carrasco", "detalhe": "BISAVO PATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0417_bisavodeluna_paideluizaocarrasco.jpg" },
-      { "id": "0418", "nome": "Bisavo paterna de Luiz Carrasco", "detalhe": "BISAVO PATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0418_bisavadeluna_maedeluizaocarrasco.jpg" },
+      { "id": "0417", "nome": "Pai de Luiz Carrasco", "detalhe": "BISAVO PATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0417_bisavodeluna_paideluizaocarrasco.jpg" },
+      { "id": "0418", "nome": "Mae de Luiz Carrasco", "detalhe": "BISAVA PATERNA", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0418_bisavadeluna_maedeluizaocarrasco.jpg" },
       { "id": "", "nome": "Bisavo / Bisavo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0400_paidef.jpg", "placeholder": true },
       { "id": "", "nome": "Bisavo / Bisavo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/4-bisavos/0400_maedef.jpg", "placeholder": true }
     ],
@@ -175,18 +175,18 @@
       { "id": "0516", "nome": "Helena Ferraz Pacheco", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/5-trisavos/0504_helenaferraspacheco.jpg" }
     ],
     "g5-lorena-desconhecidos": [
-      { "id": "0517", "nome": "Trisavo / Trisavo", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0300_f.jpg" },
-      { "id": "0518", "nome": "Trisavo / Trisavo", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0300_f.jpg" },
-      { "id": "0519", "nome": "Trisavo / Trisavo", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0300_f.jpg" },
-      { "id": "0520", "nome": "Trisavo / Trisavo", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0300_f.jpg" },
-      { "id": "0521", "nome": "Trisavo / Trisavo", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0300_f.jpg" },
-      { "id": "0522", "nome": "Trisavo / Trisavo", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0300_f.jpg" },
-      { "id": "0523", "nome": "Trisavo / Trisavo", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0300_f.jpg" },
-      { "id": "0524", "nome": "Trisavo / Trisavo", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0300_f.jpg" },
-      { "id": "0525", "nome": "Trisavo / Trisavo", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/3-avos/0300_f.jpg" },
-      { "id": "0526", "nome": "Trisavo / Trisavo", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/3-avos/0300_f.jpg" },
-      { "id": "0527", "nome": "Trisavo / Trisavo", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/3-avos/0300_f.jpg" },
-      { "id": "0528", "nome": "Trisavo / Trisavo", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/3-avos/0300_f.jpg" }
+      { "id": "0517", "nome": "Pai de Pai de Luiz A. Giaponesi", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg" },
+      { "id": "0518", "nome": "Mae de Pai de Luiz A. Giaponesi", "detalhe": "TRISAVA", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figurafeminina.jpg" },
+      { "id": "0519", "nome": "Pai de Mae de Luiz A. Giaponesi", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg" },
+      { "id": "0520", "nome": "Mae de Mae de Luiz A. Giaponesi", "detalhe": "TRISAVA", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figurafeminina.jpg" },
+      { "id": "0521", "nome": "Pai de Pai de Silvana Santos", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg" },
+      { "id": "0522", "nome": "Mae de Pai de Silvana Santos", "detalhe": "TRISAVA", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figurafeminina.jpg" },
+      { "id": "0523", "nome": "Pai de Mae de Silvana Santos", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg" },
+      { "id": "0524", "nome": "Mae de Mae de Silvana Santos", "detalhe": "TRISAVA", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figurafeminina.jpg" },
+      { "id": "0525", "nome": "Pai de Pai de LFT", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg" },
+      { "id": "0526", "nome": "Mae de Pai de LFT", "detalhe": "TRISAVA", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/figurafeminina.jpg" },
+      { "id": "0527", "nome": "Pai de Mae de LFT", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg" },
+      { "id": "0528", "nome": "Mae de Mae de LFT", "detalhe": "TRISAVA", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/figurafeminina.jpg" }
     ],
     "g5-lorena-andrea": [
       { "id": "0501", "nome": "Marcelo Pizzirani", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/5-trisavos/0501_marcelopizzirani.jpg" },

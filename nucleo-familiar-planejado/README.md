@@ -45,6 +45,22 @@ Para evitar misturar arquivos manuais com arquivos de propagacao, use esta regra
 - Prioridade de retorno: historico do navegador (pagina anterior), depois `from` na URL, depois `referrer` same-origin e por fim fallback do proprio link da pagina.
 - Para conteudos raros e pesados, usar `paginas/extra-saiba-mais/` e manter entrada por links dentro de paginas Saiba Mais especificas.
 
+## Pagina Saiba Mais por casal
+
+Quando um casal compartilha uma unica pagina Saiba Mais, o modelo e:
+
+- **Arquivo real** (codigo impar): contem todo o conteudo — fotos, textos, historia. E aqui que voce edita sempre.
+- **Arquivo redirect** (codigo par): arquivo minimo que redireciona para o real. Nunca precisa ser aberto ou editado.
+
+Exemplos ativos:
+- `0501_marcelopizzirani_anacristinalienhardt.html` → pagina real (editar aqui)
+- `0502_marcelopizzirani_anacristinalienhardt.html` → redirect invisivel
+
+- `0607_josealvescunha_antoniamsantos.html` → pagina real (editar aqui)
+- `0608_josealvescunha_antoniamsantos.html` → redirect invisivel
+
+**Regra pratica: insercoes de fotos e textos sempre no arquivo de codigo impar.**
+
 ## Paginas duplicadas por pessoa (por que existem)
 
 Em algumas arvores existem duas paginas, por exemplo:

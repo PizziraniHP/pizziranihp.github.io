@@ -48,6 +48,21 @@ Definir um modelo previsivel para o novo nucleo, com menos risco de divergencia 
 - Nomes de arquivo devem permanecer previsiveis e, quando possivel, devem refletir o conteudo da foto sem quebrar o vinculo historico com a pessoa.
 - O caminho das paginas Saiba Mais deve apontar para esse novo repositório de extras sempre que a pagina for migrada para o nucleo planejado.
 
+### Paginas Saiba Mais por casal
+
+- Quando o conteudo historico for essencialmente comum ao casal, preferir uma unica pagina Saiba Mais para os dois.
+- Nesses casos, o nome do arquivo deve deixar evidente que se trata de pagina de casal, contendo os dois nomes no identificador do arquivo sempre que praticavel.
+- Mesmo com pagina unica de casal, cada ID individual continua precisando de uma rota propria de entrada para a arvore resolver o link corretamente.
+- Regra pratica: manter uma pagina principal do casal e criar alias/redirecionamento para o outro ID do casal quando necessario.
+- Objetivo: evitar duplicacao de conteudo, preservar rastreabilidade e deixar claro para futuras insercoes que aquela pagina foi pensada como pagina conjunta.
+
+### Paginas Saiba Mais sem material suficiente
+
+- Nao e obrigatorio manter pagina Saiba Mais para toda pessoa.
+- Se uma pagina existir, mas nao houver material minimo para justificar manutencao futura, avaliar remocao da pagina dedicada.
+- Material minimo pode ser apenas nome confirmado e alguma funcao de navegacao, mas paginas vazias ou sem perspectiva de conteudo devem ser revistas caso a caso.
+- Antes de remover uma pagina, garantir que o ID continue com rota valida no indice ou por alias temporario, para nao quebrar os links da arvore.
+
 ### Separacao por pastas de geracao
 
 - `imagens/` é a raiz geral.

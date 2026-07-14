@@ -435,6 +435,13 @@
     var lb = document.getElementById('lightbox');
     var lbImg = document.getElementById('lightbox-img');
     target.querySelectorAll('img').forEach(function (img) {
+      img.addEventListener('error', function () {
+        if (img.dataset.retryLoad === '1') return;
+        img.dataset.retryLoad = '1';
+        var sep = img.src.indexOf('?') >= 0 ? '&' : '?';
+        img.src = img.src + sep + 'reload=' + Date.now();
+      });
+
       img.addEventListener('click', function () {
         if (!lb || !lbImg) return;
         lb.style.display = 'flex';

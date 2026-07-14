@@ -13,6 +13,17 @@ Base nova para evoluir a arvore familiar com mais planejamento, separacao por ca
 
 - Guia de preservacao e continuidade: `INSTRUCOES-CONTINUIDADE.md`
 
+## Operacao em 1 comando (v2/v25)
+
+Para evitar repeticao manual entre as duas bases:
+
+- Execute: `scripts\\alinhar-v2-v25.cmd`
+- O comando faz 2 etapas automaticamente:
+	1. Sincroniza blocos comuns da v2 para a v25.
+	2. Valida codigos/posicoes (sequencia de IDs) entre v2 e v25.
+
+Se houver qualquer divergencia, o comando retorna erro e interrompe.
+
 ## Estrutura inicial
 
 - `dados/`: fonte de verdade dos registros.

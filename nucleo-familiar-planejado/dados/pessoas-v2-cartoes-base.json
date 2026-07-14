@@ -17,7 +17,7 @@
     "g3-lorena": [
       { "id": "0305", "nome": "Luiz A. Giaponesi", "detalhe": "AVO” PATERNO (PAI DO ANDERSON)", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0305_luizgiaponesi.jpg" },
       { "id": "0306", "nome": "Silvana Santos", "detalhe": "AVO“ PATERNA (MÃƒE DO ANDERSON)", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0306_silvanasantos.jpg" },
-      { "id": "0300", "nome": "LFT", "detalhe": "AVO MATERNO (PAI DA STHEFANIE)", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg" },
+      { "id": "0300", "nome": "LFT", "detalhe": "AVO MATERNO (PAI DA STHEFANIE)", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/repdosteo.jpg" },
       { "id": "0304", "nome": "Andrea", "detalhe": "AVO“ MATERNA (MÃƒE DA STHEFANIE)", "ramo": "materno", "imagem": "imagens/ancestrais/3-avos/0304_andrea.jpg" }
     ],
     "g2-flavio-barbara": [
@@ -41,13 +41,13 @@
     "g3-luna": [
       { "id": "0317", "nome": "Luiz Carrasco", "detalhe": "AVO” PATERNO (PAI DO LUIZ CARRASCO)", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0317_luizcarrasco.jpg" },
       { "id": "0316", "nome": "Ligia Carrasco", "detalhe": "AVO“ PATERNA (MÃƒE DO LUIZ CARRASCO)", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0316_ligia.jpg" },
-      { "id": "0300", "nome": "LFT", "detalhe": "AVO MATERNO (PAI DA STHEFANIE)", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg" },
+      { "id": "0300", "nome": "LFT", "detalhe": "AVO MATERNO (PAI DA STHEFANIE)", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/repdosteo.jpg" },
       { "id": "0304", "nome": "Andrea", "detalhe": "AVO MATERNA (MAE DA STHEFANIE)", "ramo": "materno", "imagem": "imagens/ancestrais/3-avos/0304_andrea.jpg" }
     ],
     "g3-gabriela": [
       { "id": "0311", "nome": "Pai da Livia", "detalhe": "AVO PATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg" },
       { "id": "0312", "nome": "Marcia", "detalhe": "AVO PATERNA", "ramo": "paterno", "imagem": "imagens/ancestrais/3-avos/0312_marcia.jpg" },
-      { "id": "0303", "nome": "Flavio Melo", "detalhe": "AVO MATERNO", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg" },
+      { "id": "0303", "nome": "Flavio Melo", "detalhe": "AVO MATERNO", "ramo": "materno", "imagem": "imagens/ancestrais/3-avos/0303_flaviomelo.jpg" },
       { "id": "0304", "nome": "Andrea", "detalhe": "AVO MATERNA", "ramo": "materno", "imagem": "imagens/ancestrais/3-avos/0304_andrea.jpg" }
     ],
     "g4-pedro-gabriela": [
@@ -219,8 +219,8 @@
       { "id": "0414", "nome": "Mae de Silvana Santos", "detalhe": "BISAVO MATERNO", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figurafeminina.jpg" }
     ],
     "g4-lorena-materno": [
-      { "id": "0415", "nome": "Pai de LFT", "detalhe": "BISAVO PATERNO (PAI DE LFT)", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg" },
-      { "id": "0416", "nome": "Mae de LFT", "detalhe": "BISAVA PATERNA (MAE DE LFT)", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/figurafeminina.jpg" },
+      { "id": "0415", "nome": "Pai de LFT", "detalhe": "BISAVO PATERNO (PAI DE LFT)", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/repdosteo.jpg", "representativo": true, "ocultarIdentidade": true, "verdadeGenealogicaConfirmada": true, "notaPrivacidade": "Linhagem biologica confirmada; identidade nao exibida por decisao pessoal/familiar." },
+      { "id": "0416", "nome": "Mae de LFT", "detalhe": "BISAVA PATERNA (MAE DE LFT)", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/repdosteo.jpg", "representativo": true, "ocultarIdentidade": true, "verdadeGenealogicaConfirmada": true, "notaPrivacidade": "Linhagem biologica confirmada; identidade nao exibida por decisao pessoal/familiar." },
       { "id": "0401", "nome": "Arnaldo", "detalhe": "BISAVÃ” (PAI DE ANDREA)", "ramo": "materno", "imagem": "imagens/ancestrais/4-bisavos/0401_arnaldo.jpg" },
       { "id": "0402", "nome": "Antonia Maria", "detalhe": "BISAVÃ“ (MÃƒE DE ANDREA)", "ramo": "materno", "imagem": "imagens/ancestrais/4-bisavos/0402_amaria.jpg" }
     ],
@@ -319,15 +319,18 @@
       { "id": "0607", "nome": "Jose Alves da Cunha", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0607_jose_alves_da_cunha.jpg" },
       { "id": "0608", "nome": "Antonia Marques", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0608_antonia_marques_dos_santos.jpg" }
     ],
+    "g5-lft-comum": [
+      { "id": "0525", "nome": "Pai de Pai de LFT", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/repdosteo.jpg" },
+      { "id": "0526", "nome": "Mae de Pai de LFT", "detalhe": "TRISAVA", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/repdosteo.jpg" },
+      { "id": "0527", "nome": "Pai de Mae de LFT", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/repdosteo.jpg" },
+      { "id": "0528", "nome": "Mae de Mae de LFT", "detalhe": "TRISAVA", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/repdosteo.jpg" }
+    ],
     "g5-lorena-desconhecidos": [
       { "id": "0517", "nome": "João Giaponesi", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg" },
       { "id": "0518", "nome": "Maria Ribeiro", "detalhe": "TRISAVA", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figurafeminina.jpg" },
       { "id": "0519", "nome": "Pai de Mae de Luiz A. Giaponesi", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg" },
       { "id": "0520", "nome": "Mae de Mae de Luiz A. Giaponesi", "detalhe": "TRISAVA", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figurafeminina.jpg" },
-      { "id": "0525", "nome": "Pai de Pai de LFT", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg" },
-      { "id": "0526", "nome": "Mae de Pai de LFT", "detalhe": "TRISAVA", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/figurafeminina.jpg" },
-      { "id": "0527", "nome": "Pai de Mae de LFT", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg" },
-      { "id": "0528", "nome": "Mae de Mae de LFT", "detalhe": "TRISAVA", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/figurafeminina.jpg" },
+      { "$ref": "g5-lft-comum" },
       { "id": "0521", "nome": "Pai de Pai de Silvana Santos", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg" },
       { "id": "0522", "nome": "Mae de Pai de Silvana Santos", "detalhe": "TRISAVA", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figurafeminina.jpg" },
       { "id": "0523", "nome": "Pai de Mae de Silvana Santos", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg" },
@@ -344,10 +347,7 @@
       { "id": "0518", "nome": "Mae de Pai de Luiz Carrasco", "detalhe": "TRISAVA", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figurafeminina.jpg", "placeholder": true },
       { "id": "0519", "nome": "Pai de Mae de Luiz Carrasco", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg", "placeholder": true },
       { "id": "0520", "nome": "Mae de Mae de Luiz Carrasco", "detalhe": "TRISAVA", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figurafeminina.jpg", "placeholder": true },
-      { "id": "", "codigoCartao": "0525", "nome": "Pai de Pai de LFT", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg", "placeholder": true },
-      { "id": "", "codigoCartao": "0526", "nome": "Mae de Pai de LFT", "detalhe": "TRISAVA", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/figurafeminina.jpg", "placeholder": true },
-      { "id": "", "codigoCartao": "0527", "nome": "Pai de Mae de LFT", "detalhe": "TRISAVO", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg", "placeholder": true },
-      { "id": "", "codigoCartao": "0528", "nome": "Mae de Mae de LFT", "detalhe": "TRISAVA", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/figurafeminina.jpg", "placeholder": true },
+      { "$ref": "g5-lft-comum" },
       { "id": "0521", "nome": "Pai de Pai de Ligia Carrasco", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg", "placeholder": true },
       { "id": "0522", "nome": "Mae de Pai de Ligia Carrasco", "detalhe": "TRISAVA", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figurafeminina.jpg", "placeholder": true },
       { "id": "0523", "nome": "Pai de Mae de Ligia Carrasco", "detalhe": "TRISAVO", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figuramasculina.jpg", "placeholder": true },
@@ -362,55 +362,46 @@
         { "id": "0610", "nome": "Vitalina Ribeiro", "detalhe": "TETRAVA", "ramo": "paterno", "imagem": "imagens/ancestrais/2-pais/figurafeminina.jpg" },
         { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
         { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-        { "id": "0601", "nome": "Nicola Pizzirani", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0601_nicola_pizzirani.jpg" },
-        { "id": "0602", "nome": "Maria Mazzini", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0602_maria_mazzini.jpg" },
-        { "id": "0603", "nome": "Henrique Lienhardt", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0603_henrique_lienhardt.jpg" },
-        { "id": "0604", "nome": "Ana Petru", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0604_ana_petru.jpg" }
+        { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/repdosteo.jpg", "placeholder": true },
+        { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/repdosteo.jpg", "placeholder": true },
+        { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/repdosteo.jpg", "placeholder": true },
+        { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/repdosteo.jpg", "placeholder": true }
     ],
     "g6-lorena-desconhecidos": [
         { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
         { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
         { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
         { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-        { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-        { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-        { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-        { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+        { "id": "0601", "nome": "Nicola Pizzirani", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0601_nicola_pizzirani.jpg" },
+        { "id": "0602", "nome": "Maria Mazzini", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0602_maria_mazzini.jpg" },
+        { "id": "0603", "nome": "Henrique Lienhardt", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0603_henrique_lienhardt.jpg" },
+        { "id": "0604", "nome": "Ana Petru", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0604_ana_petru.jpg" },
         { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
         { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
         { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
         { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-        { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-        { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-        { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-        { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+        { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/repdosteo.jpg", "placeholder": true },
+        { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/repdosteo.jpg", "placeholder": true },
+        { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/repdosteo.jpg", "placeholder": true },
+        { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/repdosteo.jpg", "placeholder": true },
         { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
         { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
         { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
         { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-        { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-        { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-        { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-        { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true }
+        { "id": "0605", "nome": "Aquilino Pacheco Filho", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0605_aquilino_pacheco_filho.jpg" },
+        { "id": "0606", "nome": "Antonieta Silveira", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0606_antonieta_silveira_ferraz_pacheco.jpg" },
+        { "id": "0607", "nome": "Jose Alves da Cunha", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0607_jose_alves_da_cunha.jpg" },
+        { "id": "0608", "nome": "Antonia Marques", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0608_antonia_marques_dos_santos.jpg" }
     ],
     "g6-luna-exclusivo": [
       { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
       { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
       { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
       { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-      { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-      { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-      { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-      { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-
-      { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-      { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-      { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-      { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-      { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-      { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-      { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
-      { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/repdosteo.jpg", "placeholder": true },
+      { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/repdosteo.jpg", "placeholder": true },
+      { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/repdosteo.jpg", "placeholder": true },
+      { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/repdosteo.jpg", "placeholder": true },
 
       { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
       { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
@@ -420,6 +411,15 @@
       { "id": "0602", "nome": "Maria Mazzini", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0602_maria_mazzini.jpg" },
       { "id": "0603", "nome": "Henrique Lienhardt", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0603_henrique_lienhardt.jpg" },
       { "id": "0604", "nome": "Ana Petru", "detalhe": "TETRAVO", "ramo": "materno", "imagem": "imagens/ancestrais/6-tetravos/0604_ana_petru.jpg" },
+
+      { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
+      { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/repdosteo.jpg", "placeholder": true },
+      { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/repdosteo.jpg", "placeholder": true },
+      { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/repdosteo.jpg", "placeholder": true },
+      { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "materno", "imagem": "imagens/ancestrais/2-pais/repdosteo.jpg", "placeholder": true },
 
       { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },
       { "id": "", "nome": "Tetravo / Tetravo", "detalhe": "Informacoes", "ramo": "paterno", "imagem": "imagens/ancestrais/6-tetravos/0600_tetravos_lorena.jpg", "placeholder": true },

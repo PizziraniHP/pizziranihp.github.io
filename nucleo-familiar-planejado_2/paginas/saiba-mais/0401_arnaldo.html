@@ -1,0 +1,656 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Saiba mais - Arnaldo Pizzirani</title>
+    <style>
+        :root {
+            --bg: #f7f5ef;
+            --panel: #ffffff;
+            --ink: #222222;
+            --muted: #666666;
+            --line: #ddd7ca;
+            --accent: #7a2e2e;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            color: var(--ink);
+            background: radial-gradient(circle at top right, #efe8d8, var(--bg) 45%);
+            line-height: 1.55;
+        }
+
+        .page {
+            width: min(980px, 92vw);
+            margin: 32px auto;
+            padding: 24px;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+        }
+
+        .top-links {
+            margin: 0 0 18px;
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        .top-links a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .top-links a:hover { text-decoration: underline; }
+        .saiba-mais-badge {
+            margin: 0 0 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #5b2a2a;
+            border: 1px solid #d6c9b8;
+            border-radius: 999px;
+            background: #fff8ec;
+            padding: 6px 12px;
+        }
+
+        .saiba-mais-icone {
+            width: 16px;
+            height: 10px;
+            border: 1.6px solid #7a2e2e;
+            border-radius: 100% / 75%;
+            position: relative;
+            display: inline-block;
+            background: #fff;
+        }
+
+        .saiba-mais-icone::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: #7a2e2e;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 22px;
+            align-items: start;
+            margin-bottom: 20px;
+        }
+
+        .photo-box {
+            background: #f2efe5;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .photo-box img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .meta h1 {
+            margin: 0 0 8px;
+            font-size: clamp(28px, 4vw, 42px);
+            line-height: 1.08;
+        }
+
+        .meta .chip {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .meta p { margin: 6px 0; }
+        .meta a,
+        .extra-item p a,
+        .story a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        .meta a:hover,
+        .extra-item p a:hover,
+        .story a:hover {
+            text-decoration-thickness: 2px;
+        }
+        .extra {
+            border-top: 1px solid var(--line);
+            padding-top: 16px;
+            margin-bottom: 20px;
+        }
+        .extra h2 {
+            margin: 0 0 12px;
+            font-size: 22px;
+        }
+        
+        .extra-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            align-items: start;
+        }
+        .extra-grid-small {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+            align-items: start;
+        }
+        .extra-item {
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            overflow: hidden;
+            background: #faf8f3;
+            min-width: 0;
+            transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+        }
+        .extra-item img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            background: #f2efe5;
+            transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1), filter 320ms ease;
+            transform-origin: center center;
+            will-change: transform;
+            cursor: zoom-in;
+            position: relative;
+            z-index: 1;
+        }
+        .extra-item:hover {
+            transform: translateY(-3px);
+            border-color: #c9bea8;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+        }
+        .extra-item:hover img,
+        .extra-item img:hover {
+            transform: scale(1.24);
+            filter: saturate(1.08) contrast(1.06);
+        }
+        .extra-item p {
+            margin: 0;
+            padding: 12px 14px;
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.55;
+            overflow-wrap: anywhere;
+            position: relative;
+            z-index: 3;
+            background: #faf8f3;
+        }
+        .extra-item-small img {
+            aspect-ratio: 1 / 1;
+        }
+        .extra-item-small p {
+            padding: 8px 9px;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+        .story {
+            border-top: 1px solid var(--line);
+            padding-top: 16px;
+            margin-bottom: 20px;
+        }
+
+        .story h2 {
+            margin: 0 0 10px;
+            font-size: 22px;
+        }
+
+        .story p {
+            margin: 0 0 12px;
+            text-align: justify;
+        }
+        @media (max-width: 1080px) {
+            .extra-grid-small { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 760px) {
+            .hero { grid-template-columns: 1fr; }
+            .photo-box { max-width: 320px; }
+            .extra-grid { grid-template-columns: 1fr; }
+            .extra-grid-small { grid-template-columns: 1fr; }
+            .extra-item img { aspect-ratio: auto; }
+        }
+
+        .img-lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.82);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 18px;
+            z-index: 2000;
+        }
+
+        .img-lightbox.active {
+            display: flex;
+        }
+
+        .img-lightbox img {
+            max-width: 92vw;
+            max-height: 88vh;
+            width: auto;
+            height: auto;
+            border-radius: 10px;
+            border: 1px solid #e8dfd0;
+            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.45);
+            background: #fff;
+        }
+
+        .img-lightbox-close {
+            position: fixed;
+            top: 18px;
+            right: 18px;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #d7c8b0;
+            border-radius: 999px;
+            background: #fff7ea;
+            color: #6c2e2e;
+            font-size: 22px;
+            line-height: 1;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+        }
+
+        .photo-box img,
+        .extra-item img {
+            cursor: zoom-in;
+        }
+.topo-fixo {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 999;
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            background: #fffdf8;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 13px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+
+        .topo-fixo:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script defer src="retorno.js"></script>
+</head>
+<body id="topo">
+    <main class="page">
+        <p class="top-links">
+            <a href="../../elo_indice.html">voltar ao Nucleo Familiar</a>
+        </p>
+        <p class="saiba-mais-badge">
+            <span class="saiba-mais-icone" aria-hidden="true"></span>
+            <span>SAIBA MAIS</span>
+        </p>
+        <section class="hero">
+            <figure class="photo-box">
+                <img src="../../imagens/bisavos/0401_Arnaldo_InPixio_v01.jpg" alt="Foto de Arnaldo">
+            </figure>
+            <div class="meta">
+                <h1>Arnaldo Pizzirani</h1>
+                <span class="chip">ID 0401</span>
+                <p><strong>Família Pizzirani</strong></p>
+                <p>Casado com <a href="0402_amaria.html">Antonia Maria Cunha</a>. Bisavô de <a href="0101-lorena.html">Lorena</a>, <a href="0102-alice.html">Alice</a>, <a href="0103-pedro.html">Pedro</a>, <a href="0104-rafael.html">Rafael</a>, <a href="0105-luna.html">Luna</a>, <a href="0106-gabriela.html">Gabriela</a>. Base da arvore da família Pizzirani. Avô de <a href="0302-patricia.html">Patricia</a> , <a href="0304_andrea.html">Andrea</a> e Marcelo.</p>
+            </div>
+        </section>
+
+        <section class="extra">
+            <h2>Fotos e comentarios</h2>
+            <div class="extra-grid">
+                <figure class="extra-item">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/arnaldoamariamarceloanacunhahelena.jpg" alt="Foto da reunião de família de Nicola Pizzirani">
+                    <p>Casamento Arnaldo Pizzirani & Antonia Maria Cunha Pizzirani, a direita dos nubentes Ezequiel e Helena pais da noiva a esquerda os pais do noivo Marcelo e Ana Cristina.</p>
+                </figure>
+                <figure class="extra-item">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/tudojuntoemisturado_2023.jpg" alt="Reunião na residencia do casal Sidnei/Patricia">
+                    <p>Encontro em 2023 na casa de <a href="0301-sidnei.html">Sidnei</a> e <a href="0302-patricia.html">Patricia</a> - acredito reuniao com todos do cla <a href="0401_arnaldo.html">Arnaldo</a>/<a href="0402_amaria.html">Antonia Maria</a>.</p>
+                </figure>
+                <figure class="extra-item">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/tudojuntoemisturado_2023_v02.jpg" alt="Reunião na residencia do casal Sidnei/Patricia (versão diferente)">
+                    <p>Encontro em 2023 na casa do Sidnei/Patricia - acredito reunião com todos do clã Arnaldo/Antonia Maria.(versão diferente).</p>
+                </figure>
+                <figure class="extra-item">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/oscinco2023.jpg" alt="Foto 3">
+                    <p>Em 2023, na casa da Patricia/Sidnei- nós; Patricia, Antonia Maria, Arnaldo Andrea e Marcelo.</p>
+                </figure>
+                 <figure class="extra-item">
+                    <img src="../../imagens/imagens_smais/0601_nicolapizzirani/familia_nicola_pizzirani_v02.jpg" alt="Foto 4 ">
+                    <p>Familia NICOLA PIZZIRANI & MARIA MAZZINI sentados ao centro, atrás em pé da esquerda p/ a direita, Alexandre, Lazaro, Marcelo, Augusto, Roque o jovem a esquerda Efésio, da direita Ismael, entre o casal Joel, as moças, da esquerda Dometila e da direita Hermenegilda.</p>
+                </figure>
+                 <figure class="extra-item">
+                    <img src="../../imagens/imagens_smais/0601_nicolapizzirani/familia_nicola_pizzirani_v03.jpg" alt="Foto 5">
+                    <p>Armazem de  SECOS E MOLHADOS NICOLA PIZZIRANI, Rua quatro esquina com Avenida doze, nesse local também eram comercializados (tijolos comuns), produzidos na OLARIA da familia, no Sitio Boa Vista, localizado na Rua 6 proximo ao Rio Corumbatai.</p>
+                </figure>
+                                 <figure class="extra-item">
+                                        <img src="../../imagens/extras/mansao-vila-indaia/9.jpg" alt="Foto 6">
+                                                    <p>Foto da mansao-nossa residencia.
+
+                            
+                                                        <a href="../extra-saiba-mais/mansao-vila-indaia.html?from=../saiba-mais/0401_arnaldo.html">Extra Saiba Mais: Vila Indaia</a>.</p>
+                                 </figure>  
+            </div>        </section>
+        <section class="extra extra-small">
+            <h2>Fotos menores (adicionais)</h2>
+            <div class="extra-grid-small">
+               
+                 <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/arnaldo_amaria_1964.jpg" alt="Foto casal Arnaldo e Antonia Maria">
+                    <p>Casamento Arnaldo Pizzirani & Antonia Maria Cunha Pizzirani.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/arnaldo_bebe.jpg" alt="Arnaldo bebê 1943/1944">
+                    <p>Arnaldo - bebê - Provavelmente no Sitio Boa Vista - 1943/1944</a></a></p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/arnaldo_corvina.jpg" alt="Resultado pescaria bem sucedida"></p>
+                    <p>Pescaria bem sucedida  - uma bela corvina - além de muitos outros peixes.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/arnaldo_solo_banhooleo_v01.jpg" alt="Após solo como PP">
+                    <p>No AERO CLUBE DE RIO CLARO, após solar (PRIMEIRO VOO SEM INSTRUTOR), como piloto privado (PP), BANHO DE OLEO - NO CANTO A DIREITA DA FOTO -meu filho MARCELO PIZZIRANI NETO.</p>
+                </figure>
+                 <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/arnaldo_focker255.jpg" alt="Foto 4 ">
+                    <p>Lancha -FOCKER 255- grandes aventuras maritimas.</p>
+                </figure>
+                 <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/arnaldo_marcelinho.jpg" alt="Foto 5">
+                    <p>Quando o Marcelinho foi nos visitar em Caraguatatuba - banho de mar na Martim de Sá.</p>
+                </figure>
+                 <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/reuniao_comnetosebisnetos-29-11-23.jpg" alt="Foto 6">
+                          <p>Encontro com familiares em 23/11/23, no ap de <a href="0401_arnaldo.html">Arnaldo</a> e <a href="0402_amaria.html">Antonia Maria</a>; no fundo, <a href="0402_amaria.html">Amaria</a> e <a href="0304_andrea.html">Andrea</a>, <a href="0208-marcella.html">Marcella</a>, <a href="0101-lorena.html">Lorena</a> e <a href="0204-sthefanie.html">Sthefanie</a>, <a href="0207-livia.html">Livia</a> e <a href="0401_arnaldo.html">Arnaldo</a>.</p>
+                 </figure>  
+             <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/arnaldo_sograhelena.jpg" alt="Foto 6">
+                          <p>Uma sogra maravilhosa D. Helena. <a href="0401_arnaldo.html">Arnaldo</a> e <a href="0402_amaria.html">Antonia Maria</a>; no fundo, <a href="0402_amaria.html">Amaria</a> e <a href="0304_andrea.html">Andrea</a>, <a href="0208-marcella.html">Marcella</a>, <a href="0101-lorena.html">Lorena</a> e <a href="0204-sthefanie.html">Sthefanie</a>, <a href="0207-livia.html">Livia</a> e <a href="0401_arnaldo.html">Arnaldo</a>.</p>
+                 </figure>  
+             </figure>
+                 <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/arnaldo-habilitacao_voo_a_vela.jpg" alt="Foto 5">
+                    <p>Minha habilitação para voo a vela.</p>
+                </figure>
+                 <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/arnaldo-viagsaopedrobike.jpg" alt="Foto 6">
+                          <p>Uma viagem de bike a S. Pedro com amigos Marcio Aily e Rubens Galvani <a href="0401_arnaldo.html">Arnaldo</a> e <a href="0402_amaria.html">Antonia Maria</a>; no fundo, <a href="0402_amaria.html">Amaria</a> e <a href="0304_andrea.html">Andrea</a>, <a href="0208-marcella.html">Marcella</a>, <a href="0101-lorena.html">Lorena</a> e <a href="0204-sthefanie.html">Sthefanie</a>, <a href="0207-livia.html">Livia</a> e <a href="0401_arnaldo.html">Arnaldo</a>.</p>
+                 </figure>  
+             <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/diapais.jpg" alt="Foto 6">
+                          <p>Num espetacular dia dos pais <a href="0401_arnaldo.html">Arnaldo</a> e <a href="0402_amaria.html">Antonia Maria</a>; no fundo, <a href="0402_amaria.html">Amaria</a> e <a href="0304_andrea.html">Andrea</a>, <a href="0208-marcella.html">Marcella</a>, e <a href="0204-sthefanie.html">Sthefanie</a>,  e <a href="0401_arnaldo.html">Arnaldo</a>.</p>
+                 </figure>  
+                  </figure>  
+             <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/diapais1.jpg" alt="Foto 6">
+                          <p>Num magnifico dia dos pais <a href="0401_arnaldo.html">Arnaldo</a> e <a href="0402_amaria.html">Antonia Maria</a>; no fundo, <a href="0402_amaria.html">Amaria</a> e <a href="0304_andrea.html">Andrea</a>, <a href="0208-marcella.html">Marcella</a></a> e <a href="0401_arnaldo.html">Arnaldo</a>.</p>
+                </figure>
+                 <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/diapais2.jpg" alt="Foto 5">
+                    <p>Noutro magnifico dia dos pais-reunidos filhos e netos.</p>
+                </figure>
+                 <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/lucas_sthefanie.jpg" alt="Foto 6">
+                          <p>Netos lindos os dois primeiros LUCAS e STHEFANIE. <a href="0401_arnaldo.html">Arnaldo</a> e <a href="0402_amaria.html">Antonia Maria</a>; no fundo, <a href="0402_amaria.html">Amaria</a> e <a href="0304_andrea.html">Andrea</a>, <a href="0208-marcella.html">Marcella</a>, <a href="0101-lorena.html">Lorena</a> e <a href="0204-sthefanie.html">Sthefanie</a>, <a href="0207-livia.html">Livia</a> e <a href="0401_arnaldo.html">Arnaldo</a>.</p>
+                 </figure>  
+                  <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/familia.jpg" alt="Foto 6">
+                          <p>Uma das muitas reuniões familiares.Marcelo, vó Helena,Sthefanie, Patricia, Barbara, Amaria, Arnaldo, Lucas, Pamela, Paula, Sidnei, Andrea e Flavio. <a href="0401_arnaldo.html">Arnaldo</a> e <a href="0402_amaria.html">Antonia Maria</a>; <a href="0402_amaria.html">Amaria</a> e <a href="0304_andrea.html">Andrea</a>, <a href="0208-marcella.html">Marcella</a>, <a href="0101-lorena.html">Lorena</a> e <a href="0204-sthefanie.html">Sthefanie</a> e <a href="0401_arnaldo.html">Arnaldo</a>.</p>
+                 </figure>  
+                   <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/arnaldo_lima_tg40.jpg" alt="Descricao da foto A1">
+                    <p>Valorosos guerreiros, Arnaldo -35- e Lima num treinamento na selva ( hummm).</p>
+                 </figure>
+                     <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/arnaldo_amaria_lambreta.jpg" alt="Foto A2">
+                    <p>Arnaldo e sua lambreta preta e branca com simbolo da caveira cruzada por duas tibias, na garupa a namorada que não andava de lambreta, o pais não liberava.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/arnaldo_joel_carrinho.jpg" alt="Foto A3">
+                    <p>Arnaldo - ainda um bebe - sendo cuidado pelo tio Joel.</p>
+                </figure>
+                 <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/amaria_escconcred.jpg" alt="Descricao da foto A1">
+                    <p>Sala de Reuniões na Concred, quando representantes da Crefisul S.A.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/arnaldo_escconcred.jpg" alt="Descricao da foto A2">
+                    <p>Sala de Reuniões na Concred, quando representantes da Crefisul S.A.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/arnaldo_amaria_carnagremio.jpg" alt="Descricao da foto A3">
+                    <p>Arnaldo e Amaria (primeiro carnaval com a namorada),no Baile do Grêmio, (1960/61/62).</p>
+                </figure>
+                 <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/arnaldo_lancha fischer.jpg" alt="Descricao da foto A2">
+                    <p>Arnaldo passeando com a lancha Fishing 22 muito à vontade.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/arnaldo_netospqs.jpg" alt="Descricao da foto A3">
+                    <p>Arnaldo curtindo os netos ainda pequenos, não vejo a Barbara, talvez ainda não tenha chegado.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/arnaldo_varanda_ceva.jpg" alt="Descricao da foto A2">
+                    <p>Arnaldo num fim de tarde se deliciando com uma cerveja gelada em sua recen construida casa nova.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/arnaldo_patricia_amaria_piscina.jpeg" alt="Descricao da foto A3">
+                    <p>Arnaldo Arnaldo, Patricia e Antonia Maria curtindo uma tarde descontraidamente.</p>
+                </figure>
+                 <figure class="extra-item extra-item-small">
+                  <img src="../../imagens/imagens_smais/0401_arnaldo/arnaldo1957.jpg" alt="Descricao da foto A2">
+                    <p>Arnaldo numa foto de 1957.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/arnaldodecadade60.jpg" alt="Descricao da foto A3">
+                    <p>Arnaldo em foto da decada de 60.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                  <img src="../../imagens/imagens_smais/0401_arnaldo/arnaldogg.jpg" alt="Descricao da foto A2">
+                    <p>Arnaldo em outra foto da decada de 60</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/arnaldoamariaconvcrefrgs.jpeg" alt="Descricao da foto A3">
+                    <p>Arnaldo e Amaria chegando à Convenção do Banco Crefisul em Gramado, RS.</p>
+                </figure>
+                  <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/arnaldomarcelinhopiscina.jpeg" alt="Descricao da foto B1">
+                    <p>Arnaldo e Marcelinho curtindo uma tarde na piscina.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/atikotikaenossa.jpg" alt="Descricao da foto B2">
+                    <p>Arnaldo em S. J. do Rio Preto, cuidando do batismo da nossa "tiko tika", Sthefanie, nossa, sim porque é nossa e o boi não lambe! Padrinhos Marcelo Pizziran Neto e Vanessa Graciano, hoje Vanessa Graciano Mazaro.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/familiaparcial.jpg" alt="Descricao da foto B3">
+                    <p>Descrever os familiares presentes na foto.</p>
+                </figure>
+                  <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/todosnamarajo.jpg" alt="Descricao da foto A3">
+                    <p>Passeio de lancha (Marajó), alias o nome da lancha era "Sonho Meu.</p>
+                </figure>
+                  <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/patricia15anosjornal.jpg" alt="Descricao da foto B1">
+                    <p>Patrícia aos 15 anos, conforme destaque em jornal.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/sthefaniedobermangregory.jpg" alt="Descricao da foto B2">
+                    <p>Sthefanie e Gregory (nosso doberman) em nossa casa.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/neto_nagandaia.jpg" alt="Descricao da foto B3">
+                    <p>Essa pra encerrar (por hoje), Marcelo, não o meu pai, mas o meu filho na gandaia, quem quiser saber detalhes perguntem pra ele.</p>
+                </figure>
+                -->
+
+                <!-- BLOCO MODELO B (3 cards) - copiar/colar conforme necessidade -->
+                <!--
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/nome_da_foto_B1.jpg" alt="Descricao da foto B1">
+                    <p>Comentario da foto B1.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/nome_da_foto_B2.jpg" alt="Descricao da foto B2">
+                    <p>Comentario da foto B2.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/nome_da_foto_B3.jpg" alt="Descricao da foto B3">
+                    <p>Comentario da foto B3.</p>
+                </figure>
+                <!-- BLOCO MODELO A (3 cards) - copiar/colar conforme necessidade -->
+                <!--
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/nome_da_foto_A1.jpg" alt="Descricao da foto A1">
+                    <p>Comentario da foto A1.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/nome_da_foto_A2.jpg" alt="Descricao da foto A2">
+                    <p>Comentario da foto A2.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/nome_da_foto_A3.jpg" alt="Descricao da foto A3">
+                    <p>Comentario da foto A3.</p>
+                </figure>
+                -->
+
+                <!-- BLOCO MODELO B (3 cards) - copiar/colar conforme necessidade -->
+                <!--
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/nome_da_foto_B1.jpg" alt="Descricao da foto B1">
+                    <p>Comentario da foto B1.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/nome_da_foto_B2.jpg" alt="Descricao da foto B2">
+                    <p>Comentario da foto B2.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/nome_da_foto_B3.jpg" alt="Descricao da foto B3">
+                    <p>Comentario da foto B3.</p>
+                </figure>
+                -->
+
+                <!-- BLOCO MODELO C (3 cards) - copiar/colar conforme necessidade -->
+                <!--
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/nome_da_foto_C1.jpg" alt="Descricao da foto C1">
+                    <p>Comentario da foto C1.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/nome_da_foto_C2.jpg" alt="Descricao da foto C2">
+                    <p>Comentario da foto C2.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/imagens_smais/0401_arnaldo/nome_da_foto_C3.jpg" alt="Descricao da foto C3">
+                    <p>Comentario da foto C3.</p>
+                </figure>
+                -->
+             
+            </div>
+        </section>
+
+        <section class="story">
+            <h2>Historia</h2>
+            <p>Nicola Pizzirani imigrou da Italia ........</p>
+            <p>Se preferir, adicione parágrafos curtos para leitura mais confortável.</p>
+            <p>Paragrafo 3 da historia.</p>
+            <p>Paragrafo 4 da historia.</p>
+        </section>
+    </main>
+
+    <div class="img-lightbox" aria-hidden="true" role="dialog" aria-label="Visualizacao ampliada de imagem">
+        <button class="img-lightbox-close" type="button" aria-label="Fechar visualizacao">×</button>
+        <img src="" alt="Imagem ampliada">
+    </div>
+    <a href="#topo" class="topo-fixo" aria-label="Voltar ao topo">Topo</a>
+    <script>
+        (function () {
+            const overlay = document.querySelector('.img-lightbox');
+            if (!overlay) return;
+
+            const overlayImg = overlay.querySelector('img');
+            const closeBtn = overlay.querySelector('.img-lightbox-close');
+
+            function openImageLightbox(sourceImg) {
+                if (!overlayImg) return;
+                overlayImg.src = sourceImg.currentSrc || sourceImg.src;
+                overlayImg.alt = sourceImg.alt || 'Imagem ampliada';
+                overlay.classList.add('active');
+                overlay.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeImageLightbox() {
+                if (!overlayImg) return;
+                overlay.classList.remove('active');
+                overlay.setAttribute('aria-hidden', 'true');
+                overlayImg.src = '';
+                overlayImg.alt = 'Imagem ampliada';
+                document.body.style.overflow = '';
+            }
+
+            document.querySelectorAll('.photo-box img, .extra-item img').forEach(function (img) {
+                img.addEventListener('click', function () {
+                    openImageLightbox(img);
+                });
+            });
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeImageLightbox);
+            }
+
+            overlay.addEventListener('click', function (event) {
+                if (event.target === overlay) {
+                    closeImageLightbox();
+                }
+            });
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape' && overlay.classList.contains('active')) {
+                    closeImageLightbox();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

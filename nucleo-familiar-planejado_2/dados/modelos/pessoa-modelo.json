@@ -1,0 +1,11 @@
+{
+  "id": "0001",
+  "nome": "Nome da Pessoa",
+  "codigoGenealogico": "G1A-0001",
+  "pagina": "saiba-mais/0001-nome-da-pessoa.html",
+  "imagem": "imagens/pessoas/0001-nome-da-pessoa.jpg",
+  "relacoes": {
+    "pai": "0002",
+    "mae": "0003"
+  }
+}

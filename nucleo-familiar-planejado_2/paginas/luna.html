@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Luna - Arvore Genealogica</title>
+  <link rel="stylesheet" href="arvores.css?v=20260706">
+    <script defer src="../js/arvore-propagacao.js?v=20260716d"></script>
+</head>
+<body>
+  <div id="lightbox" class="lightbox"><img id="lightbox-img" src="" alt=""></div>
+  <div class="container">
+    <header>
+      <h1 id="arvore-title">Bisneta Luna - Piramide da Familia</h1>
+      <h2 id="arvore-subtitle">Um universo de ancestrais visto a partir da bisneta Luna</h2>
+    </header>
+
+    <div class="acesso-discreto"><a href="../elo_indice.html">voltar ao Nucleo Familiar</a></div>
+
+    <nav class="ordem-arvores" aria-label="Ordem padrao das arvores">
+      <a class="ordem-link" href="lorena.html"><img class="ordem-thumb" src="../imagens/ancestrais/1-bisnetos/0101_lorena.jpg" alt="Lorena"><span class="ordem-label"><span class="ordem-num">1</span><span class="ordem-nome">Lorena</span></span></a>
+      <a class="ordem-link" href="alice.html"><img class="ordem-thumb" src="../imagens/ancestrais/1-bisnetos/0102_alice.jpg" alt="Alice"><span class="ordem-label"><span class="ordem-num">2</span><span class="ordem-nome">Alice</span></span></a>
+      <a class="ordem-link" href="pedro.html"><img class="ordem-thumb" src="../imagens/ancestrais/1-bisnetos/0103_pedro.jpg" alt="Pedro"><span class="ordem-label"><span class="ordem-num">3</span><span class="ordem-nome">Pedro</span></span></a>
+      <a class="ordem-link" href="rafael.html"><img class="ordem-thumb" src="../imagens/ancestrais/1-bisnetos/0104_rafael.jpg" alt="Rafael"><span class="ordem-label"><span class="ordem-num">4</span><span class="ordem-nome">Rafael</span></span></a>
+      <span class="ordem-link ordem-link-ativa"><img class="ordem-thumb" src="../imagens/ancestrais/1-bisnetos/0105_luna.jpg" alt="Luna"><span class="ordem-label"><span class="ordem-num">5</span><span class="ordem-nome">Luna</span></span></span>
+      <a class="ordem-link" href="gabriela.html"><img class="ordem-thumb" src="../imagens/ancestrais/1-bisnetos/0106_gabriela.jpg" alt="Gabriela"><span class="ordem-label"><span class="ordem-num">6</span><span class="ordem-nome">Gabriela</span></span></a>
+    </nav>
+
+    <section class="piramide-inversa">
+      <div class="piramide-title">Piramide</div>
+      <div class="piramide-subtitle">Da base (bisneto) as raizes da familia.</div>
+      <div class="piramide-inversa-inner" id="piramide-root"></div>
+    </section>
+
+    <footer class="rodape-arvore" aria-label="Observação sobre as faixas de geração">
+      <p>Nas faixas separadoras, mostramos o total teórico de antepassados por geração, calculado por duplicação sucessiva. Nem todos os nomes foram identificados, mas a progressão evidencia claramente o aumento de antecessores a cada nível.</p>
+    </footer>
+  </div>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      window.initArvorePropagacao({
+        treeKey: 'luna',
+        containerId: 'piramide-root',
+        dataPath: '../dados/arvore-luna-individual.json?v=20260716c',
+        imagePrefix: '../'
+      });
+    });
+  </script>
+</body>
+</html>
+

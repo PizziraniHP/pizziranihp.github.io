@@ -3,15 +3,15 @@
                          "g2-marcella-livia":  [
                                                    {
                                                        "id":  "0207",
-                                                       "nome":  "Mae da Gabriela",
-                                                       "detalhe":  "Livia",
+                                                       "nome":  "Livia",
+                                                       "detalhe":  "Mae da Gabriela",
                                                        "ramo":  "paterno",
                                                        "imagem":  "imagens/ancestrais/2-pais/0207_livia.jpg"
                                                    },
                                                    {
                                                        "id":  "0208",
-                                                       "nome":  "Mae da Gabriela",
-                                                       "detalhe":  "Marcella",
+                                                       "nome":  "Marcella",
+                                                       "detalhe":  "Mae da Gabriela",
                                                        "ramo":  "materno",
                                                        "imagem":  "imagens/ancestrais/2-pais/0208_marcella.jpg"
                                                    }
@@ -19,93 +19,102 @@
                          "g3-gabriela":  [
                                              {
                                                  "id":  "0311",
-                                                 "nome":  "Pai da Livia",
-                                                 "detalhe":  "AVO PATERNO",
+                                                 "nome":  " Edson Andrade D'Ávila",
+                                                 "detalhe":  "AVO",
                                                  "ramo":  "paterno",
-                                                 "imagem":  "imagens/ancestrais/3-avos/0311_paidalivia_avogabriela.jpg"
+                                                 "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg",
+                                                 "saibamaislink":  "paginas/saiba-mais/0311_edsonandradedavila.html"
+
                                              },
                                              {
                                                  "id":  "0312",
                                                  "nome":  "Marcia",
-                                                 "detalhe":  "AVO PATERNA",
+                                                 "detalhe":  "AVO",
                                                  "ramo":  "paterno",
-                                                 "imagem":  "imagens/ancestrais/3-avos/0312_marcia.jpg"
+                                                 "imagem":  "imagens/ancestrais/3-avos/0312_marcia.jpg",
+                                                 "saibamaislink":  "paginas/saiba-mais/0312_marcia.html"
                                              },
                                              {
                                                  "id":  "0303",
-                                                 "nome":  "Flavio Melo",
-                                                 "detalhe":  "AVO MATERNO",
+                                                 "nome":  "Flavio Mello",
+                                                 "detalhe":  "AVO",
                                                  "ramo":  "materno",
-                                                 "imagem":  "imagens/ancestrais/3-avos/0303_flaviomelo.jpg"
+                                                 "imagem":  "imagens/ancestrais/3-avos/0303_flaviomelo.jpg",
+                                                    "saibamaislink":  "paginas/saiba-mais/0303_flaviomello.html"
                                              },
                                              {
                                                  "id":  "0304",
                                                  "nome":  "Andrea",
-                                                 "detalhe":  "AVO MATERNA",
+                                                 "detalhe":  "AVO",
                                                  "ramo":  "materno",
-                                                 "imagem":  "imagens/ancestrais/3-avos/0304_andrea.jpg"
+                                                 "imagem":  "imagens/ancestrais/3-avos/0304_andrea.jpg",
+                                                "saibamaislink":  "paginas/saiba-mais/0304_andrea.html"
                                              }
                                          ],
                          "g4-pedro-gabriela":  [
                                                    {
-                                                       "id":  "",
-                                                       "nome":  "Bisavo / Bisavo",
-                                                       "detalhe":  "Informacoes",
+                                                       "id":  "0497",
+                                                       "nome":  "Orlando D'Ávila",
+                                                       "detalhe":  "AVO da Livia -Bisavo da Gabriela",
                                                        "ramo":  "paterno",
-                                                       "imagem":  "imagens/ancestrais/4-bisavos/0400_paidef.jpg",
-                                                       "placeholder":  true
+                                                       "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg",
+                                                       "saibamaislink":  "paginas/saiba-mais/0497_orlandodavila-janetedavila.html"
                                                    },
                                                    {
-                                                       "id":  "",
-                                                       "nome":  "Bisavo / Bisavo",
-                                                       "detalhe":  "Informacoes",
+                                                       "id":  "0498",
+                                                       "nome":  "Janete Andrade D'Ávila",
+                                                       "detalhe":  "AVO da Livia -Bisavo da Gabriela",
                                                        "ramo":  "paterno",
-                                                       "imagem":  "imagens/ancestrais/4-bisavos/0400_maedef.jpg",
-                                                       "placeholder":  true
+                                                       "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg",
+                                                       "saibamaislink":  "paginas/saiba-mais/0497_orlandodavila-janetedavila.html"
                                                    },
                                                    {
-                                                       "id":  "",
-                                                       "nome":  "Bisavo / Bisavo",
-                                                       "detalhe":  "Informacoes",
+                                                       "id":  "0495",
+                                                       "nome":  "Joao Bonafe Filho",
+                                                       "detalhe":  "Pai da Marcia, bisavo da Gabriela",
                                                        "ramo":  "paterno",
-                                                       "imagem":  "imagens/ancestrais/4-bisavos/0400_paidef.jpg",
-                                                       "placeholder":  true
+                                                       "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg",
+                                                       "saibamaislink":  "paginas/saiba-mais/0403_flavioolivettepaidoflaviomelo.html"
                                                    },
                                                    {
-                                                       "id":  "",
-                                                       "nome":  "Bisavo / Bisavo",
-                                                       "detalhe":  "Informacoes",
+                                                       "id":  "0496",
+                                                       "nome":  "Clea Christofoletti Bonafe",
+                                                       "detalhe":  "Mae da Marcia, bisavo da Gabriela",
                                                        "ramo":  "paterno",
-                                                       "imagem":  "imagens/ancestrais/4-bisavos/0400_maedef.jpg",
-                                                       "placeholder":  true
+                                                       "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg",
+                                                        "saibamaislink":  "paginas/saiba-mais/0403_flavioolivettepaidoflaviomelo.html"
                                                    },
                                                    {
                                                        "id":  "0403",
-                                                       "nome":  "Pai do Flavio Melo",
-                                                       "detalhe":  "BISAVO",
+                                                       "nome":  "Flavio Olivette Mello",
+                                                       "detalhe":  "AVO da Marcella -Bisavo da Gabriela",
                                                        "ramo":  "materno",
-                                                       "imagem":  "imagens/ancestrais/4-bisavos/0403_paidoflaviomelo.jpg"
+                                                       "imagem":  "imagens/ancestrais/4-bisavos/0403_paidoflaviomelo.jpg",
+                                                         "saibamaislink":  "paginas/saiba-mais/0403_flavioolivettepaidoflaviomelo.html"
                                                    },
                                                    {
                                                        "id":  "0404",
-                                                       "nome":  "Mae do Flavio Melo",
-                                                       "detalhe":  "BISAVO",
+                                                       "nome":  "Teresinha A. C. Mello",
+                                                       "detalhe":  "AVO da Marcella -Bisavo da Gabriela",
                                                        "ramo":  "materno",
-                                                       "imagem":  "imagens/ancestrais/4-bisavos/0404_maedoflaviomelo.jpg"
+                                                       "imagem":  "imagens/ancestrais/4-bisavos/0404_maedoflaviomelo.jpg",
+                                                          "saibamaislink":  "paginas/saiba-mais/0403_flavioolivettepaidoflaviomelo.html"
                                                    },
                                                    {
                                                        "id":  "0401",
                                                        "nome":  "Arnaldo",
-                                                       "detalhe":  "BISAVO MATERNO",
+                                                       "detalhe":  "BISAVO",
                                                        "ramo":  "materno",
-                                                       "imagem":  "imagens/ancestrais/4-bisavos/0401_arnaldo.jpg"
+                                                       "imagem":  "imagens/ancestrais/4-bisavos/0401_arnaldo.jpg",
+                                                          "saibamaislink":  "paginas/saiba-mais/0401_arnaldo-antonia.html"
                                                    },
                                                    {
                                                        "id":  "0402",
                                                        "nome":  "Antonia Maria",
-                                                       "detalhe":  "BISAVO MATERNO",
+                                                       "detalhe":  "BISAVO",
                                                        "ramo":  "materno",
-                                                       "imagem":  "imagens/ancestrais/4-bisavos/0402_amaria.jpg"
+                                                       "imagem":  "imagens/ancestrais/4-bisavos/0402_amaria.jpg",
+                                                          "saibamaislink":  "paginas/saiba-mais/0401_arnaldo-antonia.html"
                                                    }
                                                ],
                          "g5-pedro-gabriela":  [

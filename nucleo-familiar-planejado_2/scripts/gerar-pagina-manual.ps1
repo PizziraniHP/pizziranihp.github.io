@@ -15,7 +15,7 @@ if ([string]::IsNullOrWhiteSpace($DataFile)) {
   if (Test-Path $candidate) {
     $DataFile = $candidate
   } else {
-    $DataFile = Join-Path $repoRoot "dados/arvores-propagacao.json"
+    throw "Arquivo individual nao encontrado para '$TreeKey': $candidate"
   }
 } else {
   $DataFile = Join-Path $repoRoot $DataFile

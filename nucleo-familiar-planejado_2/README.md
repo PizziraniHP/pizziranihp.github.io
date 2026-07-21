@@ -24,32 +24,20 @@ Para evitar repeticao manual entre as duas bases:
 
 Se houver qualquer divergencia, o comando retorna erro e interrompe.
 
-## Geracao generalizada de arvores individuais
+## Fluxo atual das arvores
 
-Para evitar colcha de retalhos por correcoes pontuais, as arvores individuais devem ser sempre geradas a partir da fonte canonica `dados/arvores-propagacao.json`.
+Fluxo oficial atual: manutencao manual por arvore individual.
 
-- Gerar uma arvore:
-	- `scripts\gerar-arvore-individual.cmd alice`
-- Gerar todas:
-	- `scripts\gerar-arvore-individual.cmd --all`
+- Cada pagina principal em `paginas/` aponta para seu proprio arquivo em `dados/arvore-*-individual.json`.
+- As alteracoes passam a ser feitas diretamente no arquivo individual do bisneto.
+- O gerador automatico pode ser mantido apenas como ferramenta de legado, nao como etapa obrigatoria.
 
-Regras do gerador:
+## Legado de propagacao
 
-- Coleta automaticamente apenas os `sharedBlocks` referenciados pela arvore.
-- Escreve JSON em UTF-8 sem BOM para evitar corrupcao de acentuacao.
-- Evita edicao manual nos arquivos `dados/arvore-*-individual.json`.
+Arquivos e scripts de propagacao antiga foram mantidos apenas para consulta historica e compatibilidade.
 
-## Espelho exato do planejado antigo
-
-Quando a meta for manter copia exata do canônico do projeto antigo para evitar retrabalho:
-
-- `scripts\espelhar-planejado-antigo.cmd`
-
-Esse comando:
-
-- Compara hash de `dados/arvores-propagacao.json` entre antigo e `planejado_2`.
-- Copia o canônico antigo para `planejado_2` apenas se houver divergência (ou com `-Force`).
-- Regenera todas as arvores individuais com o gerador padrão.
+- Fluxo diario nao depende mais de `dados/arvores-propagacao.json`.
+- Evite usar espelhamento/regeneracao como parte do cadastro normal.
 
 ## Operacao segura (sem perda de dados)
 
@@ -89,14 +77,14 @@ Saida de checkpoint:
 4. Consolidar imagens e links de paginas.
 5. Validar homogeneidade antes de publicar qualquer etapa.
 
-## Regra de edicao (propagacao)
+## Regra de edicao (manual por arvore)
 
-Para evitar misturar arquivos manuais com arquivos de propagacao, use esta regra:
+Para manter previsibilidade e reduzir erro humano:
 
 - Paginas principais canonicas dos 6 bisnetos ficam em `paginas/` (ex.: `paginas/lorena.html`, `paginas/alice.html`).
-- Quer alterar um ancestral compartilhado por varios bisnetos: editar `dados/arvores-propagacao.json`.
-- Quer alterar dados gerais de pessoa (nome, imagem, pagina): editar `dados/pessoas-v2-cartoes-base.json`.
-- Quer alterar o comportamento de renderizacao para todas as arvores de propagacao: editar `js/arvore-propagacao.js`.
+- Altere dados da arvore no arquivo individual correspondente (`dados/arvore-*-individual.json`).
+- Altere dados gerais de pessoa no cadastro oficial (`dados/pessoas-v2-cartoes-base.json`) quando aplicavel.
+- Ajustes de layout/comportamento global continuam em `js/arvore-propagacao.js` e `paginas/arvores.css`.
 
 ## Checklist curto antes de editar
 
@@ -145,7 +133,7 @@ Use este treino quando ainda nao houver ancestral confirmado e voce quiser prati
 
 ### 1) Trocar placeholder por casal fake de treino
 
-No arquivo `dados/arvores-propagacao.json`, em um bloco de geracao 8 (hexavos), voce pode substituir dois placeholders por um casal ficticio:
+No arquivo individual do bisneto (por exemplo `dados/arvore-lorena-individual.json`), em um bloco de geracao 8 (hexavos), voce pode substituir dois placeholders por um casal ficticio:
 
 ```json
 {
@@ -233,7 +221,7 @@ Observacao: use sempre endereco ficticio em dados de treino.
 
 Use este fluxo toda vez que for treinar ou inserir novo ancestral:
 
-1. Escolher a geracao e o bloco correto em `dados/arvores-propagacao.json`.
+1. Escolher a geracao e o bloco correto no `dados/arvore-*-individual.json` do bisneto.
 2. Inserir os dois cartoes (pai e mae), com `id` valido e `ramo` coerente.
 3. Definir `imagem` na pasta certa da geracao e marcar `confianca` como `fake` quando for treino.
 4. Recarregar a pagina principal da arvore e conferir ordem visual + contagem da geracao.

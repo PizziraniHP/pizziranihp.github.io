@@ -22,28 +22,32 @@
                                                     "nome":  "Sidnei",
                                                     "detalhe":  "AVO MATERNO",
                                                     "ramo":  "materno",
-                                                    "imagem":  "imagens/ancestrais/3-avos/0301_sidnei.jpg"
+                                                    "imagem":  "imagens/ancestrais/3-avos/0301_sidnei.jpg",
+                                                    "saibamaislink":  "paginas/saiba-mais/0301-sidnei-patricia.html"
                                                 },
                                                 {
                                                     "id":  "0302",
                                                     "nome":  "Patricia",
                                                     "detalhe":  "AVO MATERNA",
                                                     "ramo":  "materno",
-                                                    "imagem":  "imagens/ancestrais/3-avos/0302_patricia.jpg"
+                                                    "imagem":  "imagens/ancestrais/3-avos/0302_patricia.jpg",
+                                                    "saibamaislink":  "paginas/saiba-mais/0301-sidnei-patricia.html"
                                                 },
-                                                {
-                                                    "id":  "0318",
+                                               {
+                                                    "id":  "0319",
                                                     "nome":  "Odeon",
                                                     "detalhe":  "AVO PATERNO",
                                                     "ramo":  "paterno",
-                                                    "imagem":  "imagens/ancestrais/3-avos/0318_odeon.jpg"
+                                                    "imagem":  "imagens/ancestrais/3-avos/0319_odeon.jpg",
+                                                    "saibamaislink":  "paginas/saiba-mais/0319-odeon-luciene.html"
                                                 },
                                                 {
-                                                    "id":  "0319",
+                                                    "id":  "0318",
                                                     "nome":  "Luciene",
                                                     "detalhe":  "AVO PATERNA",
                                                     "ramo":  "paterno",
-                                                    "imagem":  "imagens/ancestrais/3-avos/0319_luciene.jpg"
+                                                    "imagem":  "imagens/ancestrais/3-avos/0318_luciene.jpg",
+                                                    "saibamaislink":  "paginas/saiba-mais/0319-odeon-luciene.html"
                                                 }
                                             ],
                          "g4-paterno-comum":  [
@@ -52,7 +56,8 @@
                                                       "nome":  "Julio",
                                                       "detalhe":  "BISAVO PATERNO",
                                                       "ramo":  "paterno",
-                                                      "imagem":  "imagens/ancestrais/4-bisavos/0405_juliodesouzarocha.jpg"
+                                                      "imagem":  "imagens/ancestrais/4-bisavos/0405_juliodesouzarocha.jpg",
+                                                        "saibamaislink":  "paginas/saiba-mais/0405_juliodesouzarocha-terezinha.html"
                                                   },
                                                   {
                                                       "id":  "0406",
@@ -66,14 +71,16 @@
                                                       "nome":  "Julio",
                                                       "detalhe":  "BISAVO MATERNO",
                                                       "ramo":  "paterno",
-                                                      "imagem":  "imagens/ancestrais/4-bisavos/0407_julioramos.jpg"
+                                                      "imagem":  "imagens/ancestrais/4-bisavos/0407_julioramos.jpg",
+                                                        "saibamaislink":  "paginas/saiba-mais/0407_julioramos-leontina.html"
                                                   },
                                                   {
                                                       "id":  "0408",
                                                       "nome":  "Leontina",
                                                       "detalhe":  "BISAVO MATERNO",
                                                       "ramo":  "paterno",
-                                                      "imagem":  "imagens/ancestrais/4-bisavos/0408_leontinamariaramos.jpg"
+                                                      "imagem":  "imagens/ancestrais/4-bisavos/0408_leontinamariaramos.jpg",
+                                                        "saibamaislink":  "paginas/saiba-mais/0407_julioramos-leontina.html"
                                                   }
                                               ],
                          "g4-materno-comum":  [
@@ -82,14 +89,16 @@
                                                       "nome":  "Indalecio",
                                                       "detalhe":  "BISAVO PATERNO",
                                                       "ramo":  "materno",
-                                                      "imagem":  "imagens/ancestrais/4-bisavos/0409_indaleciomarola.jpg"
+                                                      "imagem":  "imagens/ancestrais/4-bisavos/0409_indaleciomarola.jpg",
+                                                        "saibamaislink":  "paginas/saiba-mais/0409_indaleciomarola-tereza.html"
                                                   },
                                                   {
                                                       "id":  "0410",
                                                       "nome":  "Tereza",
                                                       "detalhe":  "BISAVO PATERNO",
                                                       "ramo":  "materno",
-                                                      "imagem":  "imagens/ancestrais/4-bisavos/0410_terezamarola.jpg"
+                                                      "imagem":  "imagens/ancestrais/4-bisavos/0410_terezamarola.jpg",
+                                                        "saibamaislink":  "paginas/saiba-mais/0409_indaleciomarola-tereza.html"
                                                   },
                                                   {
                                                       "id":  "0401",
@@ -112,28 +121,33 @@
                                                       "nome":  "Pai de Julio de Souza Rocha",
                                                       "detalhe":  "TRISAVO",
                                                       "ramo":  "materno",
-                                                      "imagem":  "imagens/ancestrais/5-trisavos/0509_paijuliosrocha_trisavoali_rafael.jpg"
+                                                      "imagem":  "imagens/ancestrais/5-trisavos/0509_paijuliosrocha_trisavoali_rafael.jpg",
+                                                        "saibamaislink":  "paginas/saiba-mais/0509_rochas-ramos-esposas-8familiares.html"
+
                                                   },
                                                   {
                                                       "id":  "0510",
                                                       "nome":  "Mae de Julio de Souza Rocha",
                                                       "detalhe":  "TRISAVO",
                                                       "ramo":  "materno",
-                                                      "imagem":  "imagens/ancestrais/5-trisavos/0510_maejuliosrocha.jpg"
+                                                      "imagem":  "imagens/ancestrais/5-trisavos/0510_maejuliosrocha.jpg",
+                                                        "saibamaislink":  "paginas/saiba-mais/0509_rochas-ramos-esposas-8familiares.html"
                                                   },
                                                   {
                                                       "id":  "0511",
                                                       "nome":  "Pai de Terezinha",
                                                       "detalhe":  "TRISAVO",
                                                       "ramo":  "materno",
-                                                      "imagem":  "imagens/ancestrais/5-trisavos/0511_paidaterezinha_trisavoalice_rafael.jpg"
+                                                      "imagem":  "imagens/ancestrais/5-trisavos/0511_paidaterezinha_trisavoalice_rafael.jpg",
+                                                        "saibamaislink":  "paginas/saiba-mais/0509_rochas-ramos-esposas-8familiares.html"
                                                   },
                                                   {
                                                       "id":  "0512",
                                                       "nome":  "Mae de Terezinha",
                                                       "detalhe":  "TRISAVO",
                                                       "ramo":  "materno",
-                                                      "imagem":  "imagens/ancestrais/5-trisavos/0512_maeterezinhasrocha_trisavoalice_rafael.jpg"
+                                                      "imagem":  "imagens/ancestrais/5-trisavos/0512_maeterezinhasrocha_trisavoalice_rafael.jpg",
+                                                        "saibamaislink":  "paginas/saiba-mais/0509_rochas-ramos-esposas-8familiares.html"
                                                   },
                                                  
                                                 
@@ -143,28 +157,33 @@
                                                       "nome":  "Silvio Marola",
                                                       "detalhe":  "TRISAVO",
                                                       "ramo":  "paterno",
-                                                      "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg"
+                                                      "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg",
+                                                        "saibamaislink":  "paginas/saiba-mais/0505_familia-pais-indalecio-e-tereza.html"
+                                                      
                                                   },
                                                   {
                                                       "id":  "0506",
                                                       "nome":  "Herminia Massaro Marola",
                                                       "detalhe":  "TRISAVO",
                                                       "ramo":  "paterno",
-                                                      "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg"
+                                                      "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg",
+                                                        "saibamaislink":  "paginas/saiba-mais/0505_familia-pais-indalecio-e-tereza.html"
                                                   },
                                                   {
                                                       "id":  "0507",
                                                       "nome":  "José de Araújo Pinto",
                                                       "detalhe":  "TRISAVO",
                                                       "ramo":  "paterno",
-                                                      "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg"
+                                                      "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg",
+                                                        "saibamaislink":  "paginas/saiba-mais/0505_familia-pais-indalecio-e-tereza.html"
                                                   },
                                                   {
                                                       "id":  "0508",
                                                       "nome":  "Maria Zaia Pinto",
                                                       "detalhe":  "TRISAVO",
                                                       "ramo":  "paterno",
-                                                      "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg"
+                                                      "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg",
+                                                        "saibamaislink":  "paginas/saiba-mais/0505_familia-pais-indalecio-e-tereza.html"
                                                   }
                                               ],
                          "g5-materno-comum":  [
@@ -174,28 +193,32 @@
                                                       "nome":  "Pai de Julio Ramos",
                                                       "detalhe":  "TRISAVO",
                                                       "ramo":  "materno",
-                                                      "imagem":  "imagens/ancestrais/5-trisavos/0513_paidejulioramos_trisavoalice_rafael.jpg"
+                                                      "imagem":  "imagens/ancestrais/5-trisavos/0513_paidejulioramos_trisavoalice_rafael.jpg",
+                                                        "saibamaislink":  "paginas/saiba-mais/0509_rochas-ramos-esposas-8familiares.html"
                                                   },
                                                   {
                                                       "id":  "0514",
                                                       "nome":  "Mae de Julio Ramos",
                                                       "detalhe":  "TRISAVO",
                                                       "ramo":  "materno",
-                                                      "imagem":  "imagens/ancestrais/5-trisavos/0514_maejulioramos.jpg"
+                                                      "imagem":  "imagens/ancestrais/5-trisavos/0514_maejulioramos.jpg",
+                                                        "saibamaislink":  "paginas/saiba-mais/0509_rochas-ramos-esposas-8familiares.html"
                                                   },
                                                   {
                                                       "id":  "0515",
                                                       "nome":  "Pai de Leontina",
                                                       "detalhe":  "TRISAVO",
                                                       "ramo":  "materno",
-                                                      "imagem":  "imagens/ancestrais/5-trisavos/0515_paileontina_trisavoalice_rafael.jpg"
+                                                      "imagem":  "imagens/ancestrais/5-trisavos/0515_paileontina_trisavoalice_rafael.jpg",
+                                                        "saibamaislink":  "paginas/saiba-mais/0509_rochas-ramos-esposas-8familiares.html"
                                                   },
                                                   {
                                                       "id":  "0516",
                                                       "nome":  "Mae de Leontina",
                                                       "detalhe":  "TRISAVO",
                                                       "ramo":  "materno",
-                                                      "imagem":  "imagens/ancestrais/5-trisavos/0516_maeleontina.jpg"
+                                                      "imagem":  "imagens/ancestrais/5-trisavos/0516_maeleontina.jpg",
+                                                        "saibamaislink":  "paginas/saiba-mais/0509_rochas-ramos-esposas-8familiares.html"
                                                   },
                                                    {
                                                       "id":  "0501",
@@ -227,201 +250,229 @@
                                                   }
                                               ],
                          "g6-paterno-comum":  [
-                                                  {
+                                                 {
                                               "id":  "0681",
                                               "nome":  "pai do pai julio de souza rocha",
                                               "detalhe":  "TETRAVO",
                                               "ramo":  "materno",
-                                              "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg"
+                                              "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg",
+                                              "saibamaislink":  "paginas/saiba-mais/0681_familias-rocha-ramos-g6-16familiares.html"
                                           },
                                           {
                                               "id":  "0682",
                                               "nome":  "mae do pai julio de souza rocha",
                                               "detalhe":  "TETRAVO",
                                               "ramo":  "materno",
-                                              "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg"
+                                              "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg",
+                                                "saibamaislink":  "paginas/saiba-mais/0681_familias-rocha-ramos-g6-16familiares.html"
                                           },
                                           {
                                               "id":  "0683",
                                               "nome":  "pai da mae do julio de souza rocha",
                                               "detalhe":  "TETRAVO",
                                               "ramo":  "materno",
-                                              "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg"
+                                              "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg",
+                                                "saibamaislink":  "paginas/saiba-mais/0681_familias-rocha-ramos-g6-16familiares.html"
                                           },
                                           {
                                               "id":  "0684",
                                               "nome":  "mae da mae do julio de souza rocha",
                                               "detalhe":  "TETRAVO",
                                               "ramo":  "materno",
-                                              "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg"
+                                              "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg",
+                                                "saibamaislink":  "paginas/saiba-mais/0681_familias-rocha-ramos-g6-16familiares.html"
                                           },
                                           {
                                               "id":  "0685",
                                               "nome":  "Pai de Silvio Marola",
                                               "detalhe":  "TETRAVO",
                                               "ramo":  "materno",
-                                              "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg"
+                                              "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg",
+                                                "saibamaislink":  "paginas/saiba-mais/0685_familia-marolas-g6-8familiares.html"
                                           },
                                           {
                                               "id":  "0686",
                                               "nome":  "mae de de Silvio Marola",
                                               "detalhe":  "TETRAVO",
                                               "ramo":  "materno",
-                                              "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg"
+                                              "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg",
+                                                "saibamaislink":  "paginas/saiba-mais/0685_familia-marolas-g6-8familiares.html"
                                           },
                                           {
                                               "id":  "0687",
                                               "nome":  "Pai de Herminia Massaro Marola",
                                               "detalhe":  "TETRAVO",
                                               "ramo":  "materno",
-                                              "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg"
+                                              "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg",
+                                                "saibamaislink":  "paginas/saiba-mais/0685_familia-marolas-g6-8familiares.html"
                                           },
                                           {
                                               "id":  "0688",
                                               "nome":  "Mae de Herminia Massaro Marola",
                                               "detalhe":  "TETRAVO",
                                               "ramo":  "materno",
-                                              "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg"
+                                              "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg",
+                                                "saibamaislink":  "paginas/saiba-mais/0685_familia-marolas-g6-8familiares.html"
                                           },
                                            {
                                               "id":  "0689",
                                               "nome":  "Pai de pai de Terezinha",
                                               "detalhe":  "TETRAVO",
                                               "ramo":  "materno",
-                                              "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg"
+                                              "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg",
+                                                "saibamaislink":  "paginas/saiba-mais/0681_familias-rocha-ramos-g6-16familiares.html"
                                           },
                                           {
                                               "id":  "0690",
                                               "nome":  "Mae de pai de Terezinha",
                                               "detalhe":  "TETRAVO",
                                               "ramo":  "materno",
-                                              "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg"
+                                              "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg",
+                                                "saibamaislink":  "paginas/saiba-mais/0681_familias-rocha-ramos-g6-16familiares.html"
                                           },
                                           {
                                               "id":  "0691",
                                               "nome":  "pai de mae de Terezinha",
                                               "detalhe":  "TETRAVO",
                                               "ramo":  "materno",
-                                              "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg"
+                                              "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg",
+                                                "saibamaislink":  "paginas/saiba-mais/0681_familias-rocha-ramos-g6-16familiares.html"
                                           },
                                           {
                                               "id":  "0692",
                                               "nome":  "mae de mae de Terezinha",
                                               "detalhe":  "TETRAVO",
                                               "ramo":  "materno",
-                                              "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg"
+                                              "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg",
+                                                "saibamaislink":  "paginas/saiba-mais/0681_familias-rocha-ramos-g6-16familiares.html"
                                           },
                                            {
                                               "id":  "0693",
                                               "nome":  "Pai de Jose de Araujo Pinto",
                                               "detalhe":  "TETRAVO",
                                               "ramo":  "materno",
-                                              "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg"
+                                              "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg",
+                                                "saibamaislink":  "paginas/saiba-mais/0685_familia-marolas-g6-8familiares.html"
                                           },
                                           {
                                               "id":  "0694",
                                               "nome":  "Mae de Jose de Araujo Pinto",
                                               "detalhe":  "TETRAVO",
                                               "ramo":  "materno",
-                                              "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg"
+                                              "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg",
+                                                "saibamaislink":  "paginas/saiba-mais/0685_familia-marolas-g6-8familiares.html"
                                           },
                                           {
                                               "id":  "0695",
                                               "nome":  "Pai de Maria Zaia Pinto",
                                               "detalhe":  "TETRAVO",
                                               "ramo":  "materno",
-                                              "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg"
+                                              "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg",
+                                                "saibamaislink":  "paginas/saiba-mais/0685_familia-marolas-g6-8familiares.html"
                                           },
                                           {
                                               "id":  "0696",
                                               "nome":  "Mae de Maria Zaia Pinto",
                                               "detalhe":  "TETRAVO",
                                               "ramo":  "materno",
-                                              "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg"
+                                              "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg",
+                                                "saibamaislink":  "paginas/saiba-mais/0685_familia-marolas-g6-8familiares.html"
                                           },
                                           {
                                               "id":  "0689",
                                               "nome":  "Pai de pai de Julio Ramos",
                                               "detalhe":  "TETRAVO",
                                               "ramo":  "materno",
-                                              "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg"
+                                              "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg",
+                                                "saibamaislink":  "paginas/saiba-mais/0681_familias-rocha-ramos-g6-16familiares.html"
                                           },
                                           {
                                               "id":  "0690",
                                               "nome":  "Mae de pai de Julio Ramos",
                                               "detalhe":  "TETRAVO",
                                               "ramo":  "materno",
-                                              "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg"
+                                              "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg",
+                                                "saibamaislink":  "paginas/saiba-mais/0681_familias-rocha-ramos-g6-16familiares.html"
                                           },
                                           {
                                               "id":  "0691",
                                               "nome":  "pai de mae de Julio Ramos",
                                               "detalhe":  "TETRAVO",
                                               "ramo":  "materno",
-                                              "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg"
+                                              "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg",
+                                                "saibamaislink":  "paginas/saiba-mais/0681_familias-rocha-ramos-g6-16familiares.html"
                                           },
                                           {
                                               "id":  "0692",
                                               "nome":  "mae de mae de Julio Ramos",
                                               "detalhe":  "TETRAVO",
                                               "ramo":  "materno",
-                                              "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg"
+                                              "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg",
+                                                "saibamaislink":  "paginas/saiba-mais/0681_familias-rocha-ramos-g6-16familiares.html"
                                           },
                                           {
                                                       "id":  "0601",
                                                       "nome":  "Nicola Pizzirani",
                                                       "detalhe":  "TETRAVO",
                                                       "ramo":  "paterno",
-                                                      "imagem":  "imagens/ancestrais/6-tetravos/0601_nicola_pizzirani.jpg"
+                                                      "imagem":  "imagens/ancestrais/6-tetravos/0601_nicola_pizzirani.jpg",
+                                                      "saibamaislink": "paginas/saiba-mais/0601_nicolapizzirani-mariamazzini.html"
                                                   },
                                                   {
                                                       "id":  "0602",
                                                       "nome":  "Maria Mazzini",
                                                       "detalhe":  "TETRAVO",
                                                       "ramo":  "paterno",
-                                                      "imagem":  "imagens/ancestrais/6-tetravos/0602_maria_mazzini.jpg"
+                                                      "imagem":  "imagens/ancestrais/6-tetravos/0602_maria_mazzini.jpg",
+                                                      "saibamaislink": "paginas/saiba-mais/0601_nicolapizzirani-mariamazzini.html"
                                                   },
                                                   {
                                                       "id":  "0603",
                                                       "nome":  "Henrique Lienhardt",
                                                       "detalhe":  "TETRAVO",
                                                       "ramo":  "paterno",
-                                                      "imagem":  "imagens/ancestrais/6-tetravos/0603_henrique_lienhardt.jpg"
+                                                      "imagem":  "imagens/ancestrais/6-tetravos/0603_henrique_lienhardt.jpg",
+                                                      "saibamaislink": "paginas/saiba-mais/0603_henriquelienhardt-anapetru.html" 
                                                   },
                                                   {
                                                       "id":  "0604",
                                                       "nome":  "Ana Petru",
                                                       "detalhe":  "TETRAVO",
                                                       "ramo":  "paterno",
-                                                      "imagem":  "imagens/ancestrais/6-tetravos/0604_ana_petru.jpg"
+                                                      "imagem":  "imagens/ancestrais/6-tetravos/0604_ana_petru.jpg",
+                                                       "saibamaislink": "paginas/saiba-mais/0603_henriquelienhardt-anapetru.html"
                                                   },
                                             {
                                               "id":  "0697",
                                               "nome":  "Pai do pai Leontina",
                                               "detalhe":  "TETRAVO",
                                               "ramo":  "materno",
-                                              "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg"
+                                              "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg",
+                                                "saibamaislink":  "paginas/saiba-mais/0681_familias-rocha-ramos-g6-16familiares.html"
                                           },
                                           {
                                               "id":  "0698",
                                               "nome":  "Mae do pai Leontina",
                                               "detalhe":  "TETRAVO",
                                               "ramo":  "materno",
-                                              "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg"
+                                              "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg",
+                                                "saibamaislink":  "paginas/saiba-mais/0681_familias-rocha-ramos-g6-16familiares.html"
                                           },
                                           {
                                               "id":  "0681",
                                               "nome":  "Pai da mae da Leontina",
                                               "detalhe":  "TETRAVO",
                                               "ramo":  "materno",
-                                              "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg"
+                                              "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg",
+                                                "saibamaislink":  "paginas/saiba-mais/0681_familias-rocha-ramos-g6-16familiares.html"
                                           },
                                           {
                                               "id":  "0682",
                                               "nome":  "Mae da mae da Leontina",
                                               "detalhe":  "TETRAVO",
                                               "ramo":  "materno",
-                                              "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg"
+                                              "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg",
+                                                "saibamaislink":  "paginas/saiba-mais/0681_familias-rocha-ramos-g6-16familiares.html"
                                           },
                                           
                                                    {
@@ -429,32 +480,50 @@
                                                       "nome":  "Aquilino Pacheco Filho",
                                                       "detalhe":  "TETRAVO",
                                                       "ramo":  "materno",
-                                                      "imagem":  "imagens/ancestrais/6-tetravos/0605_aquilino_pacheco_filho.jpg"
+                                                      "imagem":  "imagens/ancestrais/6-tetravos/0605_aquilino_pacheco_filho.jpg",
+                                                      "saibamaislink":"paginas/saiba-mais/0605_aquilinopachecofilho-antonietasilveira.html"
                                                   },
                                                   {
                                                       "id":  "0606",
                                                       "nome":  "Antonieta Silveira",
                                                       "detalhe":  "TETRAVO",
                                                       "ramo":  "materno",
-                                                      "imagem":  "imagens/ancestrais/6-tetravos/0606_antonieta_silveira_ferraz_pacheco.jpg"
-                                                  },
+                                                      "imagem":  "imagens/ancestrais/6-tetravos/0606_antonieta_silveira_ferraz_pacheco.jpg",
+                                                        "saibamaislink":"paginas/saiba-mais/0605_aquilinopachecofilho-antonietasilveira.html"
+                                                  },  
                                                   {
                                                       "id":  "0607",
                                                       "nome":  "Jose Alves da Cunha",
                                                       "detalhe":  "TETRAVO",
                                                       "ramo":  "materno",
-                                                      "imagem":  "imagens/ancestrais/6-tetravos/0607_jose_alves_da_cunha.jpg"
+                                                      "imagem":  "imagens/ancestrais/6-tetravos/0607_jose_alves_da_cunha.jpg",
+                                                        "saibamaislink":"paginas/saiba-mais/0607_josealvescunha_antoniamsantos.html"
                                                   },
                                                   {
                                                       "id":  "0608",
                                                       "nome":  "Antonia Marques",
                                                       "detalhe":  "TETRAVO",
                                                       "ramo":  "materno",
-                                                      "imagem":  "imagens/ancestrais/6-tetravos/0608_antonia_marques_dos_santos.jpg"
+                                                      "imagem":  "imagens/ancestrais/6-tetravos/0608_antonia_marques_dos_santos.jpg",
+                                                        "saibamaislink":"paginas/saiba-mais/0607_josealvescunha_antoniamsantos.html"
                                                   }
                                               ],
                          "g7-paterno-comum":  [
                                                   {
+                                                      "id":  "0703",
+                                                      "nome":  "Alessandro Pizzirani",
+                                                      "detalhe":  "PENTAVO",
+                                                      "ramo":  "paterno",
+                                                      "imagem":  "imagens/ancestrais/7-pentavos/0703_alessandropizzirani.jpg"
+                                                  },
+                                                  {
+                                                      "id":  "0704",
+                                                      "nome":  "Maria Piazzi Pizzirani",
+                                                      "detalhe":  "PENTAVO",
+                                                      "ramo":  "paterno",
+                                                      "imagem":  "imagens/ancestrais/7-pentavos/0704_mariapiazzipizzirani.jpg"
+                                                  },
+                                                    {
                                                       "id":  "0701",
                                                       "nome":  "Luiz Mazzini",
                                                       "detalhe":  "PENTAVO",
@@ -469,18 +538,18 @@
                                                       "imagem":  "imagens/ancestrais/7-pentavos/0702_beatrizmazzini.jpg"
                                                   },
                                                   {
-                                                      "id":  "0703",
-                                                      "nome":  "Alessandro Pizzirani",
-                                                      "detalhe":  "PENTAVO",
-                                                      "ramo":  "paterno",
-                                                      "imagem":  "imagens/ancestrais/7-pentavos/0703_alessandropizzirani.jpg"
-                                                  },
-                                                  {
-                                                      "id":  "0704",
-                                                      "nome":  "Maria Piazzi Pizzirani",
-                                                      "detalhe":  "PENTAVO",
-                                                      "ramo":  "paterno",
-                                                      "imagem":  "imagens/ancestrais/7-pentavos/0704_mariapiazzipizzirani.jpg"
+                                                        "id":  "0703",
+                                                        "nome":  "Alessandro Pizzirani",
+                                                        "detalhe":  "PENTAVO",
+                                                        "ramo":  "paterno",
+                                                        "imagem":  "imagens/ancestrais/7-pentavos/0703_alessandropizzirani.jpg"
+                                                    },
+                                                    {
+                                                        "id":  "0704",
+                                                        "nome":  "Maria Piazzi Pizzirani",
+                                                        "detalhe":  "PENTAVO",
+                                                        "ramo":  "paterno",
+                                                        "imagem":  "imagens/ancestrais/7-pentavos/0704_mariapiazzipizzirani.jpg"
                                                   }
                                               ],
                          "g7-materno-comum":  [
@@ -489,15 +558,18 @@
                                                       "nome":  "Aquilino Jose Pacheco",
                                                       "detalhe":  "PENTAVO",
                                                       "ramo":  "materno",
-                                                      "imagem":  "imagens/ancestrais/7-pentavos/0705_aquilinojosepacheco.jpg"
+                                                      "imagem":  "imagens/ancestrais/7-pentavos/0705_aquilinojosepacheco.jpg",
+                                                     "saibamaislink":  "paginas/saiba-mais/0705_aquilinojosepacheco.html"
                                                   },
                                                   {
                                                       "id":  "0706",
                                                       "nome":  "Rita de Arruda Pacheco",
                                                       "detalhe":  "PENTAVO",
                                                       "ramo":  "materno",
-                                                      "imagem":  "imagens/ancestrais/7-pentavos/0706_rita_de_arruda_pacheco.svg"
-                                                  }
+                                                      "imagem":  "imagens/ancestrais/7-pentavos/0706_rita_de_arruda_pacheco.svg",
+                                                      "saibamaislink":  "paginas/saiba-mais/0705_aquilinojosepacheco.html"
+                                                  } 
+
                                               ],
                          "g8-materno-comum":  [
                                                   {
@@ -505,14 +577,16 @@
                                                       "nome":  "Firmiano Botto Pacheco",
                                                       "detalhe":  "HEXAVO",
                                                       "ramo":  "materno",
-                                                      "imagem":  "imagens/ancestrais/8-hexavos/0801_firmiano_botto_pacheco.svg"
+                                                      "imagem":  "imagens/ancestrais/8-hexavos/0801_firmiano_botto_pacheco.svg",
+                                                        "saibamaislink":  "paginas/saiba-mais/0801-firmianobottopacheco-marialcostapaheco.html"
                                                   },
                                                   {
                                                       "id":  "0802",
                                                       "nome":  "Maria Luiza Costa Pacheco",
                                                       "detalhe":  "HEXAVO",
                                                       "ramo":  "materno",
-                                                      "imagem":  "imagens/ancestrais/8-hexavos/0802_marialuiza_costa_pacheco.svg"
+                                                      "imagem":  "imagens/ancestrais/8-hexavos/0802_marialuiza_costa_pacheco.svg",
+                                                       "saibamaislink":  "paginas/saiba-mais/0801-firmianobottopacheco-marialcostapaheco.html"
                                                   }
                                               ]
                      },

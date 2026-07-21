@@ -16,18 +16,25 @@ Para checar outra faixa de IDs:
 ./scripts/validar-saiba-mais.ps1 -MinId 100 -MaxId 899
 ```
 
-Para usar em validacao mais rigida (retorna erro se houver falta):
+Para usar em validacao mais rigida de links explicitos (retorna erro se houver falta):
 
 ```powershell
-./scripts/validar-saiba-mais.ps1 -FailOnMissing
+./scripts/validar-saiba-mais.ps1 -FailOnExplicitMissing
+```
+
+Atalho equivalente:
+
+```powershell
+./scripts/validar-saiba-mais.cmd
 ```
 
 ## O que o script valida
 
-- IDs presentes no dados/arvores-propagacao.json (faixa configurada)
+- Links explicitos `saibamaislink` nos arquivos `dados/arvore-*-individual.json`
 - IDs que tem entrada no paginas/saiba-mais/index.html
 - IDs que tem arquivo HTML correspondente em paginas/saiba-mais
 - IDs cujo indice aponta para arquivo que nao existe
+- Caminho final resolvido do link explicito (para detectar erro de nome/hifen/capitalizacao)
 
 ## Interpretacao rapida
 
@@ -40,5 +47,5 @@ Para usar em validacao mais rigida (retorna erro se houver falta):
 1. Criou/alterou pagina Saiba Mais.
 2. Se a pagina for de casal, garantir que o nome do arquivo deixe isso claro e que ambos os IDs do casal tenham rota valida.
 3. Executou o script.
-4. Corrigiu os IDs listados em Sem rota e Indice quebrado.
+4. Corrigiu os IDs listados em Sem rota, Indice quebrado e Links explicitos quebrados.
 5. Reexecutou ate zerar pendencias criticas.

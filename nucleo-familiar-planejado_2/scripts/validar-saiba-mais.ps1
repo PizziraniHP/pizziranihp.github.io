@@ -1,24 +1,24 @@
 param(
     [int]$MinId = 300,
     [int]$MaxId = 699,
-    [switch]$FailOnMissing
+    [switch]$FailOnMissing,
+    [switch]$FailOnExplicitMissing
 )
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = 'Stop'
 
 $repoRoot = Resolve-Path (Join-Path $PSScriptRoot '..')
-$jsonPath = Join-Path $repoRoot 'dados/arvores-propagacao.json'
 $indexPath = Join-Path $repoRoot 'paginas/saiba-mais/index.html'
 $saibaDir = Join-Path $repoRoot 'paginas/saiba-mais'
 
-if (-not (Test-Path $jsonPath)) { throw "Arquivo nao encontrado: $jsonPath" }
 if (-not (Test-Path $indexPath)) { throw "Arquivo nao encontrado: $indexPath" }
 if (-not (Test-Path $saibaDir)) { throw "Pasta nao encontrada: $saibaDir" }
 
-$data = Get-Content -Raw -Path $jsonPath | ConvertFrom-Json
+$individualJsonFiles = @(Get-ChildItem -Path (Join-Path $repoRoot 'dados') -File -Filter 'arvore-*-individual.json' | Sort-Object Name)
 
 $ids = [System.Collections.Generic.HashSet[string]]::new()
+$explicitLinks = New-Object System.Collections.Generic.List[object]
 
 function Add-IdsFromNode {
     param([object]$Node)
@@ -53,7 +53,53 @@ function Add-IdsFromNode {
     }
 }
 
-Add-IdsFromNode -Node $data
+function Add-ExplicitLinksFromNode {
+    param(
+        [object]$Node,
+        [string]$JsonFileName
+    )
+
+    if ($null -eq $Node) { return }
+
+    if ($Node -is [System.Collections.IEnumerable] -and -not ($Node -is [string])) {
+        foreach ($item in $Node) {
+            Add-ExplicitLinksFromNode -Node $item -JsonFileName $JsonFileName
+        }
+        return
+    }
+
+    $props = $Node.PSObject.Properties
+    if ($props.Name -contains 'saibamaislink') {
+        $link = [string]$Node.saibamaislink
+        if (-not [string]::IsNullOrWhiteSpace($link)) {
+            $id = ''
+            if ($props.Name -contains 'id') {
+                $id = [string]$Node.id
+            }
+
+            $explicitLinks.Add([pscustomobject]@{
+                id = $id
+                json = $JsonFileName
+                link = $link
+            }) | Out-Null
+        }
+    }
+
+    foreach ($prop in $props) {
+        $value = $prop.Value
+        if ($value -is [System.Collections.IEnumerable] -and -not ($value -is [string])) {
+            Add-ExplicitLinksFromNode -Node $value -JsonFileName $JsonFileName
+        } elseif ($value -is [pscustomobject]) {
+            Add-ExplicitLinksFromNode -Node $value -JsonFileName $JsonFileName
+        }
+    }
+}
+
+foreach ($jsonFile in $individualJsonFiles) {
+    $jsonObj = Get-Content -Raw -Path $jsonFile.FullName | ConvertFrom-Json
+    Add-IdsFromNode -Node $jsonObj
+    Add-ExplicitLinksFromNode -Node $jsonObj -JsonFileName $jsonFile.Name
+}
 
 $indexHtml = Get-Content -Raw -Path $indexPath
 $indexById = @{}
@@ -92,11 +138,65 @@ $semRota = @($rows | Where-Object { -not $_.temIndice -and -not $_.temArquivo })
 $okSemIndice = @($rows | Where-Object { -not $_.temIndice -and $_.temArquivo })
 $indiceSemArquivo = @($rows | Where-Object { $_.temIndice -and -not ($htmlFiles -contains $_.arquivoIndice) })
 
+function Resolve-ExplicitHref {
+    param([string]$RawLink)
+
+    $raw = ([string]$RawLink).Trim()
+    if ([string]::IsNullOrWhiteSpace($raw)) {
+        return ''
+    }
+
+    if ($raw -match '^paginas/saiba-mais/') {
+        return ($raw -replace '^paginas/', '')
+    }
+
+    if ($raw -match '^(https?:|file:|/|\.{1,2}/)') {
+        return $raw
+    }
+
+    if ($raw -match '^saiba-mais/') {
+        return $raw
+    }
+
+    return ('saiba-mais/' + $raw)
+}
+
+$explicitRows = @(foreach ($entry in $explicitLinks) {
+    $rawLink = ([string]$entry.link).Trim()
+    $resolvedHref = Resolve-ExplicitHref -RawLink (($rawLink -replace '\\', '/').Split('?')[0].Split('#')[0])
+    $isExternal = $resolvedHref -match '^(https?:|file:|//)'
+
+    if ($isExternal) {
+        $fullPath = ''
+        $exists = $true
+    } elseif ($resolvedHref.StartsWith('/')) {
+        $fullPath = Join-Path $repoRoot ($resolvedHref.TrimStart('/'))
+        $exists = Test-Path -LiteralPath $fullPath
+    } else {
+        $basePageDir = Join-Path $repoRoot 'paginas'
+        $fullPath = [System.IO.Path]::GetFullPath((Join-Path $basePageDir $resolvedHref))
+        $exists = Test-Path -LiteralPath $fullPath
+    }
+
+    [pscustomobject]@{
+        id = [string]$entry.id
+        json = [string]$entry.json
+        link = $rawLink
+        hrefResolvido = $resolvedHref
+        externo = $isExternal
+        existe = $exists
+    }
+})
+
+$explicitMissing = @($explicitRows | Where-Object { -not $_.externo -and -not $_.existe })
+
 Write-Host "Auditoria Saiba Mais ($MinId-$MaxId)"
 Write-Host "IDs analisados: $($rows.Count)"
 Write-Host "Sem rota (nem indice nem arquivo): $($semRota.Count)"
 Write-Host "Com arquivo, sem indice: $($okSemIndice.Count)"
 Write-Host "Indice aponta para arquivo ausente: $($indiceSemArquivo.Count)"
+Write-Host "Links explicitos auditados (saibamaislink): $($explicitRows.Count)"
+Write-Host "Links explicitos com arquivo ausente: $($explicitMissing.Count)"
 
 if ($semRota.Count -gt 0) {
     Write-Host "`nIDs sem rota:"
@@ -113,7 +213,16 @@ if ($indiceSemArquivo.Count -gt 0) {
     ($indiceSemArquivo | Select-Object id,arquivoIndice | Format-Table -AutoSize | Out-String).TrimEnd() | Write-Host
 }
 
+if ($explicitMissing.Count -gt 0) {
+    Write-Host "`nLinks explicitos quebrados (saibamaislink):"
+    ($explicitMissing | Select-Object id,json,link,hrefResolvido | Format-Table -AutoSize | Out-String).TrimEnd() | Write-Host
+}
+
 if ($FailOnMissing -and ($semRota.Count -gt 0 -or $indiceSemArquivo.Count -gt 0)) {
+    exit 1
+}
+
+if ($FailOnExplicitMissing -and $explicitMissing.Count -gt 0) {
     exit 1
 }
 

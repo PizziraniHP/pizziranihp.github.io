@@ -266,6 +266,10 @@
       return '';
     }
 
+    if (/^paginas\/saiba-mais\//i.test(raw)) {
+      return raw.replace(/^paginas\//i, '');
+    }
+
     if (/^(https?:|file:|\/|\.{1,2}\/)/i.test(raw)) {
       return raw;
     }
@@ -275,6 +279,14 @@
     }
 
     return basePath + raw;
+  }
+
+  function explicitSaibaMaisFromCard(card) {
+    if (!card || typeof card !== 'object') {
+      return '';
+    }
+
+    return card.saibamaislink || '';
   }
 
   function appendOriginParam(url) {
@@ -317,7 +329,7 @@
         var imagem = p && p.imagem ? p.imagem : '';
         var imgSrc = imagem ? (imgPrefix + imagem) : 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==';
         var nomeExibicao = p.nome || (slotCode ? ('Slot ' + slotCode) : 'Aguardando cadastro');
-        var explicitSaibaMais = resolveExplicitSaibaMaisUrl('saiba-mais/', p.saibaMaisLink || p.saibaMaisUrl || p.linkSaibaMais || '');
+        var explicitSaibaMais = resolveExplicitSaibaMaisUrl('saiba-mais/', explicitSaibaMaisFromCard(p));
         var explicitAttr = explicitSaibaMais ? (' data-saiba-mais-explicit="' + escapeHtml(explicitSaibaMais) + '"') : '';
         var saibaMaisHref = explicitSaibaMais || 'saiba-mais/index.html';
         html += [
@@ -422,11 +434,11 @@
 
   window.initArvorePropagacao = async function initArvorePropagacao(opts) {
     var treeKey = opts && opts.treeKey;
-    var dataPath = opts && opts.dataPath ? opts.dataPath : '../../dados/arvores-propagacao.json';
+    var dataPath = opts && opts.dataPath ? opts.dataPath : '';
     var imagePrefix = opts && Object.prototype.hasOwnProperty.call(opts, 'imagePrefix') ? opts.imagePrefix : '../../';
     var saibaMaisBasePath = opts && opts.saibaMaisBasePath ? opts.saibaMaisBasePath : 'saiba-mais/';
     var target = document.getElementById(opts && opts.containerId || 'piramide-root');
-    if (!treeKey || !target) return;
+    if (!treeKey || !target || !dataPath) return;
 
     var res = await fetch(dataPath, { cache: 'no-store' });
     var data = await res.json();

@@ -14,7 +14,6 @@ $backupBase = if ([System.IO.Path]::IsPathRooted($BackupRoot)) { $BackupRoot } e
 $filesToBackup = @(
   'dados/pessoas-v2-cartoes-base.json',
   'dados/pessoas-v25-cartoes-base.json',
-  'dados/arvores-propagacao.json',
   'docs/padroes.md',
   'README.md'
 )
@@ -76,7 +75,9 @@ function New-Checkpoint {
   $manifestPath = Join-Path $checkpointDir 'manifesto-sha256.txt'
   $manifestLines = New-Object System.Collections.Generic.List[string]
 
-  foreach ($relative in $filesToBackup) {
+  $effectiveFiles = @($filesToBackup)
+
+  foreach ($relative in $effectiveFiles) {
     $source = Join-Path $repoRoot $relative
     if (-not (Test-Path -LiteralPath $source)) {
       Write-Host "AVISO: arquivo fora do checkpoint: $relative" -ForegroundColor Yellow
@@ -100,7 +101,6 @@ function New-Checkpoint {
 
 function Run-Validations {
   Assert-JsonParse -RelativePath 'dados/pessoas-v2-cartoes-base.json'
-  Assert-JsonParse -RelativePath 'dados/arvores-propagacao.json'
 
   $v25Path = Join-Path $repoRoot 'dados/pessoas-v25-cartoes-base.json'
   if (Test-Path -LiteralPath $v25Path) {

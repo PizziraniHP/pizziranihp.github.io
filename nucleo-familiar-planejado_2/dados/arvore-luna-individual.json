@@ -22,8 +22,12 @@
                                              "nome":  "Luiz Carrasco",
                                              "detalhe":  "AVO PATERNO",
                                              "ramo":  "paterno",
-                                             "imagem":  "imagens/ancestrais/3-avos/0317_luizcarrasco.jpg"
-                                         },
+                                             "imagem":  "imagens/ancestrais/3-avos/0317_luizcarrasco.jpg",
+                                            "saibamaislink": "paginas/saiba-mais/0317-luizcarrasco-ligiacarrasco.html"
+
+                                             },
+                                       
+                                        
                                          {
                                              "id":  "0316",
                                              "nome":  "Ligia Carrasco",

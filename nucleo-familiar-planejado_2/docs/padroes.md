@@ -143,7 +143,7 @@ Objetivo: definir, por bisneto, quais ramos sobem para geracoes superiores e qua
 
 ## Checklist operacional por bisneto
 
-Objetivo: validar cada arvore antes de publicar alteracoes de propagacao.
+Objetivo: validar cada arvore individual antes de publicar alteracoes.
 
 ### Passo 1 - Confirmar regra do caso
 
@@ -152,7 +152,7 @@ Objetivo: validar cada arvore antes de publicar alteracoes de propagacao.
 
 ### Passo 2 - Conferir referencias no JSON
 
-- Abrir dados/arvores-propagacao.json.
+- Abrir o JSON individual do bisneto em dados/arvore-<nome>-individual.json.
 - Conferir referencias de g2, g3, g4 e g5 do bisneto.
 - Verificar se os refs apontam para os blocos corretos do caso.
 
@@ -199,7 +199,7 @@ Objetivo: validar cada arvore antes de publicar alteracoes de propagacao.
 
 ## Modo sem IA (operacao manual)
 
-Objetivo: permitir manutencao da propagacao mesmo sem assistente.
+Objetivo: permitir manutencao da arvore individual mesmo sem assistente.
 
 ### Regra simples (lembrar sempre)
 
@@ -209,7 +209,7 @@ Objetivo: permitir manutencao da propagacao mesmo sem assistente.
 ### Fluxo manual em 7 passos
 
 1. Defina o bisneto alvo (ex.: gabriela).
-2. Abra `dados/arvores-propagacao.json` e localize o bloco `trees.<bisneto>`.
+2. Abra `dados/arvore-<bisneto>-individual.json` e localize os blocos da arvore.
 3. Veja quais `$ref` estao em `g4`, `g5`, `g6`.
 4. Abra os blocos referenciados em `sharedBlocks`.
 5. Verifique se a pessoa desejada esta dentro do bloco correto.
@@ -220,7 +220,7 @@ Objetivo: permitir manutencao da propagacao mesmo sem assistente.
 
 ### Regra de seguranca
 
-- Nao editar IDs para forcar propagacao.
+- Nao editar IDs para forcar exibicao.
 - Se o bloco for compartilhado por outro bisneto, preferir criar bloco exclusivo para evitar efeito colateral.
 
 ### Exemplo curto (caso Gabriela)

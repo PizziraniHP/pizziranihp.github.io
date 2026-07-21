@@ -266,6 +266,22 @@
       return '';
     }
 
+    raw = raw.replace(/\\/g, '/');
+
+    // Normaliza formatos legados como "../0203-anderson.html" e "..0204-sthefanie.html"
+    // para o caminho atual relativo a paginas/*.html: "saiba-mais/<arquivo>.html".
+    if (/^\.{2}\/paginas\/saiba-mais\//i.test(raw)) {
+      return raw.replace(/^\.{2}\/paginas\//i, '');
+    }
+
+    if (/^\.{2}\/?[^/]+\.html?(?:[?#].*)?$/i.test(raw)) {
+      return basePath + raw.replace(/^\.{2}\/?/, '');
+    }
+
+    if (/^\.\/[^/]+\.html?(?:[?#].*)?$/i.test(raw)) {
+      return basePath + raw.replace(/^\.\//, '');
+    }
+
     if (/^paginas\/saiba-mais\//i.test(raw)) {
       return raw.replace(/^paginas\//i, '');
     }
@@ -298,6 +314,25 @@
     } catch (err) {
       return url;
     }
+  }
+
+  async function resolveSaibaMaisFromCard(basePath, explicitUrl, personId, personName) {
+    if (explicitUrl && window.location && window.location.protocol === 'file:') {
+      return explicitUrl;
+    }
+
+    if (explicitUrl) {
+      try {
+        var explicitRes = await fetch(explicitUrl, { cache: 'no-store' });
+        if (explicitRes.ok) {
+          return explicitUrl;
+        }
+      } catch (err) {
+        // Se o link explicito falhar, usa busca por ID/nome como fallback.
+      }
+    }
+
+    return resolveSaibaMaisPage(basePath, personId, personName);
   }
 
   function renderLine(cards, generation, imagePrefix) {
@@ -502,13 +537,9 @@
       link.addEventListener('click', async function (event) {
         event.preventDefault();
         var explicit = link.getAttribute('data-saiba-mais-explicit') || '';
-        if (explicit) {
-          window.location.href = appendOriginParam(explicit);
-          return;
-        }
         var personId = link.getAttribute('data-person-id') || '';
         var personName = link.getAttribute('data-person-name') || '';
-        var url = await resolveSaibaMaisPage(saibaMaisBasePath, personId, personName);
+        var url = await resolveSaibaMaisFromCard(saibaMaisBasePath, explicit, personId, personName);
         window.location.href = appendOriginParam(url);
       });
     });
@@ -520,18 +551,13 @@
         }
 
         var explicit = card.getAttribute('data-saiba-mais-explicit') || '';
-        if (explicit) {
-          window.location.href = appendOriginParam(explicit);
-          return;
-        }
-
         var personId = card.getAttribute('data-person-id') || '';
         var personName = card.getAttribute('data-person-name') || '';
         if (!personId) {
           return;
         }
 
-        var url = await resolveSaibaMaisPage(saibaMaisBasePath, personId, personName);
+        var url = await resolveSaibaMaisFromCard(saibaMaisBasePath, explicit, personId, personName);
         window.location.href = appendOriginParam(url);
       });
     });

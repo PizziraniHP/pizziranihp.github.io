@@ -4,17 +4,18 @@
                                                        {
                                                            "id":  "0203",
                                                            "nome":  "Anderson",
-                                                           "detalhe":  "",
+                                                           "detalhe":  "Pai de Lorena",
                                                            "ramo":  "paterno",
                                                            "imagem":  "imagens/ancestrais/2-pais/0203_anderson.jpg",
-                                                           "saibamaislink":  "../0203_anderson.html"
+                                                           "saibamaislink":  "../0203-anderson.html"
                                                        },
                                                        {
                                                            "id":  "0204",
                                                            "nome":  "Sthefanie",
-                                                           "detalhe":  "mae de Lorena",
+                                                           "detalhe":  "Mae de Lorena",
                                                            "ramo":  "materno",
-                                                           "imagem":  "imagens/ancestrais/2-pais/0204_sthefanie.jpg"
+                                                           "imagem":  "imagens/ancestrais/2-pais/0204_sthefanie.jpg",
+                                                           "saibamaislink":  "..0204-sthefanie.html"
                                                        }
                                                    ],
                          "g3-lorena":  [
@@ -39,7 +40,8 @@
                                                "nome":  "LFT",
                                                "detalhe":  "AVO MATERNO",
                                                "ramo":  "materno",
-                                               "imagem":  "imagens/ancestrais/2-pais/repdosteo.jpg"
+                                               "imagem":  "imagens/ancestrais/2-pais/repdosteo.jpg",
+                                               "saibamaislink":  "../0300_LFT.html"
                                            },
                                            {
                                                "id":  "0304",
@@ -56,7 +58,7 @@
                                                         "detalhe":  "BISAVO PATERNO",
                                                         "ramo":  "paterno",
                                                         "imagem":  "imagens/ancestrais/4-bisavos/0411_luizgiaponezi.jpg",
-                                                        "saibamaislink":  "../0411_luizgiaponezi-mariateodoro.html"
+                                                        "saibamaislink":  "../0411_luizgiaponesi-mariateodoro.html"
                                                     },
                                                     {
                                                         "id":  "0412",
@@ -72,7 +74,7 @@
                                                         "detalhe":  "BISAVO MATERNO",
                                                         "ramo":  "paterno",
                                                         "imagem":  "imagens/ancestrais/4-bisavos/0413_lorisvaldosantos.jpg",
-                                                        "saibamaislink":  "../0413_lorisvaldosantos-leonildabazan.html"
+                                                        "saibamaislink":  "../0413_lorisvaldosantos-leontinabazan.html"
                                                     },
                                                     {
                                                         "id":  "0414",
@@ -80,7 +82,7 @@
                                                         "detalhe":  "BISAVA MATERNA",
                                                         "ramo":  "paterno",
                                                         "imagem":  "imagens/ancestrais/4-bisavos/0414_leonildabazan.jpg",
-                                                        "saibamaislink":  "../0413_lorisvaldosantos-leonildabazan.html"
+                                                        "saibamaislink":  "../0413_lorisvaldosantos-leontinabazan.html"
                                                     }
                                                 ],
                          "g4-lorena-materno":  [
@@ -123,7 +125,7 @@
                                                              "nome":  "Joao Giaponesi",
                                                              "detalhe":  "TRISAVO",
                                                              "ramo":  "paterno",
-                                                             "imagem":  "imagens/ancestrais/5-bisavos/0517_joaogiaponesi.jpg",
+                                                             "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg",
                                                                 "saibamaislink":  "../0517_joaogiaponesi-mariaribeiro.html"
                                                          },
                                                          {
@@ -131,7 +133,7 @@
                                                              "nome":  "Maria Ribeiro",
                                                              "detalhe":  "TRISAVO",
                                                              "ramo":  "paterno",
-                                                             "imagem":  "imagens/ancestrais/5-bisavos/0518_mariaribeiro.jpg",
+                                                             "imagem":  "imagens/ancestrais/2-pais/figurafeminina.jpg",
                                                                 "saibamaislink":  "../0517_joaogiaponesi-mariaribeiro.html"
                                                          },
                                                          {
@@ -139,16 +141,16 @@
                                                              "nome":  "Nome Desconhecido",
                                                              "detalhe":  "TRISAVO",
                                                              "ramo":  "paterno",
-                                                             "imagem":  "imagens/ancestrais/3-avos/0300_f.jpg",
-                                                                "saibamaislink":  "../0519_nome-desconhecido-herminiateodoro.html"
+                                                             "imagem":  "imagens/ancestrais/2-pais/figuramasculina.jpg",
+                                                                "saibamaislink":  "../0517_joaogiaponesi-mariaribeiro.html"
                                                          },
                                                          {
                                                              "id":  "0520",
                                                              "nome":  "Herminia Teodoro",
                                                              "detalhe":  "TRISAVO",
                                                              "ramo":  "paterno",
-                                                             "imagem":  "imagens/ancestrais/5-bisavos/0520_herminiateodoro.jpg",
-                                                                "saibamaislink":  "../0519_nome-desconhecido-herminiateodoro.html"
+                                                             "imagem":  "imagens/ancestrais/5-trisavos/0520_herminia-teodoro-giaponezi-trisavo-lorena.jpg",
+                                                                "saibamaislink":  "../0517_joaogiaponesi-mariaribeiro.html"
                                                          },
                                                          {
                                                              "id":  "0521",
@@ -214,7 +216,7 @@
                                                       "detalhe":  "TRISAVO",
                                                       "ramo":  "materno",
                                                       "imagem":  "imagens/ancestrais/5-trisavos/0501_marcelopizzirani.jpg",
-                                                        "saibamaislink":  "../0501_marcelopizzirani-ana_cristina.html"
+                                                        "saibamaislink":  "../0501_marcelopizzirani_anacristinalienhardt.html"
                                                   },
                                                   {
                                                       "id":  "0502",
@@ -222,7 +224,7 @@
                                                       "detalhe":  "TRISAVO",
                                                       "ramo":  "materno",
                                                       "imagem":  "imagens/ancestrais/5-trisavos/0502_anacristinalienhardt.jpg",
-                                                        "saibamaislink":  "../0501_marcelopizzirani-ana_cristina.html"
+                                                        "saibamaislink":  "../0501_marcelopizzirani_anacristinalienhardt.html"
                                                   },
                                                   {
                                                       "id":  "0503",
@@ -230,7 +232,7 @@
                                                       "detalhe":  "TRISAVO",
                                                       "ramo":  "materno",
                                                       "imagem":  "imagens/ancestrais/5-trisavos/0503_ezequieladacunha.jpg",
-                                                        "saibamaislink":  "../0503_ezequieladacunha-helenaferrazpacheco.html"
+                                                        "saibamaislink":  "../0503_ezequieldacunha_helenaferraspacheco.html"
                                                   },
                                                   {
                                                       "id":  "0504",
@@ -238,7 +240,7 @@
                                                       "detalhe":  "TRISAVO",
                                                       "ramo":  "materno",
                                                       "imagem":  "imagens/ancestrais/5-trisavos/0504_helenaferraspacheco.jpg",
-                                                        "saibamaislink":  "../0503_ezequieladacunha-helenaferrazpacheco.html"
+                                                        "saibamaislink":  "../0503_ezequieldacunha_helenaferraspacheco.html"
                                                   }
                                               ],
                          "g6-lorena-conhecidos":  [
@@ -248,7 +250,7 @@
                                                           "detalhe":  "TETRAVO",
                                                           "ramo":  "paterno",
                                                           "imagem":  "imagens/ancestrais/6-tetravos/0601_nicola_pizzirani.jpg",
-                                                            "saibamaislink":  "../0601_nicola_pizzirani-maria_mazzini.html"
+                                                            "saibamaislink":  "../0601_nicolapizzirani-mariamazzini.html"
                                                       },
                                                       {
                                                           "id":  "0602",
@@ -256,7 +258,7 @@
                                                           "detalhe":  "TETRAVO",
                                                           "ramo":  "paterno",
                                                           "imagem":  "imagens/ancestrais/6-tetravos/0602_maria_mazzini.jpg",
-                                                            "saibamaislink":  "../0601_nicola_pizzirani-maria_mazzini.html"
+                                                            "saibamaislink":  "../0601_nicolapizzirani-mariamazzini.html"
                                                       },
                                                       {
                                                           "id":  "0603",
@@ -264,7 +266,7 @@
                                                           "detalhe":  "TETRAVO",
                                                           "ramo":  "paterno",
                                                           "imagem":  "imagens/ancestrais/6-tetravos/0603_henrique_lienhardt.jpg",
-                                                            "saibamaislink":  "../0603_henrique_lienhardt-ana_petru.html"
+                                                            "saibamaislink":  "../0603_henriquelienhardt-anapetru.html"
                                                       },
                                                       {
                                                           "id":  "0604",
@@ -272,7 +274,7 @@
                                                           "detalhe":  "TETRAVO",
                                                           "ramo":  "paterno",
                                                           "imagem":  "imagens/ancestrais/6-tetravos/0604_ana_petru.jpg",
-                                                            "saibamaislink":  "../0603_henrique_lienhardt-ana_petru.html"
+                                                            "saibamaislink":  "../0603_henriquelienhardt-anapetru.html"
                                                       },
                                                       {
                                                           "id":  "",

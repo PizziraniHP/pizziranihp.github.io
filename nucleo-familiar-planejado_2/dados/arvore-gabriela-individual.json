@@ -39,7 +39,7 @@
                                                  "nome":  "Flavio Mello",
                                                  "detalhe":  "AVO",
                                                  "ramo":  "materno",
-                                                 "imagem":  "imagens/ancestrais/3-avos/0303_flaviomelo.jpg",
+                                                 "imagem":  "imagens/ancestrais/3-avos/0303_flaviomello.jpg",
                                                     "saibamaislink":  "paginas/saiba-mais/0303_flaviomello.html"
                                              },
                                              {
@@ -219,30 +219,32 @@
                                                        "nome":  "Marcelo Pizzirani",
                                                        "detalhe":  "TRISAVO",
                                                        "ramo":  "materno",
-                                                       "imagem":  "imagens/ancestrais/5-trisavos/0501_marcelopizzirani.jpg"
+                                                       "imagem":  "imagens/ancestrais/5-trisavos/0501_marcelopizzirani.jpg",
+                                                         "saibamaislink":  "paginas/saiba-mais/0501_marcelopizzirani_anacristinalienhardt.html"
                                                    },
                                                    {
                                                        "id":  "0502",
                                                        "nome":  "Ana Cristina",
                                                        "detalhe":  "TRISAVO",
                                                        "ramo":  "materno",
-                                                       "imagem":  "imagens/ancestrais/5-trisavos/0502_anacristinalienhardt.jpg"
+                                                       "imagem":  "imagens/ancestrais/5-trisavos/0502_anacristinalienhardt.jpg",
+                                                         "saibamaislink":  "paginas/saiba-mais/0501_marcelopizzirani_anacristinalienhardt.html"
                                                    },
                                                    {
-                                                       "id":  "",
-                                                       "nome":  "Trisavo / Trisavo",
+                                                       "id":  "0503",
+                                                       "nome":  "Ezequiel Alves da Cunha",
                                                        "detalhe":  "TRISAVO",
                                                        "ramo":  "materno",
-                                                       "imagem":  "imagens/ancestrais/3-avos/0300_f.jpg",
-                                                       "placeholder":  true
+                                                       "imagem":  "imagens/ancestrais/5-trisavos/0503_ezequieladacunha.jpg",
+                                                       "saibamaislink":  "paginas/saiba-mais/0503_ezequieldacunha_helenaferraspacheco.html"
                                                    },
                                                    {
-                                                       "id":  "",
-                                                       "nome":  "Trisavo / Trisavo",
+                                                       "id":  "0504",
+                                                       "nome":  "Helena Ferraz Pacheco",
                                                        "detalhe":  "TRISAVO",
                                                        "ramo":  "materno",
-                                                       "imagem":  "imagens/ancestrais/3-avos/0300_f.jpg",
-                                                       "placeholder":  true
+                                                       "imagem":  "imagens/ancestrais/5-trisavos/0504_helenaferraspacheco.jpg",
+                                                       "saibamaislink":  "paginas/saiba-mais/0504_helenaferraspacheco.html"
                                                    }
                                                ],
                          "g6-pedro-gabriela":  [

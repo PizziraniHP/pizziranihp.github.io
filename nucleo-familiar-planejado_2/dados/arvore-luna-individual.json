@@ -37,10 +37,11 @@
                                          },
                                          {
                                              "id":  "0300",
-                                             "nome":  "F",
+                                             "nome":  "LFT",
                                              "detalhe":  "AVO MATERNO",
                                              "ramo":  "materno",
-                                             "imagem":  "imagens/ancestrais/3-avos/0300_f.jpg"
+                                             "imagem":  "imagens/ancestrais/2-pais/repdosteo.jpg",
+                                                "saibamaislink":  "../0300_LFT.html"
                                          },
                                          {
                                              "id":  "0304",
@@ -118,7 +119,8 @@
                                                              "nome":  "Trisavo / Trisavo",
                                                              "detalhe":  "TRISAVO",
                                                              "ramo":  "paterno",
-                                                             "imagem":  "imagens/ancestrais/3-avos/0300_f.jpg"
+                                                             "imagem":  "imagens/ancestrais/3-avos/0300_f.jpg",
+                                                            "saibamaislink":  "../0517_joaogiaponesi-mariaribeiro.html"
                                                          },
                                                          {
                                                              "id":  "0518",

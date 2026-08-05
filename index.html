@@ -319,12 +319,12 @@
 
       <div class="level netos">
           <div class="person"><img src="/imagens/familia/Lucas.jpg"><div>Lucas</div></div>
-		  <div class="person"><img src="../imagens/familia/new_leticia.png"><div>Leticia</div></div>
-          <div class="person"><img src="/imagens/familia/new_luiz.jpeg"><div>Luiz</div></div>
-          <div class="person"><img src="../imagens/familia/new_sthefanie.jpeg"><div>Sthefanie</div></div>
-          <div class="person"><img src="../../imagens/familia/new_marcos.jpeg"><div>Marcos</div></div>
-          <div class="person"><img src="../../imagens/familia/new_paula.jpeg"><div>Paula</div></div>
-          <div class="person"><img src="../../imagens/familia/pamela.jpg"><div>Pamela</div></div>
+		  <div class="person"><img src="imagens/familia/new_leticia.png"><div>Leticia</div></div>
+          <div class="person"><img src="imagens/familia/new_luiz.jpeg"><div>Luiz</div></div>
+          <div class="person"><img src="imagens/familia/new_sthefanie.jpeg"><div>Sthefanie</div></div>
+          <div class="person"><img src="imagens/familia/new_marcos.jpeg"><div>Marcos</div></div>
+          <div class="person"><img src="imagens/familia/new_paula.jpeg"><div>Paula</div></div>
+          <div class="person"><img src="imagens/familia/pamela.jpg"><div>Pamela</div></div>
 		      <div class="person"><img src="imagens/familia/new_david.jpeg"><div>David</div></div>
           <div class="person"><img src="imagens/familia/michele.jpg"><div>Michele</div></div>
           <div class="person"><img src="imagens/familia/newflavio1.jpeg"><div>Flavio</div></div>
@@ -433,6 +433,24 @@
   });
 
   // Fecha ao clicar no fundo escuro
+  document.getElementById('lightbox').addEventListener('click', () => {
+    document.getElementById('lightbox').style.display = 'none';
+  });
+</script>
+<div id="lightbox">
+  <img id="lightbox-img" src="">
+</div>
+
+<script>
+  document.querySelectorAll('.person img').forEach(img => {
+    img.addEventListener('click', () => {
+      // Usa o caminho absoluto já resolvido pelo navegador
+      const caminho = img.src;
+      document.getElementById('lightbox-img').src = caminho;
+      document.getElementById('lightbox').style.display = 'flex';
+    });
+  });
+
   document.getElementById('lightbox').addEventListener('click', () => {
     document.getElementById('lightbox').style.display = 'none';
   });

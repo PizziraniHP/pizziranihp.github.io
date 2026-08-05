@@ -396,6 +396,47 @@
     </a>
   </div>
 </footer>
+<style>
+  .person img {
+    cursor: zoom-in;
+    transition: 0.2s;
+  }
+
+  #lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+
+  #lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 4px;
+    box-shadow: 0 0 20px #000;
+  }
+</style>
+<div id="lightbox">
+  <img id="lightbox-img" src="">
+</div>
+
+<script>
+  // Torna todas as imagens clicáveis para zoom
+  document.querySelectorAll('.person img').forEach(img => {
+    img.addEventListener('click', () => {
+      document.getElementById('lightbox-img').src = img.src;
+      document.getElementById('lightbox').style.display = 'flex';
+    });
+  });
+
+  // Fecha ao clicar no fundo escuro
+  document.getElementById('lightbox').addEventListener('click', () => {
+    document.getElementById('lightbox').style.display = 'none';
+  });
+</script>
 
 </body>
 </html>

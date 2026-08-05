@@ -389,42 +389,7 @@
     </div>
 
     <p id="audioHint" class="audio-note">Selecionado: Teste rápido</p>
-  </section>
 
-<script>
-  const musica = document.getElementById('musica');
-  const audioChoice = document.getElementById('audioChoice');
-  const audioHint = document.getElementById('audioHint');
-  const botaoPlay = document.getElementById('botaoPlay');
-
-  const options = {
-    test: 'audio/test.wav',
-    song1: 'audio/song1.wav',
-    song2: 'audio/song2.wav',
-    song3: 'audio/song3.wav',
-    myall: 'audio/My_All.mp3',
-    seawaves: 'audio/SeaWaves.wav'
-  };
-
-  function setAudio(option) {
-    musica.src = options[option] || options.test;
-    musica.load();
-    const label = audioChoice.options[audioChoice.selectedIndex].text;
-    audioHint.textContent = `Selecionado: ${label}`;
-  }
-
-  audioChoice.addEventListener('change', function(event) {
-    setAudio(event.target.value);
-  });
-
-  botaoPlay.addEventListener('click', function() {
-    musica.play().catch(function(error) {
-      console.log('Não foi possível reproduzir o áudio:', error);
-      alert('O áudio não pôde ser reproduzido automaticamente. Toque novamente ou verifique o navegador.');
-    });
-  });
-
-  setAudio('test');
 
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightboxImg');

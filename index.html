@@ -455,6 +455,47 @@
     document.getElementById('lightbox').style.display = 'none';
   });
 </script>
+<script>
+document.querySelectorAll('.card-foto').forEach(img => {
+    img.style.cursor = 'zoom-in';
+
+    img.addEventListener('click', () => {
+        // cria overlay
+        const overlay = document.createElement('div');
+        overlay.className = 'lightbox-overlay';
+
+        // cria imagem grande
+        const bigImg = document.createElement('img');
+        bigImg.src = img.src;
+
+        // cria botão de fechar
+        const closeBtn = document.createElement('div');
+        closeBtn.className = 'lightbox-close';
+        closeBtn.textContent = '×';
+
+        // fechar ao clicar no botão
+        closeBtn.addEventListener('click', () => {
+            overlay.remove();
+            closeBtn.remove();
+        });
+
+        // fechar ao clicar fora da imagem
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                overlay.remove();
+                closeBtn.remove();
+            }
+        });
+
+        // adiciona elementos na página
+        overlay.appendChild(bigImg);
+        document.body.appendChild(overlay);
+        document.body.appendChild(closeBtn);
+    });
+});
+</script>
+
+						
 
 </body>
 </html>

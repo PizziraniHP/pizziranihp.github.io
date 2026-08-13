@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Saiba mais - L F T</title>
+    <style>
+        :root {
+            --bg: #f7f5ef;
+            --panel: #ffffff;
+            --ink: #222222;
+            --muted: #666666;
+            --line: #ddd7ca;
+            --accent: #7a2e2e;
+        }
+
+        
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            color: var(--ink);
+            background: radial-gradient(circle at top right, #efe8d8, var(--bg) 45%);
+            line-height: 1.55;
+        }
+
+        .page {
+            width: min(980px, 92vw);
+            margin: 32px auto;
+            padding: 24px;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+        }
+
+        .top-links {
+            margin: 0 0 18px;
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        .top-links a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .top-links a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 22px;
+            align-items: start;
+            margin-bottom: 20px;
+        }
+
+        .photo-box {
+            background: #f2efe5;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .photo-box img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .meta h1 {
+            margin: 0 0 8px;
+            font-size: clamp(28px, 4vw, 42px);
+            line-height: 1.08;
+        }
+
+        .meta .chip {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .meta p {
+            margin: 6px 0;
+        }
+        .story {
+            border-top: 1px solid var(--line);
+            padding-top: 16px;
+        }
+
+        .story h2 {
+            margin: 0 0 10px;
+            font-size: 22px;
+        }
+
+        .story p {
+            margin: 0 0 12px;
+            text-align: justify;
+        }
+        .extra {
+            border-top: 1px solid var(--line);
+            padding-top: 16px;
+            margin-bottom: 20px;
+        }
+        .extra h2 {
+            margin: 0 0 12px;
+            font-size: 22px;
+        }
+        
+        .extra-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            align-items: start;
+        }
+        .extra-grid-small {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+            align-items: start;
+        }
+        .extra-item {
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            overflow: hidden;
+            background: #faf8f3;
+            min-width: 0;
+            transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+        }
+        .extra-item img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            background: #f2efe5;
+            transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1), filter 320ms ease;
+            transform-origin: center center;
+            will-change: transform;
+            cursor: zoom-in;
+        }
+        .extra-item:hover {
+            transform: translateY(-3px);
+            border-color: #c9bea8;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+        }
+        .extra-item:hover img,
+        .extra-item img:hover {
+            transform: scale(1.24);
+            filter: saturate(1.08) contrast(1.06);
+        }
+        .extra-item p {
+            margin: 0;
+            padding: 12px 14px;
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.55;
+            overflow-wrap: anywhere;
+        }
+        .extra-item-small img {
+            aspect-ratio: 1 / 1;
+        }
+        .extra-item-small p {
+            padding: 8px 9px;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+        @media (max-width: 1080px) {
+            .extra-grid-small { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 760px) {
+            .hero { grid-template-columns: 1fr; }
+            .photo-box { max-width: 320px; }
+            .extra-grid { grid-template-columns: 1fr; }
+            .extra-grid-small { grid-template-columns: 1fr; }
+            .extra-item img { aspect-ratio: auto; }
+        }
+
+        .img-lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.82);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 18px;
+            z-index: 2000;
+        }
+
+        .img-lightbox.active {
+            display: flex;
+        }
+
+        .img-lightbox img {
+            max-width: 92vw;
+            max-height: 88vh;
+            width: auto;
+            height: auto;
+            border-radius: 10px;
+            border: 1px solid #e8dfd0;
+            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.45);
+            background: #fff;
+        }
+
+        .img-lightbox-close {
+            position: fixed;
+            top: 18px;
+            right: 18px;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #d7c8b0;
+            border-radius: 999px;
+            background: #fff7ea;
+            color: #6c2e2e;
+            font-size: 22px;
+            line-height: 1;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+        }
+
+        .photo-box img,
+        .extra-item img {
+            cursor: zoom-in;
+        }
+.topo-fixo {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 999;
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            background: #fffdf8;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 13px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+        .topo-fixo:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body id="topo">
+    <script defer src="retorno.js"></script>
+
+
+    <main class="page">
+        <p class="top-links">
+            <a href="../../elo_indice.html">voltar ao Nucleo Familiar</a>
+        </p>
+        <p class="saiba-mais-badge">
+            <span class="saiba-mais-icone" aria-hidden="true"></span>
+            <span>SAIBA MAIS</span>
+        </p>
+        <section class="hero">
+            <figure class="photo-box">
+                <img src="../../imagens/ancestrais/2-pais/repdosteo.jpg" alt="Foto da pessoa">
+            </figure>
+            <div class="meta">
+                <h1>L F T</h1>
+                <span class="chip">ID 0300</span>
+                <p><strong> SOMENTE BIOLOGICAMENTE E GENEALOGICAMENTE AVO DA lORENA </strong></p>
+                <p>Iremos historiar o caso..a foto mostra que o personagem, elemento,deixou como unica informação uma caixa vazia - assim como vazia foi sua responsabilidade, dignidade e etc. e etc. mas não podemos negar nos DEIXOU A (TIKO TIKA), STHEFANIE (NOSSA FILHANETA), QUE TROUXE LUZ, RIQUEZA, AMOR, E BISNETAS (LORENA e LUNA), PARA NOSSO MEIO.</p>
+            </div>
+        </section>
+
+                <section class="extra">
+            <h2>Fotos e comentarios</h2>
+            <div class="extra-grid">
+                <figure class="extra-item">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4MDAnIGhlaWdodD0nNTYwJyB2aWV3Qm94PScwIDAgODAwIDU2MCc+CiAgPHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0nI2YyZWZlNScvPgogIDxyZWN0IHg9JzI0JyB5PScyNCcgd2lkdGg9Jzc1MicgaGVpZ2h0PSc1MTInIHJ4PScxOCcgcnk9JzE4JyBmaWxsPSdub25lJyBzdHJva2U9JyNkZGQ3Y2EnIHN0cm9rZS13aWR0aD0nNCcgc3Ryb2tlLWRhc2hhcnJheT0nMTIgMTAnLz4KICA8dGV4dCB4PSc1MCUnIHk9JzQ2JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzdhMmUyZScgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nNDInPkZvdG8gMTwvdGV4dD4KICA8dGV4dCB4PSc1MCUnIHk9JzU4JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzY2NjY2NicgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nMjQnPnN1YnN0aXR1YSBwb3IgdW1hIGltYWdlbTwvdGV4dD4KPC9zdmc+" alt="Foto 1">
+                    <p>Comentario da foto 1.</p>
+                </figure>
+                <figure class="extra-item">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4MDAnIGhlaWdodD0nNTYwJyB2aWV3Qm94PScwIDAgODAwIDU2MCc+CiAgPHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0nI2YyZWZlNScvPgogIDxyZWN0IHg9JzI0JyB5PScyNCcgd2lkdGg9Jzc1MicgaGVpZ2h0PSc1MTInIHJ4PScxOCcgcnk9JzE4JyBmaWxsPSdub25lJyBzdHJva2U9JyNkZGQ3Y2EnIHN0cm9rZS13aWR0aD0nNCcgc3Ryb2tlLWRhc2hhcnJheT0nMTIgMTAnLz4KICA8dGV4dCB4PSc1MCUnIHk9JzQ2JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzdhMmUyZScgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nNDInPkZvdG8gMjwvdGV4dD4KICA8dGV4dCB4PSc1MCUnIHk9JzU4JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzY2NjY2NicgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nMjQnPnN1YnN0aXR1YSBwb3IgdW1hIGltYWdlbTwvdGV4dD4KPC9zdmc+" alt="Foto 2">
+                    <p>Comentario da foto 2.</p>
+                </figure>
+                <figure class="extra-item">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4MDAnIGhlaWdodD0nNTYwJyB2aWV3Qm94PScwIDAgODAwIDU2MCc+CiAgPHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0nI2YyZWZlNScvPgogIDxyZWN0IHg9JzI0JyB5PScyNCcgd2lkdGg9Jzc1MicgaGVpZ2h0PSc1MTInIHJ4PScxOCcgcnk9JzE4JyBmaWxsPSdub25lJyBzdHJva2U9JyNkZGQ3Y2EnIHN0cm9rZS13aWR0aD0nNCcgc3Ryb2tlLWRhc2hhcnJheT0nMTIgMTAnLz4KICA8dGV4dCB4PSc1MCUnIHk9JzQ2JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzdhMmUyZScgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nNDInPkZvdG8gMzwvdGV4dD4KICA8dGV4dCB4PSc1MCUnIHk9JzU4JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzY2NjY2NicgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nMjQnPnN1YnN0aXR1YSBwb3IgdW1hIGltYWdlbTwvdGV4dD4KPC9zdmc+" alt="Foto 3">
+                    <p>Comentario da foto 3.</p>
+                </figure>
+                <figure class="extra-item">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4MDAnIGhlaWdodD0nNTYwJyB2aWV3Qm94PScwIDAgODAwIDU2MCc+CiAgPHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0nI2YyZWZlNScvPgogIDxyZWN0IHg9JzI0JyB5PScyNCcgd2lkdGg9Jzc1MicgaGVpZ2h0PSc1MTInIHJ4PScxOCcgcnk9JzE4JyBmaWxsPSdub25lJyBzdHJva2U9JyNkZGQ3Y2EnIHN0cm9rZS13aWR0aD0nNCcgc3Ryb2tlLWRhc2hhcnJheT0nMTIgMTAnLz4KICA8dGV4dCB4PSc1MCUnIHk9JzQ2JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzdhMmUyZScgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nNDInPkZvdG8gNDwvdGV4dD4KICA8dGV4dCB4PSc1MCUnIHk9JzU4JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzY2NjY2NicgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nMjQnPnN1YnN0aXR1YSBwb3IgdW1hIGltYWdlbTwvdGV4dD4KPC9zdmc+" alt="Foto 4">
+                    <p>Comentario da foto 4.</p>
+                </figure>
+            </div>
+        </section>
+        <section class="extra extra-small">
+            <h2>Fotos menores (adicionais)</h2>
+            <div class="extra-grid-small">
+                <figure class="extra-item extra-item-small">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4MDAnIGhlaWdodD0nNTYwJyB2aWV3Qm94PScwIDAgODAwIDU2MCc+CiAgPHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0nI2YyZWZlNScvPgogIDxyZWN0IHg9JzI0JyB5PScyNCcgd2lkdGg9Jzc1MicgaGVpZ2h0PSc1MTInIHJ4PScxOCcgcnk9JzE4JyBmaWxsPSdub25lJyBzdHJva2U9JyNkZGQ3Y2EnIHN0cm9rZS13aWR0aD0nNCcgc3Ryb2tlLWRhc2hhcnJheT0nMTIgMTAnLz4KICA8dGV4dCB4PSc1MCUnIHk9JzQ2JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzdhMmUyZScgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nNDInPkZvdG8gMTwvdGV4dD4KICA8dGV4dCB4PSc1MCUnIHk9JzU4JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzY2NjY2NicgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nMjQnPnN1YnN0aXR1YSBwb3IgdW1hIGltYWdlbTwvdGV4dD4KPC9zdmc+" alt="Foto 1">
+                    <p>Comentario da foto 1.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4MDAnIGhlaWdodD0nNTYwJyB2aWV3Qm94PScwIDAgODAwIDU2MCc+CiAgPHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0nI2YyZWZlNScvPgogIDxyZWN0IHg9JzI0JyB5PScyNCcgd2lkdGg9Jzc1MicgaGVpZ2h0PSc1MTInIHJ4PScxOCcgcnk9JzE4JyBmaWxsPSdub25lJyBzdHJva2U9JyNkZGQ3Y2EnIHN0cm9rZS13aWR0aD0nNCcgc3Ryb2tlLWRhc2hhcnJheT0nMTIgMTAnLz4KICA8dGV4dCB4PSc1MCUnIHk9JzQ2JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzdhMmUyZScgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nNDInPkZvdG8gMjwvdGV4dD4KICA8dGV4dCB4PSc1MCUnIHk9JzU4JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzY2NjY2NicgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nMjQnPnN1YnN0aXR1YSBwb3IgdW1hIGltYWdlbTwvdGV4dD4KPC9zdmc+" alt="Foto 2">
+                    <p>Comentario da foto 2.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4MDAnIGhlaWdodD0nNTYwJyB2aWV3Qm94PScwIDAgODAwIDU2MCc+CiAgPHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0nI2YyZWZlNScvPgogIDxyZWN0IHg9JzI0JyB5PScyNCcgd2lkdGg9Jzc1MicgaGVpZ2h0PSc1MTInIHJ4PScxOCcgcnk9JzE4JyBmaWxsPSdub25lJyBzdHJva2U9JyNkZGQ3Y2EnIHN0cm9rZS13aWR0aD0nNCcgc3Ryb2tlLWRhc2hhcnJheT0nMTIgMTAnLz4KICA8dGV4dCB4PSc1MCUnIHk9JzQ2JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzdhMmUyZScgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nNDInPkZvdG8gMzwvdGV4dD4KICA8dGV4dCB4PSc1MCUnIHk9JzU4JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzY2NjY2NicgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nMjQnPnN1YnN0aXR1YSBwb3IgdW1hIGltYWdlbTwvdGV4dD4KPC9zdmc+" alt="Foto 3">
+                    <p>Comentario da foto 3.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4MDAnIGhlaWdodD0nNTYwJyB2aWV3Qm94PScwIDAgODAwIDU2MCc+CiAgPHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0nI2YyZWZlNScvPgogIDxyZWN0IHg9JzI0JyB5PScyNCcgd2lkdGg9Jzc1MicgaGVpZ2h0PSc1MTInIHJ4PScxOCcgcnk9JzE4JyBmaWxsPSdub25lJyBzdHJva2U9JyNkZGQ3Y2EnIHN0cm9rZS13aWR0aD0nNCcgc3Ryb2tlLWRhc2hhcnJheT0nMTIgMTAnLz4KICA8dGV4dCB4PSc1MCUnIHk9JzQ2JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzdhMmUyZScgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nNDInPkZvdG8gNDwvdGV4dD4KICA8dGV4dCB4PSc1MCUnIHk9JzU4JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzY2NjY2NicgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nMjQnPnN1YnN0aXR1YSBwb3IgdW1hIGltYWdlbTwvdGV4dD4KPC9zdmc+" alt="Foto 4">
+                    <p>Comentario da foto 4.</p>
+                </figure>
+            
+            </div>
+        </section>
+        <section class="story">
+            <h2>Historia</h2>
+                <p>Espaco reservado para o texto historico principal deste registro.</p>
+                <p>Use paragrafos curtos para facilitar a leitura em celular e manter consistencia com as demais paginas.</p>
+                <p>Inclua datas, locais e relacoes familiares confirmadas conforme o material disponivel.</p>
+                <p>Quando houver novas fontes, adicione complementos ao final desta secao historica.</p>
+        </section>
+    </main>
+
+    <div class="img-lightbox" aria-hidden="true" role="dialog" aria-label="Visualizacao ampliada de imagem">
+        <button class="img-lightbox-close" type="button" aria-label="Fechar visualizacao">&times;</button>
+        <img src="" alt="Imagem ampliada">
+    </div>
+    <a href="#topo" class="topo-fixo" aria-label="Voltar ao topo">Topo</a>
+    <script>
+        (function () {
+            const overlay = document.querySelector('.img-lightbox');
+            if (!overlay) return;
+
+            const overlayImg = overlay.querySelector('img');
+            const closeBtn = overlay.querySelector('.img-lightbox-close');
+
+            function openImageLightbox(sourceImg) {
+                if (!overlayImg) return;
+                overlayImg.src = sourceImg.currentSrc || sourceImg.src;
+                overlayImg.alt = sourceImg.alt || 'Imagem ampliada';
+                overlay.classList.add('active');
+                overlay.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeImageLightbox() {
+                if (!overlayImg) return;
+                overlay.classList.remove('active');
+                overlay.setAttribute('aria-hidden', 'true');
+                overlayImg.src = '';
+                overlayImg.alt = 'Imagem ampliada';
+                document.body.style.overflow = '';
+            }
+
+            document.querySelectorAll('.photo-box img, .extra-item img').forEach(function (img) {
+                img.addEventListener('click', function () {
+                    openImageLightbox(img);
+                });
+            });
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeImageLightbox);
+            }
+
+            overlay.addEventListener('click', function (event) {
+                if (event.target === overlay) {
+                    closeImageLightbox();
+                }
+            });
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape' && overlay.classList.contains('active')) {
+                    closeImageLightbox();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

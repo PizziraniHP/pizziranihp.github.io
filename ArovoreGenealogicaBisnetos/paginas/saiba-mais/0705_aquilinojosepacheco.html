@@ -1,0 +1,396 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Saiba mais - Aquilino José Pacheco e Rita de Arruda Pacheco</title>
+    <style>
+        :root {
+            --bg: #f7f5ef;
+            --panel: #ffffff;
+            --ink: #222222;
+            --muted: #666666;
+            --line: #ddd7ca;
+            --accent: #7a2e2e;
+        }
+
+        
+        html { scroll-behavior: smooth; }
+
+        body {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            color: var(--ink);
+            background: radial-gradient(circle at top right, #efe8d8, var(--bg) 45%);
+            line-height: 1.55;
+        }
+
+        .page {
+            width: min(980px, 92vw);
+            margin: 32px auto;
+            padding: 24px;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+        }
+
+        .top-links {
+            margin: 0 0 18px;
+            font-size: 14px;
+            color: var(--muted);
+        }
+
+        .top-links a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .top-links a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 22px;
+            align-items: start;
+            margin-bottom: 20px;
+        }
+
+        .photo-box {
+            background: #f2efe5;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .photo-box img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .meta h1 {
+            margin: 0 0 8px;
+            font-size: clamp(28px, 4vw, 42px);
+            line-height: 1.08;
+        }
+
+        .meta .chip {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+
+        .meta p {
+            margin: 6px 0;
+        }
+        .story {
+            border-top: 1px solid var(--line);
+            padding-top: 16px;
+        }
+
+        .story h2 {
+            margin: 0 0 10px;
+            font-size: 22px;
+        }
+
+        .story p {
+            margin: 0 0 12px;
+            text-align: justify;
+        }
+        .extra {
+            border-top: 1px solid var(--line);
+            padding-top: 16px;
+            margin-bottom: 20px;
+        }
+        .extra h2 {
+            margin: 0 0 12px;
+            font-size: 22px;
+        }
+        
+        .extra-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            align-items: start;
+        }
+        .extra-grid-small {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+            align-items: start;
+        }
+        .extra-item {
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            overflow: hidden;
+            background: #faf8f3;
+            min-width: 0;
+            transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+        }
+        .extra-item img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            background: #f2efe5;
+            transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1), filter 320ms ease;
+            transform-origin: center center;
+            will-change: transform;
+            cursor: zoom-in;
+        }
+        .extra-item:hover {
+            transform: translateY(-3px);
+            border-color: #c9bea8;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+        }
+        .extra-item:hover img,
+        .extra-item img:hover {
+            transform: scale(1.24);
+            filter: saturate(1.08) contrast(1.06);
+        }
+        .extra-item p {
+            margin: 0;
+            padding: 12px 14px;
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.55;
+            overflow-wrap: anywhere;
+        }
+        .extra-item-small img {
+            aspect-ratio: 1 / 1;
+        }
+        .extra-item-small p {
+            padding: 8px 9px;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+        @media (max-width: 1080px) {
+            .extra-grid-small { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 760px) {
+            .hero { grid-template-columns: 1fr; }
+            .photo-box { max-width: 320px; }
+            .extra-grid { grid-template-columns: 1fr; }
+            .extra-grid-small { grid-template-columns: 1fr; }
+            .extra-item img { aspect-ratio: auto; }
+        }
+
+        .img-lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.82);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 18px;
+            z-index: 2000;
+        }
+
+        .img-lightbox.active {
+            display: flex;
+        }
+
+        .img-lightbox img {
+            max-width: 92vw;
+            max-height: 88vh;
+            width: auto;
+            height: auto;
+            border-radius: 10px;
+            border: 1px solid #e8dfd0;
+            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.45);
+            background: #fff;
+        }
+
+        .img-lightbox-close {
+            position: fixed;
+            top: 18px;
+            right: 18px;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #d7c8b0;
+            border-radius: 999px;
+            background: #fff7ea;
+            color: #6c2e2e;
+            font-size: 22px;
+            line-height: 1;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+        }
+
+        .photo-box img,
+        .extra-item img {
+            cursor: zoom-in;
+        }
+.topo-fixo {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 999;
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            background: #fffdf8;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 13px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+        .topo-fixo:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script defer src="retorno.js"></script>
+</head>
+<body id="topo">
+    <main class="page">
+        <p class="top-links">
+            <a href="../../elo_indice.html">voltar ao Nucleo Familiar</a>
+        </p>
+        <p class="saiba-mais-badge">
+            <span class="saiba-mais-icone" aria-hidden="true"></span>
+            <span>SAIBA MAIS</span>
+        </p>
+        <section class="hero">
+            <figure class="photo-box">
+                <img src="../../imagens/ancestrais/7-pentavos/0705_aquilinojosepacheco.jpg" alt="Foto da pessoa">
+            </figure>
+            <div class="meta">
+                <h1>Aquilino José Pacheco</h1>
+                <span class="chip">ID 0705</span>
+                <p><strong>Pentavô de Lorena, Alice, Pedro, Rafael, Luna e Gabriela </strong></p>
+                <p>Aquilino José Pacheco é pai de Aquilino Pacheco Filho que por sua vez é o pai de Helena Ferraz Pacheco. Veja na reportagem abaixo (foto 1), registrada na imprensa DIARIO NACIONAL 12 03 1932.</p>
+                 <p>Neste Saiba mais incluimos tambem os Pais da Antonieta Silveira, dos quais não conseguimos apurar siquer os nomes.</p>
+            </div>
+        </section>
+
+                <section class="extra">
+            <h2>Fotos e comentarios</h2>
+            <div class="extra-grid">
+                <figure class="extra-item">
+                    <img src="../../imagens/imagens_smais/0705_aquilinojosepacheco/repaquilinojosepachecojornalmetropole.jpg" alt="Foto 1">
+                    <p>Aquilino José Pacheco, conhecido e respeitado na época como Coronel Aquilino. Veja na reportagem acima, registrada na imprensa DIARIO NACIONAL 12 03 1932."transcrita na integra nos comentários abaixo"</p>
+                </figure>
+                <figure class="extra-item">
+                    <img src="../../imagens/imagens_smais/0705_aquilinojosepacheco/esalq_piracicaba_aquilino_j_pacheco.jpg" alt="Foto 2">
+                    <p>Nesta foto cedida pelo Sr. Aquilino Pacheco filho que retrata a ESALQ, em Piracicaba, acha-se presente vestindo calça branca e paletó preto ou cinza o Coronel Aquilino José Pacheco.</p>
+                </figure>
+                <figure class="extra-item">
+                    <img src="../../imagens/imagens_smais/0705_aquilinojosepacheco/rep2deaquilinojpacheco.jpg" alt="Foto 3">
+                    <p>Mais uma reportagem citando o Coronel Aquilino José Pacheco em jornal Piracicabano.</p>
+                </figure>
+                <figure class="extra-item">
+                    <img src="../../imagens/imagens_smais/0705_aquilinojosepacheco/rep3aquilinojosepacheco.jpg" alt="Foto 4">
+                    <p>Mais uma reportagem citando o Coronel Aquilino José Pacheco em jornal Piracicabano-(abaixo transcrevemos na integra o texto para leitura).</p>
+                </figure>
+            </div>
+        </section>
+        <section class="extra extra-small">
+            <h2>Fotos menores (adicionais)</h2>
+            <div class="extra-grid-small">
+                <figure class="extra-item extra-item-small">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4MDAnIGhlaWdodD0nNTYwJyB2aWV3Qm94PScwIDAgODAwIDU2MCc+CiAgPHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0nI2YyZWZlNScvPgogIDxyZWN0IHg9JzI0JyB5PScyNCcgd2lkdGg9Jzc1MicgaGVpZ2h0PSc1MTInIHJ4PScxOCcgcnk9JzE4JyBmaWxsPSdub25lJyBzdHJva2U9JyNkZGQ3Y2EnIHN0cm9rZS13aWR0aD0nNCcgc3Ryb2tlLWRhc2hhcnJheT0nMTIgMTAnLz4KICA8dGV4dCB4PSc1MCUnIHk9JzQ2JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzdhMmUyZScgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nNDInPkZvdG8gMTwvdGV4dD4KICA8dGV4dCB4PSc1MCUnIHk9JzU4JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzY2NjY2NicgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nMjQnPnN1YnN0aXR1YSBwb3IgdW1hIGltYWdlbTwvdGV4dD4KPC9zdmc+" alt="Foto 1">
+                    <p>Comentario da foto 1.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4MDAnIGhlaWdodD0nNTYwJyB2aWV3Qm94PScwIDAgODAwIDU2MCc+CiAgPHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0nI2YyZWZlNScvPgogIDxyZWN0IHg9JzI0JyB5PScyNCcgd2lkdGg9Jzc1MicgaGVpZ2h0PSc1MTInIHJ4PScxOCcgcnk9JzE4JyBmaWxsPSdub25lJyBzdHJva2U9JyNkZGQ3Y2EnIHN0cm9rZS13aWR0aD0nNCcgc3Ryb2tlLWRhc2hhcnJheT0nMTIgMTAnLz4KICA8dGV4dCB4PSc1MCUnIHk9JzQ2JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzdhMmUyZScgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nNDInPkZvdG8gMjwvdGV4dD4KICA8dGV4dCB4PSc1MCUnIHk9JzU4JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzY2NjY2NicgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nMjQnPnN1YnN0aXR1YSBwb3IgdW1hIGltYWdlbTwvdGV4dD4KPC9zdmc+" alt="Foto 2">
+                    <p>Comentario da foto 2.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4MDAnIGhlaWdodD0nNTYwJyB2aWV3Qm94PScwIDAgODAwIDU2MCc+CiAgPHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0nI2YyZWZlNScvPgogIDxyZWN0IHg9JzI0JyB5PScyNCcgd2lkdGg9Jzc1MicgaGVpZ2h0PSc1MTInIHJ4PScxOCcgcnk9JzE4JyBmaWxsPSdub25lJyBzdHJva2U9JyNkZGQ3Y2EnIHN0cm9rZS13aWR0aD0nNCcgc3Ryb2tlLWRhc2hhcnJheT0nMTIgMTAnLz4KICA8dGV4dCB4PSc1MCUnIHk9JzQ2JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzdhMmUyZScgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nNDInPkZvdG8gMzwvdGV4dD4KICA8dGV4dCB4PSc1MCUnIHk9JzU4JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzY2NjY2NicgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nMjQnPnN1YnN0aXR1YSBwb3IgdW1hIGltYWdlbTwvdGV4dD4KPC9zdmc+" alt="Foto 3">
+                    <p>Comentario da foto 3.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc4MDAnIGhlaWdodD0nNTYwJyB2aWV3Qm94PScwIDAgODAwIDU2MCc+CiAgPHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsbD0nI2YyZWZlNScvPgogIDxyZWN0IHg9JzI0JyB5PScyNCcgd2lkdGg9Jzc1MicgaGVpZ2h0PSc1MTInIHJ4PScxOCcgcnk9JzE4JyBmaWxsPSdub25lJyBzdHJva2U9JyNkZGQ3Y2EnIHN0cm9rZS13aWR0aD0nNCcgc3Ryb2tlLWRhc2hhcnJheT0nMTIgMTAnLz4KICA8dGV4dCB4PSc1MCUnIHk9JzQ2JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzdhMmUyZScgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nNDInPkZvdG8gNDwvdGV4dD4KICA8dGV4dCB4PSc1MCUnIHk9JzU4JScgdGV4dC1hbmNob3I9J21pZGRsZScgZG9taW5hbnQtYmFzZWxpbmU9J21pZGRsZScgZmlsbD0nIzY2NjY2NicgZm9udC1mYW1pbHk9J0dlb3JnaWEsIFRpbWVzIE5ldyBSb21hbiwgc2VyaWYnIGZvbnQtc2l6ZT0nMjQnPnN1YnN0aXR1YSBwb3IgdW1hIGltYWdlbTwvdGV4dD4KPC9zdmc+" alt="Foto 4">
+                    <p>Comentario da foto 4.</p>
+                </figure>
+            
+            </div>
+        </section>
+        <section class="story">
+            <h2>Historia</h2>
+                <p>O venerando coronel Aquilino José Pacheco, ardoroso propugnador dos ideais republicanos, que, em quase cem anos de vida, desenvolveu a i mais admirável ação cívica. Perde com seu desaparecimento, aquela, cidade — o mais lídimo representante de sua cultura política, e as fileiras democráticas — um dos seus ele- mentos mais valiosos. Depositário zeloso das acrisoladas virtudes que foram o apanágio de nossos antepassados, o ilustre paulista pautou sempre os seus atos pelas normas da mais acentuada honestidade, o que lhe valeu inestimável galardão, consubstanciado na veneração que lhe tributa a terra em que nasceu e onde fruiu a maior parte de sua grande vida. Essa linha de conduta caracterizou também, como é natural, sua atividade política, sempre exercida no bom sentido, à procura de melhores dias para o povo a que servia, o que quer dizer orientada para o liberalismo. Nascido em Piracicaba no dia 9 de fevereiro de 1839, ha 93 anos por- tanto, sempre aplicou sua prodigiosa atividade, quer na política local, quer na lavoura que lhe deu nome e fama. Muito moço, casou-se, contando numerosa descendência, por seus onze filhos, alguns dos quais são hoje fazendeiros em Jaú e Piracicaba. Na monarquia, militou no Partido Liberal, tendo sido depois um dos signatários do manifesto republicano de Piracicaba, aderindo ao programa da Convenção de Itu, ao lado de Prudente de Moraes e Moraes Barres. Em 1883 mudou-se de Piracicaba para Jaú, onde abriu uma fazenda na freguesia da Bocaina, cidade que fundou com João Pacheco de Almeida Prado. Ali permaneceu, mi- litando no Partido Republicano até 1894, ano em que vendeu sua propriedade, regressando, então, para Piracicaba, onde passou a residir. Em sua terra ocupou então o coronel Aquilino Pacheco vários cargos políticos, no desempenho dos quais sempre mostrou um conhecimento profundo das necessidades públicas, bem como invulgar capacidade de discernir as mediadas necessárias daquelas que, muito embora úteis, não são, no entanto, oportunas. Em 1896, eleito vereador, não tardou a ocupar a prefeitura, posto em que granjeou o renome e a admiração pública. Piracicaba, sob sua administração, tornou-se a cidade modelo. O melhoramento mais importante introduzido pelo digno prefeito foi a rede de esgotos, levada a efeito, mediante planos do grande engenheiro Saturnino de Brito, uma das notabilidades no assumpto. Encetada a obra, em um tempo em que raro era esse serviço no Estado, começou a ser feita sob a direção do engenheiro Bernardino Quiroga, que, depois de um ano de serviço, se retirou inesperadamente. Ficaria ela interrompida, se o coronel Aquilino Pacheco, tomando a si o pesado encargo, não continuasse os trabalhos começados, sem outro socorro que não fosse sua comprovada experiência. A Câmara Municipal não queria pagar engenheiros e a paralisação dos serviços seria, então, uma calamidade. Depois de três anos de incansável trabalho, as obras terminaram e, hoje em dia, Piracicaba se orgulha desse seu melhoramento, devido em grande parte a iniciativa e ao esforço do coronel Aquilino Pacheco. Devesse-lhe também a construção do grupo escolar "Moraes Barros', em terreno municipal e a expensas da Câmara local, gesto que é tanto mais de encarecer-se quando, naquela época, outras cidades tudo esperavam do governo do Estado. Como prefeito, permaneceu o coronel Aquilino Pacheco, durante neve anos seguidos, propugnando. sempre, pelo seu lema que era o máximo de progresso e adiantamento para o município, com o mínimo dispêndio para os cofres municipais. Em 1906, abandonou a vida política, só aceitando o cargo de vereador que, por diversas vezes, ocupou. De 1901 a 1907, acompanhou a Dissidência chefiada por Prudente de Moraes Barros, o mesmo fazendo em 1915, quando idêntico movimento se os noves generais RIO. 11 (U. T. B.) — Noticia-se que a lista completa dos novos generais, deve ser a seguinte: Manoel Rabello, Christovão Barcellos, Lima e Silva e Paes de Andrade. O CORONEL JOSE' PESSOA NAO SERA' PROMOVIDO RIO, 11 (U. T. B.) — O coronel José Pessoa, comandante da Escola Militar, ao contrário do que também se divulgou não poderia ainda ser promovido uma vez que não possuem o curso de Estado Maior. 0 que foi a vida quase centenária do velho paulista. O CORONEL AQUILINO JOSÉ PACHECO operou sob a orientação de Júlio Mesquita. Em 1917 desligou-se do Partido Republicano de Piracicaba, de que era um dos membros influentes, e retirou- se para a vida privada, só dele saindo, para, em 1925, cerrar fileiras no Partido Independente, de cuja adesão ao Partido Democrático foi um dos elementos determinantes, tendo, em 1926, assinado o manifesto que essa incorporação se verificou. Eleito presidente do diretório locai, quando se afastou, viu-se elevado à categoria de presidente honorário. Nas rudes lutas políticas em que o Partido Democrático se empenhou naquela cidade, como devem estar lembrados os leitores, pela circunstância- do relato que nestas colunas fizemos, foi destacada a ação do coronel Aquilino Pacheco. Mas, pouco antes de morrer, coube-lhe a satisfação de ver recomposta em sua unidade a família política piracicabana, com o estabelecimento da frente única local, de cujo manifesto, há poucos dias publicado, foi o primeiro e mais autorizado signatário. Político exemplar, caráter sem já- cá, chefe de família modelo — a gratidão de seus conterrâneos mais de uma vez se manifestou em inequívocas demonstrações de apreço, cujo valor sobe de ponto se se atentar para o facto de não ter sido ele jamais um grande potentado, que se valesse da fortuna para alicerçar seu prestigio. Ao contrário, este cada vez mais se firmou, não obstante, (ou talvez por isso mesmo), a placidez do teor de sua benemérita existência. Duma feita, há poucos anos. a mocidade local comemorou-lhe a data aniversaria com um banquete. Brindes se levantaram, até que, tremulo, comovido até ás lagrimas, o velho paulista se ergueu para balbuciar o seu agradecimento imenso: — Deus lhes pague pra mecês... Mais não pôde dizer, do que essas poucas palavras com aquele travo tão profundo do dialeto caipira, que ele timbrava em manter, não obstante a instrução de que se podia jactar. Com o morto de ontem, perde, pois, S. Paulo, um dos vultos mais significativos de sua política e Piracicaba um dos seus maiores filhos. Ha Central do Brasil Remorso de um agente RIO, 11 (U. T. B.) — Foi removido pelo chefe da 2.» divisão da Central do j Brasil, para a estação de Caçapava, agente Laurindo Lopes da Rocha. AUTORIZADO A REQUISITAR PASSAGENS RIO, 11 (U. T. B ) — Foi autorizado a requisitar passagens na Central do Brasil, por conta do Estado de S. Paulo, o sr. Guilherme Florence, chefe do serviço de jardas»- Filho de Firmiano Botto Pacheco e de d. Maria Luiza Costa Pacheco, o finado desaparece aos 93 anos de idade. Casado em primeiras núpcias com d. Maria de Arruda Leite, teve desse consorcio, quatro filhos: Firmiano de Campos Pacheco, já falecido, que foi casado com d. Francisca Bueno Pacheco; José e Antonio de Campos Pacheco, já falecidos; e d. Antonia Silveira Penteado, casada com Antonio Silveira Penteado. Casando-se em segundas núpcias com d. Rita de Arruda Pacheco, teve os seguintes filhos: Marcolino de Campos Pacheco, casado com d. Patrocinia de Campos Pacheco; João de Campos Pacheco, casado com d. Maria de Oliveira Pacheco; d. Anna Pacheco da Silva, casada com o sr. Seraphim Pacheco da Silva; d. Francisca Pacheco Ferraz, casada com o sr. ANTONIO Henrique Ferraz; Aquilino Pacheco Filho, casado com d. Antonietta Ferraz Pacheco; d. Maria do Campos Pacheco e a falecida Gertrudes de Campos Pacheco. Deixa ainda 65 netos, 121 bisnetos e 5 tataranetos. Assim que se divulgou a triste notícia, a cidade de Piracicaba tomou luto: a Prefeitura, a Frente Única local, a Escola de Pharmacia e Odontologia, todos os clubes da cidade resolveram hastear a bandeira em funeral e suspender, durante três dias, todas as atividades festivas, razão pela qual foram suspensas todas as reuniões sociais e esportivas marcadas para hoje e amanhã. O enterro realizar-se-á hoje, às 9 horas, no cemitério municipal, devendo o comercio local conservar-se fechado das 8 às 11 horas. Inúmeros amigos do extinto já se dirigiram desta capital a Piracicaba, afim de tomar parte nos funerais, contando-se entre eles vários membros da família Moraes Barros. O diretório central do Partido Democrático far-se-á representar por uma comissão, tendo já depositada flores sobre a urna mortuária.</p>
+                <p>.</p>
+                <p>Paragrafo 3 da historia.</p>
+                <p>Paragrafo 4 da historia.</p>
+        </section>
+    </main>
+
+    <div class="img-lightbox" aria-hidden="true" role="dialog" aria-label="Visualizacao ampliada de imagem">
+        <button class="img-lightbox-close" type="button" aria-label="Fechar visualizacao">×</button>
+        <img src="" alt="Imagem ampliada">
+    </div>
+    <a href="#topo" class="topo-fixo" aria-label="Voltar ao topo">Topo</a>
+    <script>
+        (function () {
+            const overlay = document.querySelector('.img-lightbox');
+            if (!overlay) return;
+
+            const overlayImg = overlay.querySelector('img');
+            const closeBtn = overlay.querySelector('.img-lightbox-close');
+
+            function openImageLightbox(sourceImg) {
+                if (!overlayImg) return;
+                overlayImg.src = sourceImg.currentSrc || sourceImg.src;
+                overlayImg.alt = sourceImg.alt || 'Imagem ampliada';
+                overlay.classList.add('active');
+                overlay.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeImageLightbox() {
+                if (!overlayImg) return;
+                overlay.classList.remove('active');
+                overlay.setAttribute('aria-hidden', 'true');
+                overlayImg.src = '';
+                overlayImg.alt = 'Imagem ampliada';
+                document.body.style.overflow = '';
+            }
+
+            document.querySelectorAll('.photo-box img, .extra-item img').forEach(function (img) {
+                img.addEventListener('click', function () {
+                    openImageLightbox(img);
+                });
+            });
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeImageLightbox);
+            }
+
+            overlay.addEventListener('click', function (event) {
+                if (event.target === overlay) {
+                    closeImageLightbox();
+                }
+            });
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape' && overlay.classList.contains('active')) {
+                    closeImageLightbox();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

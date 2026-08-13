@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100" role="img" aria-label="Retrato ilustrativo de Rita de Arruda Pacheco">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f1ece4"/>
+      <stop offset="100%" stop-color="#dccab6"/>
+    </linearGradient>
+    <radialGradient id="face" cx="50%" cy="38%" r="60%">
+      <stop offset="0%" stop-color="#f7dcc4"/>
+      <stop offset="100%" stop-color="#e1b89a"/>
+    </radialGradient>
+    <linearGradient id="dress" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6a5770"/>
+      <stop offset="100%" stop-color="#493a50"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="1100" fill="url(#bg)"/>
+  <circle cx="450" cy="350" r="235" fill="#d5c2a9" opacity="0.34"/>
+
+  <g transform="translate(450 325)">
+    <ellipse cx="0" cy="30" rx="168" ry="208" fill="url(#face)"/>
+    <ellipse cx="-58" cy="10" rx="12" ry="8" fill="#4a3327"/>
+    <ellipse cx="58" cy="10" rx="12" ry="8" fill="#4a3327"/>
+    <path d="M -34 86 Q 0 104 34 86" fill="none" stroke="#7a4f3b" stroke-width="6" stroke-linecap="round"/>
+    <path d="M -24 50 Q 0 66 24 50" fill="none" stroke="#8a5e49" stroke-width="4" stroke-linecap="round"/>
+
+    <path d="M -176 -62 Q -138 -178 0 -184 Q 138 -178 176 -62 L 176 -24 Q 92 -104 0 -104 Q -92 -104 -176 -24 Z" fill="#5b463e"/>
+    <ellipse cx="0" cy="-136" rx="108" ry="46" fill="#6a544b" opacity="0.92"/>
+  </g>
+
+  <g transform="translate(450 735)">
+    <path d="M -286 226 Q -176 22 0 26 Q 176 22 286 226 L 286 334 L -286 334 Z" fill="url(#dress)"/>
+    <path d="M -96 48 Q 0 188 96 48" fill="#f5efe6"/>
+    <ellipse cx="0" cy="30" rx="40" ry="18" fill="#ccb79f"/>
+  </g>
+
+  <g transform="translate(450 990)">
+    <rect x="-338" y="-74" width="676" height="138" rx="18" fill="#fff8ec" stroke="#bea583" stroke-width="3"/>
+    <text x="0" y="-18" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="44" fill="#4a3220">Rita de Arruda Pacheco</text>
+    <text x="0" y="32" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="27" fill="#7a5b40">Retrato ilustrativo</text>
+  </g>
+
+  <circle cx="792" cy="98" r="64" fill="#fff7eb" stroke="#bea583" stroke-width="3"/>
+  <text x="792" y="112" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#5a3820">RAP</text>
+</svg>

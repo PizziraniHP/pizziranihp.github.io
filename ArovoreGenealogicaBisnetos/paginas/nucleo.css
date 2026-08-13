@@ -1,0 +1,366 @@
+/* ============================================================
+   NUCLEO.CSS — Faixa de miniaturas dos bisnetos
+   ============================================================ */
+
+
+
+/* Cada item (link ou ativo) */
+.ordem-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 0.75rem;
+}
+
+/* Miniatura circular */
+.ordem-thumb {
+    width: 50px;      /* tamanho escolhido */
+    height: 50px;     /* tamanho escolhido */
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid #ccc;
+    margin-bottom: 4px;
+}
+
+/* Item ativo (a página atual) */
+.ordem-link-ativa .ordem-thumb {
+    border-color: #0077aa;
+    box-shadow: 0 0 6px rgba(0, 119, 170, 0.4);
+}
+
+/* Número + nome */
+.ordem-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.70rem;
+    color: #444;
+}
+
+.ordem-num {
+    font-weight: bold;
+    color: #666;
+}
+
+.ordem-nome {
+    font-weight: 600;
+    color: #333;
+}
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+header h2 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #555;
+}
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+header h2 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #555;
+}
+.geracao-barra {
+  max-width: 600px;   /* pode ajustar para 500 se quiser mais estreito */
+  margin: 20px auto;
+  border-radius: 8px;
+}
+.geracao-titulo {
+  text-align: center;
+}
+.piramide-title,
+.piramide-subtitle {
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+:root {
+      --bg-top:    #2c1a0e;
+      --bg-mid:    #4a2c14;
+      --bg-bot:    #1e1208;
+      --gold:      #c9a84c;
+      --gold-lt:   #e8c97a;
+      --cream:     #f5edd8;
+      --card-bg:   rgba(255,255,255,0.07);
+      --card-brd:  rgba(201,168,76,0.35);
+      --card-hover:#c9a84c22;
+      --radius:    16px;
+      --shadow:    0 8px 32px rgba(0,0,0,0.45);
+}
+
+/* FUNDO IGUAL AO ELO-ÍNDICE */
+body {
+  background: linear-gradient(
+    to bottom,
+    var(--bg-top),
+    var(--bg-mid),
+    var(--bg-bot)
+  );
+  color: var(--cream);
+}
+
+/* FAIXA DAS MINIATURAS (já no tema ouro‑velho) */
+.ordem-arvores {
+    display: flex;
+    gap: 12px;
+    padding: 10px 0;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--card-bg);
+    border-bottom: 1px solid var(--card-brd);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    
+}
+
+/* LINK DE CADA BISNETO */
+.ordem-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--cream);
+    font-size: 0.75rem;
+    padding: 6px 8px;
+    border-radius: var(--radius);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.ordem-link:hover {
+    background-color: var(--card-hover);
+    color: var(--gold-lt);
+}
+
+/* MINIATURA */
+.ordem-thumb {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid var(--card-brd);
+    margin-bottom: 4px;
+    box-shadow: var(--shadow);
+}
+
+/* MINIATURA ATIVA */
+.ordem-link-ativa .ordem-thumb {
+    border-color: var(--gold);
+    box-shadow: 0 0 6px rgba(201,168,76,0.6);
+}
+
+/* LABEL (NÚMERO + NOME) */
+.ordem-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.70rem;
+    color: var(--cream);
+}
+
+/* NÚMERO */
+.ordem-num {
+    font-weight: bold;
+    color: var(--gold-lt);
+    font-size: 0.80rem;
+}
+
+/* NOME DO BISNETO — AGORA EM BRANCO E NEGRITO */
+.ordem-nome {
+    font-weight: 700;          /* negrito forte */
+    color: var(--cream);       /* branco suave do tema */
+    margin-top: 2px;
+    font-size: 0.78rem;        /* ligeiramente maior */
+}
+/* NÚMERO DO BISNETO (1, 2, 3, 4, 5, 6) */
+.ordem-num {
+    font-weight: 700;          /* negrito forte */
+    color: var(--gold-lt);     /* dourado claro */
+    font-size: 0.85rem;        /* ligeiramente maior */
+    margin-bottom: 2px;
+}
+
+/* NOME DO BISNETO — BRANCO E NEGRITO */
+.ordem-nome {
+    font-weight: 700;          /* negrito forte */
+    color: var(--cream);       /* branco suave do tema */
+    font-size: 0.82rem;        /* maior que antes */
+    margin-top: 1px;
+    text-shadow: 0 0 3px rgba(0,0,0,0.4); /* realce elegante */
+}
+
+/* Recuo progressivo para dar sensação de pirâmide */
+.linha-geracao:nth-child(odd) {
+    padding-left: 10px;
+}
+
+.linha-geracao:nth-child(even) {
+    padding-left: 30px;
+}
+/* Borda dourada mais definida */
+.card-pessoa {
+    border: 1px solid rgba(201,168,76,0.45);
+}
+/* Nome com brilho dourado suave */
+.card-nome {
+    color: var(--gold-lt);
+    text-shadow: 0 0 4px rgba(201,168,76,0.35);
+}
+/* Status com fundo translúcido */
+.card-status {
+    background-color: rgba(0,0,0,0.25);
+    padding: 4px 6px;
+    border-radius: 6px;
+    display: inline-block;
+}
+/* Botão saiba mais mais elegante */
+.card-saiba-mais {
+    background-color: rgba(201,168,76,0.15);
+    border-color: rgba(201,168,76,0.45);
+    color: var(--cream);
+    font-weight: 600;
+}
+
+.card-saiba-mais:hover {
+    background-color: rgba(201,168,76,0.35);
+    color: var(--gold-lt);
+}
+/* Painel da pirâmide com efeito vidro mais forte */
+.piramide-inversa-inner {
+    backdrop-filter: blur(10px) brightness(1.08);
+}
+/* ============================
+   CORREÇÃO DE STATUS
+   ============================ */
+.card-status {
+    background-color: rgba(201,168,76,0.20); /* dourado translúcido */
+    color: var(--cream);                     /* branco suave */
+    padding: 4px 6px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-shadow: 0 0 3px rgba(0,0,0,0.45);
+    display: inline-block;
+}
+
+/* ============================
+   CORREÇÃO DO ID
+   ============================ */
+.card-id {
+    color: var(--cream);                     /* branco suave */
+    opacity: 0.9;
+    font-size: 0.78rem;
+    margin-top: 4px;
+    text-shadow: 0 0 3px rgba(0,0,0,0.45);   /* melhora leitura */
+}
+
+/* ============================
+   CORREÇÃO DO FUNDO DO CARD
+   ============================ */
+.card-pessoa {
+    background-color: rgba(255,255,255,0.07); /* fundo translúcido ouro-velho */
+    border: 1px solid rgba(201,168,76,0.45);  /* borda dourada */
+    border-radius: var(--radius);
+    padding: 14px;
+    width: 160px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(8px) brightness(1.05);
+}
+
+/* ============================
+   CORREÇÃO DO BOTÃO "SAIBA MAIS"
+   ============================ */
+.card-saiba-mais {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: rgba(201,168,76,0.35); /* dourado visível */
+    border: 1px solid rgba(201,168,76,0.65); /* borda dourada forte */
+    border-radius: var(--radius);
+    color: var(--cream);                     /* texto branco */
+    font-weight: 700;
+    text-decoration: none;
+    text-shadow: 0 0 3px rgba(0,0,0,0.45);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-saiba-mais:hover {
+    background-color: rgba(201,168,76,0.55); /* dourado mais forte */
+    color: var(--bg-top);                    /* texto escuro para contraste */
+}
+/* ID visível, discreto, texto preto */
+.card-id {
+    color: #000;                     /* preto */
+    opacity: 0.85;                   /* leve suavização */
+    font-size: 0.78rem;
+    margin-top: 4px;
+    text-shadow: none;               /* remove brilho que atrapalhava */
+}
+/* Barras das gerações no tema ouro-velho */
+.geracao-barra {
+    background-color: rgba(201,168,76,0.20);
+    border: 1px solid rgba(201,168,76,0.45);
+    border-radius: var(--radius);
+    padding: 14px 20px;
+    color: var(--cream);
+    text-align: center;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+
+.geracao-barra:hover {
+    background-color: rgba(201,168,76,0.35);
+    border-color: rgba(201,168,76,0.65);
+}
+
+/* Botão expandir/recolher bem visível */
+.geracao-toggle {
+    font-size: 0.90rem;
+    font-weight: 700;
+    color: var(--cream);                     /* texto branco */
+    background-color: rgba(201,168,76,0.35); /* dourado escuro */
+    padding: 4px 10px;
+    border-radius: 6px;
+    display: inline-block;
+    margin-top: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.geracao-barra:hover .geracao-toggle {
+    background-color: rgba(201,168,76,0.55); /* dourado mais forte */
+    color: var(--bg-top);                    /* texto escuro para contraste */
+}
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,927 @@
+
+/* TESTE ARNALDO 123 *//* ============================================================
+   ARVORE.CSS — PARTE 1
+   ------------------------------------------------------------
+   Este arquivo contém SOMENTE o CSS da ÁRVORE GENEALÓGICA.
+   Nada do "Saiba Mais" está incluído aqui.
+   Organizado e comentado para facilitar manutenção.
+   ============================================================ */
+
+
+/* ============================================================
+   1. LAYOUT GERAL DA ÁRVORE
+   ------------------------------------------------------------
+   Define o container principal e espaçamentos gerais.
+   ============================================================ */
+
+.container-arvore {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+
+/* ============================================================
+   2. LINHAS DE GERAÇÃO
+   ------------------------------------------------------------
+   Cada geração (pais, avós, bisavós, etc.) é uma linha.
+   O wrap garante que sempre teremos 8 cartões por linha.
+   ============================================================ */
+
+.linha-geracao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /*centraliza os cartões*/
+    gap: 12px;
+    margin-bottom: 25px;
+}
+.card-pessoa {
+    background-color: rgba(255,255,255,0.07);
+    border: 1px solid rgba(201,168,76,0.45);
+    border-radius: var(--radius);
+    padding: 14px;
+    width: 175px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(8px) brightness(1.05);
+}
+
+
+
+
+
+/* ============================================================
+   4. FOTOS PADRONIZADAS
+   ------------------------------------------------------------
+   Fotos sempre proporcionais, sem hover, sem zoom automático.
+   O zoom com clique é feito via JS/lightbox (em outro arquivo).
+   ============================================================ */
+
+.card-foto {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+
+
+
+/* ============================================================
+   5. TEXTOS DO CARTÃO
+   ------------------------------------------------------------
+   Nome, status (pai, avô, bisavô...), ID e código genealógico.
+   ============================================================ */
+
+.card-nome {
+    font-size: 0.82rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 4px;
+    color: #333;
+}
+
+.card-status {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.card-id {
+    font-size: 0.70rem;
+    font-weight: 600;
+    background: #f5f5f5;
+    padding: 2px 6px;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    color: #444;
+}
+/* ============================================================
+   6. BOTÃO "SAIBA MAIS" DENTRO DO CARTÃO
+   ------------------------------------------------------------
+   Discreto, como você pediu. Sem hover chamativo.
+   ============================================================ */
+   
+
+.card-saiba-mais {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 4px 10px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #4d5964;
+    background: #f8fbff;
+    border: 1px solid #c9d2dc;
+    border-radius: 999px;
+    text-decoration: none;
+}
+
+.card-saiba-mais:hover {
+    background: #eef5fb;
+    border-color: #9fb0c0;
+    text-decoration: none;
+}
+
+
+
+/* ============================================================
+   7. CORES PARA PATERNO / MATERNO
+   ------------------------------------------------------------
+   Você organiza manualmente 4 paternos + 4 maternos.
+   Aqui apenas definimos estilos visuais.
+   ============================================================ */
+
+.card-paterno {
+    border-color: #c9a84c;
+    background: #fffdf5;
+}
+
+.card-materno {
+    border-color: #9bb7d9;
+    background: #f7fbff;
+}
+
+
+
+/* ============================================================
+   8. LARGURAS FIXAS POR GERAÇÃO
+   ------------------------------------------------------------
+   Estes valores foram MUITO testados por você e funcionam
+   perfeitamente em celular, PC e TV.
+   Garantem 8 cartões por linha SEM calc().
+   ============================================================ */
+/* ============================================================
+   8. LARGURAS FIXAS PADRONIZADAS
+   ------------------------------------------------------------
+   Todas as gerações com a mesma largura.
+   Garante 8 cartões por linha SEM calc().
+   ============================================================ */
+
+.card-pais,
+.card-avos,
+.card-bisavos,
+.card-trisavos,
+.card-tetravos,
+.card-pentavos,
+.card-hexavos,
+.card-bisneto,
+.card-bisneta {
+    width: 175px;
+    flex: 0 0 175px;
+}
+
+
+
+
+/* ============================================================
+   9. RESPONSIVIDADE CONTROLADA
+   ------------------------------------------------------------
+   Sem porcentagens que deformam cartões.
+   Sem media queries destrutivas.
+   Apenas ajustes suaves para telas pequenas.
+   ============================================================ */
+
+@media (max-width: 600px) {
+    .linha-geracao {
+        justify-content: center;
+    }
+}
+/* ============================================================
+   ARVORE.CSS — PARTE 2
+   ------------------------------------------------------------
+   Continuação das regras da árvore genealógica.
+   ============================================================ */
+
+
+/* ============================================================
+   10. SEPARADORES E TÍTULOS DE GERAÇÃO
+   ------------------------------------------------------------
+   Barras, legendas e divisores entre gerações.
+   ============================================================ */
+
+.legenda-linha {
+    text-align: center;
+    font-weight: bold;
+    margin: 10px 0;
+    font-size: 0.90rem;
+    color: #4a3a1e;
+}
+
+.linha-separadora {
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        rgba(201, 168, 76, 0.1),
+        #7e5a22 18%,
+        #d8b86a 50%,
+        #7e5a22 82%,
+        rgba(201, 168, 76, 0.1)
+    );
+    margin: 20px 0;
+    border-radius: 999px;
+}
+
+.geracao-barra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 12px 0 8px;
+    padding: 9px 12px;
+    border: 1px solid #cba85a;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #2f1d10, #4f3017);
+    box-shadow: 0 7px 18px rgba(0, 0, 0, 0.22);
+}
+
+.geracao-titulo {
+    font-weight: 700;
+    color: #f6dfaf;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+}
+
+.geracao-toggle {
+    border: 1px solid #d7b971;
+    border-radius: 999px;
+    background: rgba(255, 245, 219, 0.98);
+    color: #2b1a0c;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+.geracao-toggle:hover {
+    background: #f3d88d;
+}
+
+
+
+/* ============================================================
+   11. QUOTE / FRASE ENTRE GERAÇÕES
+   ------------------------------------------------------------
+   Usado para frases, dedicatórias ou observações.
+   ============================================================ */
+
+.quote {
+    font-style: italic;
+    text-align: center;
+    margin: 20px 0;
+    color: #5a4a3a;
+}
+
+
+
+/* ============================================================
+   12. LIGHTBOX (APENAS ESTRUTURA)
+   ------------------------------------------------------------
+   O comportamento do clique (abrir/fechar) será no JS.
+   Aqui apenas deixamos a estrutura visual.
+   ============================================================ */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+}
+
+
+
+/* ============================================================
+   13. AJUSTES RESPONSIVOS (SUAVES)
+   ------------------------------------------------------------
+   Sem deformar cartões. Apenas ajustes leves.
+   ============================================================ */
+
+@media (max-width: 1200px) {
+    .card-pessoa {
+        width: 100px;
+        flex: 0 0 100px;
+    }
+
+    .card-bisneto,
+    .card-bisneta {
+        width: 150px;
+        flex: 0 0 150px;
+    }
+
+    .card-pais {
+        width: 110px;
+        flex: 0 0 110px;
+    }
+
+    .card-avos {
+        width: 100px;
+        flex: 0 0 100px;
+    }
+}
+
+@media (max-width: 900px) {
+    .card-pessoa {
+        width: 90px;
+        flex: 0 0 90px;
+        padding: 8px;
+    }
+
+    .card-bisneto,
+    .card-bisneta {
+        width: 140px;
+        flex: 0 0 140px;
+    }
+}
+
+@media (max-width: 700px) {
+    .card-pessoa {
+        width: 45%;
+        flex: 0 0 45%;
+    }
+
+    .card-bisneto,
+    .card-bisneta {
+        width: 70%;
+        flex: 0 0 70%;
+    }
+}
+
+@media (max-width: 520px) {
+    .container-arvore {
+        width: 100%;
+        padding: 0 8px;
+    }
+
+    .card-pessoa {
+        width: 100%;
+        flex: 0 0 100%;
+    }
+}
+
+
+
+/* ============================================================
+   14. ACESSO DISCRETO (LINKS SECUNDÁRIOS)
+   ------------------------------------------------------------
+   Usado para links pequenos abaixo das gerações.
+   ============================================================ */
+
+.acesso-discreto {
+    display: flex;
+    justify-content: center;
+    margin: 12px 0 10px;
+    font-size: 0.9rem;
+}
+
+.acesso-discreto a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #c9a84c, #e8c97a);
+    border: 1px solid #f2dc9d;
+    border-radius: 999px;
+    padding: 8px 16px;
+    color: #2c1a0e;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.24);
+}
+
+.acesso-discreto a:hover {
+    transform: translateY(-1px);
+    filter: brightness(1.03);
+}
+/* ============================================================
+   ARVORE.CSS — PARTE 3
+   ------------------------------------------------------------
+   Continuação das regras da árvore genealógica.
+   ============================================================ */
+
+
+/* ============================================================
+   15. CAIXAS DE AGRUPAMENTO (OPCIONAL)
+   ------------------------------------------------------------
+   Usado quando você quer agrupar certos cartões visualmente.
+   Pode ser ignorado se não estiver usando agrupamentos.
+   ============================================================ */
+
+.grupo-arvore {
+    border: 1px solid #d9c89a;
+    background: #fffdf7;
+    padding: 14px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.grupo-titulo {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #5a4a2a;
+    margin-bottom: 10px;
+}
+
+
+
+/* ============================================================
+   16. MINI-INDICADORES (SE NECESSÁRIO)
+   ------------------------------------------------------------
+   Pequenos marcadores usados em alguns cartões.
+   ============================================================ */
+
+.indicador {
+    font-size: 0.65rem;
+    background: #f0f0f0;
+    padding: 2px 6px;
+    border-radius: 6px;
+    margin-top: 4px;
+    color: #555;
+}
+
+
+
+/* ============================================================
+   17. LINHAS DE CONEXÃO (SE VOCÊ USAR)
+   ------------------------------------------------------------
+   Caso você queira desenhar linhas entre gerações.
+   Pode ser ignorado se não estiver usando.
+   ============================================================ */
+
+.linha-conexao {
+    width: 2px;
+    background: #c9a84c;
+    margin: 0 auto;
+    height: 20px;
+}
+
+
+
+/* ============================================================
+   18. CAIXAS DE TEXTO EXPLICATIVO
+   ------------------------------------------------------------
+   Usado para explicações entre gerações.
+   ============================================================ */
+
+.caixa-explicacao {
+    background: #fff9e8;
+    border: 1px solid #e2d3a8;
+    padding: 12px 14px;
+    border-radius: 10px;
+    margin: 18px 0;
+    color: #4a3a1e;
+    font-size: 0.85rem;
+    line-height: 1.35;
+}
+
+
+
+/* ============================================================
+   19. ÍCONES DECORATIVOS (OPCIONAL)
+   ------------------------------------------------------------
+   Caso você use pequenos ícones nos cartões.
+   ============================================================ */
+
+.icone-pequeno {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+
+/* ============================================================
+   20. CAIXA DE ALERTA (OPCIONAL)
+   ------------------------------------------------------------
+   Usado para avisos dentro da árvore.
+   ============================================================ */
+
+.alerta-arvore {
+    background: #fff4d6;
+    border: 1px solid #e5c98f;
+    padding: 12px;
+    border-radius: 10px;
+    color: #5a3f1a;
+    font-size: 0.85rem;
+    margin: 20px 0;
+}
+
+
+
+/* ============================================================
+   21. CAIXA DE NOTA (OPCIONAL)
+   ------------------------------------------------------------
+   Notas pequenas abaixo de cartões ou gerações.
+   ============================================================ */
+
+.nota-arvore {
+    font-size: 0.75rem;
+    color: #6a5a4a;
+    margin-top: 6px;
+    text-align: center;
+}
+
+
+
+/* ============================================================
+   22. AJUSTES DE ESPAÇAMENTO ENTRE CARTÕES
+   ------------------------------------------------------------
+   Mantém o layout limpo e organizado.
+   ============================================================ */
+
+.card-pessoa {
+    margin-bottom: 10px;
+}
+
+
+
+/* ============================================================
+   23. AJUSTES DE SOMBRA E PROFUNDIDADE
+   /* ============================================================
+   ARVORE.CSS — PARTE 4 (FINAL)
+   ------------------------------------------------------------
+   Ajustes finais, complementos e fechamento do arquivo.
+   ============================================================ */
+
+
+/* ============================================================
+   29. AJUSTES DE ALINHAMENTO EM TELAS GRANDES
+   ------------------------------------------------------------
+   Mantém a árvore centralizada em monitores largos.
+   ============================================================ */
+
+@media (min-width: 1500px) {
+    .container-arvore {
+        max-width: 1600px;
+    }
+}
+
+
+
+/* ============================================================
+   30. AJUSTES DE ESPAÇAMENTO EM TELAS MUITO GRANDES
+   ------------------------------------------------------------
+   Evita que os cartões fiquem “perdidos” em telas 4K.
+   ============================================================ */
+
+@media (min-width: 1900px) {
+    .linha-geracao {
+        gap: 16px;
+    }
+
+    .card-pessoa {
+        margin-bottom: 14px;
+    }
+}
+
+
+
+/* ============================================================
+   31. AJUSTES DE TEXTO EM TELAS 4K
+   ------------------------------------------------------------
+   Mantém legibilidade sem exagero.
+   ============================================================ */
+
+@media (min-width: 1900px) {
+    .card-nome {
+        font-size: 0.90rem;
+    }
+
+    .card-status {
+        font-size: 0.80rem;
+    }
+
+    .card-id,
+    .card-codigo-genealogico {
+        font-size: 0.75rem;
+    }
+}
+
+
+
+/* ============================================================
+   32. AJUSTES DE FOTO EM TELAS 4K
+   ------------------------------------------------------------
+   Fotos maiores, mas sem deformar.
+   ============================================================ */
+
+@media (min-width: 1900px) {
+    .card-foto {
+        height: 140px;
+    }
+}
+
+/* ============================================================
+   33. AJUSTES DE BOTÃO EM TELAS GRANDES
+   ------------------------------------------------------------
+   Mantém o botão “Saiba Mais” proporcional.
+   ============================================================ */
+
+@media (min-width: 1900px) {
+    .card-saiba-mais {
+        padding: 6px 14px;
+        font-size: 0.80rem;
+    }
+}
+
+/* ============================================================
+   34. AJUSTES DE AGRUPAMENTO EM TELAS GRANDES
+   ------------------------------------------------------------
+   Caixas de agrupamento mais espaçosas.
+   ============================================================ */
+
+@media (min-width: 1900px) {
+    .grupo-arvore {
+        padding: 18px;
+    }
+
+    .grupo-titulo {
+        font-size: 1rem;
+    }
+}
+
+body {
+  background: linear-gradient(
+    to bottom,
+    var(--bg-top),
+    var(--bg-mid),
+    var(--bg-bot)
+  );
+  color: var(--cream);
+}
+
+/* ============================
+   AJUSTE DE LARGURA DOS CARDS
+   ============================ */
+
+/* Card padrão (usado nas gerações 3 a 8) */
+.card-pessoa {
+    width: 120px;
+    flex: 0 0 120px;
+}
+
+/* ============================
+   AJUSTE DE LARGURA DOS CARDS
+   ============================ */
+
+/* Card padrão (usado nas gerações 3 a 8) */
+.card-pessoa {
+    width: 120px;        /* antes 160px */
+    flex: 0 0 120px;
+}
+
+/* Pais */
+.card-pais {
+    width: 110px;        /* antes 120px */
+    flex: 0 0 110px;
+}
+
+/* Avós */
+.card-avos {
+    width: 95px;         /* antes 100px */
+    flex: 0 0 95px;
+}
+
+/* Bisavós */
+.card-bisavos {
+    width: 70px;         /* antes 60px */
+    flex: 0 0 70px;
+}
+
+/* Trisavós / Tetravós / Pentavós / Hexavós */
+.card-trisavos,
+.card-tetravos,
+.card-pentavos,
+.card-hexavos {
+    width: 115px;
+    flex: 0 0 115px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+
+/* Bisnetos */
+.card-bisneto,
+.card-bisneta {
+    width: 120px;        /* antes 150px */
+    flex: 0 0 120px;
+}
+
+
+/* ============================
+   AJUSTE DE FOTOS
+   ============================ */
+
+.card-foto {
+    width: 100%;
+    height: 90px;        /* antes 120px */
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+/* Telas muito grandes (4K) */
+@media (min-width: 1900px) {
+    .card-pessoa {
+        width: 130px;    /* proporcional */
+        flex: 0 0 130px;
+    }
+
+    .card-foto {
+        height: 110px;   /* proporcional */
+    }
+}
+/* Gerações 5 a 8 — largura real dos cards */
+.card-trisavos,
+.card-tetravos,
+.card-pentavos,
+.card-hexavos {
+    width: 115px;
+    flex: 0 0 115px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+
+
+/* Fotos proporcionais */
+.card-foto {
+    height: 90px;       /* já está bom */
+    width: 100%;
+    object-fit: cover;
+}
+/* ============================
+   AJUSTE GERAÇÕES 5 A 8
+   ============================ */
+
+/* Trisavós, Tetravós, Pentavós, Hexavós */
+.card-trisavos,
+.card-tetravos,
+.card-pentavos,
+.card-hexavos {
+    width: 115px;
+    flex: 0 0 115px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+
+/* Fotos proporcionais */
+.card-foto {
+    width: 100%;
+    height: 90px;       /* altura já está boa */
+    object-fit: cover;
+}
+/* ============================================================
+   99. PADRONIZAÇÃO DOS CARDS ANTIGOS (.pessoa)
+   ------------------------------------------------------------
+   Estes cartões não tinham CSS. Agora ficam iguais aos modernos.
+   ============================================================ */
+
+.pessoa {
+    width: 160px;
+    padding: 14px;
+    text-align: center;
+    border: 1px solid rgba(201,168,76,0.45);
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.07);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(8px) brightness(1.05);
+}
+
+.pessoa img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+/* ============================================================
+   AJUSTE DE LARGURA PARA TODAS AS GERAÇÕES ANTIGAS
+   ------------------------------------------------------------
+   Padroniza o espaço reservado para 8 cartões por linha.
+   ============================================================ */
+
+
+
+
+/* Trisavós em diante: cartão menor */
+.card-trisavos .pessoa,
+.card-tetravos .pessoa,
+.card-pentavos .pessoa,
+.card-hexavos .pessoa {
+    width: 115px;
+    padding: 8px;
+}
+
+.card-trisavos .pessoa img,
+.card-tetravos .pessoa img,
+.card-pentavos .pessoa img,
+.card-hexavos .pessoa img {
+    height: 70px;
+}
+/* Cartões das gerações altas precisam ser menores */
+.card-trisavos .pessoa,
+.card-tetravos .pessoa,
+.card-pentavos .pessoa,
+.card-hexavos .pessoa {
+    width: 95px;
+    padding: 8px;
+}
+
+.card-trisavos .pessoa img,
+.card-tetravos .pessoa img,
+.card-pentavos .pessoa img,
+.card-hexavos .pessoa img {
+    height: 70px;
+}
+/* Ativa zoom nas fotos dos bisnetos */
+.card-foto {
+    cursor: zoom-in;
+    transition: transform .3s ease;
+}
+
+.card-foto:hover {
+    transform: scale(1.5);
+}
+
+/* Garante que o zoom não seja cortado pelo card */
+.card-pessoa {
+    overflow: visible;
+}
+/* LIGHTBOX NOVO — independente e seguro */
+.lightbox-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+.lightbox-overlay img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 8px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+.lightbox-close {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 32px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100000;
+    font-family: Arial, sans-serif;
+}
+.linha-geracao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+
+    max-width: 1400px; /* ajuste conforme seu card */
+    margin: 0 auto;
+}
+
+
+
+
+/* ============================================================
+   35. FECHAMENTO DO ARQUIVO
+   ------------------------------------------------------------
+   Fim do CSS da árvore genealógica.
+   O CSS do “Saiba Mais” será criado separadamente.
+   ============================================================ */

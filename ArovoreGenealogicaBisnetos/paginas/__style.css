@@ -1,0 +1,359 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.container {
+    width: 95%;
+    max-width: 1400px;
+    margin: auto;
+    padding: 0 10px;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.intro-block, .curiosidade-block, .piramide-inversa {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.piramide-inversa-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.linha-geracao {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.linha-geracao .ramo-paterno {
+    order: 1;
+}
+
+.linha-geracao .ramo-materno {
+    order: 2;
+}
+
+.ramo-paterno {
+    background: #d6e8f7 !important;
+    border-left: 4px solid #2980b9 !important;
+}
+
+.ramo-materno {
+    background: #d5f0e0 !important;
+    border-left: 4px solid #27ae60 !important;
+}
+
+.card-trisavos.ramo-paterno {
+    background: #d5f0e0 !important;
+    border-left: 4px solid #27ae60 !important;
+}
+
+.card-trisavos.ramo-materno {
+    background: #d6e8f7 !important;
+    border-left: 4px solid #2980b9 !important;
+}
+
+/* linhas que devem conter exatamente 8 cart�es e preencher a largura */
+.linha-geracao.linha-8 {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.linha-geracao.linha-8 .card-pessoa {
+    margin: 5px 0;
+    flex: 0 1 calc((100% - 70px) / 8);
+    width: calc((100% - 70px) / 8);
+    max-width: calc((100% - 70px) / 8);
+}
+
+.card-pessoa {
+    background: #e2e2e2;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    flex: 0 1 110px;
+    width: 110px;
+}
+
+.card-bisneta,
+.card-bisneto {
+    flex: 0 1 160px;
+    width: 160px;
+}
+
+.card-pais {
+    flex: 0 1 120px;
+    width: 120px;
+}
+
+.card-avos {
+    flex: 0 1 110px;
+    width: 110px;
+}
+
+.card-bisavos {
+    flex: 0 1 125px;
+    width: 125px;
+}
+
+.card-trisavos,
+.card-tataravos {
+    flex: 0 1 95px;
+    width: 95px;
+}
+
+.card-pessoa img {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    height: auto;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 5px;
+    display: block;
+    cursor: zoom-in;
+}
+
+.nome {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.detalhe {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.legenda-linha {
+    text-align: center;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.linha-separadora {
+    display: none;
+}
+
+.geracao-barra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 12px 0 8px;
+    padding: 8px 10px;
+    border: 1px solid #bcc7d3;
+    border-radius: 8px;
+    background: #f6f9fc;
+}
+
+.geracao-titulo {
+    font-weight: 700;
+    color: #26323d;
+    font-size: 0.95rem;
+}
+
+.geracao-toggle {
+    border: 1px solid #9fb0c0;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #23313f;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    padding: 4px 10px;
+    cursor: pointer;
+}
+
+.geracao-toggle:hover {
+    background: #eef5fb;
+}
+
+.legenda-linha {
+    display: none;
+}
+
+.linha-geracao.linha-geracao-compacta {
+    width: 100%;
+    justify-content: center !important;
+    flex-wrap: nowrap !important;
+    gap: 8px;
+}
+
+.linha-geracao-compacta .card-pessoa,
+.linha-geracao.linha-8.linha-geracao-compacta .card-pessoa {
+    flex: 0 0 95px !important;
+    width: 95px !important;
+    max-width: 95px !important;
+}
+
+.quote {
+    font-style: italic;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* ← ESSENCIAL */
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    z-index: 10000; /* ← garante que a imagem fica acima do fundo */
+}
+
+
+@media (max-width: 1200px) {
+    .card-pessoa {
+        flex: 0 1 100px;
+        width: 100px;
+    }
+
+    .card-bisneta,
+    .card-bisneto {
+        flex: 0 1 130px;
+        width: 130px;
+    }
+
+    .card-pais {
+        flex: 0 1 110px;
+        width: 110px;
+    }
+
+    .card-avos {
+        flex: 0 1 100px;
+        width: 100px;
+    }
+}
+
+@media (max-width: 900px) {
+    .card-pessoa {
+        flex: 0 1 90px;
+        width: 90px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 700px) {
+    .card-pessoa {
+        flex: 0 1 45%;
+        width: 45%;
+    }
+}
+
+@media (max-width: 520px) {
+    .container {
+        width: 100%;
+        padding: 0 8px;
+    }
+
+    .card-pessoa {
+        flex: 0 1 100%;
+        width: 100%;
+    }
+}
+
+
+.acesso-discreto {
+    text-align: right;
+    margin: 8px 0 14px;
+    font-size: 0.85rem;
+}
+
+.acesso-discreto a {
+    color: #5f5a54;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.acesso-discreto a:hover {
+    opacity: 1;
+    text-decoration: underline;
+}
+
+.saiba-mais-wrap {
+    margin-top: 8px;
+}
+
+.saiba-mais-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: #4d5964;
+    text-decoration: none;
+    border: 1px solid #c9d2dc;
+    border-radius: 999px;
+    padding: 3px 10px;
+    background: #f8fbff;
+}
+
+.saiba-mais-link:hover {
+    text-decoration: none;
+    border-color: #9fb0c0;
+    background: #eef5fb;
+}
+
+.saiba-mais-icone {
+    width: 14px;
+    height: 9px;
+    border: 1.5px solid #4d5964;
+    border-radius: 100% / 75%;
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    flex: 0 0 auto;
+}
+
+.saiba-mais-icone::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #4d5964;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.saiba-mais-texto {
+    line-height: 1;
+}
+
+

@@ -1,0 +1,423 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Saiba mais - Alice</title>
+    <style>
+        :root {
+            --bg: #f7f5ef;
+            --panel: #ffffff;
+            --ink: #222222;
+            --muted: #666666;
+            --line: #ddd7ca;
+            --accent: #7a2e2e;
+        }
+        
+        html { scroll-behavior: smooth; }
+        body {
+            margin: 0;
+            font-family: Georgia, "Times New Roman", serif;
+            color: var(--ink);
+            background: radial-gradient(circle at top right, #efe8d8, var(--bg) 45%);
+            line-height: 1.55;
+        }
+        .page {
+            width: min(980px, 92vw);
+            margin: 32px auto;
+            padding: 24px;
+            background: var(--panel);
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+        }
+        .top-links {
+            margin: 0 0 18px;
+            font-size: 14px;
+            color: var(--muted);
+        }
+        .top-links a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        .top-links a:hover { text-decoration: underline; }
+        .saiba-mais-badge {
+            margin: 0 0 16px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 11px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #5b2a2a;
+            border: 1px solid #d6c9b8;
+            border-radius: 999px;
+            background: #fff8ec;
+            padding: 6px 12px;
+        }
+
+        .saiba-mais-icone {
+            width: 16px;
+            height: 10px;
+            border: 1.6px solid #7a2e2e;
+            border-radius: 100% / 75%;
+            position: relative;
+            display: inline-block;
+            background: #fff;
+        }
+
+        .saiba-mais-icone::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: #7a2e2e;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .hero {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 22px;
+            align-items: start;
+            margin-bottom: 20px;
+        }
+        .photo-box {
+            background: #f2efe5;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .photo-box img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+        .meta h1 {
+            margin: 0 0 8px;
+            font-size: clamp(28px, 4vw, 42px);
+            line-height: 1.08;
+        }
+        .meta .chip {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            color: var(--muted);
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        .meta p { margin: 6px 0; }
+        .extra {
+            border-top: 1px solid var(--line);
+            padding-top: 16px;
+            margin-bottom: 20px;
+        }
+        .extra h2 {
+            margin: 0 0 12px;
+            font-size: 22px;
+        }
+        
+        .extra-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+            align-items: start;
+        }
+        .extra-grid-small {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+            align-items: start;
+        }
+        .extra-item {
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            overflow: hidden;
+            background: #faf8f3;
+            min-width: 0;
+            transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+        }
+        .extra-item img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+            background: #f2efe5;
+            transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1), filter 320ms ease;
+            transform-origin: center center;
+            will-change: transform;
+            cursor: zoom-in;
+        }
+        .extra-item:hover {
+            transform: translateY(-3px);
+            border-color: #c9bea8;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.14);
+        }
+        .extra-item:hover img,
+        .extra-item img:hover {
+            transform: scale(1.24);
+            filter: saturate(1.08) contrast(1.06);
+        }
+        .extra-item p {
+            margin: 0;
+            padding: 12px 14px;
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.55;
+            overflow-wrap: anywhere;
+        }
+        .extra-item-small img {
+            aspect-ratio: 1 / 1;
+        }
+        .extra-item-small p {
+            padding: 8px 9px;
+            font-size: 12px;
+            line-height: 1.4;
+        }
+        .story {
+            border-top: 1px solid var(--line);
+            padding-top: 16px;
+        }
+        .story h2 {
+            margin: 0 0 10px;
+            font-size: 22px;
+        }
+        .story p {
+            margin: 0 0 12px;
+            text-align: justify;
+        }
+        .story a {
+            color: var(--accent);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+        .story a:hover {
+            text-decoration-thickness: 2px;
+        }
+        @media (max-width: 1080px) {
+            .extra-grid-small { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 760px) {
+            .hero { grid-template-columns: 1fr; }
+            .photo-box { max-width: 320px; }
+            .extra-grid { grid-template-columns: 1fr; }
+            .extra-grid-small { grid-template-columns: 1fr; }
+            .extra-item img { aspect-ratio: auto; }
+        }
+
+        .img-lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.82);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 18px;
+            z-index: 2000;
+        }
+
+        .img-lightbox.active {
+            display: flex;
+        }
+
+        .img-lightbox img {
+            max-width: 92vw;
+            max-height: 88vh;
+            width: auto;
+            height: auto;
+            border-radius: 10px;
+            border: 1px solid #e8dfd0;
+            box-shadow: 0 16px 34px rgba(0, 0, 0, 0.45);
+            background: #fff;
+        }
+
+        .img-lightbox-close {
+            position: fixed;
+            top: 18px;
+            right: 18px;
+            width: 40px;
+            height: 40px;
+            border: 1px solid #d7c8b0;
+            border-radius: 999px;
+            background: #fff7ea;
+            color: #6c2e2e;
+            font-size: 22px;
+            line-height: 1;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+        }
+
+        .photo-box img,
+        .extra-item img {
+            cursor: zoom-in;
+        }
+.topo-fixo {
+            position: fixed;
+            right: 18px;
+            bottom: 18px;
+            z-index: 999;
+            padding: 8px 12px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            background: #fffdf8;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 13px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+        .topo-fixo:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script defer src="retorno.js"></script>
+</head>
+<body id="topo">
+    <main class="page">
+        <p class="top-links">
+            <a href="../../elo_indice.html">voltar ao Nucleo Familiar</a>
+        </p>
+        <p class="saiba-mais-badge">
+            <span class="saiba-mais-icone" aria-hidden="true"></span>
+            <span>SAIBA MAIS</span>
+        </p>
+        <section class="hero">
+            <figure class="photo-box">
+                <img src="../../imagens/ancestrais/1-bisnetos/0102_alice.jpg" alt="Foto de Alice">
+            </figure>
+            <div class="meta">
+                <h1>Alice</h1>
+                <span class="chip">ID 0102</span>
+                <p><strong>Bisneta Alice - filha do Marcos e da Paula.</strong></p>
+                <p>Alice é irma do Rafael, e prima de Lorena, Pedro, Luna e Gabriela</p>
+            </div>
+        </section>
+
+                <section class="extra">
+            <h2>Fotos e comentarios</h2>
+            <div class="extra-grid">
+<figure class="extra-item">
+                    <img src="../../imagens/ancestrais/1-bisnetos/combinado_bisnetos_circulo.jpg" alt="Alice em outro momento">
+                    <p>Nosso time de bisnetos.</p>
+                </figure>
+<figure class="extra-item">
+                    <img src="../../imagens/familia/new_alice.jpg" alt="Descricao da foto">
+                    <p>Seu comentario da foto.</p>
+                </figure>
+                <figure class="extra-item">
+                    <img src="../../imagens/familia/new_alice.jpg" alt="Foto 3">
+                    <p>Comentario da foto 3.</p>
+                </figure>
+                <figure class="extra-item">
+                    <img src="../../imagens/familia/new_alice.jpg" alt="Foto 4">
+                    <p>Comentario da foto 4.</p>
+                </figure>
+            </div>
+        </section>
+        <section class="extra extra-small">
+            <h2>Fotos menores (adicionais)</h2>
+            <div class="extra-grid-small">
+<figure class="extra-item extra-item-small">
+                    <img src="../../imagens/bisnetos/0102_alice_v01.jpg" alt="Alice em outro momento">
+                    <p>Comentario da foto: local, data aproximada ou contexto.</p>
+                </figure>
+<figure class="extra-item extra-item-small">
+                    <img src="../../imagens/familia/new_alice.jpg" alt="Descricao da foto">
+                    <p>Seu comentario da foto.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/familia/new_alice.jpg" alt="Foto 3">
+                    <p>Comentario da foto 3.</p>
+                </figure>
+                <figure class="extra-item extra-item-small">
+                    <img src="../../imagens/familia/new_alice.jpg" alt="Foto 4">
+                    <p>Comentario da foto 4.</p>
+                </figure>
+            
+            </div>
+        </section>
+
+                <section class="story">
+            <h2>Historia</h2>
+                        <p>A <a href="0102-alice.html">Alice</a> é filha do <a href="0201-marcos.html">Marcos</a> e da <a href="0202-paula.html">Paula</a>, é a segunda bisneta, prima da primeira, <a href="0101-lorena.html">Lorena</a>, irmã do <a href="0104-rafael.html">Rafael</a> e também prima da <a href="0101-lorena.html">Lorena</a>. Os dois ainda têm outros primos e primas: a <a href="0105-luna.html">Luna</a>, o <a href="0103-pedro.html">Pedro</a> e a <a href="0106-gabriela.html">Gabriela</a>, que está no forno.</p>
+                <p>Se preferir, adicione parágrafos curtos para leitura mais confortável.</p>
+                <p>Parágrafo 3 da história.</p>
+                <p>Paragrafo 4 da historia.</p>
+        </section>
+    </main>
+
+    <div class="img-lightbox" aria-hidden="true" role="dialog" aria-label="Visualizacao ampliada de imagem">
+        <button class="img-lightbox-close" type="button" aria-label="Fechar visualizacao">×</button>
+        <img src="" alt="Imagem ampliada">
+    </div>
+    <a href="#topo" class="topo-fixo" aria-label="Voltar ao topo">Topo</a>
+    <script>
+        (function () {
+            const overlay = document.querySelector('.img-lightbox');
+            if (!overlay) return;
+
+            const overlayImg = overlay.querySelector('img');
+            const closeBtn = overlay.querySelector('.img-lightbox-close');
+
+            function openImageLightbox(sourceImg) {
+                if (!overlayImg) return;
+                overlayImg.src = sourceImg.currentSrc || sourceImg.src;
+                overlayImg.alt = sourceImg.alt || 'Imagem ampliada';
+                overlay.classList.add('active');
+                overlay.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeImageLightbox() {
+                if (!overlayImg) return;
+                overlay.classList.remove('active');
+                overlay.setAttribute('aria-hidden', 'true');
+                overlayImg.src = '';
+                overlayImg.alt = 'Imagem ampliada';
+                document.body.style.overflow = '';
+            }
+
+            document.querySelectorAll('.photo-box img, .extra-item img').forEach(function (img) {
+                img.addEventListener('click', function () {
+                    openImageLightbox(img);
+                });
+            });
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', closeImageLightbox);
+            }
+
+            overlay.addEventListener('click', function (event) {
+                if (event.target === overlay) {
+                    closeImageLightbox();
+                }
+            });
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape' && overlay.classList.contains('active')) {
+                    closeImageLightbox();
+                }
+            });
+        })();
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

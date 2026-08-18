@@ -198,6 +198,37 @@
             gap: 18px;
             align-items: start;
         }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 15px;
+            margin: 8px 0 18px;
+            align-items: start;
+        }
+
+        .video-card {
+            width: 100%;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.10);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform .15s ease-in-out;
+        }
+
+        .video-card:hover {
+            transform: scale(1.02);
+        }
+
+        .video-thumb {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            display: block;
+        }
+
         .extra-grid-small {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -406,26 +437,31 @@
                     <p>No Essa foto contem um link (no texto), para encontros e reuniões familiares.
                     <a href="../extra-saiba-mais/reunioes-festivas-arnaldo.html?from=../saiba-mais/reunioes-festivas-arnaldo.html">Extra Saiba Mais: Reuniões Festivas Arnaldo</a>.</p>
                  </figure>  
-                   <!-- 17 -->
+                </figure>
+            </div>
+
+            <div class="video-grid">
                 <div class="video-card">
-                 <a href="https://youtu.be/z1s4q_iT3BY" target="_blank">
-                 <img class="video-thumb" src="https://img.youtube.com/vi/z1s4q_iT3BY/hqdefault.jpg" alt="Vídeo XVII – Passeios de lancha">
-                  </a>
-                  <div class="video-content">
-                  <div class="video-title">VÍDEO XVII – Passeios de lancha</div>
-                  <a class="video-link" href="https://youtu.be/z1s4q_iT3BY" target="_blank">Abrir no YouTube</a>
-              </div>
-                <!-- 16 -->
+                    <a href="https://youtu.be/z1s4q_iT3BY" target="_blank">
+                        <img class="video-thumb" src="https://img.youtube.com/vi/z1s4q_iT3BY/hqdefault.jpg" alt="Vídeo XVII – Passeios de lancha">
+                    </a>
+                    <div class="video-content">
+                        <div class="video-title">Passeios de lancha com os netos</div>
+                        <a class="video-link" href="https://youtu.be/z1s4q_iT3BY" target="_blank">Abrir no YouTube</a>
+                    </div>
+                </div>
+
                 <div class="video-card">
-                 <a href="https://youtu.be/uDaUIyba9as" target="_blank">
-                  <img class="video-thumb" src="https://img.youtube.com/vi/uDaUIyba9as/hqdefault.jpg" alt="Vídeo XVI – Núpcías Arnaldo & Antonia">
-                  </a>
-                 <div class="video-content">
-                  <div class="video-title">VÍDEO XVI – Núpcías Arnaldo & Antonia</div>
-                  <a class="video-link" href="https://youtu.be/uDaUIyba9as" target="_blank">Abrir no YouTube</a>
-                 </div>
-            </div>     
-           </section>
+                    <a href="https://youtu.be/uDaUIyba9as" target="_blank">
+                        <img class="video-thumb" src="https://img.youtube.com/vi/uDaUIyba9as/hqdefault.jpg" alt="Vídeo XVI – Núpcías Arnaldo & Antonia">
+                    </a>
+                    <div class="video-content">
+                        <div class="video-title">Núpcías Arnaldo & Antonia Maria</div>
+                        <a class="video-link" href="https://youtu.be/uDaUIyba9as" target="_blank">Abrir no YouTube</a>
+                    </div>
+                </div>
+            </div>
+        </section>
              <section class="extra extra-small">
             <h2>Fotos menores (adicionais)</h2>
             <div class="extra-grid-small">
